@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Blowfish</title>
-    <link>/posts/</link>
+    <link>https://cp.t98.info/posts/</link>
     <description>Recent content in Posts on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 18 Mar 2023 17:12:19 +0900</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Mar 2023 17:12:19 +0900</lastBuildDate><atom:link href="https://cp.t98.info/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>031801</title>
-      <link>/posts/2023/031801/</link>
+      <link>https://cp.t98.info/posts/2023/031801/</link>
       <pubDate>Sat, 18 Mar 2023 17:12:19 +0900</pubDate>
       
-      <guid>/posts/2023/031801/</guid>
+      <guid>https://cp.t98.info/posts/2023/031801/</guid>
       <description></description>
     </item>
     

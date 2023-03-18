@@ -6,18 +6,18 @@
   
     
       <url>
-            <loc>/en/</loc>
+            <loc>https://cp.t98.info/en/</loc>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
             <xhtml:link
               rel="alternate"
               hreflang="ja"
-              href="/"
+              href="https://cp.t98.info/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="/en/"
+              href="https://cp.t98.info/en/"
               />
           </url>
     

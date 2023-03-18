@@ -4,7 +4,7 @@
   
     
       <url>
-            <loc>/posts/2023/031801/</loc>
+            <loc>https://cp.t98.info/posts/2023/031801/</loc>
             <lastmod>2023-03-18T17:12:19+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -13,26 +13,26 @@
   
     
       <url>
-            <loc>/</loc>
+            <loc>https://cp.t98.info/</loc>
             <lastmod>2023-03-18T17:12:19+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
             <xhtml:link
               rel="alternate"
               hreflang="en"
-              href="/en/"
+              href="https://cp.t98.info/en/"
               />
             <xhtml:link
               rel="alternate"
               hreflang="ja"
-              href="/"
+              href="https://cp.t98.info/"
               />
           </url>
     
   
     
       <url>
-            <loc>/posts/</loc>
+            <loc>https://cp.t98.info/posts/</loc>
             <lastmod>2023-03-18T17:12:19+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>

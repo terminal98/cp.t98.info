@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Blowfish</title>
-    <link>/series/</link>
+    <link>https://cp.t98.info/series/</link>
     <description>Recent content in Series on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language><atom:link href="https://cp.t98.info/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
