@@ -5,10 +5,10 @@ isoCode = "ja"
 weight = 1
 rtl = false
 
-title = "Blowfish"
+title = "cp.t98.info"
 # logo = "img/logo.png"
-# description = "My awesome website"
-# copyright = "Copy, _right?_ :thinking_face:"
+description = "My awesome website"
+copyright = "(C)2023 ほむりんルーム."
 
 dateFormat = "2006.1.2"
 
