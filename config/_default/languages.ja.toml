@@ -12,14 +12,14 @@ copyright = "(C)2023 ほむりんルーム."
 
 dateFormat = "2006.1.2"
 
-# [author]
-#   name = "Your name here"
-#   image = "img/blowfish_logo.png"
-#   headline = "I'm only human"
-#   bio = "A little bit about you"
-#   links = [
+ [author]
+   name = "ほむりん"
+   image = "img/pFIScid5.jpg"
+   headline = "I'm only human"
+   bio = "bio"
+   links = [
 #     { email = "mailto:hello@your_domain.com" },
-#     { link = "https://link-to-some-website.com/" },
+#     { link = "https://t98.info/" },
 #     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
 #     { apple = "https://www.apple.com" },
 #     { blogger = "https://username.blogspot.com/" },
@@ -56,8 +56,8 @@ dateFormat = "2006.1.2"
 #     { tiktok = "https://tiktok.com/@username" },
 #     { tumblr = "https://username.tumblr.com" },
 #     { twitch = "https://twitch.tv/username" },
-#     { twitter = "https://twitter.com/username" },
+     { twitter = "https://twitter.com/98tml" },
 #     { whatsapp = "https://wa.me/phone-number" },
 #     { youtube = "https://youtube.com/username" },
 #     { ko-fi = "https://ko-fi.com/username" },
-#   ]
+   ]
