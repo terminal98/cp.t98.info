@@ -15,8 +15,8 @@ dateFormat = "2006.1.2"
  [author]
    name = "ほむりん"
    image = "img/pFIScid5.jpg"
-   headline = "I'm only human"
-   bio = "bio"
+   headline = ""
+   bio = "よろしくお願いします！"
    links = [
 #     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://t98.info/" },
