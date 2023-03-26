@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>cp.t98.info</title>
-    <link>https://cp.t98.info/</link>
-    <description>Recent content on cp.t98.info</description>
+    <title>撮影について on cp.t98.info</title>
+    <link>https://cp.t98.info/series/%E6%92%AE%E5%BD%B1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+    <description>Recent content in 撮影について on cp.t98.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>(C)2023 ほむりんルーム.</copyright>
-    <lastBuildDate>Sun, 26 Mar 2023 02:58:36 +0900</lastBuildDate><atom:link href="https://cp.t98.info/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>5月の夜アコで撮影させてくださる方…（同行可）</title>
-      <link>https://cp.t98.info/posts/2023/032601/</link>
-      <pubDate>Sun, 26 Mar 2023 02:58:36 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2023/032601/</guid>
-      <description></description>
-      
-    </item>
-    
+    <lastBuildDate>Sun, 26 Mar 2023 02:36:15 +0900</lastBuildDate><atom:link href="https://cp.t98.info/series/%E6%92%AE%E5%BD%B1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>イベント参加予定</title>
       <link>https://cp.t98.info/eventlist/</link>
@@ -25,17 +15,6 @@
       
       <guid>https://cp.t98.info/eventlist/</guid>
       <description></description>
-      
-    </item>
-    
-    <item>
-      <title>【被写体募集】3/28 OR 3/30 @ コセット池袋</title>
-      <link>https://cp.t98.info/posts/2023/032501/</link>
-      <pubDate>Sat, 25 Mar 2023 21:38:18 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2023/032501/</guid>
-      <description></description>
-      
     </item>
     
     <item>
@@ -45,7 +24,6 @@
       
       <guid>https://cp.t98.info/policy/</guid>
       <description></description>
-      
     </item>
     
     <item>
@@ -55,7 +33,6 @@
       
       <guid>https://cp.t98.info/favlist/</guid>
       <description></description>
-      
     </item>
     
   </channel>
