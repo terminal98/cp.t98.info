@@ -16,6 +16,11 @@
   weight = 5
 
 [[main]]
+  name = "プロフィール"
+  pageRef = "about"
+  weight = 5
+
+[[main]]
   name = "撮影について"
   weight = 10
 
@@ -23,19 +28,19 @@
   name = "イベント参加予定"
   parent = "撮影について"
   pageRef = "eventlist"
-  weight = 11
+  weight = 13
 
 [[main]]
-  name = "撮影・写真データについて"
+  name = "撮影・データについて"
   parent = "撮影について"
   pageRef = "policy"
-  weight = 15
+  weight = 11
 
 [[main]]
   name = "撮影してみたい作品"
   parent = "撮影について"
   pageRef = "favlist"
-  weight = 20
+  weight = 12
 
 #[[subnavigation]]
 #  name = "An interesting topic"
