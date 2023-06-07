@@ -3,20 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
-      <url>
-            <loc>https://cp.t98.info/posts/2023/060402/</loc>
-            <lastmod>2023-06-04T19:15:20+09:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
   
     
       <url>
             <loc>https://cp.t98.info/</loc>
-            <lastmod>2023-06-04T19:15:20+09:00</lastmod>
+            <lastmod>2023-06-08T00:14:11+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -25,6 +16,26 @@
     
       <url>
             <loc>https://cp.t98.info/posts/</loc>
+            <lastmod>2023-06-08T00:14:11+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://cp.t98.info/posts/2023/060801/</loc>
+            <lastmod>2023-06-08T00:14:11+09:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://cp.t98.info/posts/2023/060402/</loc>
             <lastmod>2023-06-04T19:15:20+09:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
@@ -49,8 +60,6 @@
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
-    
-  
     
   
     
