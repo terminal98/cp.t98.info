@@ -1,7 +1,7 @@
 ---
 title: "撮影・データについて"
 date: 2023-03-25T21:37:37+09:00
-draft: false
+draft: true
 series: ["撮影について"]
 series_order: 1
 

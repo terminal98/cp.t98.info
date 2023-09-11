@@ -31,7 +31,7 @@ categories: ["お知らせ"]
 
 ### お問い合わせ
 
-X （旧Twitter） DM : @98tml
-お問い合わせフォーム: https://t98.info/contact/
+- X （旧Twitter） DM : [@98tml](https://x.com/98tml)
+- お問い合わせフォーム: https://t98.info/contact/
 
 以上、何卒よろしくお願いいたします。
