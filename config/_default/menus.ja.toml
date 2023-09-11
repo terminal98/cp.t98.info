@@ -10,11 +10,6 @@
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
 
-[[footer]]
-  name = "Posts"
-  pageRef = "posts"
-  weight = 5
-
 [[main]]
   name = "プロフィール"
   pageRef = "about"
@@ -25,22 +20,28 @@
   weight = 10
 
 [[main]]
-  name = "イベント参加予定"
-  parent = "撮影について"
-  pageRef = "eventlist"
-  weight = 13
-
-[[main]]
   name = "撮影・データについて"
   parent = "撮影について"
   pageRef = "policy"
   weight = 11
 
 [[main]]
-  name = "撮影してみたい作品"
+  name = "イベント参加予定"
   parent = "撮影について"
-  pageRef = "favlist"
+  pageRef = "eventlist"
   weight = 12
+
+[[main]]
+  name = "作例 (X/Twitter)"
+  parent = "撮影について"
+  url = "https://x.com/search?q=%4098tml%20filter%3Amedia%20min_retweets%3A2%20-from%3A98tml&src=typed_query&f=image"
+  weight = 13
+
+[[main]]
+  pre = "twitter"
+  name = "X/Twitter"
+  url = "https://x.com/98tml"
+  weight = 30
 
 #[[subnavigation]]
 #  name = "An interesting topic"
@@ -53,28 +54,43 @@
 #  pageRef = "categories/awesome"
 #  weight = 20
 
-#[[main]]
-#  name = "Category"
-# pageRef = "categories"
-# weight = 20
-
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
-
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
+[[footer]]
+  name = "投稿一覧"
+  pageRef = "posts"
+  weight = 5
+
+# [[footer]]
+#   pre = "tag"
+#   name = "タグ"
+#   pageRef = "tags"
+#   weight = 10
 
  [[footer]]
-   name = "Tags"
-   pageRef = "tags"
-   weight = 10
-
- [[footer]]
-   name = "Categories"
+   #pre = "substack"
+   name = "カテゴリ"
    pageRef = "categories"
    weight = 20
+  
+[[footer]]
+  #pre = "envelope"
+  name = "お問い合わせ"
+  url = "https://t98.info/contact/"
+  weight = 38
+
+[[footer]]
+  name = "利用規約"
+  url = "https://doc.t98.info/rule/"
+  weight = 39
+
+[[footer]]
+  name = "プライバシーポリシー"
+  url = "https://doc.t98.info/policy/"
+  weight = 40
+
+#[[footer]]
+#  name = "特定商取引法に基づく表記"

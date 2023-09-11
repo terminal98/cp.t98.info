@@ -26,7 +26,7 @@ series_order: 1
   * 自然光を活かした撮影を練習しています
   * スタジオなどの室内は経験があまりないので、沢山練習させてください…！
 
-* [＞＞ 今までの作例はこちら](https://twitter.com/search?q=%4098tml%20filter%3Amedia%20min_retweets%3A2%20-from%3A98tml&src=typed_query&f=image)
+* [＞＞ 今までの作例はこちら](https://x.com/search?q=%4098tml%20filter%3Amedia%20min_retweets%3A2%20-from%3A98tml&src=typed_query&f=image)
 
 * 原則として土日祝でお願いいたします
 * 7日以上前にご相談いただけましたら平日も対応できます。
