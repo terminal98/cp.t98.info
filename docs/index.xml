@@ -99,7 +99,7 @@
     </item>
     
     <item>
-      <title>イベント参加予定</title>
+      <title>依頼受付状況・イベント参加予定</title>
       <link>https://cp.t98.info/eventlist/</link>
       <pubDate>Sun, 26 Mar 2023 02:36:15 +0900</pubDate>
       
@@ -124,16 +124,6 @@
       <pubDate>Sat, 25 Mar 2023 21:37:37 +0900</pubDate>
       
       <guid>https://cp.t98.info/policy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>撮影してみたい作品</title>
-      <link>https://cp.t98.info/favlist/</link>
-      <pubDate>Sat, 25 Mar 2023 21:37:28 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/favlist/</guid>
       <description></description>
       
     </item>
