@@ -37,11 +37,11 @@ defaultBackgroundImage = "img/aig35bg.jpg" # used as default for background imag
   layout = "background" # valid options: page, profile, hero, card, background, custom
   homepageImage = "img/aig35bg.jpg" # used in: hero, and card
   showRecent = true
-  showRecentItems = 5
+  showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/posts"
   cardView = true
-  cardViewScreenWidth = true
+  cardViewScreenWidth = false
   layoutBackgroundBlur = false # only used when layout equals background
 
 [article]
@@ -101,7 +101,7 @@ defaultBackgroundImage = "img/aig35bg.jpg" # used as default for background imag
   cardView = false
 
 [term]
-  showHero = true
+  showHero = false
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = false
   showViews = false

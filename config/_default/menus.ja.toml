@@ -16,24 +16,28 @@
   weight = 5
 
 [[main]]
-  name = "撮影について"
-  weight = 10
-
-[[main]]
-  name = "撮影・データについて"
-  parent = "撮影について"
-  pageRef = "policy"
-  weight = 11
-
-[[main]]
-  name = "イベント参加予定"
-  parent = "撮影について"
+  name = "今後の予定"
   pageRef = "eventlist"
-  weight = 12
+  weight = 6
+
+#[[main]]
+#  name = "撮影について"
+#  weight = 10
+
+#[[main]]
+#  name = "撮影・データについて"
+#  parent = "撮影について"
+#  pageRef = "policy"
+#  weight = 11
+
+#[[main]]
+#  name = "イベント参加予定"
+#  parent = "撮影について"
+#  pageRef = "eventlist"
+#  weight = 12
 
 [[main]]
-  name = "作例 (X/Twitter)"
-  parent = "撮影について"
+  name = "作例"
   url = "https://x.com/search?q=%4098tml%20filter%3Amedia%20min_retweets%3A2%20-from%3A98tml&src=typed_query&f=image"
   weight = 13
 

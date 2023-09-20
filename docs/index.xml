@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>にじてくと</title>
+    <title>ほむりん on にじてくと</title>
     <link>https://cp.t98.info/</link>
-    <description>Recent content on にじてくと</description>
+    <description>Recent content in ほむりん on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>(C)2023 ほむりんルーム.</copyright>
-    <lastBuildDate>Mon, 11 Sep 2023 22:02:05 +0900</lastBuildDate><atom:link href="https://cp.t98.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Sep 2023 23:35:22 +0900</lastBuildDate><atom:link href="https://cp.t98.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【DEV】作例一覧</title>
+      <link>https://cp.t98.info/develop/gallery/</link>
+      <pubDate>Wed, 20 Sep 2023 23:32:54 +0900</pubDate>
+      
+      <guid>https://cp.t98.info/develop/gallery/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>作例用のお写真を募集します</title>
       <link>https://cp.t98.info/posts/2023/091103/</link>
@@ -45,7 +54,7 @@
       
       <guid>https://cp.t98.info/posts/2023/081701/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2023/081701/featured.png" />
+      
     </item>
     
     <item>
@@ -65,7 +74,7 @@
       
       <guid>https://cp.t98.info/posts/2023/060801/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2023/060801/featured.jpg" />
+      
     </item>
     
     <item>
