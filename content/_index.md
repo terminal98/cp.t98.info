@@ -1,7 +1,8 @@
 ---
 title: "ほむりん"
 description: "写真・動画撮影編集、Webサイトの製作・運営をしています"
----
+draft: false
+---zz
 
 <style>
 .top-btn{
@@ -10,7 +11,7 @@ description: "写真・動画撮影編集、Webサイトの製作・運営をし
   display: inline-block;
   color: #FFF;
 }
-.top-twbtn { 
+.top-twbtn {
   width: 170px;
   margin-left: auto;
   margin-right: auto;
@@ -34,6 +35,6 @@ description: "写真・動画撮影編集、Webサイトの製作・運営をし
 
 <p class="top-twbtn">
 <small class="text-center">＼ フォローお願いします!! ／</small>
-<a href="https://twitter.com/intent/follow?original_referer=&ref_src=twsrc&screen_name=98tml&tw_p=followbutton" class="twitter-follow-button tw-align-center" style="float: none;">Follow @98tml</a> 
+<a href="https://twitter.com/intent/follow?original_referer=&ref_src=twsrc&screen_name=98tml&tw_p=followbutton" class="twitter-follow-button tw-align-center" style="float: none;">Follow @98tml</a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </p>

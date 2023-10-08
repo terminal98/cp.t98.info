@@ -8,16 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Tags &middot; にじてくと</title>
-  <meta name="title" content="Tags &middot; にじてくと" />
+  <title>事例集 &middot; にじてくと</title>
+  <meta name="title" content="事例集 &middot; にじてくと" />
   
   <meta name="description" content="ほむりん(@98tml). 写真撮影,動画編集,Webサイト製作/保守." />
   
   
   
-  <link rel="canonical" href="https://cp.t98.info/tags/" />
+  <link rel="canonical" href="https://cp.t98.info/case/" />
   
-  <link rel="alternate" type="application/rss+xml" href="/tags/index.xml" title="にじてくと" />
+  <link rel="alternate" type="application/rss+xml" href="/case/index.xml" title="にじてくと" />
   
   
   
@@ -60,14 +60,14 @@
   
   
   
-  <meta property="og:title" content="Tags" />
+  <meta property="og:title" content="事例集" />
 <meta property="og:description" content="ほむりん(@98tml). 写真撮影,動画編集,Webサイト製作/保守." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://cp.t98.info/tags/" />
+<meta property="og:url" content="https://cp.t98.info/case/" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
+<meta name="twitter:title" content="事例集"/>
 <meta name="twitter:description" content="ほむりん(@98tml). 写真撮影,動画編集,Webサイト製作/保守."/>
 
   
@@ -438,13 +438,68 @@
       
 
 
- 
 
-  <header>
+
+
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
     
-    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Tags</h1>
-    <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-      
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/img/aig35bg_hucf967c33f389130ab619766a81118218_498192_1200x0_resize_q75_box.jpg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+ <header>
+  
+  <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >ほむりん</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/case/"
+      >事例集</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+  
+  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">事例集</h1>
+  <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+    
 
 
 
@@ -472,29 +527,44 @@
 </div>
 
 
-    </div>
-  </header>
-  
+  </div>
   <script>
-    var oid = "views_taxonomy_tags"
-    var oid_likes = "likes_taxonomy_tags"
+    var oid = "views_case\/_index.md"
+    var oid_likes = "likes_case\/_index.md"
   </script>
   
   
   <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
-  
-
-  
-
-  <section class="flex flex-wrap max-w-prose -mx-2 overflow-hidden">
+  </header>
+  <section class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
     
-  </section>
+    <div class="min-w-0 min-h-0 max-w-prose">
+      <p>私が制作に関わった事例集です。</p>
 
+    </div>
+   
+
+
+
+  </section>
+  
+  <section class="mt-10 prose dark:prose-invert">
+    <p class="py-8 border-t">
+      <em>ここに掲載する記事はまだありません。</em>
+    </p>
+  </section>
   
 
+    
 
-
-      
+  
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="TOPへスクロール" title="TOPへスクロール">
+    &uarr;
+  </a>
+</div>
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
