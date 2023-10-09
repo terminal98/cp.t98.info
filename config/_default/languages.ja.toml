@@ -8,9 +8,9 @@ title = "にじてくと"
   isoCode = "ja"
   rtl = false
 
-  # logo = "img/pFIScid5.jpg"
+  logo = "img/nijitect_logo_r1.png"
   description = "ほむりん(@98tml). 写真撮影,動画編集,Webサイト製作/保守."
-  copyright = "(C)2013 - 2023 ほむりんルーム."
+  copyright = "&copy;{ year } 穂村田"
   dateFormat = "2006.1.2"
 
  [author]

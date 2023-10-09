@@ -17,7 +17,7 @@
   {{ with (.Params.Summary | default .Params.Description) | default .Site.Params.description -}}
   <meta name="description" content="{{ . }}" />
   {{- end }}
-  {{ with  .Params.Tags | default .Site.Params.keywords -}}
+  {{ with .Params.Tags | default .Site.Params.keywords -}}
   <meta name="keywords" content="{{ range . }}{{ . }}, {{ end -}}" />
   {{- end }}
   {{ with .Site.Params.robots }}
@@ -50,7 +50,8 @@
   <link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}"
     integrity="{{ $bundleCSS.Data.Integrity }}" />
   {{ $jsAppearance := resources.Get "js/appearance.js" }}
-  {{ $jsAppearance = $jsAppearance | resources.ExecuteAsTemplate $jsAppearance.RelPermalink . | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $jsAppearance = $jsAppearance | resources.ExecuteAsTemplate "js/appearance.js" . | resources.Minify |
+  resources.Fingerprint "sha512" }}
   <script type="text/javascript" src="{{ $jsAppearance.RelPermalink }}"
     integrity="{{ $jsAppearance.Data.Integrity }}"></script>
   {{ if .Site.Params.enableSearch | default false }}
@@ -73,15 +74,15 @@
     integrity="{{ $bundleJS.Data.Integrity }}" data-copy="{{ i18n " code.copy" }}" data-copied="{{ i18n " code.copied"
     }}"></script>
   {{ end }}
-  <script src="{{ "js/zoom.min.js" | relURL }}"></script>
+  <script src="{{ " js/zoom.min.js" | relURL }}"></script>
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
   {{ partialCached "favicons.html" .Site }}
   {{ else }}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}" />
-  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ " apple-touch-icon.png" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ " favicon-32x32.png" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ " favicon-16x16.png" | relURL }}" />
+  <link rel="manifest" href="{{ " site.webmanifest" | relURL }}" />
   {{ end }}
   {{/* Site Verification */}}
   {{ with .Site.Params.verification.google }}
@@ -113,12 +114,12 @@
   {{/* Vendor */}}
   {{ partial "vendor.html" . }}
   {{/* Analytics */}}
-  {{ partial "analytics.html" .Site }}
+  {{ partial "analytics/main.html" .Site }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}
   {{ if templates.Exists "partials/extend-head.html" }}
   {{ partialCached "extend-head.html" .Site }}
   {{ end }}
-  <meta name="theme-color"/>
+  <meta name="theme-color" />
   {{/* Firebase */}}
   {{ with $.Site.Params.firebase }}
   {{ if isset $.Site.Params "firebase" }}
@@ -129,12 +130,12 @@
 
     const firebaseConfig = {
       apiKey: {{ $.Site.Params.firebase.apiKey }},
-      authDomain: {{ $.Site.Params.firebase.apiKey }},
-      projectId: {{ $.Site.Params.firebase.projectId }},
-      storageBucket: {{ $.Site.Params.firebase.storageBucket }},
-      messagingSenderId: {{ $.Site.Params.firebase.messagingSenderId }},
-      appId: {{ $.Site.Params.firebase.appId }},
-      measurementId: {{ $.Site.Params.firebase.measurementId }}
+    authDomain: { { $.Site.Params.firebase.apiKey } },
+    projectId: { { $.Site.Params.firebase.projectId } },
+    storageBucket: { { $.Site.Params.firebase.storageBucket } },
+    messagingSenderId: { { $.Site.Params.firebase.messagingSenderId } },
+    appId: { { $.Site.Params.firebase.appId } },
+    measurementId: { { $.Site.Params.firebase.measurementId } }
     };
 
     var app = firebase.initializeApp(firebaseConfig);
@@ -145,5 +146,13 @@
   {{ end }}
   {{ end }}
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1182967632880966" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1182967632880966"
+    crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700&family=Quicksand:wght@300;600&display=swap"
+    rel="stylesheet">
 </head>
