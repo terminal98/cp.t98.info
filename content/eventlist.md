@@ -5,7 +5,7 @@ lastmod: 2023-10-08
 draft: false
 
 series: ["撮影について"]
-series_order: 2
+series_order: 1
 ---
 
 ## 依頼受付状況 {#request-status}
