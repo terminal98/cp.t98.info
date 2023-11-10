@@ -21,6 +21,7 @@ categories: ["お知らせ"]
 
 - コミックマーケット103 2日目 (2023年12月31日)
 - 配置： 東地区 “ｔ” ブロック 06b 
+- "Webカタログ":https://webcatalog.circle.ms/Perma/Circle/10448152/
 
 ## お品書き
 
