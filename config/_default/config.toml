@@ -20,6 +20,8 @@ buildFuture = false
 
 googleAnalytics = "G-JK7Q5M0KNR"
 
+enableGitInfo = true
+
 [imaging]
   anchor = 'Center'
 
