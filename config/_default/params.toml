@@ -17,11 +17,12 @@ enableCodeCopy = false
 
 disableImageOptimization = false
 
-defaultBackgroundImage = "img/aig35bg.jpg" # used as default for background images 
+defaultBackgroundImage = "img/bg.webp" # used as default for background images 
+defaultFeaturedImage = "img/logo-square.png"
 
-# highlightCurrentMenuArea = true
-# smartTOC = true
-# smartTOCHideUnfocusedChildren = true
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = true
 
 [header]
   layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
@@ -35,14 +36,14 @@ defaultBackgroundImage = "img/aig35bg.jpg" # used as default for background imag
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "img/aig35bg.jpg" # used in: hero, and card
+  homepageImage = "img/bg.webp" # used in: hero, and card
   showRecent = true
   showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/posts"
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = false # only used when layout equals background
+  layoutBackgroundBlur = true # only used when layout equals background
 
 [article]
   showDate = true
@@ -75,39 +76,39 @@ defaultBackgroundImage = "img/aig35bg.jpg" # used as default for background imag
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
-  layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
+  layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
   showBreadcrumbs = true
   showSummary = true
   showViews = false
   showLikes = false
-  showTableOfContents = false
+  showTableOfContents = true
   showCards = true
   groupByYear = true
   cardView = false
   cardViewScreenWidth = false
-  constrainItemsWidth = true
+  constrainItemsWidth = false
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
 
 [taxonomy]
   showTermCount = true
-  showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  showBreadcrumbs = false
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showBreadcrumbs = true
   showViews = false
   showLikes = false
   showTableOfContents = false
-  cardView = false
+  cardView = true
 
 [term]
-  showHero = false
+  showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  showBreadcrumbs = false
+  showBreadcrumbs = true
   showViews = false
   showLikes = false
   showTableOfContents = true
-  groupByYear = false
+  groupByYear = true
   cardView = false
   cardViewScreenWidth = false
 

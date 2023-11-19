@@ -42,7 +42,7 @@
   weight = 13
 
 [[main]]
-  pre = "twitter"
+  pre = "x-twitter"
   name = "X/Twitter"
   url = "https://x.com/98tml"
   weight = 30

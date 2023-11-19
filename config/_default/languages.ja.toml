@@ -16,8 +16,8 @@ title = "にじてくと"
  [author]
    name = "ほむりん"
    image = "img/pFIScid5.jpg"
-   headline = "写真・動画撮影編集、Webサイトの製作・運営をしています"
-   bio = "よろしくお願いします！"
+   headline = "写真・動画撮影、Webサイトの製作・運営をしています"
+   bio = "SNSのフォローもお願いいたします！"
    links = [
 #     { apple = "https://www.apple.com" },
 #     { blogger = "https://username.blogspot.com/" },
@@ -51,16 +51,16 @@ title = "にじてくと"
 #     { tiktok = "https://tiktok.com/@username" },
 #     { tumblr = "https://username.tumblr.com" },
 #     { twitch = "https://twitch.tv/username" },
-     { twitter = "https://twitter.com/98tml" },
-#     { twitter = "https://twitter.com/t98ml" },
-     { instagram = "https://www.instagram.com/98tml/" },
+      { x-twitter = "https://x.com/98tml" },
+#     { x-twitter = "https://twitter.com/t98ml" },
+      { instagram = "https://www.instagram.com/98tml/" },
 #     { github = "https://github.com/terminal98" },
 #     { discord = "https://discord.gg/invitecode" },
 #     { whatsapp = "https://wa.me/phone-number" },
 #     { youtube = "https://youtube.com/username" },
 #     { ko-fi = "https://ko-fi.com/username" },
 #     { link = "https://t98.info/" },
-     { envelope = "https://t98.info/contact/" },
+      { envelope = "https://t98.info/contact/" },
 #     { amazon = "https://www.amazon.co.jp/hz/wishlist/ls/3HIW8VNQ3HZUU?tag=uxwfl8kw-22" },
    ]
 
