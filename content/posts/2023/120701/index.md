@@ -31,6 +31,7 @@ https://hacostadium.com/ikebukuro/access/
 ### ■ 締切
 
 * 2023/12/7 18:00(JST) まで
+* <span style="color:red;">理由の如何を問わず、上記までに連絡をいただけなかった場合は無効となります</span>
 
 ### ■ 費用
 
