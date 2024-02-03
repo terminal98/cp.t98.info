@@ -20,7 +20,7 @@ heroStyle: "background"
 </style>
 
 {{< alert icon="bullhorn-solid" >}}
-**[コミックマーケット103にサークル参加します！ 詳細はこちら](/posts/2023/111001/)**   
+**[コミックマーケット103 後日通販](https://twitter.com/98tml/status/1742542288457241076)**   
 {{< /alert >}}
 
 <br>
@@ -39,6 +39,3 @@ heroStyle: "background"
 作例
 </a>
 </div>
-
-<span>冬コミに向けた作業を進めているため、諸々お時間いただきます。  
-急ぎのご要件がありましたら、DMまたはメールでご連絡ください。</span>
