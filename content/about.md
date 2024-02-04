@@ -6,7 +6,7 @@ draft: false
 
 ## カメラプロフィール
 
-![profile](/img/2023/profile_r2_20231112.webp)
+![profile](/img/2024/profile_r3_20240204.webp)
 
 ▲ クリックで拡大
 
