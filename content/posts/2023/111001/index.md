@@ -38,7 +38,7 @@ categories: ["お知らせ"]
 
 「トリオキニ」による取置依頼を受け付けております。
 
-- [＞＞ 取置依頼はこちら](https://triokini.com/circle/item/list/289025)
+- __終了しました__
 
 - [＞＞ トリオキニの使い方はこちら](https://triokini.com/how_to_use#ippan_wrapper)
 
