@@ -21,7 +21,7 @@ article:
   likes:
     one: "いいね {{ .Count }}"
     other: "いいね {{ .Count }}"
-  part_of_series: "目次"
+  part_of_series: "コンテンツ一覧"
   part: ""
   this_article: "このページです"
   related_articles: "関連記事"
