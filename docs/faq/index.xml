@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>よくある質問 on にじてくと</title>
+    <link>https://cp.t98.info/faq/</link>
+    <description>Recent content in よくある質問 on にじてくと</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy;2024 穂村田</copyright>
+    <lastBuildDate>Sun, 19 Nov 2023 21:42:54 +0900</lastBuildDate><atom:link href="https://cp.t98.info/faq/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
