@@ -1,8 +1,7 @@
 ---
-# title: "にじてくと"
+# title: "にじてくとへようこそ！"
 description: "写真・動画撮影、Webサイトの製作・運営をしています"
 draft: false
-heroStyle: "background"
 ---
 
 <style>
@@ -19,9 +18,12 @@ heroStyle: "background"
 }
 </style>
 
-{{< alert icon="bullhorn-solid" >}}
-**[コミックマーケット103 後日通販](https://twitter.com/98tml/status/1742542288457241076)**   
-{{< /alert >}}
+<div class="w-full grid gap-4">
+<a href="https://twitter.com/98tml/status/1742542288457241076" class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" target="_blank">
+{{< icon "bullhorn-solid" >}}
+コミックマーケット103 後日通販
+</a>
+</div>
 
 <br>
 

@@ -10,7 +10,7 @@ title = "にじてくと"
 
   logo = "img/nijitect_logo_r1.png"
   description = "ほむりん(@98tml). 写真撮影,動画編集,Webサイト製作/保守."
-  copyright = "&copy;{ year } 穂村田"
+  copyright = "&copy;{ year } にじてくと"
   dateFormat = "2006.1.2"
 
  [author]

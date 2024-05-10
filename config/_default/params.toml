@@ -35,25 +35,27 @@ smartTOCHideUnfocusedChildren = true
   showScrollToTop = true
 
 [homepage]
-  layout = "background" # valid options: page, profile, hero, card, background, custom
+  layout = "page" # valid options: page, profile, hero, card, background, custom
+  showHero = true
+  heroStyle = "background"
   homepageImage = "img/bg.webp" # used in: hero, and card
   showRecent = true
-  showRecentItems = 6
+  showRecentItems = 4
   showMoreLink = true
   showMoreLinkDest = "/posts"
-  cardView = true
+  cardView = false
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true # only used when layout equals background
+  layoutBackgroundBlur = false # only used when layout equals background
 
 [article]
   showDate = true
-  showViews = false
+  showViews = true
   showLikes = false
   showDateUpdated = true
   showAuthor = false
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
-  layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
+  layoutBackgroundBlur = false # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
   showBreadcrumbs = true
   showDraftLabel = true
@@ -61,7 +63,7 @@ smartTOCHideUnfocusedChildren = true
   # editURL = "https://github.com/username/repo/"
   editAppendPath = true
   seriesOpened = true
-  showHeadingAnchors = true
+  showHeadingAnchors = false
   showPagination = true
   invertPagination = true
   showReadingTime = true
@@ -78,15 +80,15 @@ smartTOCHideUnfocusedChildren = true
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
   showBreadcrumbs = true
-  showSummary = true
-  showViews = false
+  showSummary = false
+  showViews = true
   showLikes = false
-  showTableOfContents = true
-  showCards = true
-  groupByYear = true
+  showTableOfContents = false
+  showCards = false
+  groupByYear = false
   cardView = false
-  cardViewScreenWidth = false
-  constrainItemsWidth = false
+  cardViewScreenWidth = true
+  constrainItemsWidth = true
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
@@ -96,7 +98,7 @@ smartTOCHideUnfocusedChildren = true
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = true
-  showViews = false
+  showViews = true
   showLikes = false
   showTableOfContents = false
   cardView = true
@@ -105,7 +107,7 @@ smartTOCHideUnfocusedChildren = true
   showHero = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = true
-  showViews = false
+  showViews = true
   showLikes = false
   showTableOfContents = true
   groupByYear = true
@@ -113,13 +115,13 @@ smartTOCHideUnfocusedChildren = true
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  apiKey = "AIzaSyCmdCrUpw8Y2XJhRsunwhQ5qB8finXM-bA"
+  authDomain = "cp-t98-info.firebaseapp.com"
+  projectId = "cp-t98-info"
+  storageBucket = "cp-t98-info.appspot.com"
+  messagingSenderId = "478013865835"
+  appId = "1:478013865835:web:0faf5e3bef01753a52562e"
+  measurementId = "G-8P1S8350Z2"
 
 [fathomAnalytics]
   # site = "ABC12345"

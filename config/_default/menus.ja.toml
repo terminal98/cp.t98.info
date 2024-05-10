@@ -43,9 +43,13 @@
 
 [[main]]
   pre = "x-twitter"
-  name = "X/Twitter"
   url = "https://x.com/98tml"
   weight = 30
+
+[[main]]
+  pre = "envelope"
+  url = "https://t98.info/contact/"
+  weight = 31
 
 #[[subnavigation]]
 #  name = "An interesting topic"
@@ -98,3 +102,13 @@
 
 #[[footer]]
 #  name = "特定商取引法に基づく表記"
+
+[[menu]]
+  name = "撮影について1"
+  weight = 18
+
+[[menu]]
+  name = "撮影・データについて"
+  parent = "撮影について1"
+  pageRef = "policy"
+  weight = 19

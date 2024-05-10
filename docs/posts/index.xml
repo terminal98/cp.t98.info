@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>にじてくと</title>
+    <title>お知らせ on にじてくと</title>
     <link>https://cp.t98.info/posts/</link>
-    <description>Recent content on にじてくと</description>
+    <description>Recent content in お知らせ on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <copyright>&amp;copy;2024 穂村田</copyright>
+    <copyright>&amp;copy;2024 にじてくと</copyright>
     <atom:link href="https://cp.t98.info/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>仮募集：【C104】サークル参加にあたり売り子さんを1名募集します</title>
