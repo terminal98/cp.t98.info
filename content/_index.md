@@ -21,7 +21,7 @@ draft: false
 <div class="w-full grid gap-4">
 <a href="https://twitter.com/98tml/status/1742542288457241076" class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" target="_blank">
 {{< icon "bullhorn-solid" >}}
-コミックマーケット103 後日通販
+コミックマーケット103 にて頒布した1年目本がメロンブックスさまでお求めいただけるようになりました！
 </a>
 </div>
 

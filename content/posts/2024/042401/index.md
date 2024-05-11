@@ -2,7 +2,7 @@
 title: "終了：【被写体募集】4/30・5/1・5/2@コセット池袋"
 date: 2024-04-24T13:12:00+09:00
 draft: false
-categories: ["募集終了"]
+categories: ["recruiting-subjects","募集終了"]
 tags: ["コセット池袋","関東"]
 ---
 
