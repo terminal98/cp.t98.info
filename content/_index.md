@@ -31,7 +31,7 @@ body{
 <div class="w-full grid gap-4">
 <a href="https://twitter.com/98tml/status/1742542288457241076" class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" target="_blank">
 {{< icon "bullhorn-solid" >}}
-C103 1年目本はこちら
+【C103】コスカメラ 1年目本 ポイント6%還元中！ 5/16 23:59まで 
 </a>
 </div>
 
