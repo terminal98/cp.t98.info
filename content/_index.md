@@ -50,4 +50,16 @@ body{
 {{< icon "images-regular" >}}
 作例
 </a>
+<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://twitter.com/intent/follow?screen_name=98tml" target="_blank">
+{{< icon "x-twitter" >}}
+@98tml
+</a>
+<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://www.instagram.com/98tml/" target="_blank">
+{{< icon "instagram" >}}
+@98tml
+</a>
+<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://t98.info/contact/" target="_blank">
+{{< icon "envelope" >}}
+お問い合わせ
+</a>
 </div>

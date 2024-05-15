@@ -42,26 +42,22 @@
   weight = 13
 
 [[main]]
+  identifier = "twitter"
   pre = "x-twitter"
   url = "https://x.com/98tml"
   weight = 30
 
 [[main]]
+  identifier = "instagram"
+  pre = "instagram"
+  url = "https://www.instagram.com/98tml/"
+  weight = 40
+
+[[main]]
+  identifier = "contact"
   pre = "envelope"
   url = "https://t98.info/contact/"
-  weight = 31
-
-#[[subnavigation]]
-#  name = "An interesting topic"
-#  pageRef = "tags/interesting-topic"
-#  weight = 10
-
-#[[subnavigation]]
-#  name = "My Awesome Category"
-#  pre = "github"
-#  pageRef = "categories/awesome"
-#  weight = 20
-
+  weight = 50
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
@@ -102,13 +98,3 @@
 
 #[[footer]]
 #  name = "特定商取引法に基づく表記"
-
-[[menu]]
-  name = "撮影について1"
-  weight = 18
-
-[[menu]]
-  name = "撮影・データについて"
-  parent = "撮影について1"
-  pageRef = "policy"
-  weight = 19
