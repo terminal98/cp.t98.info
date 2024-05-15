@@ -31,13 +31,13 @@ body{
 <div class="w-full grid gap-4">
 <a href="https://twitter.com/98tml/status/1742542288457241076" class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" target="_blank">
 {{< icon "bullhorn-solid" >}}
-【C103】コスカメラ 1年目本 ポイント6%還元中！ 5/16 23:59まで 
+冬コミ 後日通販のお知らせ 
 </a>
 </div>
 
 <br>
 
-<div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+<div class="w-full grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3">
 <a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/about/">
 {{< icon "address-card-regular" >}}
 プロフィール
