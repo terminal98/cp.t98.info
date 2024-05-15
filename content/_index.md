@@ -12,18 +12,6 @@ body{
 .dark > body{
   background: #26234f;
 }
-
-.top-btn{
-  width:100%;
-  padding: 0.5em;
-  display: inline-block;
-  color: #FFF;
-}
-.top-twbtn {
-  width: 170px;
-  margin-left: auto;
-  margin-right: auto;
-}
 </style>
 
 <img src="/img/c103_b1.png">
@@ -54,7 +42,7 @@ body{
 {{< icon "envelope" >}}
 お問い合わせ
 </a>
-<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://twitter.com/intent/follow?screen_name=98tml" target="_blank">
+<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://twitter.com/98tml" target="_blank">
 {{< icon "x-twitter" >}}
 X(旧Twitter)
 </a>
