@@ -1,7 +1,7 @@
 ---
 title: "中止:【被写体募集】6/30 @ハコアム大阪"
 date: 2023-06-22T17:54:06+09:00
-draft: false
+draft: true
 categories: ["募集終了"]
 ---
 

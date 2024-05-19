@@ -1,7 +1,7 @@
 ---
 title: "中止：【被写体募集】11/19 or 11/20 @ハコアム大阪"
 date: 2023-11-12T16:44:15+09:00
-draft: false
+draft: true
 categories: ["募集終了"]
 tags: ["関西","ハコアム大阪"]
 ---

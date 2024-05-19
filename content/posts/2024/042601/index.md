@@ -1,7 +1,7 @@
 ---
 title: "中止：【被写体募集】5/1@ハコアム大阪"
 date: 2024-04-26T23:00:00+09:00
-draft: false
+draft: true
 categories: ["募集終了"]
 tags: ["ハコアム大阪","関西"]
 ---
