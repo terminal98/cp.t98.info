@@ -54,7 +54,7 @@ smartTOCHideUnfocusedChildren = true
   showLikes = false
   showDateUpdated = true
   showAuthor = false
-  showHero = true
+  showHero = false
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = false # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
@@ -76,7 +76,7 @@ smartTOCHideUnfocusedChildren = true
   sharingLinks = ["twitter"]
 
 [list]
-  showHero = true
+  showHero = false
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = false # only used when heroStyle equals background
@@ -96,7 +96,7 @@ smartTOCHideUnfocusedChildren = true
 
 [taxonomy]
   showTermCount = true
-  showHero = true
+  showHero = false
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = true
   showViews = false
@@ -105,7 +105,7 @@ smartTOCHideUnfocusedChildren = true
   cardView = true
 
 [term]
-  showHero = true
+  showHero = false
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   showBreadcrumbs = true
   showViews = false

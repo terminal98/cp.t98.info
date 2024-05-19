@@ -1,3 +1,11 @@
 html {
   font-family: 'Quicksand', 'M PLUS 1p', sans-serif;
 }
+
+body {
+  background: linear-gradient(to right, #cae6f7, #e9ddf3);
+}
+
+.dark>body {
+  background: #26234f;
+}
