@@ -1,7 +1,7 @@
 ---
 title: "各種依頼引受制限のお知らせ(6月〜8月)"
 date: 2024-05-20T01:04:36+09:00
-draft: false
+draft: true
 categories: ["お知らせ"]
 #tags: [""]
 

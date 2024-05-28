@@ -9,7 +9,7 @@ showTableOfContents: false
 
 <!-- <img src="/img/pFIScid5.jpg" alt="プロフィール画像" width="100px"> -->
 
-- 20↑ :mens:
+- 25↑ :mens:
 - 2022年夏からコスプレカメラ活動をはじめました
 - 2024年より拠点を都内に移し、南関東を中心に活動しています
 - 自然光はもちろん、光を使った撮影も得意です
