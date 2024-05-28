@@ -12,7 +12,6 @@ showTableOfContents: false
 - 25↑ :mens:
 - 2022年夏からコスプレカメラ活動をはじめました
 - 2024年より拠点を都内に移し、南関東を中心に活動しています
-- 自然光はもちろん、光を使った撮影も得意です
 
 <div class="w-full grid gap-4 grid-cols-2 sm:grid-cols-2 lx:grid-cols-3">
 
