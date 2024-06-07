@@ -25,14 +25,15 @@ categories: ["お知らせ"]
 
 ### キャッシュレス決済が使えます
 
-当サークルでは現金のほか、便利なキャッシュレス決済もご利用いただけます。
+当サークルでは現金のほか、便利なキャッシュレス決済もご利用いただけます。  
+今回より、au PAY もご利用いただけるようになりました！
 
 - クレジット/デビット/プリベイドカード: Visa、Mastercard、JCB、American Express、Diners、Discover
 - 交通系IC: Suica、PASMO、Kitaca、TOICA、manaca、ICOCA、SUGOCA、nimoca、はやかけん  
 ※ PiTaPaはご利用いただけません。   
 ※ 当日会計時に交通系ICへのチャージ(積増)はできません。駅の券売機やコンビニなどで事前チャージをお願いいたします。
 - 電子マネー: QUICPay、iD
-- QRコード決済: CirclePAY(J-Coin Pay) 
+- QRコード決済: au PAY, CirclePAY(J-Coin Pay) 
 
 ### 取置依頼受付中
 
