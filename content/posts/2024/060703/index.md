@@ -1,7 +1,7 @@
 ---
 title: "auPAYがご利用いただけるようになりました"
 date: 2024-06-07T18:00:00+09:00
-draft: false
+draft: true
 #categories: [""]
 #tags: [""]
 ---
