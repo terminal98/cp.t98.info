@@ -52,7 +52,8 @@ categories: ["お知らせ", "募集中"]
   - [X ダイレクトメッセージ (@98tml)](https://twitter.com/98tml)
   - [お問い合わせフォーム](https://t98.info/contact/)
 
-- 2次締切: <span style="color:red; font-weight:bold">2024年6月17日(月) 18:00  ※ 延長しました</span>   
+- 2次締切: <span style="color:red; font-weight:bold">2024年6月17日(月) 18:00  ※ 延長しました<br>
+※ 早期終了する場合もございますのでお早めにご連絡ください</span>   
 
 応募状況によっては早期終了や追加募集を行う可能性がございます。
 
