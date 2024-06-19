@@ -18,7 +18,7 @@ categories: ["お知らせ", "募集中"]
 
 コミックマーケット104 サークル参加に伴い、お手伝いをしてくださる方を1名募集します。
 
-![募集要項](/posts/2024/060702/c104_uriko_end.wepb)
+![募集要項](/posts/2024/060702/c104_uriko_end.webp)
 
 <span style="color:red; font-weight:bold">※ 締 め 切 り ま し た ※</span>
 
