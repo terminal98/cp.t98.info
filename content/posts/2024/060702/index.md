@@ -12,6 +12,8 @@ categories: ["お知らせ", "募集中"]
 
 ![募集要項](/posts/2024/060702/c104_uriko_r3.png)
 
+<span style="color:red; font-weight:bold">※ 最終〆切を 2024年6月22日(土) 18:00 に延長しました ※</span>
+
 {{< article link="/posts/2024/060701" >}}
 
 ## 募集要項
@@ -52,7 +54,7 @@ categories: ["お知らせ", "募集中"]
   - [X ダイレクトメッセージ (@98tml)](https://twitter.com/98tml)
   - [お問い合わせフォーム](https://t98.info/contact/)
 
-- 最 終 締 切: <span style="color:red; font-weight:bold">2024年6月23日(日) 18:00  ※ 延長しました<br>
+- 最 終 締 切: <span style="color:red; font-weight:bold">2024年6月22日(土) 18:00  ※ 延長しました<br>
 ※ 早期終了する場合もございますのでお早めにご連絡ください</span>   
 
 応募状況によっては早期終了や追加募集を行う可能性がございます。
