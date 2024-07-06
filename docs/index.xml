@@ -2,108 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>にじてくと</title>
-    <link>http://localhost:1313/</link>
+    <link>https://cp.t98.info/</link>
     <description>Recent content on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2024 にじてくと</copyright>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cp.t98.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【C104】サークル参加のお知らせ</title>
-      <link>http://localhost:1313/posts/2024/060701/</link>
+      <link>https://cp.t98.info/posts/2024/060701/</link>
       <pubDate>Fri, 07 Jun 2024 18:00:00 +0900</pubDate>
       
-      <guid>http://localhost:1313/posts/2024/060701/</guid>
+      <guid>https://cp.t98.info/posts/2024/060701/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>終了：【C104】サークル参加にあたり売り子さんを1名募集します</title>
-      <link>http://localhost:1313/posts/2024/060702/</link>
+      <link>https://cp.t98.info/posts/2024/060702/</link>
       <pubDate>Sun, 05 May 2024 12:00:00 +0900</pubDate>
       
-      <guid>http://localhost:1313/posts/2024/060702/</guid>
+      <guid>https://cp.t98.info/posts/2024/060702/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>【C103】一般コスプレ参加に必要なものまとめ</title>
-      <link>http://localhost:1313/column/c103-p-ticket/</link>
+      <link>https://cp.t98.info/column/c103-p-ticket/</link>
       <pubDate>Wed, 22 Nov 2023 00:23:13 +0900</pubDate>
       
-      <guid>http://localhost:1313/column/c103-p-ticket/</guid>
+      <guid>https://cp.t98.info/column/c103-p-ticket/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>終了：【C103】サークル参加にあたりお手伝いをしてくださる方を1名募集します</title>
-      <link>http://localhost:1313/posts/2023/111002/</link>
+      <link>https://cp.t98.info/posts/2023/111002/</link>
       <pubDate>Fri, 10 Nov 2023 17:00:00 +0900</pubDate>
       
-      <guid>http://localhost:1313/posts/2023/111002/</guid>
+      <guid>https://cp.t98.info/posts/2023/111002/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>イベントで撮影させていただいた方へ(2023/9/24〜)</title>
-      <link>http://localhost:1313/notice/event/</link>
+      <link>https://cp.t98.info/notice/event/</link>
       <pubDate>Sun, 24 Sep 2023 23:59:40 +0900</pubDate>
       
-      <guid>http://localhost:1313/notice/event/</guid>
+      <guid>https://cp.t98.info/notice/event/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>イベントで撮影させていただいた方へ(2022/8/1〜2023/9/23)</title>
-      <link>http://localhost:1313/notice/event-20230924/</link>
+      <link>https://cp.t98.info/notice/event-20230924/</link>
       <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/notice/event-20230924/</guid>
+      <guid>https://cp.t98.info/notice/event-20230924/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>【DEV】作例一覧</title>
-      <link>http://localhost:1313/develop/gallery/</link>
+      <link>https://cp.t98.info/develop/gallery/</link>
       <pubDate>Wed, 20 Sep 2023 23:32:54 +0900</pubDate>
       
-      <guid>http://localhost:1313/develop/gallery/</guid>
+      <guid>https://cp.t98.info/develop/gallery/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>依頼受付状況・イベント参加予定</title>
-      <link>http://localhost:1313/eventlist/</link>
+      <link>https://cp.t98.info/eventlist/</link>
       <pubDate>Sun, 26 Mar 2023 02:36:15 +0900</pubDate>
       
-      <guid>http://localhost:1313/eventlist/</guid>
+      <guid>https://cp.t98.info/eventlist/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title></title>
-      <link>http://localhost:1313/dic/event/couryukei/</link>
+      <link>https://cp.t98.info/dic/event/couryukei/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/dic/event/couryukei/</guid>
+      <guid>https://cp.t98.info/dic/event/couryukei/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>プロフィール</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://cp.t98.info/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://cp.t98.info/about/</guid>
       <description></description>
       
     </item>
