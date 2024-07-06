@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>募集終了 on にじてくと</title>
-    <link>https://cp.t98.info/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/</link>
+    <link>http://localhost:1313/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/</link>
     <description>Recent content in 募集終了 on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2024 にじてくと</copyright>
-    <lastBuildDate>Sun, 05 May 2024 12:00:00 +0900</lastBuildDate><atom:link href="https://cp.t98.info/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 May 2024 12:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>終了：【C104】サークル参加にあたり売り子さんを1名募集します</title>
-      <link>https://cp.t98.info/posts/2024/060702/</link>
+      <link>http://localhost:1313/posts/2024/060702/</link>
       <pubDate>Sun, 05 May 2024 12:00:00 +0900</pubDate>
       
-      <guid>https://cp.t98.info/posts/2024/060702/</guid>
+      <guid>http://localhost:1313/posts/2024/060702/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>終了：【C103】サークル参加にあたりお手伝いをしてくださる方を1名募集します</title>
-      <link>https://cp.t98.info/posts/2023/111002/</link>
+      <link>http://localhost:1313/posts/2023/111002/</link>
       <pubDate>Fri, 10 Nov 2023 17:00:00 +0900</pubDate>
       
-      <guid>https://cp.t98.info/posts/2023/111002/</guid>
+      <guid>http://localhost:1313/posts/2023/111002/</guid>
       <description></description>
       
     </item>

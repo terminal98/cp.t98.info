@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on にじてくと</title>
-    <link>https://cp.t98.info/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2024 にじてくと</copyright>
-    <lastBuildDate>Fri, 07 Jun 2024 18:00:00 +0900</lastBuildDate><atom:link href="https://cp.t98.info/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jun 2024 18:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>お知らせ</title>
-      <link>https://cp.t98.info/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
+      <link>http://localhost:1313/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
       <pubDate>Fri, 07 Jun 2024 18:00:00 +0900</pubDate>
       
-      <guid>https://cp.t98.info/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</guid>
+      <guid>http://localhost:1313/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>募集終了</title>
-      <link>https://cp.t98.info/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/</link>
+      <link>http://localhost:1313/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/</link>
       <pubDate>Sun, 05 May 2024 12:00:00 +0900</pubDate>
       
-      <guid>https://cp.t98.info/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/</guid>
+      <guid>http://localhost:1313/categories/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>コラム</title>
-      <link>https://cp.t98.info/categories/%E3%82%B3%E3%83%A9%E3%83%A0/</link>
+      <link>http://localhost:1313/categories/%E3%82%B3%E3%83%A9%E3%83%A0/</link>
       <pubDate>Wed, 22 Nov 2023 00:23:13 +0900</pubDate>
       
-      <guid>https://cp.t98.info/categories/%E3%82%B3%E3%83%A9%E3%83%A0/</guid>
+      <guid>http://localhost:1313/categories/%E3%82%B3%E3%83%A9%E3%83%A0/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>コラム</title>
-      <link>https://cp.t98.info/categories/column/</link>
+      <link>http://localhost:1313/categories/column/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cp.t98.info/categories/column/</guid>
+      <guid>http://localhost:1313/categories/column/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>被写体募集</title>
-      <link>https://cp.t98.info/categories/recruiting-subjects/</link>
+      <link>http://localhost:1313/categories/recruiting-subjects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cp.t98.info/categories/recruiting-subjects/</guid>
+      <guid>http://localhost:1313/categories/recruiting-subjects/</guid>
       <description></description>
       
     </item>
