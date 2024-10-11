@@ -2,7 +2,7 @@
 title: "【C104】後日通販のお知らせ"
 date: 2024-06-07T18:00:00+09:00
 draft: false
-#tags: ["C104","にじてくと", "お品書き"]
+tags: ["C104","にじてくと", "通販"]
 categories: ["お知らせ"]
 ---
 
@@ -11,24 +11,8 @@ categories: ["お知らせ"]
 ## 書店委託頒布のご案内
 
 {{< gallery >}}
-
-{{< figure
-    src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png"
-    alt="にじてくとの同人誌まとめ買いはこちら"
-    href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618"
-    target="_blank"
-    nozoom=true
-    class="grid-w50"
-    >}}
-{{< figure
-    src="https://g2.t98.info/pub/svg/c/c104/melobu-circle.png"
-    alt="にじてくとの同人誌単品購入はこちら"
-    href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704"
-    target="_blank"
-    nozoom=true
-    class="grid-w50"
-    >}}
-
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618" title="にじてくとの同人誌まとめ買いはこちら(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png" class="grid-w45 nozoom"></a>
+<a href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704" title="にじてくとの同人誌単品購入はこちら(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png" class="grid-w45 nozoom"></a>
 {{< /gallery >}}
 
 
