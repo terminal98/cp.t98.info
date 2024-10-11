@@ -10,12 +10,15 @@ categories: ["お知らせ"]
 
 ## 書店委託頒布のご案内
 
+{{< gallery >}}
+
 {{< figure
     src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png"
     alt="にじてくとの同人誌まとめ買いはこちら"
     href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618"
     target="_blank"
     nozoom=true
+    class="grid-w50"
     >}}
 {{< figure
     src="https://g2.t98.info/pub/svg/c/c104/melobu-circle.png"
@@ -23,7 +26,11 @@ categories: ["お知らせ"]
     href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704"
     target="_blank"
     nozoom=true
+    class="grid-w50"
     >}}
+
+{{< /gallery >}}
+
 
 メロンブックスさまにて後日通販を実施中です。新刊+既刊セットのほか、単品もご用意がございます。
 
