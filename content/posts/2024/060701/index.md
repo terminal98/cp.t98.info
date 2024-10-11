@@ -10,12 +10,22 @@ categories: ["お知らせ"]
 
 ## 書店委託頒布のご案内
 
-メロンブックスさまにて後日通販を実施中です。
+{{< figure
+    src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png"
+    alt="にじてくとの同人誌まとめ買いはこちら"
+    href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618"
+    target="_blank"
+    nozoom=true
+    >}}
+{{< figure
+    src="https://g2.t98.info/pub/svg/c/c104/melobu-circle.png"
+    alt="にじてくとの同人誌単品購入はこちら"
+    href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704"
+    target="_blank"
+    nozoom=true
+    >}}
 
-新刊+既刊セットのほか、単品もご用意がございます。
-
-- [＞＞【第4回秋葉原「超」同人祭+新作+過去作まとめ買い】にじてくと「コスカメラ」セット](https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618)   
-- [＞＞ サークルページはこちら](https://www.melonbooks.co.jp/circle/index.php?circle_id=119704)   
+メロンブックスさまにて後日通販を実施中です。新刊+既刊セットのほか、単品もご用意がございます。
 
 ## 2年目本アクリルキーホルダー
 
