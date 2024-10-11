@@ -6,7 +6,12 @@ categories: ["募集中", "お知らせ"]
 #tags: ["作例"]
 ---
 
-[＞＞ 正しく表示されない場合はこちら](https://drive.google.com/file/d/1DmClCuZf2RNBpv89g7nRpi2bpADi54R8/view?usp=sharing)
+カメラ活動のステップアップを目指すため、作例を作ることにしました。作例として使用してもよいお写真をぜひご提供ください！   
+現在は **2022年8月 以降に撮影したお写真** を募集しております。
+
+## 詳細
+
+[＞＞ 正しく表示されない場合はこちら(Googleドライブ)](https://drive.google.com/file/d/1DmClCuZf2RNBpv89g7nRpi2bpADi54R8/view?usp=sharing)
 
 ![p2](https://g2.t98.info/pub/svg/c/photo-recruit/photo-recruit_p2.svg)
 

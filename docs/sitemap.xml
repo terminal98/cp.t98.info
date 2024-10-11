@@ -4,19 +4,13 @@
 
   <url>
     <loc>https://cp.t98.info/posts/2024/101101/</loc>
-    <lastmod>2024-10-11T19:16:30+09:00</lastmod>
+    <lastmod>2024-10-12T00:41:35+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cp.t98.info/posts/2024/060701/</loc>
     <lastmod>2024-08-03T08:31:06+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cp.t98.info/posts/2024/060702/</loc>
-    <lastmod>2024-07-10T20:02:53+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -35,12 +29,6 @@
   <url>
     <loc>https://cp.t98.info/faq/</loc>
     <lastmod>2024-05-10T22:17:38+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cp.t98.info/posts/2023/111002/</loc>
-    <lastmod>2024-05-20T01:30:31+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -82,7 +70,7 @@
   </url>
   <url>
     <loc>https://cp.t98.info/eventlist/</loc>
-    <lastmod>2024-05-29T00:50:50+09:00</lastmod>
+    <lastmod>2024-10-12T00:41:35+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
