@@ -11,8 +11,8 @@ categories: ["お知らせ"]
 ## 書店委託頒布のご案内
 
 {{< gallery >}}
-<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618" title="にじてくとの同人誌まとめ買いはこちら(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png" class="grid-w45 nozoom"></a>
-<a href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704" title="にじてくとの同人誌単品購入はこちら(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png" class="grid-w45 nozoom"></a>
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618" title="にじてくとの同人誌まとめ買いはこちら(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png" class="grid-w40 nozoom"></a>
+<a href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704" title="にじてくとの同人誌単品購入はこちら(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-circle.png" class="grid-w40 nozoom"></a>
 {{< /gallery >}}
 
 
