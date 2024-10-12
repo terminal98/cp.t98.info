@@ -2,8 +2,8 @@
 title: "【C104】後日通販のお知らせ"
 date: 2024-06-07T18:00:00+09:00
 draft: false
+categories: ["notice"]
 tags: ["C104","にじてくと", "通販"]
-categories: ["お知らせ"]
 ---
 
 ![C104新刊のご案内](https://g2.t98.info/pub/svg/c/c104/c104-newly-published.webp)

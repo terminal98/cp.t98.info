@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on にじてくと</title>
+    <title>カテゴリ on にじてくと</title>
     <link>https://cp.t98.info/categories/</link>
-    <description>Recent content in Categories on にじてくと</description>
+    <description>Recent content in カテゴリ on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2024 にじてくと</copyright>
     <lastBuildDate>Fri, 11 Oct 2024 19:16:30 +0900</lastBuildDate><atom:link href="https://cp.t98.info/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>お知らせ</title>
-      <link>https://cp.t98.info/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
+      <link>https://cp.t98.info/categories/notice/</link>
       <pubDate>Fri, 11 Oct 2024 19:16:30 +0900</pubDate>
       
-      <guid>https://cp.t98.info/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</guid>
+      <guid>https://cp.t98.info/categories/notice/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>募集中</title>
-      <link>https://cp.t98.info/categories/%E5%8B%9F%E9%9B%86%E4%B8%AD/</link>
+      <title>募集</title>
+      <link>https://cp.t98.info/categories/recruit/</link>
       <pubDate>Fri, 11 Oct 2024 19:16:30 +0900</pubDate>
       
-      <guid>https://cp.t98.info/categories/%E5%8B%9F%E9%9B%86%E4%B8%AD/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>コラム</title>
-      <link>https://cp.t98.info/categories/%E3%82%B3%E3%83%A9%E3%83%A0/</link>
-      <pubDate>Wed, 22 Nov 2023 00:23:13 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/categories/%E3%82%B3%E3%83%A9%E3%83%A0/</guid>
+      <guid>https://cp.t98.info/categories/recruit/</guid>
       <description></description>
       
     </item>
@@ -44,16 +34,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cp.t98.info/categories/column/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>被写体募集</title>
-      <link>https://cp.t98.info/categories/recruiting-subjects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cp.t98.info/categories/recruiting-subjects/</guid>
       <description></description>
       
     </item>

@@ -2,7 +2,7 @@
 title: "作例用のお写真を募集します"
 date: 2024-10-11T19:16:30+09:00
 draft: false
-categories: ["募集中", "お知らせ"]
+categories: ["notice", "recruit"]
 #tags: ["作例"]
 ---
 
