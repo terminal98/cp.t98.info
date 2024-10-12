@@ -16,14 +16,15 @@ body{
 
 <img src="/img/c103_b1.png">
 
+<!--
 <div class="w-full grid gap-4">
 <a href="https://x.com/98tml/status/1823005905186668785" class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" target="_blank">
-{{< icon "bullhorn-solid" >}}
+{< icon "bullhorn-solid" >}}
 夏コミ 後日通販やってます
 </a>
-</div>
-
 <br>
+</div>
+-->
 
 <div class="w-full grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
 <a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/about/">
@@ -42,11 +43,15 @@ body{
 {{< icon "fire" >}}
 募集一覧
 </a>
+<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/shooting-service/">
+{{< icon "camera-solid" >}}
+撮影依頼
+</a>
 <a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://t98.info/contact/" target="_blank">
 {{< icon "envelope" >}}
 お問い合わせ
 </a>
-<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://twitter.com/98tml" target="_blank">
+<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://x.com/98tml" target="_blank">
 {{< icon "x-twitter" >}}
 X(旧Twitter)
 </a>

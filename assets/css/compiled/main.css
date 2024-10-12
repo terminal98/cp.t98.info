@@ -619,6 +619,13 @@ select {
   outline:1px auto -webkit-focus-ring-color
 }
 
+@supports (-moz-appearance:none) {
+  * {
+    scrollbar-color:initial;
+    scrollbar-width:initial
+  }
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x:0;
   --tw-border-spacing-y:0;
@@ -1412,6 +1419,10 @@ select {
   order:-9999
 }
 
+.col-span-2 {
+  grid-column:span 2 / span 2
+}
+
 .float-left {
   float:left
 }
@@ -1886,6 +1897,10 @@ select {
   transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
 }
 
+.transform {
+  transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
 @keyframes pulse {
   50% {
     opacity:.5
@@ -1904,6 +1919,10 @@ select {
   cursor:pointer
 }
 
+.resize {
+  resize:both
+}
+
 .list-none {
   list-style-type:none
 }
@@ -1914,8 +1933,16 @@ select {
           appearance:none
 }
 
+.grid-cols-1 {
+  grid-template-columns:repeat(1, minmax(0, 1fr))
+}
+
 .grid-cols-2 {
   grid-template-columns:repeat(2, minmax(0, 1fr))
+}
+
+.grid-cols-3 {
+  grid-template-columns:repeat(3, minmax(0, 1fr))
 }
 
 .flex-row {
@@ -2008,6 +2035,14 @@ select {
 
 .overflow-visible {
   overflow:visible
+}
+
+.overflow-y-scroll {
+  overflow-y:scroll
+}
+
+.overscroll-contain {
+  overscroll-behavior:contain
 }
 
 .scroll-smooth {
@@ -2695,6 +2730,66 @@ select {
   transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1)
 }
 
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color:var(--scrollbar-track);
+  border-radius:var(--scrollbar-track-radius)
+}
+
+.scrollbar-thin::-webkit-scrollbar-track:hover {
+  background-color:var(--scrollbar-track-hover, var(--scrollbar-track))
+}
+
+.scrollbar-thin::-webkit-scrollbar-track:active {
+  background-color:var(--scrollbar-track-active, var(--scrollbar-track-hover, var(--scrollbar-track)))
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color:var(--scrollbar-thumb);
+  border-radius:var(--scrollbar-thumb-radius)
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color:var(--scrollbar-thumb-hover, var(--scrollbar-thumb))
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:active {
+  background-color:var(--scrollbar-thumb-active, var(--scrollbar-thumb-hover, var(--scrollbar-thumb)))
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner {
+  background-color:var(--scrollbar-corner);
+  border-radius:var(--scrollbar-corner-radius)
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner:hover {
+  background-color:var(--scrollbar-corner-hover, var(--scrollbar-corner))
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner:active {
+  background-color:var(--scrollbar-corner-active, var(--scrollbar-corner-hover, var(--scrollbar-corner)))
+}
+
+@supports (-moz-appearance:none) {
+  .scrollbar-thin {
+    scrollbar-width:thin;
+    scrollbar-color:var(--scrollbar-thumb, initial) var(--scrollbar-track, initial)
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  display:block;
+  width:8px;
+  height:8px
+}
+
+.scrollbar-track-neutral-200 {
+  --scrollbar-track:rgba(var(--color-neutral-200), 1) !important
+}
+
+.scrollbar-thumb-neutral-400 {
+  --scrollbar-thumb:rgba(var(--color-neutral-400), 1) !important
+}
+
 .\!\[clip\:rect\(0\2c 0\2c 0\2c 0\)\] {
   clip:rect(0,0,0,0) !important
 }
@@ -2713,6 +2808,13 @@ body button {
   width:1em
 }
 
+/* Scale SVG logos to appropriate size */
+
+.logo svg {
+  height:5rem;
+  width:5rem
+}
+
 /* Search */
 
 #search-query::-webkit-search-cancel-button,
@@ -2720,21 +2822,6 @@ body button {
 #search-query::-webkit-search-results-button,
 #search-query::-webkit-search-results-decoration {
   display:none
-}
-
-/* Hamburger menu */
-
-body:has(#menu-controller:checked) {
-  overflow-y:hidden
-}
-
-#menu-button:has(#menu-controller:checked) {
-  visibility:hidden
-}
-
-#menu-controller:checked~#menu-wrapper {
-  visibility:visible;
-  opacity:1
 }
 
 /* RTL support */
@@ -2894,6 +2981,14 @@ code {
   /* All browsers since IE 5.5+ */
   overflow-wrap: break-word;
   /* Renamed property in CSS3 draft spec */
+}
+
+/* Fix long URLs breaking out of article bounds on mobile */
+
+a {
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* -- Chroma Highlight -- */
@@ -4341,6 +4436,28 @@ pre {
   margin-top:2rem
 }
 
+.group:hover .group-hover\:text-primary-300 {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-primary-300), var(--tw-text-opacity))
+}
+
+.group:hover .group-hover\:text-primary-600 {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-primary-600), var(--tw-text-opacity))
+}
+
+.group:hover .group-hover\:underline {
+  text-decoration-line:underline
+}
+
+.group:hover .group-hover\:decoration-primary-500 {
+  text-decoration-color:rgba(var(--color-primary-500), 1)
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity:1
+}
+
 .hover\:border-transparent:hover {
   border-color:transparent
 }
@@ -4452,28 +4569,6 @@ pre {
 
 .focus\:outline-transparent:focus {
   outline-color:transparent
-}
-
-.group:hover .group-hover\:text-primary-300 {
-  --tw-text-opacity:1;
-  color:rgba(var(--color-primary-300), var(--tw-text-opacity))
-}
-
-.group:hover .group-hover\:text-primary-600 {
-  --tw-text-opacity:1;
-  color:rgba(var(--color-primary-600), var(--tw-text-opacity))
-}
-
-.group:hover .group-hover\:underline {
-  text-decoration-line:underline
-}
-
-.group:hover .group-hover\:decoration-primary-500 {
-  text-decoration-color:rgba(var(--color-primary-500), 1)
-}
-
-.group:hover .group-hover\:opacity-100 {
-  opacity:1
 }
 
 :is([dir="ltr"] .ltr\:-left-6) {
@@ -4744,6 +4839,24 @@ pre {
   opacity:0.6
 }
 
+:is(.dark .dark\:scrollbar-track-neutral-800) {
+  --scrollbar-track:rgba(var(--color-neutral-800), 1) !important
+}
+
+:is(.dark .dark\:scrollbar-thumb-neutral-600) {
+  --scrollbar-thumb:rgba(var(--color-neutral-600), 1) !important
+}
+
+:is(.dark .group:hover .dark\:group-hover\:text-neutral-700) {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-neutral-700), var(--tw-text-opacity))
+}
+
+:is(.dark .group:hover .dark\:group-hover\:text-primary-400) {
+  --tw-text-opacity:1;
+  color:rgba(var(--color-primary-400), var(--tw-text-opacity))
+}
+
 :is(.dark .dark\:hover\:\!bg-primary-700:hover) {
   --tw-bg-opacity:1 !important;
   background-color:rgba(var(--color-primary-700), var(--tw-bg-opacity)) !important
@@ -4774,16 +4887,6 @@ pre {
   background-color:rgba(var(--color-primary-900), var(--tw-bg-opacity))
 }
 
-:is(.dark .group:hover .dark\:group-hover\:text-neutral-700) {
-  --tw-text-opacity:1;
-  color:rgba(var(--color-neutral-700), var(--tw-text-opacity))
-}
-
-:is(.dark .group:hover .dark\:group-hover\:text-primary-400) {
-  --tw-text-opacity:1;
-  color:rgba(var(--color-primary-400), var(--tw-text-opacity))
-}
-
 @media print {
   .print\:hidden {
     display:none
@@ -4803,12 +4906,12 @@ pre {
     width:50%
   }
 
-  .sm\:grid-cols-2 {
-    grid-template-columns:repeat(2, minmax(0, 1fr))
+  .sm\:grid-cols-1 {
+    grid-template-columns:repeat(1, minmax(0, 1fr))
   }
 
-  .sm\:grid-cols-3 {
-    grid-template-columns:repeat(3, minmax(0, 1fr))
+  .sm\:grid-cols-2 {
+    grid-template-columns:repeat(2, minmax(0, 1fr))
   }
 
   .sm\:flex-row {
@@ -5025,10 +5128,6 @@ pre {
 
   .lg\:grid-cols-2 {
     grid-template-columns:repeat(2, minmax(0, 1fr))
-  }
-
-  .lg\:grid-cols-4 {
-    grid-template-columns:repeat(4, minmax(0, 1fr))
   }
 
   .lg\:flex-row {

@@ -31,22 +31,26 @@ tags: ["C104","にじてくと", "通販"]
 <a href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704" title="にじてくとの同人誌単品購入はこちら(メロンブックス)" target="_blank" class="grid-w50"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-circle.png" class="nozoom"></a>
 {{< /gallery >}}
 
+### 便利な「さくっと注文」「@店舗受取り」もご活用ください！
+
+[＞＞ サービスについて詳しくはこちら](https://www.melonbooks.co.jp/special/b/1/tenpojouhou/)
+
+{{< youtubeLite id="lZKiLW8AlSQ" >}}
+{{< youtubeLite id="KnTiXhdDmIE" >}}
+
+[＞＞ 宅配・店舗のほかコンビニやロッカーでも受取可能です](https://www.melonbooks.co.jp/special/service/c_uketori/)
 
 ## 2年目本アクリルキーホルダーもあります
 
 {{< figure
-    src="https://g2.t98.info/pub/svg/c/c104/2nen-key.png"
+    src="https://g2.t98.info/pub/svg/c/c104/2nen-key.webp"
     alt="2年目本 アクリルキーホルダー 受注生産通販ページはこちら"
     href="https://t98.booth.pm/items/5878473"
     target="_blank"
     nozoom=true
     >}}
 
-BOOTHにて受注生産販売中！！！
-
----
-
-{{< tweet user="98tml" id="1823005905186668785" >}}
+[＞＞ BOOTHにて受注生産販売中](https://t98.booth.pm/items/5878473)
 
 <!--
 

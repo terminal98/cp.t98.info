@@ -12,10 +12,14 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = false
 
+replyByEmail = false
+
 # mainSections = ["section1", "section2"]
 # robots = ""
 
 disableImageOptimization = false
+disableTextInHeader = false
+# backgroundImageWidth = 1200
 
 defaultBackgroundImage = "img/bg.webp" # used as default for background images 
 #defaultFeaturedImage = "img/logo-square.png"
@@ -23,6 +27,9 @@ defaultBackgroundImage = "img/bg.webp" # used as default for background images
 highlightCurrentMenuArea = true
 smartTOC = true
 smartTOCHideUnfocusedChildren = true
+
+giteaDefaultServer = "https://git.fsfe.org"
+forgejoDefaultServer = "https://v8.next.forgejo.org"
 
 [header]
   layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
@@ -74,6 +81,7 @@ smartTOCHideUnfocusedChildren = true
   showWordCount = false
   showSummary = true
   sharingLinks = ["twitter"]
+  showZenMode = true
 
 [list]
   showHero = false
@@ -86,6 +94,7 @@ smartTOCHideUnfocusedChildren = true
   showLikes = false
   showTableOfContents = false
   showCards = false
+  orderByWeight = false
   groupByYear = false
   cardView = false
   cardViewScreenWidth = true
@@ -124,9 +133,15 @@ smartTOCHideUnfocusedChildren = true
   appId = "1:478013865835:web:0faf5e3bef01753a52562e"
   measurementId = "G-8P1S8350Z2"
 
-[fathomAnalytics]
-  # site = "ABC12345"
+[umamiAnalytics]
+  # websiteid = "ABC12345"
   # domain = "llama.yoursite.com"
+  # dataDomains = "yoursite.com,yoursite2.com"
+  # enableTrackEvent = true
+
+[selineAnalytics]
+  # token = "XXXXXX"
+  # enableTrackEvent = true
 
 [buymeacoffee]
   # identifier = ""

@@ -9,3 +9,52 @@ body {
 .dark>body {
   background: #26234f;
 }
+
+.floating-animation-v1 {
+  animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floating-y {
+  0% {
+    transform: translateY(-1em);
+  }
+
+  100% {
+    transform: translateY(1em);
+  }
+}
+
+.profile-name {
+  font-size: xx-large;
+  background: linear-gradient(transparent 70%, #77c0fb 70%);
+}
+
+.dark .profile-name {
+  font-size: xx-large;
+  background: linear-gradient(transparent 70%, #4387be 70%);
+}
+
+.profile-likes-tag {
+  display: inline-block;
+  margin: 0 .2em .3em 0;
+  padding: .5em;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--tw-prose-code);
+  background-color: rgba(var(--color-neutral-50), 1);
+  border: 0px solid #EC5540;
+  border-radius: 0.75em;
+  font-weight: 600;
+  font-size: .75em;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.profile-likes-tag:before {
+  content: "#";
+}
+
+.dark .profile-likes-tag {
+  background-color: rgba(var(--color-neutral-700), 1);
+
+}
+

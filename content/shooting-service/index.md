@@ -1,16 +1,32 @@
 ---
-title: "撮影・データについて"
-date: 2023-03-25T21:37:37+09:00
-draft: true
-series: ["撮影について"]
-series_order: 1
+title: "撮影依頼"
+date: 2024-10-11T00:00:00+09:00
+draft: false
+#series: ["撮影について"]
+#series_order: 1
 
 ---
 
-この内容は記述途中です。  
-最新の内容は直接お問い合わせください。
+撮影依頼を随時受け付けております。ご依頼の際は以下記載事項をご確認ください。
 
----
+[＞＞ 正しく表示されない場合はこちら](https://drive.google.com/file/d/1Jj4SSd74isgy4z_OZylrcNIkITiIE8aP/view?usp=sharing)
+
+![p2](https://g2.t98.info/pub/svg/c/main/photography-request/p2.svg)
+
+![p3](https://g2.t98.info/pub/svg/c/main/photography-request/p3.svg)
+
+![p4](https://g2.t98.info/pub/svg/c/main/photography-request/p4.svg)
+
+![p5](https://g2.t98.info/pub/svg/c/main/photography-request/p5.svg)
+
+![p6](https://g2.t98.info/pub/svg/c/main/photography-request/p6.svg)
+
+## 撮影のご相談・お問い合わせ先
+
+- [Xダイレクトメッセージ(@98tml)](https://x.com/98tml)
+- [メールフォーム](https://t98.info/contact/)
+
+<!--
 
 ## 交流イベント・大規模イベント等における撮影
 
@@ -71,3 +87,5 @@ series_order: 1
 * Twitter DM: https://twitter.com/98tml
 * お問い合わせフォーム: https://t98.info/contact/
 * メール: contact@t98.info
+
+-->
