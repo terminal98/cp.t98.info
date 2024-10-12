@@ -1,6 +1,6 @@
 ---
 title: "プロフィール"
-#date: 2023-06-01T01:35:39+09:00
+date: 2022-08-01T01:35:39+09:00
 draft: false
 showDate: false
 showDateUpdated: false
@@ -56,6 +56,8 @@ Instagram
 
 - コスプレやカメラに関する同人誌を自主制作・頒布する同人サークルです。   
 - 2023年冬 コミックマーケット103より活動を開始しました。
+
+<p class="text-center font-bold">＼こんな本を作っています／</p>
 
 {{< gallery >}}
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本" target="_blank" class="grid-w33"><img src="https://g2.t98.info/pub/img/nj-sq/0nen.webp" class="nozoom"></a>

@@ -79,6 +79,16 @@
     </item>
     
     <item>
+      <title>プロフィール</title>
+      <link>https://cp.t98.info/about/</link>
+      <pubDate>Mon, 01 Aug 2022 01:35:39 +0900</pubDate>
+      
+      <guid>https://cp.t98.info/about/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/about/featured.png" />
+    </item>
+    
+    <item>
       <title></title>
       <link>https://cp.t98.info/dic/event/couryukei/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -86,16 +96,6 @@
       <guid>https://cp.t98.info/dic/event/couryukei/</guid>
       <description></description>
       
-    </item>
-    
-    <item>
-      <title>プロフィール</title>
-      <link>https://cp.t98.info/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://cp.t98.info/about/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/about/featured.png" />
     </item>
     
   </channel>

@@ -2,8 +2,8 @@
 title: "撮影依頼"
 date: 2024-10-11T00:00:00+09:00
 draft: false
-#series: ["撮影について"]
-#series_order: 1
+series: ["撮影について"]
+series_order: 1
 
 ---
 
@@ -21,7 +21,7 @@ draft: false
 
 ![p6](https://g2.t98.info/pub/svg/c/main/photography-request/p6.svg)
 
-## 撮影のご相談・お問い合わせ先
+## 撮影のご相談・お問い合わせ
 
 - [Xダイレクトメッセージ(@98tml)](https://x.com/98tml)
 - [メールフォーム](https://t98.info/contact/)
