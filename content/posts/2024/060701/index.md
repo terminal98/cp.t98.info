@@ -14,7 +14,9 @@ categories: ["お知らせ"]
 
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/0nen-detail.webp" class="nozoom"></a>
 
-一部店舗でも販売中！ 在庫状況は各店舗へお問い合わせください。
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/0nen-real.webp" class="nozoom"></a>
+
+メロンブックスの一部実店舗でも販売中！ 在庫状況は各店舗へお問い合わせください。
 
 ### コスカメラ2年目本
 
