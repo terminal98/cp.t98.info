@@ -6,19 +6,29 @@ tags: ["C104","にじてくと", "通販"]
 categories: ["お知らせ"]
 ---
 
-{{< tweet user="98tml" id="1823005905186668785" >}}
+![C104新刊のご案内](https://g2.t98.info/pub/svg/c/c104/c104-newly-published.webp)
+
+## C104新刊のご紹介
+
+### コスカメラ0年目本
+
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/0nen-detail.webp" class="nozoom"></a>
+
+### コスカメラ2年目本
+
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2431630" title="コスカメラ2年目本(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/2nen-detail.webp" class="nozoom"></a>
 
 ## 書店委託頒布のご案内
 
 {{< gallery >}}
-<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618" title="にじてくとの同人誌まとめ買いはこちら(メロンブックス)" target="_blank" class="grid-w45"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png" class="nozoom"></a>
-<a href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704" title="にじてくとの同人誌単品購入はこちら(メロンブックス)" target="_blank" class="grid-w45"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-circle.png" class="nozoom"></a>
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本購入はこちら(メロンブックス)" target="_blank" class="grid-w50"><img src="https://g2.t98.info/pub/svg/c/c104/0nen-melon.webp" class="nozoom"></a>
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2431630" title="コスカメラ2年目本購入はこちら(メロンブックス)" target="_blank" class="grid-w50"><img src="https://g2.t98.info/pub/svg/c/c104/2nen-melon.webp" class="nozoom"></a>
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2529618" title="にじてくとの同人誌まとめ買いはこちら(メロンブックス)" target="_blank" class="grid-w50"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-matome.png" class="nozoom"></a>
+<a href="https://www.melonbooks.co.jp/circle/index.php?circle_id=119704" title="にじてくとの同人誌単品購入はこちら(メロンブックス)" target="_blank" class="grid-w50"><img src="https://g2.t98.info/pub/svg/c/c104/melobu-circle.png" class="nozoom"></a>
 {{< /gallery >}}
 
 
-メロンブックスさまにて後日通販を実施中です。新刊+既刊セットのほか、単品もご用意がございます。
-
-## 2年目本アクリルキーホルダー
+## 【受注生産】2年目本アクリルキーホルダー
 
 {{< figure
     src="https://g2.t98.info/pub/svg/c/c104/2nen-key.png"
@@ -28,7 +38,11 @@ categories: ["お知らせ"]
     nozoom=true
     >}}
 
-BOOTHにて受注生産販売を実施中です。大小2サイズございます。
+BOOTHにて受注生産販売を実施中。
+
+## 告知ポスト
+
+{{< tweet user="98tml" id="1823005905186668785" >}}
 
 <!--
 
