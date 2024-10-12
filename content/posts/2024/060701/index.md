@@ -14,11 +14,13 @@ categories: ["お知らせ"]
 
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/0nen-detail.webp" class="nozoom"></a>
 
+一部店舗でも販売中！ 在庫状況は各店舗へお問い合わせください。
+
 ### コスカメラ2年目本
 
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2431630" title="コスカメラ2年目本(メロンブックス)" target="_blank"><img src="https://g2.t98.info/pub/svg/c/c104/2nen-detail.webp" class="nozoom"></a>
 
-## 書店委託頒布のご案内
+## お求めはメロンブックス通販で！
 
 {{< gallery >}}
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本購入はこちら(メロンブックス)" target="_blank" class="grid-w50"><img src="https://g2.t98.info/pub/svg/c/c104/0nen-melon.webp" class="nozoom"></a>
@@ -28,7 +30,7 @@ categories: ["お知らせ"]
 {{< /gallery >}}
 
 
-## 【受注生産】2年目本アクリルキーホルダー
+## 2年目本アクリルキーホルダーもあります
 
 {{< figure
     src="https://g2.t98.info/pub/svg/c/c104/2nen-key.png"
@@ -38,9 +40,9 @@ categories: ["お知らせ"]
     nozoom=true
     >}}
 
-BOOTHにて受注生産販売を実施中。
+BOOTHにて受注生産販売中！！！
 
-## 告知ポスト
+---
 
 {{< tweet user="98tml" id="1823005905186668785" >}}
 
