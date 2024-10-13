@@ -26,12 +26,10 @@ body {
 }
 
 .profile-name {
-  font-size: xx-large;
   background: linear-gradient(transparent 70%, #77c0fb 70%);
 }
 
 .dark .profile-name {
-  font-size: xx-large;
   background: linear-gradient(transparent 70%, #4387be 70%);
 }
 

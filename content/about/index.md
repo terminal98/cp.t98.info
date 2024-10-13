@@ -2,25 +2,21 @@
 title: "プロフィール"
 date: 2022-08-01T01:35:39+09:00
 draft: false
-showDate: false
-showDateUpdated: false
-showReadingTime: false
-showTableOfContents: false
-showViews: false
-showZenMode: false
 layout: "simple"
 ---
 
 <div class="w-full grid grid-cols-3">
 <div class="row-span-2 bg-green-500"><img src="https://g2.t98.info/pub/img/sdi/nomal.webp" class="nozoom floating-animation-v1"></div>
 <div class="col-span-2 bg-red-500">
-<span class="profile-name"><ruby>帆村<rt>ほむら</rt></ruby> サツキ</span><br>
-<a href="https://x.com/98tml" target="_blank" class="text-xl p-1.5 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300">
+<span class="profile-name text-4xl">帆村 サツキ</span>
+<div class="mt-2 text-2xl">
+<a href="https://x.com/98tml" target="_blank" class="text-neutral-700 dark:text-neutral-300">
 {{< icon "x-twitter" >}}
 </a>
-<a href="https://www.instagram.com/98tml/" target="_blank" class="text-xl p-1.5 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300">
+<a href="https://www.instagram.com/98tml/" target="_blank" class="p-1 text-neutral-700 dark:text-neutral-300">
 {{< icon "instagram" >}}
 </a>
+</div>
 
 25↑ 🚹 成人済 都内在住
 
@@ -48,7 +44,7 @@ layout: "simple"
 <span class="profile-likes-tag">prsk</span>
 <span class="profile-likes-tag">同担歓迎</span>
 
-<h3 class="profile-name text-center">同人サークル「にじてくと」</h3>
+<h3 class="profile-name text-center text-2xl">同人サークル「にじてくと」</h3>
 
 コスプレやカメラに関する同人誌を自主制作・頒布する同人サークルです。   
 コミックマーケット103から活動を開始しました。
