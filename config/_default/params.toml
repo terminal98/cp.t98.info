@@ -153,5 +153,5 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 [verification]
   # google = ""
   # bing = ""
-  # pinterest = ""
+  pinterest = "67834c210e558dfeaa4d126cab5fe388"
   # yandex = ""

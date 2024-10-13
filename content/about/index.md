@@ -8,54 +8,50 @@ showReadingTime: false
 showTableOfContents: false
 showViews: false
 showZenMode: false
+layout: "page"
 ---
 
 <div class="w-full grid grid-cols-3">
-<div class="bg-green-500"><img src="https://g2.t98.info/pub/img/sdi/nomal.webp" class="nozoom floating-animation-v1"></div>
+<div class="row-span-2 bg-green-500"><img src="https://g2.t98.info/pub/img/sdi/nomal.webp" class="nozoom floating-animation-v1"></div>
 <div class="col-span-2 bg-red-500">
-<span class="profile-name"><ruby>帆村<rt>ほむら</rt></ruby> サツキ</span>
+<span class="profile-name"><ruby>帆村<rt>ほむら</rt></ruby> サツキ</span><br>
+<a href="https://x.com/98tml" target="_blank" class="text-xl p-1.5 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300">
+{{< icon "x-twitter" >}}
+</a>
+<a href="https://www.instagram.com/98tml/" target="_blank" class="text-xl p-1.5 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300">
+{{< icon "instagram" >}}
+</a>
 
 25↑ 🚹 成人済 都内在住
 
 2022年夏からコスプレ撮影を開始。   
 都内を拠点として関東中心に活動中。
 
+</div></div>
+
 <span class="profile-likes-tag">旅行</span>
 <span class="profile-likes-tag">カメラ</span>
 <span class="profile-likes-tag">アニメ</span>
+<span class="profile-likes-tag">🌈🕒️</span>
+<span class="profile-likes-tag">🐰</span>
+<span class="profile-likes-tag">💯🦂</span>
+<span class="profile-likes-tag">👑</span>
+<span class="profile-likes-tag">🍆</span>
+<span class="profile-likes-tag">omcr🗿</span>
 <span class="profile-likes-tag">まんがタイムきらら</span>
 <span class="profile-likes-tag">ごちうさ</span>
 <span class="profile-likes-tag">ぼざろ</span>
+<span class="profile-likes-tag">NEW GAME!</span>
 <span class="profile-likes-tag">ﾗ!</span>
-<span class="profile-likes-tag">Youtube</span>
-<span class="profile-likes-tag">VTuber</span>
-<span class="profile-likes-tag">🌈🕒️🐰</span>
-<span class="profile-likes-tag">🍆</span>
-<span class="profile-likes-tag">omcr🗿</span>
 <span class="profile-likes-tag">ほよば</span>
-<span class="profile-likes-tag">電子工作</span>
-<span class="profile-likes-tag">IoT</span>
-<span class="profile-likes-tag">Webアプリ</span>
+<span class="profile-likes-tag">ボカロ</span>
+<span class="profile-likes-tag">prsk</span>
+<span class="profile-likes-tag">同担歓迎</span>
 
-</div></div>
+<h3 class="profile-name text-center">同人サークル「にじてくと」</h3>
 
-<div class="w-full grid gap-4 grid-cols-2 sm:grid-cols-2 lx:grid-cols-3">
-
-<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://twitter.com/intent/follow?screen_name=98tml" target="_blank">
-{{< icon "angles-right" >}}
-X<small>(旧Twitter)</small>
-</a>
-<a class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="https://www.instagram.com/98tml/" target="_blank">
-{{< icon "angles-right" >}}
-Instagram
-</a>
-
-</div>
-
-## 同人サークル「にじてくと」
-
-- コスプレやカメラに関する同人誌を自主制作・頒布する同人サークルです。   
-- 2023年冬 コミックマーケット103より活動を開始しました。
+コスプレやカメラに関する同人誌を自主制作・頒布する同人サークルです。   
+コミックマーケット103から活動を開始しました。
 
 <p class="text-center font-bold">＼こんな本を作っています／</p>
 
