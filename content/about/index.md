@@ -8,7 +8,7 @@ showReadingTime: false
 showTableOfContents: false
 showViews: false
 showZenMode: false
-layout: "page"
+layout: "simple"
 ---
 
 <div class="w-full grid grid-cols-3">
