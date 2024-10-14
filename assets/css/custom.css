@@ -26,6 +26,7 @@ body {
 }
 
 .profile-name {
+  color: var(--tw-prose-headings);
   background: linear-gradient(transparent 70%, #77c0fb 70%);
 }
 

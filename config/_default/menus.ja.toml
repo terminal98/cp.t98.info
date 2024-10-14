@@ -52,16 +52,6 @@
   url = "https://t98.info/contact/"
   weight = 50
 
-[[subnavigation]]
-  name = "【夏コミ】後日通販実施中"
-  pageRef = "posts/2024/060701/"
-  weight = 6
-
-[[subnavigation]]
-  name = "作例用のお写真大募集"
-  pageRef = "posts/2024/101101/"
-  weight = 7
-
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.

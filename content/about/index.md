@@ -5,9 +5,12 @@ draft: false
 layout: "simple"
 ---
 
-<div class="w-full grid grid-cols-3">
-<div class="row-span-2 bg-green-500"><img src="https://g2.t98.info/pub/img/sdi/nomal.webp" class="nozoom floating-animation-v1"></div>
-<div class="col-span-2 bg-red-500">
+<div class="grid grid-cols-3">
+<div class="row-span-3">
+  <img src="https://g2.t98.info/pub/img/sdi/nomal.webp" class="nozoom floating-animation-v1">
+</div>
+
+<div class="col-span-2">
 <span class="profile-name text-4xl">帆村 サツキ</span>
 <div class="mt-2 text-2xl">
 <a href="https://x.com/98tml" target="_blank" class="text-neutral-700 dark:text-neutral-300">
@@ -20,10 +23,12 @@ layout: "simple"
 
 25↑ 🚹 成人済 都内在住
 
-2022年夏からコスプレ撮影を開始。   
-都内を拠点として関東中心に活動中。
+2022年夏からコスプレ撮影をはじめる。現在は都内を拠点として関東で活動中。
 
-</div></div>
+きららのオタク。
+</div>
+
+<div class="col-span-3 lg:col-span-2">
 
 <span class="profile-likes-tag">旅行</span>
 <span class="profile-likes-tag">カメラ</span>
@@ -41,6 +46,10 @@ layout: "simple"
 <span class="profile-likes-tag">ほよば</span>
 <span class="profile-likes-tag">ボカロ</span>
 <span class="profile-likes-tag">prsk</span>
+
+</div>
+
+</div>
 
 <h3 class="profile-name text-center text-2xl">同人サークル「にじてくと」</h3>
 
