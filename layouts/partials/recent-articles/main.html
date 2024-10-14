@@ -21,9 +21,9 @@
 <div class="mt-10 flex justify-center">
   <a href="{{ $showMoreLinkDest }}">
     <button
-      class="bg-transparent hover:text-neutral prose dark:prose-invert font-semibold hover:!bg-primary-500 dark:hover:!bg-primary-700  py-2 px-4 border border-primary-500 hover:border-transparent rounded">
+      class="flex bg-transparent hover:text-neutral prose dark:prose-invert font-semibold hover:!bg-primary-500 dark:hover:!bg-primary-700  py-2 px-4 border border-primary-500 hover:border-transparent rounded items-center">
       {{ i18n "recent.show_more" | markdownify | emojify }}
-      <span class="inline-block align-text-bottom">{{ partial "icon.html" "angles-right" }}</span>
+      <span class="ml-1 inline-block align-text-bottom">{{ partial "icon.html" "angles-right" }}</span>
     </button>
   </a>
 </div>
