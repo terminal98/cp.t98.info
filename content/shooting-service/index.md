@@ -4,6 +4,7 @@ date: 2024-10-11T00:00:00+09:00
 draft: false
 series: ["撮影について"]
 series_order: 1
+layout: "simple"
 
 ---
 

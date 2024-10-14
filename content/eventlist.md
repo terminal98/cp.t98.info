@@ -4,6 +4,7 @@ date: 2023-03-26T02:36:15+09:00
 draft: false
 series: ["撮影について"]
 series_order: 2
+layout: "simple"
 ---
 
 ## 依頼受付状況 {#request-status}
