@@ -11,33 +11,26 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "プロフィール"
+  name = "プロフ"
+  pre = "address-card-regular"
   pageRef = "about"
   weight = 5
 
 [[main]]
-  name = "今後の予定"
-  pageRef = "eventlist"
-  weight = 6
-
-#[[main]]
-#  name = "撮影について"
-#  weight = 10
-
-#[[main]]
-#  name = "撮影・データについて"
-#  parent = "撮影について"
-#  pageRef = "policy"
-#  weight = 11
-
-#[[main]]
-#  name = "イベント参加予定"
-#  parent = "撮影について"
-#  pageRef = "eventlist"
-#  weight = 12
+  name = "予定表"
+  pre = "calendar-check-regular"
+  pageRef = "eventlist/"
+  weight = 11
 
 [[main]]
-  name = "作例"
+  name = "撮影依頼"
+  pre = "camera-solid"
+  pageRef = "shooting-service/"
+  weight = 12
+
+[[main]]
+  name = "撮影事例"
+  pre = "images-regular"
   url = "https://twitter.com/search?q=%4098tml%20filter%3Amedia%20min_retweets%3A5%20-from%3A98tml&f=image"
   weight = 13
 
@@ -45,13 +38,13 @@
   identifier = "twitter"
   pre = "x-twitter"
   url = "https://x.com/98tml"
-  weight = 30
-
-[[main]]
-  identifier = "instagram"
-  pre = "instagram"
-  url = "https://www.instagram.com/98tml/"
   weight = 40
+
+#[[main]]
+#  identifier = "instagram"
+#  pre = "instagram"
+#  url = "https://www.instagram.com/98tml/"
+#  weight = 40
 
 [[main]]
   identifier = "contact"
@@ -64,9 +57,20 @@
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-  name = "投稿一覧"
+  name = "このサイトについて"
+  pageRef = "about/"
+  weight = 99
+
+[[footer]]
+  name = "お知らせ"
   pageRef = "posts"
-  weight = 5
+  weight = 100
+
+[[footer]]
+  #pre = "substack"
+  name = "募集一覧"
+  pageRef = "categories/recruit/"
+  weight = 110
 
 # [[footer]]
 #   pre = "tag"
@@ -74,27 +78,27 @@
 #   pageRef = "tags"
 #   weight = 10
 
- [[footer]]
-   #pre = "substack"
-   name = "カテゴリ"
-   pageRef = "categories"
-   weight = 20
-  
 [[footer]]
-  #pre = "envelope"
-  name = "お問い合わせ"
-  url = "https://t98.info/contact/"
-  weight = 38
+  name = "カテゴリ"
+  pageRef = "categories/"
+  weight = 120
 
 [[footer]]
   name = "利用規約"
   url = "https://doc.t98.info/rule/"
-  weight = 39
+  weight = 170
 
 [[footer]]
   name = "プライバシーポリシー"
   url = "https://doc.t98.info/policy/"
-  weight = 40
+  weight = 180
 
-#[[footer]]
-#  name = "特定商取引法に基づく表記"
+[[footer]]
+  name = "お問い合わせ"
+  url = "https://tayori.com/form/77947e5dc4b5f590517b0cc3ed6038aeed5ddb1f"
+  weight = 190
+
+[[footer]]
+  name = "通販"
+  url = "https://www.melonbooks.co.jp/circle/index.php?circle_id=119704"
+  weight = 191

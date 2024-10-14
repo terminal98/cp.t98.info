@@ -34,7 +34,6 @@ layout: "simple"
 <span class="profile-likes-tag">👑</span>
 <span class="profile-likes-tag">🍆</span>
 <span class="profile-likes-tag">omcr🗿</span>
-<span class="profile-likes-tag">まんがタイムきらら</span>
 <span class="profile-likes-tag">ごちうさ</span>
 <span class="profile-likes-tag">ぼざろ</span>
 <span class="profile-likes-tag">NEW GAME!</span>
@@ -42,7 +41,6 @@ layout: "simple"
 <span class="profile-likes-tag">ほよば</span>
 <span class="profile-likes-tag">ボカロ</span>
 <span class="profile-likes-tag">prsk</span>
-<span class="profile-likes-tag">同担歓迎</span>
 
 <h3 class="profile-name text-center text-2xl">同人サークル「にじてくと」</h3>
 

@@ -60,7 +60,7 @@
             {{ end }}
 
         </nav>
-        <div class="flex md:hidden items-center space-x-5 md:ml-12">
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
 
             <span></span>
 
@@ -89,8 +89,8 @@
     </div>
     <div class="-my-2 -mr-2 md:hidden">
 
-        <label id="menu-button" for="menu-controller" class="block">
-            <input type="checkbox" id="menu-controller" class="hidden" />
+        <label id="menu-button" class="block">
+            {{ if .Site.Menus.main }}
             <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
                 {{ partial "icon.html" "bars" }}
             </div>
@@ -99,7 +99,7 @@
                 <ul
                     class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
 
-                    <li>
+                    <li id="menu-close-button">
                         <span
                             class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">{{
                             partial
@@ -107,12 +107,10 @@
                             "xmark" }}</span>
                     </li>
 
-                    {{ if .Site.Menus.main }}
                     {{ range .Site.Menus.main }}
 
                     {{ partial "header/header-mobile-option.html" . }}
 
-                    {{ end }}
                     {{ end }}
 
                 </ul>
@@ -132,13 +130,14 @@
                             </span>
                             {{ end }}
                             <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="{{ .Title }}">
-                                {{ .Name | markdownify | emojify }}
+                                {{ .Name | markdownify }}
                             </p>
                         </a>
                     </li>
                     {{ end }}
 
                 </ul>
+                {{ end }}
                 {{ end }}
 
             </div>
@@ -159,7 +158,7 @@
             </span>
             {{ end }}
             <p class="text-xs font-light text-gray-500 hover:text-gray-900" title="{{ .Title }}">
-                {{ .Name | markdownify | emojify }}
+                {{ .Name | markdownify }}
             </p>
         </a>
         {{ end }}
