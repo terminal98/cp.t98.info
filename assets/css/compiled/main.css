@@ -1727,10 +1727,6 @@ select {
   height:2rem
 }
 
-.h-\[1\.75em\] {
-  height:1.75em
-}
-
 .h-\[1000px\] {
   height:1000px
 }
@@ -2344,19 +2340,9 @@ select {
   padding-right:1.5rem
 }
 
-.px-8 {
-  padding-left:2rem;
-  padding-right:2rem
-}
-
 .px-\[30px\] {
   padding-left:30px;
   padding-right:30px
-}
-
-.py-0 {
-  padding-top:0px;
-  padding-bottom:0px
 }
 
 .py-1 {
@@ -5035,11 +5021,6 @@ pre {
   .md\:px-24 {
     padding-left:6rem;
     padding-right:6rem
-  }
-
-  .md\:py-16 {
-    padding-top:4rem;
-    padding-bottom:4rem
   }
 }
 

@@ -17,8 +17,8 @@ replyByEmail = false
 # mainSections = ["section1", "section2"]
 # robots = ""
 
-disableImageOptimization = false
-disableTextInHeader = false
+disableImageOptimization = true
+disableTextInHeader = true
 # backgroundImageWidth = 1200
 
 defaultBackgroundImage = "img/bg.webp" # used as default for background images 
@@ -47,7 +47,7 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   heroStyle = "background"
   homepageImage = "img/bg.webp" # used in: hero, and card
   showRecent = true
-  showRecentItems = 3
+  showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/posts"
   cardView = true
@@ -57,7 +57,7 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 
 [article]
   showDate = true
-  showViews = true
+  showViews = false
   showLikes = false
   showDateUpdated = true
   showAuthor = false
@@ -111,7 +111,7 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   showViews = false
   showLikes = false
   showTableOfContents = false
-  cardView = true
+  cardView = false
 
 [term]
   showHero = false
@@ -125,13 +125,13 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   cardViewScreenWidth = false
 
 [firebase]
-  apiKey = "AIzaSyCmdCrUpw8Y2XJhRsunwhQ5qB8finXM-bA"
-  authDomain = "cp-t98-info.firebaseapp.com"
-  projectId = "cp-t98-info"
-  storageBucket = "cp-t98-info.appspot.com"
-  messagingSenderId = "478013865835"
-  appId = "1:478013865835:web:0faf5e3bef01753a52562e"
-  measurementId = "G-8P1S8350Z2"
+#  apiKey = ""
+#  authDomain = ""
+#  projectId = ""
+#  storageBucket = ""
+#  messagingSenderId = ""
+#  appId = ""
+#  measurementId = ""
 
 [umamiAnalytics]
   websiteid = "7ddd163e-03aa-4d49-98bf-cf3e8ddc0f23"
@@ -139,11 +139,11 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   # dataDomains = "cp.t98.info"
   enableTrackEvent = true
 
-[selineAnalytics]
+#[selineAnalytics]
   # token = "XXXXXX"
   # enableTrackEvent = true
 
-[buymeacoffee]
+#[buymeacoffee]
   # identifier = ""
   # globalWidget = true
   # globalWidgetMessage = "Hello"

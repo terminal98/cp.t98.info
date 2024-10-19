@@ -10,6 +10,11 @@ body {
   background: #26234f;
 }
 
+.logo {
+  height: 1.75em;
+  max-width: 15rem;
+}
+
 .floating-animation-v1 {
   animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
   margin: 0;

@@ -57,48 +57,43 @@
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-  name = "このサイトについて"
-  pageRef = "about/"
-  weight = 99
-
-[[footer]]
-  name = "お知らせ"
+  name = "News"
   pageRef = "posts"
   weight = 100
 
 [[footer]]
   #pre = "substack"
-  name = "募集一覧"
+  name = "Recruit"
   pageRef = "categories/recruit/"
   weight = 110
 
 # [[footer]]
 #   pre = "tag"
-#   name = "タグ"
+#   name = "Tags"
 #   pageRef = "tags"
 #   weight = 10
 
 [[footer]]
-  name = "カテゴリ"
+  name = "Categories"
   pageRef = "categories/"
   weight = 120
 
 [[footer]]
-  name = "利用規約"
+  name = "Rule"
   url = "https://doc.t98.info/rule/"
   weight = 170
 
 [[footer]]
-  name = "プライバシーポリシー"
+  name = "Policy"
   url = "https://doc.t98.info/policy/"
   weight = 180
 
 [[footer]]
-  name = "お問い合わせ"
-  url = "https://tayori.com/form/77947e5dc4b5f590517b0cc3ed6038aeed5ddb1f"
-  weight = 190
-
-[[footer]]
-  name = "通販"
+  name = "Shop"
   url = "https://www.melonbooks.co.jp/circle/index.php?circle_id=119704"
   weight = 191
+
+[[footer]]
+  name = "Contact"
+  url = "https://tayori.com/form/77947e5dc4b5f590517b0cc3ed6038aeed5ddb1f"
+  weight = 192

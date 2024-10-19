@@ -1,16 +1,16 @@
 global:
-  language: "🇯🇵"
+  language: "JA"
 
 article:
   anchor_label: "アンカー"
   date: "{{ .Date }}"
-  date_updated: "{{ .Date }} 更新"
+  date_updated: "更新日: {{ .Date }}"
   draft: "下書き"
   edit_title: "編集"
   reading_time:
     one: "{{ .Count }} 分で読めます"
     other: "{{ .Count }} 分で読めます"
-  reading_time_title: "この記事を読むのに必要な時間"
+  reading_time_title: "この記事の読了時間"
   table_of_contents: "目次"
   word_count:
     one: "{{ .Count }} 文字"
@@ -23,8 +23,11 @@ article:
     other: "いいね {{ .Count }}"
   part_of_series: "コンテンツ一覧"
   part: ""
-  this_article: "このページです"
+  this_article: "このページ"
   related_articles: "関連記事"
+  zen_mode_title:
+    enable: "リーディングモードを使用する"
+    disable: "通常表示に戻す"
 
 author:
   byline_title: "著者"
@@ -39,8 +42,8 @@ error:
   404_description: "お探しのページは、すでに削除されたか存在しない可能性があります。正しいアドレスかご確認ください。"
 
 footer:
-  dark_appearance: "ダークモードへ切り替え"
-  light_appearance: "ライトモードへ切り替え"
+  dark_appearance: "ダークモードに切り替え"
+  light_appearance: "ライトモードに切り替え"
   powered_by: "Powered by {{ .Hugo }} &amp; {{ .Theme }}"
 
 list:
@@ -62,10 +65,13 @@ sharing:
   linkedin: "LinkedInでシェア"
   pinterest: "Pinterestにピン"
   reddit: "Redditに投稿"
-  twitter: "X/Twitterにポスト"
+  twitter: "Xにポスト"
+  bluesky: "Blueskyにポスト"
+  whatsapp: "WhatsAppでシェア"
+  telegram: "Telegramでシェア"
 
 shortcode:
-  recent_articles: "■ お知らせ"
+  recent_articles: "ニュース"
 
 recent:
   show_more: "もっと見る"
