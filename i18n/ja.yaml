@@ -4,23 +4,23 @@ global:
 article:
   anchor_label: "アンカー"
   date: "{{ .Date }}"
-  date_updated: "更新日: {{ .Date }}"
+  date_updated: "{{ .Date }}更新"
   draft: "下書き"
   edit_title: "編集"
   reading_time:
-    one: "{{ .Count }} 分で読めます"
-    other: "{{ .Count }} 分で読めます"
+    one: "{{ .Count }}分で読めます"
+    other: "{{ .Count }}分で読めます"
   reading_time_title: "この記事の読了時間"
   table_of_contents: "目次"
   word_count:
-    one: "{{ .Count }} 文字"
-    other: "{{ .Count }} 文字"
+    one: "{{ .Count }}文字"
+    other: "{{ .Count }}文字"
   views:
-    one: "{{ .Count }} 回閲覧"
-    other: "{{ .Count }} 回閲覧"
+    one: "{{ .Count }}回閲覧"
+    other: "{{ .Count }}回閲覧"
   likes:
-    one: "いいね {{ .Count }}"
-    other: "いいね {{ .Count }}"
+    one: "{{ .Count }}いいね"
+    other: "{{ .Count }}いいね"
   part_of_series: "コンテンツ一覧"
   part: ""
   this_article: "このページ"
