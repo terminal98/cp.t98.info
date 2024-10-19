@@ -15,6 +15,31 @@ body {
   max-width: 15rem;
 }
 
+#menu-wrapper li {
+  width: 100%;
+  border-bottom-width: 0.5px;
+  border-bottom-color: #ccc;
+}
+
+#menu-wrapper li>span,
+#menu-wrapper li>a {
+  padding: 1em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#menu-wrapper a[href="https://x.com/98tml"]:after {
+  margin-left: .5rem;
+  content: "X";
+}
+
+#menu-wrapper a[href="https://t98.info/contact/"]:after {
+  margin-left: .5rem;
+  content: "メールフォーム";
+}
+
 .floating-animation-v1 {
   animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
   margin: 0;
@@ -60,5 +85,4 @@ body {
 
 .dark .profile-likes-tag {
   background-color: rgba(var(--color-neutral-700), 1);
-
 }
