@@ -17,7 +17,7 @@ layout: "simple"
 
 <div id="calendar">しばらくお待ちください</div>
 
-`◯ 受付中` `△ 要相談` `✕ 締切` `- 終了` `■ ｲﾍﾞﾝﾄ参加日`  
+`◯ 受付中` `△ 要相談` `✕ 締切` `- 終了`  
 
 <span id="showMaxRange">調 整 中</span>  
 
@@ -26,6 +26,9 @@ layout: "simple"
 記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。
 
 <h3 id="event" class="profile-name text-center text-2xl">イベント参加予定表</h3>
+
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div>
 
 ### 2024年 {#event-2024}
 
@@ -38,6 +41,8 @@ layout: "simple"
 | 12/29(日) | コミックマーケット105(一般)                                                        |
 | 12/30(月) | コミックマーケット105(サークル)                                                    |
 
+</div><div>
+
 ### 2025年 {#event-2025}
 
 | 日付     | イベント名              |
@@ -45,3 +50,4 @@ layout: "simple"
 | 4/26(土) | ※ニコニコ超会議2025(仮) |
 | 4/27(日) | ※ニコニコ超会議2025(仮) |
 
+</div></div>
