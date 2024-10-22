@@ -33,7 +33,7 @@ layout: "simple"
 
 記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。
 
-<h3 id="event" class="profile-name text-center text-2xl">イベント参加予定表</h3>
+<h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
 
 <div class="grid grid-cols-1 lg:grid-cols-2">
 <div>

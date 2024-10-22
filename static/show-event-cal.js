@@ -68,12 +68,12 @@ function generateCalendar(month, year) {
       const isWeekend = currentDate.getDay() === 0 || currentDate.getDay() === 6;
 
       if (isWeekend || holiday) {
-        eventName = daysDiff === 0 ? '△' : '◯';
+        eventName = daysDiff === 0 ? '△' : '○';
       } else {
         if (daysDiff < 0) {
           eventName = daysDiff >= -7 ? '✕' : '△';
         } else {
-          eventName = daysDiff <= 7 ? '-' : '△';
+          eventName = daysDiff <= 5 ? '✕' : '△';
         }
       }
     }
