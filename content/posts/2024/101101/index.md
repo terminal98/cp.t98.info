@@ -1,5 +1,5 @@
 ---
-title: "作例用のお写真を募集します"
+title: "作例用データ提供のお願い"
 date: 2024-10-11T19:16:30+09:00
 draft: false
 categories: ["notice", "recruit"]
