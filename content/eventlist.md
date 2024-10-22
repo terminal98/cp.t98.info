@@ -25,7 +25,7 @@ layout: "simple"
 
 <div id="calendar">しばらくお待ちください</div>
 
-`◯ 受付中` `△ 要相談` `✕ 締切` `- 終了`  
+`◯ 受付中` `△ 要相談` `✕ 締切` 
 
 <span id="showMaxRange">調 整 中</span>  
 
