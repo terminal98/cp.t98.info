@@ -11,13 +11,13 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "プロフ"
+  name = "プロフィール"
   pre = "address-card-regular"
   pageRef = "about"
   weight = 5
 
 [[main]]
-  name = "予定表"
+  name = "スケジュール"
   pre = "calendar-check-regular"
   pageRef = "eventlist/"
   weight = 11
@@ -29,7 +29,7 @@
   weight = 12
 
 [[main]]
-  name = "撮影事例"
+  name = "作例"
   pre = "images-regular"
   url = "https://x.com/search?q=%4098tml%20filter%3Amedia%20min_retweets%3A5%20-from%3A98tml&f=image"
   weight = 13
