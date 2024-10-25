@@ -1699,6 +1699,10 @@ select {
   height:50%
 }
 
+.h-10 {
+  height:2.5rem
+}
+
 .h-12 {
   height:3rem
 }
@@ -1781,6 +1785,10 @@ select {
 
 .\!w-px {
   width:1px !important
+}
+
+.w-10 {
+  width:2.5rem
 }
 
 .w-12 {
@@ -1917,6 +1925,16 @@ select {
 
 .animate-pulse {
   animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite
+}
+
+@keyframes spin {
+  to {
+    transform:rotate(360deg)
+  }
+}
+
+.animate-spin {
+  animation:spin 1s linear infinite
 }
 
 .cursor-default {
@@ -2114,6 +2132,10 @@ select {
   border-width:2px
 }
 
+.border-4 {
+  border-width:4px
+}
+
 .border-y-\[10px\] {
   border-top-width:10px;
   border-bottom-width:10px
@@ -2157,6 +2179,10 @@ select {
 
 .border-transparent {
   border-color:transparent
+}
+
+.border-t-transparent {
+  border-top-color:transparent
 }
 
 .bg-neutral {
