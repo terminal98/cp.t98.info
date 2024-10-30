@@ -26,7 +26,7 @@ function maxYearMonthGen() {
   const threeMonthsLater = new Date(new Date().setMonth(new Date().getMonth() + maxMonthRange));
   // 年と月を取得
   const threeMonthsLaterYear = threeMonthsLater.getFullYear();
-  const threeMonthsLaterMonth = threeMonthsLater.getMonth() + 1; // 0から始まるので+1
+  const threeMonthsLaterMonth = threeMonthsLater.getMonth()
   document.getElementById('showMaxRange').innerText = `${threeMonthsLaterYear}年${threeMonthsLaterMonth}月までの予定を公開しています`;
 }
 
