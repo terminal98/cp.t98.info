@@ -72,7 +72,7 @@ function generateCalendar(month, year) {
         if (daysDiff < 0) {
           eventName = daysDiff >= -7 ? '✕' : '△';
         } else {
-          eventName = daysDiff <= 5 ? '✕' : '△';
+          eventName = daysDiff <= 12 ? '✕' : '△';
         }
       }
     }
