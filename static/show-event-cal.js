@@ -23,7 +23,8 @@ function fetchData() {
 }
 
 function maxYearMonthGen() {
-  const threeMonthsLater = new Date(new Date().setMonth(new Date().getMonth() + maxMonthRange));
+  const today = new Date();
+  const threeMonthsLater = new Date(new Date().setMonth(new Date(today.getFullYear(), today.getMonth() + 1, 1).getMonth() + maxMonthRange));
   // 年と月を取得
   const threeMonthsLaterYear = threeMonthsLater.getFullYear();
   const threeMonthsLaterMonth = threeMonthsLater.getMonth()
@@ -36,8 +37,6 @@ function generateCalendar(month, year) {
   let daysInMonth = new Date(year, month + 1, 0).getDate();
   let calendarDiv = document.getElementById('calendar');
   let calendarHtml = `<table><thead><tr><th class="mon">月</th><th class="tue">火</th><th class="wed">水</th><th class="thu">木</th><th class="fri">金</th><th class="sat">土</th><th class="sun">日</th></tr><tr></thead><tbody>`;
-
-  //document.getElementById('maxYearMonth').innerText = monthYearText;
 
   const shiftDays = (firstDay === 0) ? 6 : firstDay - 1;
   for (let i = 0; i < shiftDays; i++) {
@@ -58,9 +57,9 @@ function generateCalendar(month, year) {
     }
     let holiday = holidays[dateStr] ? holidays[dateStr] : '';
     // 振替休日の処理
-    //if (holiday.includes('振替休日')) {
-    //  holiday = '振替休日';
-    //}
+    if (holiday.includes('振替休日')) {
+      holiday = '振替休日';
+    }
 
     if (!eventName) {
       const currentDate = new Date(year, month, day);
@@ -81,14 +80,14 @@ function generateCalendar(month, year) {
     // 今日以前のイベントにバツ印を表示
     let eventDisplay = new Date(dateStr) < today ? '-' : eventName;
 
-    let isToday = today.getMonth() === currentMonth && today.getDate() === day ? "today" : "";
+    let isToday = today.getMonth() === currentMonth && today.getDate() === day ? " today" : "";
 
     if (holiday || (shiftDays + day - 1) % 7 == 6) {
-      calendarHtml += `<td class="day ${isToday}"><span class="num sun" title="${holiday}">${day}</span><span class="event-title">${eventDisplay}</span></td>`;
+      calendarHtml += `<td class="day${isToday}"><span class="num sun" title="${holiday}">${day}</span><span class="event-title">${eventDisplay}</span></td>`;
     } else if ((shiftDays + day - 1) % 7 == 5) {
-      calendarHtml += `<td class="day ${isToday}"><span class="num sat">${day}</span><span class="event-title">${eventDisplay}</span></td>`;
+      calendarHtml += `<td class="day${isToday}"><span class="num sat">${day}</span><span class="event-title">${eventDisplay}</span></td>`;
     } else {
-      calendarHtml += `<td class="day ${isToday}"><span class="num">${day}</span><span class="event-title">${eventDisplay}</span></td>`;
+      calendarHtml += `<td class="day${isToday}"><span class="num">${day}</span><span class="event-title">${eventDisplay}</span></td>`;
     }
   }
 
