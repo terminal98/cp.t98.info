@@ -5,6 +5,7 @@ draft: false
 series: ["撮影について"]
 series_order: 2
 layout: "simple"
+featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 ---
 
 <h3 class="profile-name text-center text-2xl">依頼受付カレンダー</h3>
@@ -44,11 +45,11 @@ layout: "simple"
 
 ### 2024年 {#event-2024}
 
-| 日付      | イベント名                      |
-| --------- | ------------------------------- |
-| 12/7(土)  | [アコスタ池袋](https://g2.t98.info/pub/img/event/202412_ike.webp)              |
-| 12/29(日) | コミックマーケット105(一般)     |
-| 12/30(月) | コミックマーケット105(サークル) |
+| 日付      | イベント名                                                        |
+| --------- | ----------------------------------------------------------------- |
+| 12/7(土)  | [アコスタ池袋](https://g2.t98.info/pub/img/event/202412_ike.webp) |
+| 12/29(日) | コミックマーケット105(一般)                                       |
+| 12/30(月) | コミックマーケット105(サークル)                                   |
 
 </div><div>
 

@@ -25,7 +25,7 @@
       
       <guid>https://cp.t98.info/eventlist/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/eventlist/featured.png" />
     </item>
     
   </channel>
