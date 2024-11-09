@@ -26,7 +26,7 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 
 <div id="calendar">
   <div className="flex justify-center" aria-label="読み込み中">
-    <p class="text-center text-2xl">読込中です。しばらくお待ちください…</p>
+    <p class="text-center text-xl">読込中です。しばらくお待ちください…</p>
   </div>
 </div>
 
