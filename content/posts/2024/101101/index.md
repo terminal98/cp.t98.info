@@ -19,7 +19,7 @@ categories: ["notice", "recruit"]
 
 ![p4](https://g2.t98.info/pub/svg/c/photo-recruit/photo-recruit_p4.svg)
 
-![p5](https://g2.t98.info/pub/svg/c/photo-recruit/photo-recruit_p5.svg)
+本項目は現在見直し中です
 
 ![p6](https://g2.t98.info/pub/svg/c/photo-recruit/photo-recruit_p6.svg)
 
