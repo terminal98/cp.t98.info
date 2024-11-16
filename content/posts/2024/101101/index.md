@@ -1,9 +1,7 @@
 ---
 title: "作例用データ提供のお願い"
-date: 2024-10-11T19:16:30+09:00
-draft: false
-categories: ["notice", "recruit"]
-#tags: ["作例"]
+aliases:
+    - /post/2017/01/05/content-name/
 ---
 
 カメラ活動のステップアップを目指すため、作例を作ることにしました。作例として使用してもよいお写真をぜひご提供ください！   
