@@ -1,7 +1,7 @@
 ---
-title: "【終了】作例用データ提供のお願い"
+title: "終了: 作例用データ提供のお願い"
 date: 2024-10-11T19:16:30+09:00
-draft: false
+draft: true
 # categories: ["notice", "recruit"]
 # tags: ["作例"]
 ---
