@@ -45,6 +45,7 @@ Xのダイレクトメッセージまたはメールフォームよりご連絡�
 - [Xダイレクトメッセージ(@98tml)](https://x.com/98tml)
 - [メールフォーム](https://t98.info/contact/)
 
+<!--
 ---
 
 {{< alert >}}
@@ -64,7 +65,6 @@ Xのダイレクトメッセージまたはメールフォームよりご連絡�
 
 ![p6](https://g2.t98.info/pub/svg/c/main/photography-request/p6.svg)
 
-<!--
 
 ## 交流イベント・大規模イベント等における撮影
 
