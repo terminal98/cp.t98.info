@@ -36,6 +36,12 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 
 <script src="/show-event-cal.js"></script>
 
+{{< alert >}}
+**依頼受付制限のお知らせ**   
+冬コミ作業のため 12月20日(金) まで依頼受付制限をしています。写真集用途以外のご依頼は21日以降にお願いいたします。   
+`▲ = 写真集用途のみ受付可能な日程` ご依頼の際も可能な限り早めにご相談ください。
+{{< /alert >}}
+
 記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。
 
 <h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
