@@ -10,11 +10,16 @@ layout: "simple"
 
 ## お受けできるもの
 
-- コスプレ撮影 (スタジオ・イベント)
-- 写真集・各種グッズ向け撮影
-- 宣材撮影 (人物メイン)
-- 記録撮影
-- 動画撮影 (コスパフォ・踊ってみた など)
+<div>
+<span class="profile-likes-tag">コスプレ撮影</span>
+<span class="profile-likes-tag">スタジオ</span>
+<span class="profile-likes-tag">ロケイベント</span>
+<span class="profile-likes-tag">写真集など頒布目的</span>
+<span class="profile-likes-tag">宣材</span>
+<span class="profile-likes-tag">動画撮影</span>
+<span class="profile-likes-tag">コスパフォ</span>
+<span class="profile-likes-tag">踊ってみた</span>
+</div>
 
 ジャンル・作品・FF内外不問です。
 
