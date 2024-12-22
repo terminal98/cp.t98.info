@@ -1,34 +1,18 @@
 {
-  "2024-11-30": {
-    "eventname": "▲"
-  },
-  "2024-12-01": {
-    "eventname": "▲"
-  },
-  "2024-12-07": {
-    "eventname": "a!池袋",
-    "url": "https://g2.t98.info/pub/img/event/202412_ike.webp"
-  },
-  "2024-12-08": {
-    "eventname": "▲"
-  },
-  "2024-12-14": {
-    "eventname": "▲"
-  },
-  "2024-12-15": {
-    "eventname": "✕<br>確定"
+  "2024-12-24": {
+    "eventname": "✕"
   },
   "2024-12-25": {
     "eventname": "✕"
   },
   "2024-12-28": {
-    "eventname": "△"
+    "eventname": "✕"
   },
   "2024-12-29": {
-    "eventname": "冬コミ(一般)"
+    "eventname": "冬ｺﾐ(一般)"
   },
   "2024-12-30": {
-    "eventname": "冬コミ(サークル)"
+    "eventname": "冬ｺﾐ(ｻｰｸﾙ)"
   },
   "2024-12-31": {
     "eventname": "✕"
@@ -40,10 +24,19 @@
     "eventname": "✕"
   },
   "2025-01-03": {
-    "eventname": "○"
+    "eventname": "○(午後)"
   },
   "2025-01-12": {
     "eventname": "✕<br>確定"
+  },
+  "2025-01-13": {
+    "eventname": "✕<br>確定"
+  },
+  "2025-01-25": {
+    "eventname": "✕<br>確定"
+  },
+  "2025-04-06": {
+    "eventname": "✕<br>申込中"
   },
   "2025-04-26": {
     "eventname": "超会議"
@@ -52,7 +45,7 @@
     "eventname": "超会議"
   },
   "2025-08-15": {
-    "eventname": "✕<br>コミケ設営"
+    "eventname": "△"
   },
   "2025-08-16": {
     "eventname": "夏コミ(一般)"
