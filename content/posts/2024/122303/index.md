@@ -2,8 +2,8 @@
 title: "大崎コミシェル チラシ配布のお知らせ"
 date: 2024-12-23T02:38:59+09:00
 draft: false
-#categories: [""]
-tags: ["C105", "冬コミ"]
+categories: ["notice"]
+tags: ["大崎コミシェル"]
 #featureimage: ""
 ---
 
