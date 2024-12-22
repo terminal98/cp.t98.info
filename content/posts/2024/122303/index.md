@@ -18,8 +18,9 @@ tags: ["C105", "冬コミ"]
 
 ## イベント概要
 
-- 名称: 大崎コミックシェルター2024冬 
+- 名称： 大崎コミックシェルター2024冬 
   - (12/29は[おもしろ同人誌バザール大崎](https://hanmoto1.wixsite.com/omobazapetit)と併催)
+- 日程： 2024年12月29日(日)・30日(月) 12:00〜17:00
 - 場所： [JR大崎駅](https://www.jreast.co.jp/estation/stations/319.html)南改札エリア
 
 
