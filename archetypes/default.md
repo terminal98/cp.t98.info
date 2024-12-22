@@ -5,5 +5,6 @@ draft: true
 #categories: [""]
 #tags: [""]
 #featureimage: ""
+#externalUrl: ""
 ---
 

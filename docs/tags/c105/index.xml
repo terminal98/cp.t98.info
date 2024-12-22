@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>お知らせ on にじてくと</title>
-    <link>https://cp.t98.info/posts/</link>
-    <description>Recent content in お知らせ on にじてくと</description>
+    <title>C105 on にじてくと</title>
+    <link>https://cp.t98.info/tags/c105/</link>
+    <description>Recent content in C105 on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2024 にじてくと</copyright>
-    <atom:link href="https://cp.t98.info/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Dec 2024 03:52:39 +0900</lastBuildDate><atom:link href="https://cp.t98.info/tags/c105/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>【C105】にじてくと お品書き</title>
@@ -27,26 +27,6 @@
       <guid>https://cp.t98.info/posts/2024/122303/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2024/122303/featured.png" />
-    </item>
-    
-    <item>
-      <title>年末年始 依頼休止のお知らせ</title>
-      <link>https://cp.t98.info/posts/2024/122301/</link>
-      <pubDate>Mon, 23 Dec 2024 02:25:15 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2024/122301/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2024/122301/featured.png" />
-    </item>
-    
-    <item>
-      <title>【C104】後日通販のお知らせ</title>
-      <link>https://cp.t98.info/posts/2024/060701/</link>
-      <pubDate>Fri, 07 Jun 2024 18:00:00 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2024/060701/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2024/060701/featured.png" />
     </item>
     
   </channel>
