@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://cp.t98.info/posts/2024/122302/</loc>
-    <lastmod>2024-12-28T22:26:22+09:00</lastmod>
+    <loc>https://cp.t98.info/posts/2025/010201/</loc>
+    <lastmod>2025-01-02T10:48:07+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://cp.t98.info/posts/2024/123101/</loc>
+    <lastmod>2024-12-31T02:38:33+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
