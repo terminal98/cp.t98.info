@@ -39,15 +39,5 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2024/122301/featured.png" />
     </item>
     
-    <item>
-      <title>【C104】後日通販のお知らせ</title>
-      <link>https://cp.t98.info/posts/2024/060701/</link>
-      <pubDate>Fri, 07 Jun 2024 18:00:00 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2024/060701/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2024/060701/featured.png" />
-    </item>
-    
   </channel>
 </rss>
