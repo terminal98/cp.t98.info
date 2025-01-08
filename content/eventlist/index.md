@@ -8,6 +8,8 @@ layout: "simple"
 featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 ---
 
+<h3 id="event" class="profile-name text-center text-2xl">スケジュール</h3>
+
 <div id="cal-button">
 <button id="prevButton" class="flex m-1 rounded enabled:bg-neutral-300 p-1.5 enabled:text-neutral-700 enabled:hover:bg-primary-500 enabled:hover:text-neutral enabled:dark:bg-neutral-700 dark:text-neutral-300 enabled:dark:hover:bg-primary-400 enabled:dark:hover:text-neutral-800 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(-1)" disabled>
 <span class="relative block align-text-bottom icon">
