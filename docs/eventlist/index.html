@@ -28,8 +28,8 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.353c169ac74b54ffd7a2f312dc80c152873c25974fc777c20463603fc40f7058f10a611f3849ef635334d42758b525d8a43e97360f4ddc0c43c6723e776ce84d.css"
-    integrity="sha512-NTwWmsdLVP/XovMS3IDBUoc8JZdPx3fCBGNgP8QPcFjxCmEfOEnvY1M01CdYtSXYpD6XNg9N3AxDxnI&#43;d2zoTQ==" />
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.1abed4b6756548abbf7e544466aafc792a4000e67bf78c211c792978ce7dd9e57a608d113e6da8a0c1adc216facda62c94eb77e7d2dd23c11fa96744b6ee2e56.css"
+    integrity="sha512-Gr7UtnVlSKu/flREZqr8eSpAAOZ794whHHkpeM592eV6YI0RPm2ooMGtwhb6zaYslOt359LdI8EfqWdEtu4uVg==" />
   
   
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -109,7 +109,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "435"
+    "wordCount": "266"
   }]
   </script>
 
@@ -745,7 +745,7 @@
       </h1>
     </header>
     <section class="max-w-full mt-6 prose dark:prose-invert">
-      <h3 class="profile-name text-center text-2xl">依頼受付カレンダー</h3>
+      <h3 class="profile-name text-center text-2xl">予定カレンダー</h3>
 <div id="cal-button">
 <button id="prevButton" class="flex m-1 rounded enabled:bg-neutral-300 p-1.5 enabled:text-neutral-700 enabled:hover:bg-primary-500 enabled:hover:text-neutral enabled:dark:bg-neutral-700 dark:text-neutral-300 enabled:dark:hover:bg-primary-400 enabled:dark:hover:text-neutral-800 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(-1)" disabled>
 <span class="relative block align-text-bottom icon">
@@ -764,76 +764,19 @@
     <p class="text-center text-xl">読込中です。しばらくお待ちください…</p>
   </div>
 </div>
-<p><code>◯ 受付中</code> <code>△ 要相談</code> <code>✕ 締切</code> <code>▲ 条件付</code></p>
+<p><code>◯ 空いてます</code> <code>△ 要相談</code> <code>✕ 締切</code> <code>▲ 条件付</code></p>
 <p><span id="showMaxRange">調 整 中</span></p>
 <script src="/show-event-cal.js"></script>
-
-  
-
-
-
-<div
-  
-    class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
-  >
-
-  <span
-    
-      class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
-    >
-
-    
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
-
-  </span>
-
-
-  </span>
-
-  <span
-    
-      class="dark:text-neutral-300"
-    ><strong>2024年 依頼受付締切のお知らせ</strong><br>
-2024年内の撮影依頼は締め切りました。今年も1年大変お世話になりました。来年は4日(土)より受け付けております。</span>
-</div>
-
 <p>記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。</p>
 <h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
-<div class="grid grid-cols-1 lg:grid-cols-2">
-<div>
-
-
-<h3 class="relative group">2024年 
-    <div id="event-2024" class="anchor"></div>
-    
-</h3>
-<table>
-  <thead>
-      <tr>
-          <th>日付</th>
-          <th>イベント名</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>12/29(日)</td>
-          <td>コミックマーケット105(一般)</td>
-      </tr>
-      <tr>
-          <td>12/30(月)</td>
-          <td>コミックマーケット105(サークル)</td>
-      </tr>
-  </tbody>
-</table>
-</div><div>
 
 
 <h3 class="relative group">2025年 
-    <div id="event-2025" class="anchor"></div>
+    <div id="event-2024" class="anchor"></div>
     
 </h3>
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div>
 <table>
   <thead>
       <tr>
@@ -843,12 +786,8 @@
   </thead>
   <tbody>
       <tr>
-          <td>3/22(土)</td>
-          <td>※ AnimeJapan2025(仮)</td>
-      </tr>
-      <tr>
-          <td>4/26(土)</td>
-          <td>※ ニコニコ超会議2025(仮)</td>
+          <td>4/6(日)</td>
+          <td>第5回 秋葉原超同人祭＋(サークル参加)</td>
       </tr>
       <tr>
           <td>8/16(土)</td>
@@ -856,8 +795,19 @@
       </tr>
       <tr>
           <td>8/17(日)</td>
-          <td>コミックマーケット106(サークル)</td>
+          <td>コミックマーケット106(サークル参加予定)</td>
       </tr>
+  </tbody>
+</table>
+</div><div>
+<table>
+  <thead>
+      <tr>
+          <th>日付</th>
+          <th>イベント名</th>
+      </tr>
+  </thead>
+  <tbody>
       <tr>
           <td>9/27(土)</td>
           <td>※ 東京ゲームショウ2025(仮)</td>
@@ -873,7 +823,6 @@
   </tbody>
 </table>
 </div></div>
-<p>(仮)の予定は撮影依頼も受け付けている日です。</p>
 
     </section>
     <footer class="pt-8">

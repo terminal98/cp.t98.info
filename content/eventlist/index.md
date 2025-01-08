@@ -8,7 +8,7 @@ layout: "simple"
 featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 ---
 
-<h3 class="profile-name text-center text-2xl">依頼受付カレンダー</h3>
+<h3 class="profile-name text-center text-2xl">予定カレンダー</h3>
 
 <div id="cal-button">
 <button id="prevButton" class="flex m-1 rounded enabled:bg-neutral-300 p-1.5 enabled:text-neutral-700 enabled:hover:bg-primary-500 enabled:hover:text-neutral enabled:dark:bg-neutral-700 dark:text-neutral-300 enabled:dark:hover:bg-primary-400 enabled:dark:hover:text-neutral-800 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(-1)" disabled>
@@ -30,45 +30,33 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
   </div>
 </div>
 
-`◯ 受付中` `△ 要相談` `✕ 締切` `▲ 条件付` 
+`◯ 空いてます` `△ 要相談` `✕ 締切` `▲ 条件付` 
 
 <span id="showMaxRange">調 整 中</span>  
 
 <script src="/show-event-cal.js"></script>
 
-{{< alert >}}
-**2024年 依頼受付締切のお知らせ**   
-2024年内の撮影依頼は締め切りました。今年も1年大変お世話になりました。来年は4日(土)より受け付けております。
-{{< /alert >}}
-
 記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。
 
 <h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
 
+### 2025年 {#event-2024}
+
 <div class="grid grid-cols-1 lg:grid-cols-2">
 <div>
 
-### 2024年 {#event-2024}
-
-| 日付      | イベント名                      |
-| --------- | ------------------------------- |
-| 12/29(日) | コミックマーケット105(一般)     |
-| 12/30(月) | コミックマーケット105(サークル) |
+| 日付     | イベント名                              |
+| -------- | --------------------------------------- |
+| 4/6(日)  | 第5回 秋葉原超同人祭＋(サークル参加)    |
+| 8/16(土) | コミックマーケット106(一般)             |
+| 8/17(日) | コミックマーケット106(サークル参加予定) |
 
 </div><div>
 
-### 2025年 {#event-2025}
-
 | 日付      | イベント名                             |
 | --------- | -------------------------------------- |
-| 3/22(土)  | ※ AnimeJapan2025(仮)                   |
-| 4/26(土)  | ※ ニコニコ超会議2025(仮)               |
-| 8/16(土)  | コミックマーケット106(一般)            |
-| 8/17(日)  | コミックマーケット106(サークル)        |
 | 9/27(土)  | ※ 東京ゲームショウ2025(仮)             |
 | 10/25(土) | ※ 池袋ハロウィンコスプレフェス2025(仮) |
 | 12月末    | ※ コミックマーケット107                |
 
 </div></div>
-
-(仮)の予定は撮影依頼も受け付けている日です。

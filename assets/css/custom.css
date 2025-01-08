@@ -87,7 +87,10 @@ body {
   background-color: rgba(var(--color-neutral-700), 1);
 }
 
-#monthYear {}
+img.gallery-item {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
 
 #calendar>table {
   table-layout: fixed;
