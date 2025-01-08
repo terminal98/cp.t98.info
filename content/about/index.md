@@ -23,9 +23,11 @@ layout: "simple"
 
 25↑ 🚹 成人済 都内在住
 
-2022年夏からコスプレ撮影をはじめる。現在は都内を拠点として関東で活動中。
+2022年夏からコスプレ撮影を開始。現在は都内を拠点として関東で活動中。
 
-きららのオタク。
+🌈🕒️ときららのオタク。
+
+Japanese cosplay photographer(hobby) & web developer.
 </div>
 
 <div class="col-span-3 lg:col-span-2">
@@ -39,9 +41,8 @@ layout: "simple"
 <span class="profile-likes-tag">👑</span>
 <span class="profile-likes-tag">🍆</span>
 <span class="profile-likes-tag">omcr🗿</span>
-<span class="profile-likes-tag">ごちうさ</span>
 <span class="profile-likes-tag">ぼざろ</span>
-<span class="profile-likes-tag">NEW GAME!</span>
+<span class="profile-likes-tag">ごちうさ</span>
 <span class="profile-likes-tag">ﾗ!</span>
 <span class="profile-likes-tag">ほよば</span>
 <span class="profile-likes-tag">ボカロ</span>
@@ -59,9 +60,11 @@ layout: "simple"
 <p class="text-center font-bold">＼こんな本を作っています／</p>
 
 {{< gallery >}}
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2740963" title="コスカメラ3年目本" target="_blank" class="grid-w33"><img src="https://g2.t98.info/pub/img/nj-sq/3nen.webp" class="nozoom"></a>
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477" title="コスカメラ0年目本" target="_blank" class="grid-w33"><img src="https://g2.t98.info/pub/img/nj-sq/0nen.webp" class="nozoom"></a>
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2273516" title="コスカメラ1年目本" target="_blank" class="grid-w33"><img src="https://g2.t98.info/pub/img/nj-sq/1nen.webp" class="nozoom"></a>
 <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2431630" title="コスカメラ2年目本" target="_blank" class="grid-w33"><img src="https://g2.t98.info/pub/img/nj-sq/2nen.webp" class="nozoom"></a>
+<a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=2730946" title="コスイベ攻略本Vol1" target="_blank" class="grid-w33"><img src="https://g2.t98.info/pub/img/nj-sq/2-5nen.webp" class="nozoom"></a>
 {{< /gallery >}}
 
 
