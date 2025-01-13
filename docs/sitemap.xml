@@ -3,20 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://cp.t98.info/posts/2025/010201/</loc>
-    <lastmod>2025-01-02T13:24:42+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://cp.t98.info/posts/2024/123101/</loc>
     <lastmod>2025-01-02T13:24:42+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cp.t98.info/posts/2024/122301/</loc>
-    <lastmod>2024-12-23T04:13:03+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -76,7 +64,7 @@
   </url>
   <url>
     <loc>https://cp.t98.info/eventlist/</loc>
-    <lastmod>2025-01-08T22:18:02+09:00</lastmod>
+    <lastmod>2025-01-08T22:19:09+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
