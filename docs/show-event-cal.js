@@ -67,17 +67,20 @@ function generateCalendar(month, year) {
       const isWeekend = currentDate.getDay() === 0 || currentDate.getDay() === 6;
 
       if (isWeekend || holiday) {
+        // 土休日 前日まで○ 当日△にする
         eventName = daysDiff === 0 ? '△' : '○';
       } else {
         if (daysDiff < 0) {
+          // 平日 これはなに？
           eventName = daysDiff >= -7 ? '✕' : '△';
         } else {
-          eventName = daysDiff <= 12 ? '✕' : '△';
+          // 平日 7日前まで△ 以降は✕
+          eventName = daysDiff <= 7 ? '✕' : '△';
         }
       }
     }
 
-    // 今日以前のイベントにバツ印を表示
+    // 過去のイベントはハイフンにする
     let eventDisplay = new Date(dateStr) < today ? '-' : eventName;
 
     let isToday = today.getMonth() === currentMonth && today.getDate() === day ? " today" : "";

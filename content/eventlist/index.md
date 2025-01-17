@@ -48,7 +48,7 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 | 日付     | イベント名                                                                                                   | 参加形態       | 撮影 |
 | -------- | ------------------------------------------------------------------------------------------------------------ | -------------- | ---- |
 | 4/6(日)  | [第5回 秋葉原超同人祭＋](https://www.melonbooks.co.jp/special/b/0/fair_dojin/5th_akihabaradojinfes/general/) | サークル       | ✕    |
-| 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/)                                                     | 一般           | ✕    |
+| 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/) (仮)                                                | 一般           | ✕    |
 | 8/16(土) | [コミックマーケット106](https://www.comiket.co.jp/info-a/)                                                   | 一般           | ○    |
 | 8/17(日) | [コミックマーケット106](https://www.comiket.co.jp/info-a/)                                                   | サークル(予定) | ✕    |
 
