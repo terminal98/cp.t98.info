@@ -69,6 +69,7 @@ function generateCalendar(month, year) {
       if (isWeekend || holiday) {
         // 土休日 前日まで○ 当日△にする
         eventName = daysDiff === 0 ? '△' : '○';
+        console.log(dateStr, today);
       } else {
         if (daysDiff < 0) {
           // 平日 これはなに？

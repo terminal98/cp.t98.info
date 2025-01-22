@@ -11,13 +11,13 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 <h3 id="event" class="profile-name text-center text-2xl">スケジュール</h3>
 
 <div id="cal-button">
-<button id="prevButton" class="flex m-1 rounded enabled:bg-neutral-300 p-1.5 enabled:text-neutral-700 enabled:hover:bg-primary-500 enabled:hover:text-neutral enabled:dark:bg-neutral-700 dark:text-neutral-300 enabled:dark:hover:bg-primary-400 enabled:dark:hover:text-neutral-800 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(-1)" disabled>
+<button id="prevButton" class="flex m-1 rounded enabled:bg-primary-600 p-1.5 enabled:text-neutral enabled:hover:bg-primary-500 enabled:dark:bg-primary-800  enabled:dark:hover:bg-primary-700 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(-1)" disabled>
 <span class="relative block align-text-bottom icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
 </span>
 前月</button>
 <span id="monthYear" class="p-1.5">読込中です…</span>
-<button id="nextButton" class="flex m-1 rounded enabled:bg-neutral-300 p-1.5 enabled:text-neutral-700 enabled:hover:bg-primary-500 enabled:hover:text-neutral enabled:dark:bg-neutral-700 dark:text-neutral-300 enabled:dark:hover:bg-primary-400 enabled:dark:hover:text-neutral-800 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(1)" disabled>翌月
+<button id="nextButton" class="flex m-1 rounded enabled:bg-primary-600 p-1.5 enabled:text-neutral enabled:hover:bg-primary-500 enabled:dark:bg-primary-800  enabled:dark:hover:bg-primary-700 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(1)" disabled>翌月
 <span class="relative block align-text-bottom icon">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
 </span>
@@ -30,7 +30,7 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
   </div>
 </div>
 
-`◯ 空いてます` `△ 要相談` `✕ 締切` `▲ 条件付` 
+凡例： `◯ 空いてます` `△ 応相談` `✕ 締切` 
 
 <span id="showMaxRange">調 整 中</span>  
 
@@ -47,6 +47,7 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 
 | 日付     | イベント名                                                                                                   | 参加形態       | 撮影 |
 | -------- | ------------------------------------------------------------------------------------------------------------ | -------------- | ---- |
+| 3/16(日) | [アコスタ堀切](https://acosta.jp/event/horikiri/)                                                            | カメラ         | ○    |
 | 4/6(日)  | [第5回 秋葉原超同人祭＋](https://www.melonbooks.co.jp/special/b/0/fair_dojin/5th_akihabaradojinfes/general/) | サークル       | ✕    |
 | 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/) (仮)                                                | 一般           | ✕    |
 | 8/16(土) | [コミックマーケット106](https://www.comiket.co.jp/info-a/)                                                   | 一般           | ○    |
