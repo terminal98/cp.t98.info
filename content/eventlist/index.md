@@ -49,6 +49,7 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 
 | 日付     | イベント名                                                                                                   | 参加形態       | 撮影 |
 | -------- | ------------------------------------------------------------------------------------------------------------ | -------------- | ---- |
+| 2/15(土) | [アコスタ池袋](https://acosta.jp/event/ike0215/)                                                             | カメラ         | ○    |
 | 3/16(日) | [アコスタ堀切](https://acosta.jp/event/horikiri/)                                                            | カメラ         | ○    |
 | 4/6(日)  | [第5回 秋葉原超同人祭＋](https://www.melonbooks.co.jp/special/b/0/fair_dojin/5th_akihabaradojinfes/general/) | サークル       | ✕    |
 | 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/) (仮)                                                | 一般           | ✕    |
