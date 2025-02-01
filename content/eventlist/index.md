@@ -47,21 +47,21 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 <div class="grid grid-cols-1 lg:grid-cols-2">
 <div>
 
-| 日付     | イベント名                                                                                                   | 参加形態       | 撮影 |
-| -------- | ------------------------------------------------------------------------------------------------------------ | -------------- | ---- |
-| 2/15(土) | [アコスタ池袋](https://acosta.jp/event/ike0215/)                                                             | カメラ         | ○    |
-| 3/16(日) | [アコスタ堀切](https://acosta.jp/event/horikiri/)                                                            | カメラ         | ○    |
-| 4/6(日)  | [第5回 秋葉原超同人祭＋](https://www.melonbooks.co.jp/special/b/0/fair_dojin/5th_akihabaradojinfes/general/) | サークル       | ✕    |
-| 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/) (仮)                                                | 一般           | ✕    |
-| 8/16(土) | [コミックマーケット106](https://www.comiket.co.jp/info-a/)                                                   | 一般           | ○    |
-| 8/17(日) | [コミックマーケット106](https://www.comiket.co.jp/info-a/)                                                   | サークル(予定) | ✕    |
+| 日付     | イベント名                                                                                                   | 参加形態 | 撮影 |
+| -------- | ------------------------------------------------------------------------------------------------------------ | -------- | ---- |
+| 2/15(土) | [アコスタ池袋](https://acosta.jp/event/ike0215/)                                                             | カメラ   | ○    |
+| 3/16(日) | [アコスタ堀切](https://acosta.jp/event/horikiri/)                                                            | カメラ   | ○    |
+| 4/6(日)  | [第5回 秋葉原超同人祭＋](https://www.melonbooks.co.jp/special/b/0/fair_dojin/5th_akihabaradojinfes/general/) | サークル | ✕    |
+| 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/) (仮)                                                | 一般     | ✕    |
 
 </div><div>
 
-| 日付      | イベント名                                                 | 参加形態       | 撮影 |
-| --------- | ---------------------------------------------------------- | -------------- | ---- |
-| 10/25(土) | ※ 池袋ハロウィンコスプレフェス2025(仮)                     | カメラ(予定)   | ○    |
-| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/) | 一般           | ○    |
-| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/) | サークル(予定) | ✕    |
+| 日付      | イベント名                                                             | 参加形態       | 撮影 |
+| --------- | ---------------------------------------------------------------------- | -------------- | ---- |
+| 8/16(土)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/)             | 一般           | ○    |
+| 8/17(日)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/)             | サークル(予定) | ✕    |
+| 10/25(土) | ※ [池袋ハロウィンコスプレフェス2025](https://ikebukurocosplay.jp/)(仮) | カメラ(予定)   | ○    |
+| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/)             | 一般           | ○    |
+| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/)             | サークル(予定) | ✕    |
 
 </div></div>
