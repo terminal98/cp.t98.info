@@ -16,15 +16,15 @@ body{
 
 <img src="/img/c103_b1.png">
 
-<!--
+
 <div class="w-full grid gap-4">
-<a href="https://x.com/98tml/status/1823005905186668785" class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" target="_blank">
-{< icon "bullhorn-solid" >}}
-夏コミ 後日通販やってます
+<a href="live/" class="!rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700">
+{{< icon "bullhorn-solid" >}} 
+2/15 a!池袋 現在位置&ステータス リアルタイム配信中
 </a>
 <br>
 </div>
--->
+
 
 <div class="w-full grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
 <a class="flex !rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 items-center" href="/about/">

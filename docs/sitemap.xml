@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://cp.t98.info/live/</loc>
+    <lastmod>2025-02-15T03:37:24+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://cp.t98.info/posts/2024/123101/</loc>
     <lastmod>2025-01-02T13:24:42+09:00</lastmod>
     <changefreq>daily</changefreq>
