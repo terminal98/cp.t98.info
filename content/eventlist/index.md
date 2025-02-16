@@ -38,7 +38,7 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 
 記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。
 
-<span style="color:red">2月平日 △印の撮影依頼は締め切りました (2/10のみ相談可)</span>
+<span style="color:red">3月平日 △印の撮影依頼は残り 1件 です</span>
 
 <h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
 
