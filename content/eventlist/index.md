@@ -57,10 +57,10 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 
 | 日付      | イベント名                                                             | 参加形態       | 撮影 |
 | --------- | ---------------------------------------------------------------------- | -------------- | ---- |
-| 8/16(土)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/)             | 一般           | ○    |
-| 8/17(日)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/)             | サークル(予定) | ✕    |
+| 8/16(土)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html) | 一般           | ○    |
+| 8/17(日)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html) | サークル(予定) | ✕    |
 | 10/25(土) | ※ [池袋ハロウィンコスプレフェス2025](https://ikebukurocosplay.jp/)(仮) | カメラ(予定)   | ○    |
-| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/)             | 一般           | ○    |
-| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/)             | サークル(予定) | ✕    |
+| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/CMKinfo.html) | 一般           | ○    |
+| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/CMKinfo.html) | サークル(予定) | ✕    |
 
 </div></div>
