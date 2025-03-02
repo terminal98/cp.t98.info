@@ -2,7 +2,7 @@
 title: "既刊電子福袋セール開催中(1/10まで)"
 date: 2025-01-02T10:48:07+09:00
 expiryDate: 2025-01-10
-draft: false
+draft: true
 categories: ["notice"]
 tags: ["通販", "セール"]
 #featureimage: ""
