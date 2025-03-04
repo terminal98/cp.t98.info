@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on にじてくと</title>
-    <link>http://localhost:1313/series/</link>
+    <link>https://cp.t98.info/series/</link>
     <description>Recent content in Series on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2025 にじてくと</copyright>
-    <lastBuildDate>Fri, 11 Oct 2024 00:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Oct 2024 00:00:00 +0900</lastBuildDate><atom:link href="https://cp.t98.info/series/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>撮影について</title>
-      <link>http://localhost:1313/series/%E6%92%AE%E5%BD%B1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+      <link>https://cp.t98.info/series/%E6%92%AE%E5%BD%B1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
       <pubDate>Fri, 11 Oct 2024 00:00:00 +0900</pubDate>
       
-      <guid>http://localhost:1313/series/%E6%92%AE%E5%BD%B1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
+      <guid>https://cp.t98.info/series/%E6%92%AE%E5%BD%B1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
       <description></description>
       
     </item>
