@@ -6,7 +6,7 @@ expiryDate: 2025-03-10
 #categories: [""]
 #tags: [""]
 #featureimage: ""
-#externalUrl: ""
+externalUrl: "https://x.com/cp98t/status/1896935181719896417"
 ---
 
 <a href="https://www.melonbooks.co.jp/circle/?circle_id=119704" target="_blank"><img src="featured.png" alt="2503セール"></a>
