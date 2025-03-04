@@ -1,7 +1,7 @@
 ---
 title: "【C105】事後通販のお知らせ"
 date: 2024-12-31T02:38:33+09:00
-draft: false
+draft: true
 categories: ["notice"]
 tags: ["C105", "通販"]
 #featureimage: ""

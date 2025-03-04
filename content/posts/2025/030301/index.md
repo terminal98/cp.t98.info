@@ -2,6 +2,7 @@
 title: "既刊セール開催中(3/9まで)"
 date: 2025-03-03T05:00:28+09:00
 draft: false
+expiryDate: 2025-03-10
 #categories: [""]
 #tags: [""]
 #featureimage: ""
