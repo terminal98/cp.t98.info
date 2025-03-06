@@ -1,12 +1,13 @@
 ---
-title: "スケジュール"
+title: "撮影依頼"
 date: 2023-03-26T02:36:15+09:00
 draft: false
-series: ["撮影について"]
-series_order: 2
 layout: "simple"
 featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 ---
+
+<h3 id="event" class="profile-name text-center text-2xl">お受け</h3>
+
 
 <h3 id="event" class="profile-name text-center text-2xl">スケジュール</h3>
 

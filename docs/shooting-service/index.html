@@ -75,7 +75,6 @@
   <meta property="og:type" content="article">
     <meta property="article:published_time" content="2024-10-11T00:00:00+09:00">
     <meta property="article:modified_time" content="2025-01-08T21:55:00+09:00">
-      <meta property="og:see_also" content="https://cp.t98.info/eventlist/">
 
   
   <meta name="twitter:card" content="summary">
@@ -107,7 +106,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "350"
+    "wordCount": "623"
   }]
   </script>
 
@@ -259,7 +258,7 @@
 
     </span>
     
-    <p class="text-base font-medium" title="スケジュール">
+    <p class="text-base font-medium" title="撮影依頼">
         スケジュール
     </p>
 </a>
@@ -543,7 +542,7 @@
 
         </div>
         
-        <p class="text-bg font-bg" title="スケジュール">
+        <p class="text-bg font-bg" title="撮影依頼">
             スケジュール
         </p>
     </a>
@@ -743,12 +742,7 @@
       </h1>
     </header>
     <section class="max-w-full mt-6 prose dark:prose-invert">
-      
-
-<h2 class="relative group">お受けできるもの 
-    <div id="%E3%81%8A%E5%8F%97%E3%81%91%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%82%E3%81%AE" class="anchor"></div>
-    
-</h2>
+      <h3 id="products" class="profile-name text-center text-2xl">お受けできるもの</h3>
 <div>
 <span class="profile-likes-tag">コスプレ撮影</span>
 <span class="profile-likes-tag">スタジオ</span>
@@ -762,36 +756,126 @@
 <p>ジャンル・作品・FF内外不問です。</p>
 <p>その他記載のないものでも対応できる場合がございます。
 まずはお気軽にお問い合わせください。</p>
-
-
-<h2 class="relative group">ご依頼の際は・・・ 
-    <div id="%E3%81%94%E4%BE%9D%E9%A0%BC%E3%81%AE%E9%9A%9B%E3%81%AF" class="anchor"></div>
-    
-</h2>
+<h3 id="how-to-order" class="profile-name text-center text-2xl">ご依頼の際は・・・</h3>
 <p>撮影依頼の際は以下事項を記載の上、
-Xのダイレクトメッセージまたはメールフォームよりご連絡ください。</p>
-<ol>
-<li>日時</li>
-<li>場所</li>
-<li>作品/キャラクター</li>
-<li>人数</li>
-<li>費用(相互無償・被写体負担…)</li>
-<li>撮影イメージ(画像もあると◎)
-※ 併せの場合はメンバー全員分のXアカウントも併記してください</li>
-</ol>
-<p>平日は7日前、土休日は前日朝9時までにご連絡ください。</p>
+<a href="https://x.com/98tml" target="_blank">X(@98tml)</a>・
+<a href="https://www.instagram.com/98tml/" target="_blank">Instagram(@98tml)</a>・
+<a href="https://www.t98.info/contact/" target="_blank">メールフォーム</a>のいずれかよりご連絡ください。</p>
+<pre tabindex="0"><code>1. 日時
+2. 場所
+3. 作品/キャラクター
+4. 人数
+5. 費用(相互無償・被写体負担…)
+6. 撮影イメージ(画像もあると◎)
+※ 併せの場合はメンバー全員分のXアカウントも併記してください
+</code></pre><p>楽しいお誘いお待ちしております！</p>
+<h3 id="event" class="profile-name text-center text-2xl">スケジュール</h3>
+<div id="cal-button">
+<button id="prevButton" class="flex m-1 rounded enabled:bg-primary-600 p-1.5 enabled:text-neutral enabled:hover:bg-primary-500 enabled:dark:bg-primary-800  enabled:dark:hover:bg-primary-700 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(-1)" disabled>
+<span class="relative block align-text-bottom icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+</span>
+前月</button>
+<span id="monthYear" class="p-1.5">読込中です…</span>
+<button id="nextButton" class="flex m-1 rounded enabled:bg-primary-600 p-1.5 enabled:text-neutral enabled:hover:bg-primary-500 enabled:dark:bg-primary-800  enabled:dark:hover:bg-primary-700 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(1)" disabled>翌月
+<span class="relative block align-text-bottom icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+</span>
+</button>
+</div>
+<div id="calendar">
+  <div className="flex justify-center" aria-label="読み込み中">
+    <p class="text-center text-xl">読込中です。しばらくお待ちください…</p>
+  </div>
+</div>
+<p>凡例： <code>◯ 空いてます</code> <code>△ 応相談</code> <code>✕ 締切</code></p>
+<p><span id="showMaxRange">調 整 中</span></p>
+<script src="/show-event-cal.js"></script>
+<p>記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。</p>
+<p><span style="color:red">3月平日 △印の撮影依頼は残り 1件 です</span></p>
+<h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
 
 
-<h2 class="relative group">撮影のご相談 
-    <div id="%E6%92%AE%E5%BD%B1%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87" class="anchor"></div>
+<h3 class="relative group">2025年 
+    <div id="event-2024" class="anchor"></div>
     
-</h2>
-<p>Xのダイレクトメッセージまたはメールフォームよりご連絡ください。
-楽しいお誘いお待ちしております！</p>
-<ul>
-<li><a href="https://x.com/98tml" target="_blank">Xダイレクトメッセージ(@98tml)</a></li>
-<li><a href="https://t98.info/contact/" target="_blank">メールフォーム</a></li>
-</ul>
+</h3>
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div>
+<table>
+  <thead>
+      <tr>
+          <th>日付</th>
+          <th>イベント名</th>
+          <th>参加形態</th>
+          <th>撮影</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>3/16(日)</td>
+          <td><a href="https://acosta.jp/event/horikiri/" target="_blank">アコスタ堀切</a></td>
+          <td>カメラ</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>4/6(日)</td>
+          <td><a href="https://www.melonbooks.co.jp/special/b/0/fair_dojin/5th_akihabaradojinfes/general/" target="_blank">第5回 秋葉原超同人祭＋</a></td>
+          <td>サークル</td>
+          <td>✕</td>
+      </tr>
+      <tr>
+          <td>6/29(日)</td>
+          <td><a href="https://nijisanji.familiar-life.info/" target="_blank">#にじそうさく10</a> (仮)</td>
+          <td>一般</td>
+          <td>✕</td>
+      </tr>
+  </tbody>
+</table>
+</div><div>
+<table>
+  <thead>
+      <tr>
+          <th>日付</th>
+          <th>イベント名</th>
+          <th>参加形態</th>
+          <th>撮影</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>8/16(土)</td>
+          <td><a href="https://www.comiket.co.jp/info-a/CMKinfo.html" target="_blank">コミックマーケット106</a></td>
+          <td>一般</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>8/17(日)</td>
+          <td><a href="https://www.comiket.co.jp/info-a/CMKinfo.html" target="_blank">コミックマーケット106</a></td>
+          <td>サークル(予定)</td>
+          <td>✕</td>
+      </tr>
+      <tr>
+          <td>10/25(土)</td>
+          <td>※ <a href="https://ikebukurocosplay.jp/" target="_blank">池袋ハロウィンコスプレフェス2025</a>(仮)</td>
+          <td>カメラ(予定)</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>12月末</td>
+          <td><a href="https://www.comiket.co.jp/info-a/CMKinfo.html" target="_blank">コミックマーケット107</a></td>
+          <td>一般</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>12月末</td>
+          <td><a href="https://www.comiket.co.jp/info-a/CMKinfo.html" target="_blank">コミックマーケット107</a></td>
+          <td>サークル(予定)</td>
+          <td>✕</td>
+      </tr>
+  </tbody>
+</table>
+</div></div>
 <!--
 ---
 
