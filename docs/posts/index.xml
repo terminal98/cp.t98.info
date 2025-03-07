@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>お知らせ on にじてくと</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://cp.t98.info/posts/</link>
     <description>Recent content in お知らせ on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2025 にじてくと</copyright>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cp.t98.info/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>既刊セール開催中(3/9まで)</title>
-      <link>http://localhost:1313/posts/2025/030301/</link>
+      <link>https://cp.t98.info/posts/2025/030301/</link>
       <pubDate>Mon, 03 Mar 2025 05:00:28 +0900</pubDate>
       
-      <guid>http://localhost:1313/posts/2025/030301/</guid>
+      <guid>https://cp.t98.info/posts/2025/030301/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/030301/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2025/030301/featured.png" />
     </item>
     
   </channel>
