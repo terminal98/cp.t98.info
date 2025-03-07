@@ -75,30 +75,6 @@ layout: "simple"
 
 <span style="color:red">3月平日 △印の撮影依頼は残り 1件 です</span>
 
-<h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
-
-### 2025年 {#event-2024}
-
-<div class="grid grid-cols-1 lg:grid-cols-2">
-<div>
-
-| 日付     | イベント名                                                                                                   | 参加形態 | 撮影 |
-| -------- | ------------------------------------------------------------------------------------------------------------ | -------- | ---- |
-| 3/16(日) | [アコスタ堀切](https://acosta.jp/event/horikiri/)                                                            | カメラ   | ○    |
-| 4/6(日)  | [第5回 秋葉原超同人祭＋](https://www.melonbooks.co.jp/special/b/0/fair_dojin/5th_akihabaradojinfes/general/) | サークル | ✕    |
-| 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/) (仮)                                                | 一般     | ✕    |
-
-</div><div>
-
-| 日付      | イベント名                                                             | 参加形態       | 撮影 |
-| --------- | ---------------------------------------------------------------------- | -------------- | ---- |
-| 8/16(土)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html) | 一般           | ○    |
-| 8/17(日)  | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html) | サークル(予定) | ✕    |
-| 10/25(土) | ※ [池袋ハロウィンコスプレフェス2025](https://ikebukurocosplay.jp/)(仮) | カメラ(予定)   | ○    |
-| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/CMKinfo.html) | 一般           | ○    |
-| 12月末    | [コミックマーケット107](https://www.comiket.co.jp/info-a/CMKinfo.html) | サークル(予定) | ✕    |
-
-</div></div>
 
 
 <!--

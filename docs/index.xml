@@ -2,99 +2,99 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>にじてくと</title>
-    <link>https://cp.t98.info/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2025 にじてくと</copyright>
-    <atom:link href="https://cp.t98.info/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>既刊セール開催中(3/9まで)</title>
-      <link>https://cp.t98.info/posts/2025/030301/</link>
+      <link>http://localhost:1313/posts/2025/030301/</link>
       <pubDate>Mon, 03 Mar 2025 05:00:28 +0900</pubDate>
       
-      <guid>https://cp.t98.info/posts/2025/030301/</guid>
+      <guid>http://localhost:1313/posts/2025/030301/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2025/030301/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/030301/featured.png" />
     </item>
     
     <item>
       <title>現在のステータス</title>
-      <link>https://cp.t98.info/live/</link>
+      <link>http://localhost:1313/live/</link>
       <pubDate>Sat, 15 Feb 2025 03:37:24 +0900</pubDate>
       
-      <guid>https://cp.t98.info/live/</guid>
+      <guid>http://localhost:1313/live/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>撮影のご相談</title>
-      <link>https://cp.t98.info/shooting-service/</link>
+      <link>http://localhost:1313/shooting-service/</link>
       <pubDate>Fri, 11 Oct 2024 00:00:00 +0900</pubDate>
       
-      <guid>https://cp.t98.info/shooting-service/</guid>
+      <guid>http://localhost:1313/shooting-service/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>イベントで撮影させていただいた方へ(2023/9/24〜)</title>
-      <link>https://cp.t98.info/notice/event/</link>
+      <link>http://localhost:1313/notice/event/</link>
       <pubDate>Sun, 24 Sep 2023 23:59:40 +0900</pubDate>
       
-      <guid>https://cp.t98.info/notice/event/</guid>
+      <guid>http://localhost:1313/notice/event/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>イベントで撮影させていただいた方へ(2022/8/1〜2023/9/23)</title>
-      <link>https://cp.t98.info/notice/event-20230924/</link>
+      <link>http://localhost:1313/notice/event-20230924/</link>
       <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://cp.t98.info/notice/event-20230924/</guid>
+      <guid>http://localhost:1313/notice/event-20230924/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>【DEV】作例一覧</title>
-      <link>https://cp.t98.info/develop/gallery/</link>
+      <link>http://localhost:1313/develop/gallery/</link>
       <pubDate>Wed, 20 Sep 2023 23:32:54 +0900</pubDate>
       
-      <guid>https://cp.t98.info/develop/gallery/</guid>
+      <guid>http://localhost:1313/develop/gallery/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>撮影依頼</title>
-      <link>https://cp.t98.info/eventlist/</link>
+      <title>スケジュール</title>
+      <link>http://localhost:1313/eventlist/</link>
       <pubDate>Sun, 26 Mar 2023 02:36:15 +0900</pubDate>
       
-      <guid>https://cp.t98.info/eventlist/</guid>
+      <guid>http://localhost:1313/eventlist/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/eventlist/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/eventlist/featured.png" />
     </item>
     
     <item>
       <title>プロフィール</title>
-      <link>https://cp.t98.info/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Aug 2022 01:35:39 +0900</pubDate>
       
-      <guid>https://cp.t98.info/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/about/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/about/featured.png" />
     </item>
     
     <item>
       <title></title>
-      <link>https://cp.t98.info/dic/event/couryukei/</link>
+      <link>http://localhost:1313/dic/event/couryukei/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://cp.t98.info/dic/event/couryukei/</guid>
+      <guid>http://localhost:1313/dic/event/couryukei/</guid>
       <description></description>
       
     </item>

@@ -1,15 +1,13 @@
 ---
-title: "撮影依頼"
+title: "スケジュール"
 date: 2023-03-26T02:36:15+09:00
 draft: false
 layout: "simple"
 featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 ---
 
-<h3 id="event" class="profile-name text-center text-2xl">お受け</h3>
 
-
-<h3 id="event" class="profile-name text-center text-2xl">スケジュール</h3>
+<h3 id="event" class="profile-name text-center text-2xl">カレンダー</h3>
 
 <div id="cal-button">
 <button id="prevButton" class="flex m-1 rounded enabled:bg-primary-600 p-1.5 enabled:text-neutral enabled:hover:bg-primary-500 enabled:dark:bg-primary-800  enabled:dark:hover:bg-primary-700 disabled:border disabled:border-neutral-300 disabled:dark:border-neutral-700 disabled:cursor-not-allowed disabled:m-0.5 items-center" onclick="changeMonth(-1)" disabled>
