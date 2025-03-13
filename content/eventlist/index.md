@@ -37,8 +37,6 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 
 記載のない進行中の案件も多数ございます。ご相談はお早めにお願いいたします。
 
-<span style="color:red">3月中の新規予定は相互のみお受け可能です。新規予定は4月以降でお願いいたします</span>
-
 <h3 id="event" class="profile-name text-center text-2xl">イベント参加予定</h3>
 
 ### 2025年 {#event-2024}
