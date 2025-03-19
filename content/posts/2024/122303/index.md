@@ -26,4 +26,4 @@ tags: ["大崎コミシェル"]
 - 場所： [JR大崎駅](https://www.jreast.co.jp/estation/stations/319.html)南改札エリア
 
 
-[＞＞ チラシの内容に関するお問い合わせはこちら](https://tayori.com/form/77947e5dc4b5f590517b0cc3ed6038aeed5ddb1f)
+[＞＞ チラシの内容に関するお問い合わせはこちら](https://www.t98.info/contact/)
