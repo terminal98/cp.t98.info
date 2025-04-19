@@ -9,25 +9,5 @@
     <copyright>&amp;copy;2025 にじてくと</copyright>
     <atom:link href="https://cp.t98.info/categories/event/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>3/30 アコスタ板橋大山</title>
-      <link>https://cp.t98.info/posts/2025/031402/</link>
-      <pubDate>Fri, 14 Mar 2025 11:26:06 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2025/031402/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>4/6 秋葉原超同人祭</title>
-      <link>https://cp.t98.info/posts/2025/030301/</link>
-      <pubDate>Mon, 03 Mar 2025 05:00:28 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2025/030301/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2025/030301/featured.png" />
-    </item>
-    
   </channel>
 </rss>
