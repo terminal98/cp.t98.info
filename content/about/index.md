@@ -2,7 +2,8 @@
 title: "プロフィール"
 date: 2022-08-01T01:35:39+09:00
 draft: false
-layout: "simple"
+#layout: "simple"
+externalUrl: "https://lit.link/98tml"
 ---
 
 <div class="grid grid-cols-3">
