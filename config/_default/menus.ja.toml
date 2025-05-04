@@ -13,7 +13,8 @@
 [[main]]
   name = "プロフィール"
   pre = "address-card-regular"
-  pageRef = "about"
+  #pageRef = "about"
+  url = "https://lit.link/98tml"
   weight = 5
 
 [[main]]
