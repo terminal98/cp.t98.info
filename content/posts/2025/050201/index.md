@@ -1,7 +1,7 @@
 ---
 title: "【5/18まで】メガ電子フェス開催中！ 既刊電子 最大50%OFF"
 date: 2025-05-02T01:55:38+09:00
-draft: false
+draft: true
 #categories: [""]
 #tags: [""]
 #featureimage: ""
