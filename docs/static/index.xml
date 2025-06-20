@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>募集 on にじてくと</title>
-    <link>https://cp.t98.info/categories/recruit/</link>
-    <description>Recent content in 募集 on にじてくと</description>
+    <title>Statics on にじてくと</title>
+    <link>https://cp.t98.info/static/</link>
+    <description>Recent content in Statics on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2025 にじてくと</copyright>
-    <atom:link href="https://cp.t98.info/categories/recruit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jun 2025 11:17:34 +0900</lastBuildDate><atom:link href="https://cp.t98.info/static/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>募集中の案件はありません</title>
