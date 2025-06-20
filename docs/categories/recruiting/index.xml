@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>お知らせ on にじてくと</title>
-    <link>https://cp.t98.info/posts/</link>
-    <description>Recent content in お知らせ on にじてくと</description>
+    <title>Recruiting on にじてくと</title>
+    <link>https://cp.t98.info/categories/recruiting/</link>
+    <description>Recent content in Recruiting on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2025 にじてくと</copyright>
-    <atom:link href="https://cp.t98.info/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>【C106】配置情報・お品書き</title>
-      <link>https://cp.t98.info/posts/2025/062001/</link>
-      <pubDate>Fri, 20 Jun 2025 10:44:56 +0900</pubDate>
-      
-      <guid>https://cp.t98.info/posts/2025/062001/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2025/062001/featured.png" />
-    </item>
+    <lastBuildDate>Fri, 06 Jun 2025 17:00:00 +0900</lastBuildDate><atom:link href="https://cp.t98.info/categories/recruiting/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>【C106】売り子募集 締め切りました</title>
