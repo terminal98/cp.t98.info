@@ -2,7 +2,7 @@
 title: "【C106】売り子募集 締め切りました"
 date: 2025-06-06T17:00:00+09:00
 draft: false
-categories: ["recruiting"]
+categories: ["recruit"]
 #tags: [""]
 #featureimage: ""
 #externalUrl: ""
