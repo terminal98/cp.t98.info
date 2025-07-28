@@ -44,11 +44,12 @@ featureimage: "https://g2.t98.info/pub/svg/c/eventlist/eventlist-featured.webp"
 <div class="grid grid-cols-1 lg:grid-cols-2">
 <div>
 
-| 日付     | イベント名                                                             | 参加形態       | 撮影 |
-| -------- | ---------------------------------------------------------------------- | -------------- | ---- |
-| 6/29(日) | [#にじそうさく10](https://nijisanji.familiar-life.info/) (仮)          | 一般           | ✕    |
-| 8/16(土) | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html) | 一般           | ○    |
-| 8/17(日) | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html) | サークル(予定) | ✕    |
+| 日付     | イベント名                                                                 | 参加形態       | 撮影 |
+| -------- | -------------------------------------------------------------------------- | -------------- | ---- |
+| 8/2(土)  | [世界コスプレサミット2025](https://x.com/98tml/status/1946540735786008925) | カメラ         | ○    |
+| 8/3(日)  | [世界コスプレサミット2025](https://x.com/98tml/status/1946540735786008925) | カメラ         | ○    |
+| 8/16(土) | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html)     | 一般           | ○    |
+| 8/17(日) | [コミックマーケット106](https://www.comiket.co.jp/info-a/CMKinfo.html)     | サークル(予定) | ✕    |
 
 </div><div>
 
