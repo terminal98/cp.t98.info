@@ -15,12 +15,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://cp.t98.info/posts/2025/062002/</loc>
-    <lastmod>2025-06-20T11:32:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://cp.t98.info/live/</loc>
     <lastmod>2025-02-16T20:57:45+09:00</lastmod>
     <changefreq>daily</changefreq>
@@ -82,7 +76,7 @@
   </url>
   <url>
     <loc>https://cp.t98.info/eventlist/</loc>
-    <lastmod>2025-04-20T00:24:59+09:00</lastmod>
+    <lastmod>2025-07-29T04:19:34+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
