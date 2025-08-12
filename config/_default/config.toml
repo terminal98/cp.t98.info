@@ -40,3 +40,10 @@ enableGitInfo = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[build]
+  [buildStats]
+    enable = "true"
+  [cachebusters]
+    source = "assets/notwatching/hugo_stats.json"
+    target = "styles.css"
