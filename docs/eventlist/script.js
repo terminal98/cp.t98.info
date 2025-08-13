@@ -269,12 +269,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const paginatedItems = eventList.slice(startIndex, endIndex);
 
     const table = document.createElement('table');
-    table.className = 'w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-0 mb-0 table-auto';
+    table.className = '!w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-0 mb-0 !table-fixed';
     table.innerHTML = `
             <thead class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-700">
                 <tr>
-                    <th scope="col" class="px-6 py-3 w-[150px]">日付</th>
-                    <th scope="col" class="px-6 py-3">イベント名</th>
+                    <th scope="col" class="px-4 py-2 text-left w-1/4">日付</th>
+                    <th scope="col" class="px-4 py-2 text-left w-3/4">イベント名</th>
                 </tr>
             </thead>
             <tbody></tbody>`;
@@ -286,10 +286,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const tr = document.createElement('tr');
       tr.className = 'bg-white dark:bg-gray-800 border-b dark:border-gray-700';
       tr.innerHTML = `
-                <td class="px-6 py-4">${date.getMonth() + 1}/${date.getDate()} (${dayOfWeek})</td>
-                <td class="px-6 py-4">
+                <td class="px-4 py-2 ">${date.getMonth() + 1}/${date.getDate()} (${dayOfWeek})</td>
+                <td class="px-4 py-2 break-words">
                   <div class="flex justify-between items-center">
-                      <span class="font-medium text-gray-900 dark:text-white truncate flex-grow min-w-0">${event.eventname}</span>
+                      <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${event.eventname}</span>
                       <button class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4">
                           <i class="fas fa-info-circle"></i>
                       </button>
