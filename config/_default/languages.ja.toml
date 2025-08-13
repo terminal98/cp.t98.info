@@ -9,12 +9,12 @@ title = "にじてくと"
   rtl = false
 
   logo = "img/nijitect_logo_r1.png"
-  description = "ほむりん(@98tml). 写真撮影,動画編集,Webサイト製作/保守."
+  description = "帆村サツキ,@98tml.写真撮影,動画編集,Webサイト製作/保守."
   copyright = "&copy;{ year } にじてくと"
   dateFormat = "2006.1.2"
 
  [author]
-   name = "ほむりん"
+   name = "帆村サツキ"
    image = "img/pFIScid5.jpg"
    headline = "写真・動画撮影、Webサイトの製作・運営をしています"
    bio = "SNSのフォローもお願いいたします！"
