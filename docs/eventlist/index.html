@@ -76,7 +76,7 @@
   <meta property="og:title" content="スケジュール">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
-    <meta property="article:modified_time" content="2025-08-13T15:52:40+09:00">
+    <meta property="article:modified_time" content="2025-08-14T01:34:11+09:00">
     <meta property="og:image" content="https://cp.t98.info/eventlist/featured.png">
 
   
@@ -104,12 +104,12 @@
     
     
     
-    "dateModified": "2025-08-13T15:52:40\u002b09:00",
+    "dateModified": "2025-08-14T01:34:11\u002b09:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "72"
+    "wordCount": "81"
   }]
   </script>
 
@@ -879,6 +879,20 @@
             <div class="flex items-center"><i
                 class="fas fa-times text-red-500 dark:text-red-400 w-5 text-center mr-2"></i><span>締切</span></div>
           </div>
+        </div>
+
+        <div id="next-available-dates" class="mt-8">
+          <h4 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">直近で空いている日</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- 平日 -->
+              <div id="next-weekday" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center">
+                <!-- コンテンツはJSで生成 -->
+              </div>
+              <!-- 土休日 -->
+              <div id="next-weekend" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center">
+                <!-- コンテンツはJSで生成 -->
+              </div>
+            </div>
         </div>
 
         <!-- Event List -->

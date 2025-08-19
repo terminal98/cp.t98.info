@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const eventTableWrapper = document.getElementById('event-table-wrapper');
   const noEventsMessage = document.getElementById('no-events-message');
   const paginationControls = document.getElementById('pagination-controls');
+  const nextWeekdayEl = document.getElementById('next-weekday');
+  const nextWeekendEl = document.getElementById('next-weekend');
 
   // --- 初期化処理 ---
   async function initialize() {
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setupDisplayRange();
       renderCalendar();
       prepareAndRenderEventList();
+      renderNextAvailableDates();
       setupEventListeners();
       loadingMessage.classList.add('hidden');
       calendarWrapper.classList.remove('hidden');
@@ -242,6 +245,64 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function renderNextAvailableDates() {
+    let foundWeekday = null;
+    let foundWeekend = null;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    for (let i = 0; i < 180; i++) { // 約6ヶ月先まで探索
+      if (foundWeekday && foundWeekend) break;
+
+      const checkingDate = new Date(today);
+      checkingDate.setDate(today.getDate() + i);
+
+      const dateStr = formatDate(checkingDate);
+      const dayOfWeek = checkingDate.getDay();
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6 || holidays[dateStr];
+
+      const event = events[dateStr] || getDefaultEvent(checkingDate);
+      const isAvailable = event && (event.type === 1 || event.type === 2);
+
+      if (isAvailable) {
+        if (!isWeekend && !foundWeekday) {
+          foundWeekday = checkingDate;
+        }
+        if (isWeekend && !foundWeekend) {
+          foundWeekend = checkingDate;
+        }
+      }
+    }
+
+    const dayOfWeekMap = ['日', '月', '火', '水', '木', '金', '土'];
+
+    // 平日の表示を更新
+    if (foundWeekday) {
+      nextWeekdayEl.innerHTML = `
+                <span class="absolute top-2 left-3 text-xs font-bold text-gray-500 dark:text-gray-400">平日</span>
+                <div class="flex justify-center items-baseline">
+                    <div class="text-3xl font-bold text-gray-800 dark:text-gray-100">${foundWeekday.getMonth() + 1}月${foundWeekday.getDate()}日</div>
+                    <div class="text-md text-gray-600 dark:text-gray-300 ml-2">(${dayOfWeekMap[foundWeekday.getDay()]})</div>
+                </div>
+            `;
+    } else {
+      nextWeekdayEl.innerHTML = `<span class="text-gray-500 dark:text-gray-400">調整中</span>`;
+    }
+
+    // 土休日の表示を更新
+    if (foundWeekend) {
+      nextWeekendEl.innerHTML = `
+                <span class="absolute top-2 left-3 text-xs font-bold text-red-500 dark:text-red-400">土休日</span>
+                <div class="flex justify-center items-baseline">
+                    <div class="text-3xl font-bold text-gray-800 dark:text-gray-100">${foundWeekend.getMonth() + 1}月${foundWeekend.getDate()}日</div>
+                    <div class="text-md text-gray-600 dark:text-gray-300 ml-2">(${dayOfWeekMap[foundWeekend.getDay()]})</div>
+                </div>
+            `;
+    } else {
+      nextWeekendEl.innerHTML = `<span class="text-gray-500 dark:text-gray-400">調整中</span>`;
+    }
+  }
+
   // --- イベントリストの準備と描画 ---
   function prepareAndRenderEventList() {
     const today = new Date();
@@ -269,10 +330,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const paginatedItems = eventList.slice(startIndex, endIndex);
 
     const table = document.createElement('table');
-    table.className = '!w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-0 mb-0 !table-fixed';
+    table.className = '!w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-0 mb-0 table-auto';
     table.innerHTML = `
-            <thead class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-700">
-                <tr>
+            <thead class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-700 block w-full">
+                <tr class="inline-flex w-full">
                     <th scope="col" class="px-4 py-2 text-left w-1/4">日付</th>
                     <th scope="col" class="px-4 py-2 text-left w-3/4">イベント名</th>
                 </tr>
@@ -284,10 +345,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const date = new Date(dateStr);
       const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
       const tr = document.createElement('tr');
-      tr.className = 'bg-white dark:bg-gray-800 border-b dark:border-gray-700';
+      tr.className = 'bg-white dark:bg-gray-800 border-b dark:border-gray-700 inline-flex w-full';
       tr.innerHTML = `
-                <td class="px-4 py-2 ">${date.getMonth() + 1}/${date.getDate()} (${dayOfWeek})</td>
-                <td class="px-4 py-2 break-words">
+                <td class="px-4 py-2 w-1/4">${date.getMonth() + 1}/${date.getDate()} (${dayOfWeek})</td>
+                <td class="px-4 py-2 break-words w-3/4">
                   <div class="flex justify-between items-center">
                       <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${event.eventname}</span>
                       <button class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4">

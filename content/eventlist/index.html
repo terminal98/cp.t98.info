@@ -82,6 +82,20 @@ layout= "simple"
           </div>
         </div>
 
+        <div id="next-available-dates" class="mt-8">
+          <h4 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">直近で空いている日</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- 平日 -->
+              <div id="next-weekday" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center">
+                <!-- コンテンツはJSで生成 -->
+              </div>
+              <!-- 土休日 -->
+              <div id="next-weekend" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center">
+                <!-- コンテンツはJSで生成 -->
+              </div>
+            </div>
+        </div>
+
         <!-- Event List -->
         <div id="event-list-container" class="mt-8">
           <h4 id="event" class="profile-name text-center text-2xl mb-4">イベント参加予定</h4>
