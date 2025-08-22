@@ -1,7 +1,7 @@
 ---
 title: "【8/2・8/3】コスサミ2025"
 date: 2025-07-29T04:14:30+09:00
-draft: false
+draft: true
 categories: ["event"]
 #tags: [""]
 #featureimage: ""
