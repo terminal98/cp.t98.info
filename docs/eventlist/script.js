@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const status = statusMap[event.type];
-    const displayName = event.isDefault ? `${status.symbol} ${status.text}` : event.eventname;
+    const displayName = event.isDefault ? ` ${status.text}` : event.eventname;
     const titleIcon = event.type === 2
       ? `<i class="${status.icon} mr-2" style="transform: rotate(-90deg);"></i>`
       : `<i class="${status.icon} mr-2"></i>`;
