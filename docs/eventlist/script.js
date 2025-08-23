@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let displayEndDate = null;
   let eventList = [];
   let currentPage = 1;
+  let touchStartX = 0;
+  let touchStartY = 0;
 
   // --- DOM要素 ---
   const loadingMessage = document.getElementById('loading-message');
@@ -58,12 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (error) {
         console.warn(`Attempt ${i + 1} for ${url} failed with error:`, error);
       }
-      // 最終試行でなければ、遅延後に再試行
       if (i < retries - 1) {
-        await new Promise(res => setTimeout(res, delay * (2 ** i))); // Exponential backoff
+        await new Promise(res => setTimeout(res, delay * (2 ** i)));
       }
     }
-    // すべてのリトライが失敗した場合
     throw new Error(`Failed to fetch ${url} after ${retries} attempts.`);
   }
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('データ取得エラー (リトライ後):', error);
       events = {};
       holidays = {};
-      throw error; // エラーを再スローして初期化処理を停止させる
+      throw error;
     }
   }
 
@@ -245,13 +245,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // --- 直近の空き日程を描画 ---
   function renderNextAvailableDates() {
     let foundWeekday = null;
     let foundWeekend = null;
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    for (let i = 0; i < 180; i++) { // 約6ヶ月先まで探索
+    for (let i = 0; i < 180; i++) {
       if (foundWeekday && foundWeekend) break;
 
       const checkingDate = new Date(today);
@@ -276,7 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dayOfWeekMap = ['日', '月', '火', '水', '木', '金', '土'];
 
-    // 平日の表示を更新
     if (foundWeekday) {
       nextWeekdayEl.innerHTML = `
                 <span class="absolute top-2 left-3 text-xs font-bold text-gray-500 dark:text-gray-400">平日</span>
@@ -289,10 +289,9 @@ document.addEventListener('DOMContentLoaded', () => {
       nextWeekdayEl.innerHTML = `<span class="text-gray-500 dark:text-gray-400">調整中</span>`;
     }
 
-    // 土休日の表示を更新
     if (foundWeekend) {
       nextWeekendEl.innerHTML = `
-                <span class="absolute top-2 left-3 text-xs font-bold text-red-500 dark:text-red-400">土休日</span>
+                <span class="absolute top-2 left-3 text-xs font-bold text-gray-500 dark:text-gray-400">土休日</span>
                 <div class="flex justify-center items-baseline">
                     <div class="text-3xl font-bold text-gray-800 dark:text-gray-100">${foundWeekend.getMonth() + 1}月${foundWeekend.getDate()}日</div>
                     <div class="text-md text-gray-600 dark:text-gray-300 ml-2">(${dayOfWeekMap[foundWeekend.getDay()]})</div>
@@ -330,12 +329,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const paginatedItems = eventList.slice(startIndex, endIndex);
 
     const table = document.createElement('table');
-    table.className = '!w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-0 mb-0 table-auto';
+    table.className = 'w-full text-sm text-left text-gray-500 dark:text-gray-400 table-fixed';
     table.innerHTML = `
-            <thead class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-700 block w-full">
-                <tr class="inline-flex w-full">
-                    <th scope="col" class="px-4 py-2 text-left w-1/4">日付</th>
-                    <th scope="col" class="px-4 py-2 text-left w-3/4">イベント名</th>
+            <thead class="text-xs text-gray-700 dark:text-gray-400 uppercase bg-gray-50 dark:bg-gray-700">
+                <tr>
+                    <th scope="col" class="px-6 py-3 w-[150px]">日付</th>
+                    <th scope="col" class="px-6 py-3">イベント名</th>
                 </tr>
             </thead>
             <tbody></tbody>`;
@@ -345,15 +344,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const date = new Date(dateStr);
       const dayOfWeek = ['日', '月', '火', '水', '木', '金', '土'][date.getDay()];
       const tr = document.createElement('tr');
-      tr.className = 'bg-white dark:bg-gray-800 border-b dark:border-gray-700 inline-flex w-full';
+      tr.className = 'bg-white dark:bg-gray-800 border-b dark:border-gray-700';
       tr.innerHTML = `
-                <td class="px-4 py-2 w-1/4">${date.getMonth() + 1}/${date.getDate()} (${dayOfWeek})</td>
-                <td class="px-4 py-2 break-words w-3/4">
-                  <div class="flex justify-between items-center">
-                      <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${event.eventname}</span>
-                      <button class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4">
-                          <i class="fas fa-info-circle"></i>
-                      </button>
+                <td class="px-6 py-4">${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} (${dayOfWeek})</td>
+                <td class="px-6 py-4">
+                    <div class="flex justify-between items-center w-full">
+                        <span class="font-medium text-gray-900 dark:text-white break-words flex-grow min-w-0">${event.eventname}</span>
+                        <button class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4">
+                            <i class="fas fa-info-circle"></i>
+                        </button>
                     </div>
                 </td>
             `;
@@ -407,13 +406,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const statusMap = {
       1: { symbol: '○', text: '空き', colorClass: 'text-green-600 dark:text-green-400', icon: 'far fa-circle' },
-      2: { symbol: '△', text: '応相談', colorClass: 'text-yellow-600 dark:text-yellow-400', icon: 'fas fa-play' },
-      3: { symbol: '✕', text: '締切', colorClass: 'text-red-600 dark:text-red-400', icon: 'fas fa-times' },
+      2: { symbol: '△', text: '要相談', colorClass: 'text-yellow-600 dark:text-yellow-400', icon: 'fas fa-play' },
+      3: { symbol: '✕', text: '満枠', colorClass: 'text-red-600 dark:text-red-400', icon: 'fas fa-times' },
       4: { symbol: 'その他', text: 'その他', colorClass: 'text-gray-600 dark:text-gray-400', icon: 'fas fa-info-circle' }
     };
 
     const status = statusMap[event.type];
-    const displayName = event.isDefault ? `${status.text}` : event.eventname;
+    const displayName = event.isDefault ? `${status.symbol} ${status.text}` : event.eventname;
     const titleIcon = event.type === 2
       ? `<i class="${status.icon} mr-2" style="transform: rotate(-90deg);"></i>`
       : `<i class="${status.icon} mr-2"></i>`;
@@ -442,17 +441,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
                     <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">\\ 楽しいお誘いお待ちしております！ /</p>
                     <div class="flex items-center justify-center space-x-4">
-                        <a href="https://x.com/messages/compose?recipient_id=427460306&text=%E3%80%90%E6%92%AE%E5%BD%B1%E4%BE%9D%E9%A0%BC%E3%80%91%E2%80%BB%E4%BB%A5%E4%B8%8B%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%82%92%E5%9F%8B%E3%82%81%E3%81%A6%E9%80%81%E4%BF%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E2%80%BB%0A%0A%E2%91%A0%20%E6%97%A5%E6%99%82%EF%BC%9A%0A%E2%91%A1%20%E5%A0%B4%E6%89%80%20(%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA%E3%83%BB%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%90%8D)%EF%BC%9A%0A%E2%91%A2%20%E4%BD%9C%E5%93%81/%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%EF%BC%9A%0A%E2%91%A3%20%E4%BA%BA%E6%95%B0%EF%BC%9A%0A%E2%91%A4%20%E8%B2%BB%E7%94%A8%E8%B2%A0%E6%8B%85%20(%E7%9B%B8%E4%BA%92%E8%B2%A0%E6%8B%85%E3%83%BB%E8%A2%AB%E5%86%99%E4%BD%93%E8%B2%A0%E6%8B%85%E2%80%A6%E3%81%AA%E3%81%A9)%EF%BC%9A%0A%E2%91%A5%20%E6%92%AE%E5%BD%B1%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8(%E7%94%BB%E5%83%8F%E3%82%82%E3%81%82%E3%82%8B%E3%81%A8%E2%97%8E)%EF%BC%9A%0A%0A%E3%83%BB%E4%BD%B5%E3%81%9B%E3%81%AE%E5%A0%B4%E5%90%88%E3%81%AF%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E5%85%A8%E5%93%A1%E5%88%86%E3%81%AEX%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%82%82%E4%BD%B5%E8%A8%98%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%0A%E3%83%BB%E8%A4%87%E6%95%B0%E4%BB%B6%E5%90%8C%E6%99%82%E3%81%AB%E4%BE%9D%E9%A0%BC%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%81%8C%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%81%AF1%E4%BB%B6%E3%81%9A%E3%81%A4%E4%BD%9C%E6%88%90%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%0A%E3%83%BB%E3%81%9D%E3%81%AE%E4%BB%96%E4%B8%8D%E6%98%8E%E3%81%AA%E7%82%B9%E3%81%AF%E3%81%8A%E6%B0%97%E8%BB%BD%E3%81%AB%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-black text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-transform transform hover:scale-105">
+                        <a href="https://x.com/your-username" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-black text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-transform transform hover:scale-105">
                             <i class="fab fa-x-twitter mr-2"></i>DMで相談
                         </a>
-                        <a href="https://t98.info/contact/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                        <a href="https://example.com/contact/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
                             <i class="far fa-envelope mr-2"></i>メールフォーム
                         </a>
                     </div>
                 </div>
             `;
     }
-
 
     detailsHtml += `</div></div>`;
 
@@ -487,7 +485,41 @@ document.addEventListener('DOMContentLoaded', () => {
         hideDetails();
       }
     });
+
+    // ★ここから追加: スワイプ機能
+    calendarGrid.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+
+    calendarGrid.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      const touchEndY = e.changedTouches[0].screenY;
+      handleSwipeGesture(touchEndX, touchEndY);
+    });
+    // ★ここまで追加
   }
+
+  // ★追加: スワイプ処理
+  function handleSwipeGesture(touchEndX, touchEndY) {
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    // 横方向のスワイプを優先
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      // スワイプ距離のしきい値
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0 && !prevMonthBtn.disabled) {
+          // 右にスワイプ -> 前の月へ
+          changeMonth(-1);
+        } else if (diffX < 0 && !nextMonthBtn.disabled) {
+          // 左にスワイプ -> 次の月へ
+          changeMonth(1);
+        }
+      }
+    }
+  }
+
 
   function changeMonth(delta) {
     currentDate.setMonth(currentDate.getMonth() + delta, 1);
