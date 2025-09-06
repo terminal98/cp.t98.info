@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       calendarWrapper.classList.remove('hidden');
     } catch (error) {
       console.error('初期化に失敗しました:', error);
-      loadingMessage.innerHTML = '<p class="text-red-500 dark:text-red-400">予定の読み込みに失敗しました。時間をおいて再度お試しください。</p>';
+      loadingMessage.innerHTML = '<p class="text-red-500 dark:text-red-400">予定の読み込みに失敗しました。時間をおいて再度お試しください。<br>お急ぎの場合はDMで直接お問い合わせください。</p>';
     }
   }
 
