@@ -1,7 +1,7 @@
 ---
 title: "【C106】新刊について"
 date: 2025-06-20T11:36:21+09:00
-draft: fasle
+draft: true
 #categories: [""]
 tags: ["C106", "通販"]
 #featureimage: ""
