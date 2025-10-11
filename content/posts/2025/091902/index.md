@@ -1,7 +1,7 @@
 ---
 title: "コスカメラN年目本 通販終了"
 date: 2025-09-19T00:00:00+09:00
-draft: false
+draft: true
 categories: ["notice"]
 #tags: [""]
 #featureimage: ""
