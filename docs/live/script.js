@@ -1,43 +1,99 @@
-async function fetchAndDisplay() {
-  try {
-    const response = await fetch('https://g2.t98.info/data/place.json'); // APIのURLを指定
-    const data = await response.json();
 
-    // 現在の時刻（日本時間）
-    const now = new Date();
-    const lastUpdateDate = new Date(data.lastupdate * 1000);
+// Cloudflare Workerのデプロイ先URL
+// (ローカル開発時: http://127.0.0.1:8787)
+const API_BASE_URL = 'https://tiny-glitter-532a.t98.workers.dev';
 
-    // 経過時間を計算
-    const diffInSeconds = Math.floor((now - lastUpdateDate) / 1000);
-    let timeAgo;
-    if (diffInSeconds < 60) {
-      timeAgo = '1分前';
-    } else if (diffInSeconds < 3600) {
-      timeAgo = `${Math.floor(diffInSeconds / 60)}分前`;
-    } else {
-      timeAgo = `${Math.floor(diffInSeconds / 3600)}時間前`;
+function statusUpdater() {
+  return {
+    isLoading: true,
+    error: null,
+    data: null,
+    lastFetchData: null, // 差分更新用
+    now: new Date(), // 現在時刻（タイマーで更新）
+
+    // --- 初期化 ---
+    init() {
+      this.fetchData();
+
+      // ★修正：2分ごとにデータを再フェッチ
+      setInterval(() => {
+        this.fetchData();
+      }, 120000); // 2分
+
+      // 1秒ごとに現在時刻を更新（「N分前」表示のため）
+      setInterval(() => {
+        this.now = new Date();
+      }, 1000);
+    },
+
+    // --- データフェッチ ---
+    async fetchData() {
+      try {
+        const response = await fetch(API_BASE_URL + '/api/current');
+        if (!response.ok) {
+          throw new Error('データの取得に失敗しました。');
+        }
+        const newData = await response.json();
+
+        const newDataString = JSON.stringify(newData);
+        if (newDataString !== this.lastFetchData) {
+          this.data = newData;
+          this.lastFetchData = newDataString;
+          console.log('Data updated:', newData);
+        }
+
+        this.error = null;
+      } catch (e) {
+        this.error = e.message;
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    // --- ヘルパー関数 (View表示用) ---
+
+    // ★復活：テンプレート画像のURLを生成
+    getTemplateImageUrl() {
+      if (!this.data) return '';
+      // テンプレート画像はキャッシュを活用するため、更新日時はつけない
+      return `${API_BASE_URL}/api/templates/${this.data.templateId}/image`;
+    },
+
+    // ★復活：ピンのCSS (left/top) を生成
+    getPinStyle() {
+      if (!this.data) return { left: '50%', top: '50%' };
+      return {
+        left: `${this.data.position.x * 100}%`,
+        top: `${this.data.position.y * 100}%`,
+      };
+    },
+
+    // (getUpdateTime, getFormattedTime, getTimeAgo, isOutdated は変更なし)
+    // ...
+    getUpdateTime() {
+      if (!this.data) return new Date();
+      return new Date(this.data.lastupdate * 1000);
+    },
+
+    getFormattedTime() {
+      if (!this.data) return '';
+      const d = this.getUpdateTime();
+      return `${d.getMonth() + 1}/${d.getDate()} ${d.getHours()}:${d.getMinutes().toString().padStart(2, '0')}`;
+    },
+
+    getTimeAgo() {
+      if (!this.data) return '';
+      const diffSeconds = Math.floor((this.now - this.getUpdateTime()) / 1000);
+      const diffMinutes = Math.floor(diffSeconds / 60);
+
+      if (diffMinutes < 1) return 'たった今';
+      return `${diffMinutes} 分前`;
+    },
+
+    isOutdated() {
+      if (!this.data) return false;
+      const diffSeconds = Math.floor((this.now - this.getUpdateTime()) / 1000);
+      return diffSeconds > (15 * 60); // 15分
     }
-
-    // 日時フォーマット
-    const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Tokyo' };
-    const formattedDate = new Intl.DateTimeFormat('ja-JP', options).format(lastUpdateDate);
-
-    // HTMLに出力
-    document.getElementById('status').textContent = `状態: ${data.status}`;
-    document.getElementById('place').textContent = `場所: ${data.place}`;
-    const lastUpdateElement = document.getElementById('lastupdate');
-    lastUpdateElement.innerHTML = `最終更新時間: ${formattedDate} <span>(${timeAgo})</span>`;
-
-    // 5分以上前なら赤字にする
-    if (diffInSeconds >= 600) {
-      lastUpdateElement.querySelector('span').style.color = 'red';
-    } else {
-      lastUpdateElement.querySelector('span').style.color = 'green';
-    }
-  } catch (error) {
-    console.error('データの取得に失敗しました', error);
-  }
+  };
 }
-
-// ページ読み込み時にデータ取得
-window.onload = fetchAndDisplay;
