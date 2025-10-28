@@ -5,6 +5,6 @@ draft: false
 categories: ["event"]
 #tags: [""]
 #featureimage: ""
-expiryDate: 2025-10-25T18:59:59+09:00
-externalUrl: "https://x.com/98tml/status/1980907465916154028"
+expiryDate: 2025-11-01T18:59:59+09:00
+externalUrl: "https://x.com/98tml/status/1983190527546966207"
 ---

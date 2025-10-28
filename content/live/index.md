@@ -1,5 +1,5 @@
 ---
-title: "イベント"
+title: "11/1 ラグコスTW 現在地マップ"
 date: 2025-02-15T03:37:24+09:00
 draft: false
 layout: "simple"
@@ -9,7 +9,7 @@ layout: "simple"
 #externalUrl: ""
 ---
 
-<h3 id="event" class="profile-name text-center text-2xl">10/25 池ハロ2025</h3>
+<h3 id="event" class="profile-name text-center text-2xl">11/1 ラグコスTW</h3>
 <style>
 .map-pin {
     position: absolute;
@@ -154,6 +154,3 @@ layout: "simple"
 </div>
 
 なるべくリアルタイム更新できるように頑張ります！ 撮影のお声がけ大歓迎！リプライやDMいただければ向かいます！
-
-
-[池ハロマップ画像お借りしました](https://x.com/moon_tsukky/status/1979148296787759278)
