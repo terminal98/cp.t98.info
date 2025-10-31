@@ -98,4 +98,10 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://cp.t98.info/live/</loc>
+    <lastmod>2025-10-25T01:29:13+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
