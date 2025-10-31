@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>https://cp.t98.info/live/</loc>
+    <lastmod>2025-10-31T19:16:52+09:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://cp.t98.info/static/</loc>
     <lastmod>2025-10-29T00:18:30+09:00</lastmod>
     <changefreq>daily</changefreq>
@@ -95,12 +101,6 @@
   <url>
     <loc>https://cp.t98.info/eventlist/</loc>
     <lastmod>2025-08-25T12:24:13+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://cp.t98.info/live/</loc>
-    <lastmod>2025-10-25T01:29:13+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
