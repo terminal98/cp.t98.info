@@ -1,7 +1,7 @@
 ---
-title: "11/1 ラグコスTW 現在地マップ"
+title: "イベント現在地マップ"
 date: 2025-02-15T03:37:24+09:00
-draft: false
+draft: true
 layout: "simple"
 #categories: [""]
 #tags: [""]
@@ -9,7 +9,8 @@ layout: "simple"
 #externalUrl: ""
 ---
 
-<h3 id="event" class="profile-name text-center text-2xl">11/1 ラグコスTW</h3>
+
+<h3 id="event" class="profile-name text-center text-2xl">12/30 コミックマーケット107</h3>
 <style>
 .map-pin {
     position: absolute;
@@ -59,27 +60,14 @@ layout: "simple"
   }
 </style>
 <script src="script.js"></script>
-<!-- 
-  Font Awesome (アイコン用)
--->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<!-- 
-  Alpine.js
--->
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-<!--
-  Alpine.js コンポーネント
--->
 <div 
   x-data="statusUpdater()" 
   x-init="init()"
   class="flex justify-center items-center min-h-screen bg-gray-100 p-4"
 >
-  <!-- ★修正：全体の枠を削除し、コンテナのみに -->
   <div class="w-full max-w-lg mx-auto">
-    <!-- ローディング中またはエラー時 -->
     <template x-if="isLoading">
       <div class="p-8 text-center text-gray-500">
         読み込み中...
@@ -88,69 +76,55 @@ layout: "simple"
     <template x-if="error">
       <div class="p-8 text-center text-red-500" x-text="error" style="color:red;"></div>
     </template>
-    <!-- データ表示 -->
     <template x-if="!isLoading && !error && data">
-      <div class="space-y-6"> <!-- ★修正：要素間のマージン用 -->
-        <!-- ★修正：1. ステータスと場所 (スマホで1カラム、md以上で2カラム) -->
+      <div class="space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <!-- ステータス -->
           <div class="flex gap-3 bg-white rounded-lg">
               <h5
                 class="text-2xl font-extrabold text-center break-words"   text-xl
                 :style="{ color: data.statusColor || '#000' }"
                 x-text="data.status"
               >
-                <!-- データが入る -->
               </h5>
           </div>
-          <!-- 場所 -->
           <div class="flex items-center gap-3 bg-white rounded-lg">
-            <!-- 場所アイコン -->
             <i class="fa-solid fa-location-dot text-2xl text-gray-500 w-8 text-center"></i>
-              <h5 class="text-xl font-bold text-gray-800 break-words" x-text="data.place"> <!-- (h5相当の text-xl は変更なし) -->
-                <!-- データが入る -->
+              <h5 class="text-xl font-bold text-gray-800 break-words" x-text="data.place">
               </h5>
           </div>
         </div>
-        <!-- ★修正：2. マップ画像とピン (スタイル修正) -->
-        <!-- ★修正: shadow-lg, border, border-gray-200, aspect-video 削除。 max-h-[50vh] 追加 -->
         <div class="relative w-full rounded-lg overflow-hidden max-h-[50vh]">
-          <!-- ベースマップ画像 -->
           <img 
             id="map-image"
             :src="getTemplateImageUrl()"
             alt="Map"
             class="w-full h-full object-cover"
           >
-          <!-- ピン (CSSで位置決め) -->
           <div 
             id="map-pin"
             class="map-pin"
             :style="getPinStyle()"
           ></div>
         </div>
-        <!-- ★修正：3. 更新日時 -->
         <div 
           class="flex items-center justify-center gap-2 rounded-lg text-lg font-semibold"
           :style="isOutdated() ? 'color:red;' : 'color:green;'"
         >
-          <!-- 時計アイコン -->
           <i class="fa-regular fa-clock"></i>
           <span x-text="getFormattedTime()"></span>
           (<span x-text="getTimeAgo()"></span>)
         </div>
       </div>
     </template>
-    <!-- ★追加：X (Twitter) リンクボタンセクション -->
     <div class="text-center mt-8">
       <p class="promo-text">\ 撮影依頼はリプライやDMでお気軽に！ /</p>
       <a href="https://x.com/98tml" target="_blank" rel="noopener noreferrer" class="x-button">
-        <!-- X アイコン SVG -->
         <svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
         <span>@98tml</span>
       </a>
     </div>
   </div>
 </div>
-
+<img src="timetable.webp?202510311947" style="max-width:90%">
 なるべくリアルタイム更新できるように頑張ります！ 撮影のお声がけ大歓迎！リプライやDMいただければ向かいます！
+-->
