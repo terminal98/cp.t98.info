@@ -2,7 +2,7 @@
 title: "イベントで撮影させていただいた方へ(2023/9/24〜)"
 date: 2023-09-24T23:59:40+09:00
 lastmod: 2023-09-25
-draft: false
+draft: true
 ---
 
 {{< alert >}}
