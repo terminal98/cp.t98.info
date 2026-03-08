@@ -41,30 +41,6 @@ body{
 </span>
 作例
 </a>
-<a class="flex !rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 items-center" href="/categories/recruit/">
-<span class="mr-1">
-<span class="relative block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M159.3 5.4c7.8-7.3 19.9-7.2 27.7 .1c27.6 25.9 53.5 53.8 77.7 84c11-14.4 23.5-30.1 37-42.9c7.9-7.4 20.1-7.4 28 .1c34.6 33 63.9 76.6 84.5 118c20.3 40.8 33.8 82.5 33.8 111.9C448 404.2 348.2 512 224 512C98.4 512 0 404.1 0 276.5c0-38.4 17.8-85.3 45.4-131.7C73.3 97.7 112.7 48.6 159.3 5.4zM225.7 416c25.3 0 47.7-7 68.8-21c42.1-29.4 53.4-88.2 28.1-134.4c-2.8-5.6-5.6-11.2-9.8-16.8l-50.6 58.8s-81.4-103.6-87.1-110.6C133.1 243.8 112 273.2 112 306.8C112 375.4 162.6 416 225.7 416z"></path></svg>
-  </span>
-</span>
-募集一覧
-</a>
-<a class="flex !rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 items-center" href="/shooting-service/">
-<span class="mr-1">
-<span class="relative block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="currentColor" d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"></path></svg>
-  </span>
-</span>
-撮影依頼
-</a>
-<a class="flex !rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 items-center" href="https://x.com/98tml" target="_blank">
-<span class="mr-1">
-<span class="relative block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
-  </span>
-</span>
-X(旧Twitter)
-</a>
 <a class="flex !rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 items-center" href="https://www.melonbooks.co.jp/circle/?circle_id=119704" target="_blank">
 <span class="mr-1">
 <span class="relative block align-text-bottom icon">
@@ -73,37 +49,11 @@ X(旧Twitter)
 </span>
 通販
 </a>
-<a class="flex !rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 items-center" href="https://www.t98.info/contact/" target="_blank">
-<span class="mr-1">
-<span class="relative block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg>
-  </span>
-</span>
-お問い合わせ
-</a>
 </div>
 
-### ■ C107通販のお知らせ
-
-[メロンブックスさま](https://www.melonbooks.co.jp/circle/?circle_id=119704)と[BOOTH](https://t98.booth.pm/)にて後日通販を行っております。ぜひご利用ください。
-
-#### [【メロンブックス委託作品】](https://www.melonbooks.co.jp/circle/?circle_id=119704)
-
-作例集2025冬, 作例集2025夏, 0年目本(本・電子), 1年目本アクリルキーホルダー, 2年目本アクリルコースター
-
-#### [【BOOTH出品作品】](https://t98.booth.pm/)
-
-作例集2024, 2年目本, 2年目本アクリルキーホルダー
-
-### ■ お問い合わせについて
-
-Xのダイレクトメッセージが届かない等の事例を確認しております。   
-撮影依頼などのお問い合わせは通常2日以内に返信しておりますが、
-返信が届かない場合、お急ぎの場合はInstagramやメールフォームなどのご利用もご検討くださいますようお願いいたします。
-
-### ■ lit.linkやメロンブックスでエラー画面が表示される
-
-lit.link・メロンブックスを閲覧する際、VPNを有効にしている場合閲覧できない場合がありますので、一時的に無効化していただきますようお願い致します。
+<span style="color:red; text-decoration:underline; font-weight:bold">■ XのDMが届かない事例を確認しております</span>   
+撮影依頼などのお問い合わせは通常2日以内に返信しております。
+返信が届かない場合やお急ぎの場合は、[Instagram](https://www.instagram.com/98tml/)や[メールフォーム](http://www.t98.info/contact/)のご利用も併せてご検討くださいますようお願いいたします。
 
 <style>
 #main-content > section > h2 {

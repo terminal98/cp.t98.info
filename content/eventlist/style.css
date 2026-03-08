@@ -2,6 +2,11 @@ body {
   font-family: 'Inter', 'Noto Sans JP', sans-serif;
 }
 
+.logo {
+  height: 1.75em;
+  max-width: 15rem;
+}
+
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
