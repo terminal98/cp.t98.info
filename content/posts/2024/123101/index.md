@@ -1,7 +1,7 @@
 ---
 title: "【C107】事後通販"
 date: 2024-12-31T02:38:33+09:00
-draft: false
+draft: true
 categories: ["notice"]
 tags: ["C107", "通販"]
 #featureimage: ""
