@@ -52,11 +52,8 @@ body{
 </div>
 
 <span style="color:red; text-decoration:underline; font-weight:bold">■ XのDMが届かない事例を確認しております</span>   
-撮影依頼などのお問い合わせは通常2日以内に返信しております。
+撮影依頼などのお問い合わせは通常2日以内に返信しております。   
 返信が届かない場合やお急ぎの場合は、[Instagram](https://www.instagram.com/98tml/)や[メールフォーム](http://www.t98.info/contact/)のご利用も併せてご検討くださいますようお願いいたします。
-
-<span style="color:blue; text-decoration:underline; font-weight:bold">■ 送付した写真の加工等は自由にしていただいて構いません</span>   
-加工前提でお送りしておりますので、色味や切り抜きなど含めあらゆる改変をしていただいて構いません。素敵な作品に仕立て上げていただければと思います。
 
 <style>
 #main-content > section > h2 {
