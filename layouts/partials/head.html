@@ -33,22 +33,20 @@
   safeHTML }}
   {{ end -}}
   {{/* Asset bundles */}}
-  {{ $assets := newScratch }}
   {{ $cssScheme := resources.Get (printf "css/schemes/%s.css" (.Site.Params.colorScheme | default "blowfish")) }}
   {{ if not $cssScheme }}
   {{ $cssScheme = resources.Get "css/schemes/blowfish.css" }}
   {{ end }}
-  {{ $assets.Add "css" (slice $cssScheme) }}
   {{ $cssMain := resources.Get "css/compiled/main.css" }}
-  {{ $assets.Add "css" (slice $cssMain) }}
+  {{ $cssScheme = $cssScheme | resources.Fingerprint "sha512" }}
+  {{ $cssMain = $cssMain | resources.Fingerprint "sha512" }}
+  <link type="text/css" rel="stylesheet" href="{{ $cssScheme.RelPermalink }}" integrity="{{ $cssScheme.Data.Integrity }}" />
+  <link type="text/css" rel="stylesheet" href="{{ $cssMain.RelPermalink }}" integrity="{{ $cssMain.Data.Integrity }}" />
   {{ $cssCustom := resources.Get "css/custom.css" }}
   {{ if $cssCustom }}
-  {{ $assets.Add "css" (slice $cssCustom) }}
+  {{ $cssCustom = $cssCustom | resources.Fingerprint "sha512" }}
+  <link type="text/css" rel="stylesheet" href="{{ $cssCustom.RelPermalink }}" integrity="{{ $cssCustom.Data.Integrity }}" />
   {{ end }}
-  {{ $bundleCSS := $assets.Get "css" | resources.Concat "css/main.bundle.css" | resources.Minify | resources.Fingerprint
-  "sha512" }}
-  <link type="text/css" rel="stylesheet" href="{{ $bundleCSS.RelPermalink }}"
-    integrity="{{ $bundleCSS.Data.Integrity }}" />
   {{ $jsAppearance := resources.Get "js/appearance.js" }}
   {{ $jsAppearance = $jsAppearance | resources.ExecuteAsTemplate "js/appearance.js" . | resources.Minify | resources.Fingerprint "sha512" }}
   <script type="text/javascript" src="{{ $jsAppearance.RelPermalink }}"
@@ -56,28 +54,30 @@
   {{ if .Site.Params.enableSearch | default false }}
   {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
   {{ $jsSearch := resources.Get "js/search.js" }}
-  {{ $assets.Add "js" (slice $jsFuse $jsSearch) }}
+  {{ $jsFuse = $jsFuse | resources.Fingerprint "sha512" }}
+  {{ $jsSearch = $jsSearch | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $jsFuse.RelPermalink }}" integrity="{{ $jsFuse.Data.Integrity }}"></script>
+  <script defer type="text/javascript" src="{{ $jsSearch.RelPermalink }}" integrity="{{ $jsSearch.Data.Integrity }}"></script>
   {{ end }}
   {{ if .Site.Params.enableCodeCopy | default false }}
   {{ $jsCode := resources.Get "js/code.js" }}
-  {{ $assets.Add "js" (slice $jsCode) }}
+  {{ $jsCode = $jsCode | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $jsCode.RelPermalink }}" integrity="{{ $jsCode.Data.Integrity }}"></script>
   {{ end }}
   {{ if .Site.Params.rtl | default false }}
   {{ $jsRTL := resources.Get "js/rtl.js" }}
-  {{ $assets.Add "js" (slice $jsRTL) }}
+  {{ $jsRTL = $jsRTL | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" src="{{ $jsRTL.RelPermalink }}" integrity="{{ $jsRTL.Data.Integrity }}"></script>
   {{ end }}
   {{ $jsMobileMenu := resources.Get "js/mobilemenu.js" }}
-  {{ $assets.Add "js" (slice $jsMobileMenu) }}
-  {{ if $assets.Get "js" }}
-  {{ $bundleJS := $assets.Get "js" | resources.Concat "js/main.bundle.js" | resources.Minify | resources.Fingerprint
-  "sha512" }}
-  <script defer type="text/javascript" id="script-bundle" src="{{ $bundleJS.RelPermalink }}"
-    integrity="{{ $bundleJS.Data.Integrity }}" data-copy="{{ i18n " code.copy" }}" data-copied="{{ i18n " code.copied"
+  {{ with $jsMobileMenu }}
+  {{ $jsMobileMenu = $jsMobileMenu | resources.Fingerprint "sha512" }}
+  <script defer type="text/javascript" id="script-bundle" src="{{ $jsMobileMenu.RelPermalink }}"
+    integrity="{{ $jsMobileMenu.Data.Integrity }}" data-copy="{{ i18n " code.copy" }}" data-copied="{{ i18n " code.copied"
     }}"></script>
   {{ end }}
   {{ if not .Site.Params.disableImageZoom | default true }}
-  {{ $zoomJS := resources.Get "lib/zoom/zoom.min.js" | resources.Fingerprint "sha512" }}
-  <script src="{{ $zoomJS.RelPermalink }}" integrity="{{ $zoomJS.Data.Integrity }}"></script>
+  <script src="{{ "js/zoom.min.js" | relURL }}"></script>
   {{ end }}
   {{/* Icons */}}
   {{ if templates.Exists "partials/favicons.html" }}
@@ -117,8 +117,6 @@
   {{ end }}
   {{/* Vendor */}}
   {{ partial "vendor.html" . }}
-  {{/* Analytics */}}
-  {{ partial "analytics/main.html" .Site }}
   {{/* Extend head - eg. for custom analytics scripts, etc. */}}
   {{ if templates.Exists "partials/extend-head.html" }}
   {{ partialCached "extend-head.html" .Site }}

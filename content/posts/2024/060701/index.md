@@ -35,9 +35,6 @@ tags: ["C104","にじてくと", "通販"]
 
 [＞＞ サービスについて詳しくはこちら](https://www.melonbooks.co.jp/special/b/1/tenpojouhou/)
 
-{{< youtubeLite id="lZKiLW8AlSQ" >}}
-{{< youtubeLite id="KnTiXhdDmIE" >}}
-
 [＞＞ 宅配・店舗のほかコンビニやロッカーでも受取可能です](https://www.melonbooks.co.jp/special/service/c_uketori/)
 
 ## 2年目本アクリルキーホルダーもあります

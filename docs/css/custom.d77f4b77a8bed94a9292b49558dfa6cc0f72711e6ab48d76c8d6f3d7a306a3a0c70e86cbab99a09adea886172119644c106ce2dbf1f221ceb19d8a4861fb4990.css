@@ -1,0 +1,136 @@
+html {
+  font-family: Quicksand, 'M PLUS 1p', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "segoe ui", Roboto, "helvetica neue", Arial, "noto sans", sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol", "noto color emoji";
+}
+
+body {
+  background: linear-gradient(to right, #cae6f7, #e9ddf3);
+}
+
+.dark>body {
+  background: #26234f;
+}
+
+.logo {
+  height: 1.75em;
+  max-width: 15rem;
+}
+
+#menu-wrapper li {
+  width: 100%;
+  border-bottom-width: 0.5px;
+  border-bottom-color: #ccc;
+}
+
+#menu-wrapper li>span,
+#menu-wrapper li>a {
+  padding: 1em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#menu-wrapper a[href="https://x.com/98tml"]:after {
+  margin-left: .5rem;
+  content: "X";
+}
+
+#menu-wrapper a[href="https://t98.info/contact/"]:after {
+  margin-left: .5rem;
+  content: "メールフォーム";
+}
+
+.floating-animation-v1 {
+  animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+  margin: 0;
+}
+
+@keyframes floating-y {
+  0% {
+    transform: translateY(-1em);
+  }
+
+  100% {
+    transform: translateY(1em);
+  }
+}
+
+.profile-name {
+  color: var(--tw-prose-headings);
+  background: linear-gradient(transparent 70%, #77c0fb 70%);
+}
+
+.dark .profile-name {
+  background: linear-gradient(transparent 70%, #4387be 70%);
+}
+
+.profile-likes-tag {
+  display: inline-block;
+  margin: 0 .2em .3em 0;
+  padding: .5em;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--tw-prose-links);
+  background-color: rgba(var(--color-neutral-50), 1);
+  border-radius: 0.75em;
+  font-weight: 600;
+  font-size: .75em;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.profile-likes-tag:before {
+  content: "#";
+  color: var(--tw-prose-invert-links);
+}
+
+.dark .profile-likes-tag {
+  background-color: rgba(var(--color-neutral-700), 1);
+}
+
+img.gallery-item {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+#calendar>table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  display: inline-table;
+  text-align: center;
+}
+
+#calendar .sat {
+  color: rgb(14 165 233);
+}
+
+#calendar .sun {
+  color: rgb(244 63 94);
+}
+
+#calendar .day {
+  height: 7em;
+  max-height: 10em;
+}
+
+td.day.today {
+  background-color: var(--tw-prose-td-borders);
+}
+
+.today span {
+  font-weight: bold;
+}
+
+#calendar .num {
+  display: block;
+  text-align: left;
+}
+
+#calendar .event-name {
+  font-size: x-small;
+}
+
+#cal-button {
+  display: flex;
+  justify-content: space-between;
+}

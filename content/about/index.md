@@ -15,7 +15,7 @@ externalUrl: "https://lit.link/98tml"
 <span class="profile-name text-4xl">帆村 サツキ</span>
 <div class="mt-2 text-2xl">
 <a href="https://x.com/98tml" target="_blank" class="text-neutral-700 dark:text-neutral-300">
-{{< icon "x-twitter" >}}
+{{< icon "twitter" >}}
 </a>
 <a href="https://www.instagram.com/98tml/" target="_blank" class="p-1 text-neutral-700 dark:text-neutral-300">
 {{< icon "instagram" >}}
