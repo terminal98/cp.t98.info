@@ -4,6 +4,10 @@
 #zen-mode-button {
   cursor: pointer;
 }
+
+:root {
+  --asset-build: 20260810;
+}
 .zen-mode {
   position: relative;
 }
