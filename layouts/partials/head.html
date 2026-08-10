@@ -38,13 +38,13 @@
   {{ $cssScheme = resources.Get "css/schemes/blowfish.css" }}
   {{ end }}
   {{ $cssMain := resources.Get "css/compiled/main.css" }}
-  {{ $cssScheme = $cssScheme | resources.Fingerprint "sha512" }}
-  {{ $cssMain = $cssMain | resources.Fingerprint "sha512" }}
+  {{ $cssScheme = $cssScheme | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $cssMain = $cssMain | resources.Minify | resources.Fingerprint "sha512" }}
   <link type="text/css" rel="stylesheet" href="{{ $cssScheme.RelPermalink }}" integrity="{{ $cssScheme.Data.Integrity }}" />
   <link type="text/css" rel="stylesheet" href="{{ $cssMain.RelPermalink }}" integrity="{{ $cssMain.Data.Integrity }}" />
   {{ $cssCustom := resources.Get "css/custom.css" }}
   {{ if $cssCustom }}
-  {{ $cssCustom = $cssCustom | resources.Fingerprint "sha512" }}
+  {{ $cssCustom = $cssCustom | resources.Minify | resources.Fingerprint "sha512" }}
   <link type="text/css" rel="stylesheet" href="{{ $cssCustom.RelPermalink }}" integrity="{{ $cssCustom.Data.Integrity }}" />
   {{ end }}
   {{ $jsAppearance := resources.Get "js/appearance.js" }}
@@ -54,24 +54,24 @@
   {{ if .Site.Params.enableSearch | default false }}
   {{ $jsFuse := resources.Get "lib/fuse/fuse.min.js" }}
   {{ $jsSearch := resources.Get "js/search.js" }}
-  {{ $jsFuse = $jsFuse | resources.Fingerprint "sha512" }}
-  {{ $jsSearch = $jsSearch | resources.Fingerprint "sha512" }}
+  {{ $jsFuse = $jsFuse | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $jsSearch = $jsSearch | resources.Minify | resources.Fingerprint "sha512" }}
   <script defer type="text/javascript" src="{{ $jsFuse.RelPermalink }}" integrity="{{ $jsFuse.Data.Integrity }}"></script>
   <script defer type="text/javascript" src="{{ $jsSearch.RelPermalink }}" integrity="{{ $jsSearch.Data.Integrity }}"></script>
   {{ end }}
   {{ if .Site.Params.enableCodeCopy | default false }}
   {{ $jsCode := resources.Get "js/code.js" }}
-  {{ $jsCode = $jsCode | resources.Fingerprint "sha512" }}
+  {{ $jsCode = $jsCode | resources.Minify | resources.Fingerprint "sha512" }}
   <script defer type="text/javascript" src="{{ $jsCode.RelPermalink }}" integrity="{{ $jsCode.Data.Integrity }}"></script>
   {{ end }}
   {{ if .Site.Params.rtl | default false }}
   {{ $jsRTL := resources.Get "js/rtl.js" }}
-  {{ $jsRTL = $jsRTL | resources.Fingerprint "sha512" }}
+  {{ $jsRTL = $jsRTL | resources.Minify | resources.Fingerprint "sha512" }}
   <script defer type="text/javascript" src="{{ $jsRTL.RelPermalink }}" integrity="{{ $jsRTL.Data.Integrity }}"></script>
   {{ end }}
   {{ $jsMobileMenu := resources.Get "js/mobilemenu.js" }}
   {{ with $jsMobileMenu }}
-  {{ $jsMobileMenu = $jsMobileMenu | resources.Fingerprint "sha512" }}
+  {{ $jsMobileMenu = $jsMobileMenu | resources.Minify | resources.Fingerprint "sha512" }}
   <script defer type="text/javascript" id="script-bundle" src="{{ $jsMobileMenu.RelPermalink }}"
     integrity="{{ $jsMobileMenu.Data.Integrity }}" data-copy="{{ i18n " code.copy" }}" data-copied="{{ i18n " code.copied"
     }}"></script>
