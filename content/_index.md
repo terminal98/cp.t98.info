@@ -51,10 +51,6 @@ body{
 </a>
 </div>
 
-<span style="text-decoration:underline; font-weight:bold">■ 8/21頃までデータお渡しが若干遅延します</span>
-メインノートPCのメンテナンス中につき、8月21日ごろまで即日現像済データのお渡しができない場合がございます。帰宅次第作業を行うため、通常より若干(半日～数日程度)の遅延が見込まれます。ご承知おきくださいますようお願いいたします。   
-
-
 <span style="text-decoration:underline; font-weight:bold">■ XのDMが届かない事例を確認しております</span>   
 撮影依頼などのお問い合わせは通常2日以内に返信しております。   
 返信が届かない場合やお急ぎの場合は、[Instagram](https://www.instagram.com/98tml/)や[メールフォーム](http://www.t98.info/contact/)のご利用も併せてご検討くださいますようお願いいたします。
