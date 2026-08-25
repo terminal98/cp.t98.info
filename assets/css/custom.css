@@ -15,6 +15,13 @@ body {
   max-width: 15rem;
 }
 
+@media (max-width: 390px) {
+  .main-menu img.logo {
+    height: auto;
+    max-width: 10rem;
+  }
+}
+
 #menu-wrapper li {
   width: 100%;
   border-bottom-width: 0.5px;
