@@ -6,7 +6,9 @@
     <description>Recent content in Tags on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>&amp;copy;2026 にじてくと</copyright>
     <lastBuildDate>Fri, 20 Jun 2025 11:36:21 +0900</lastBuildDate><atom:link href="https://cp.t98.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>C108</title>
       <link>https://cp.t98.info/tags/c108/</link>
@@ -14,6 +16,7 @@
       
       <guid>https://cp.t98.info/tags/c108/</guid>
       <description></description>
+      
     </item>
     
     <item>
@@ -23,15 +26,7 @@
       
       <guid>https://cp.t98.info/tags/%E9%80%9A%E8%B2%A9/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>おしながき</title>
-      <link>https://cp.t98.info/tags/%E3%81%8A%E3%81%97%E3%81%AA%E3%81%8C%E3%81%8D/</link>
-      <pubDate>Fri, 20 Jun 2025 10:44:56 +0900</pubDate>
       
-      <guid>https://cp.t98.info/tags/%E3%81%8A%E3%81%97%E3%81%AA%E3%81%8C%E3%81%8D/</guid>
-      <description></description>
     </item>
     
   </channel>

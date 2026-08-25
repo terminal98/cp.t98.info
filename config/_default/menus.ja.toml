@@ -43,7 +43,6 @@
 
 [[main]]
   identifier = "twitter"
-  name = "X"
   pre = "x-twitter"
   url = "https://x.com/98tml"
   weight = 40

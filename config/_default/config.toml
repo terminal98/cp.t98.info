@@ -19,7 +19,7 @@ buildFuture = false
 
 googleAnalytics = "G-JK7Q5M0KNR"
 
-enableGitInfo = true
+enableGitInfo = false
 
 [pagination]
   pagerSize = 10
@@ -47,3 +47,6 @@ enableGitInfo = true
   [cachebusters]
     source = "assets/notwatching/hugo_stats.json"
     target = "styles.css"
+
+[security]
+  allowContent = ['^text/(html|markdown)$']
