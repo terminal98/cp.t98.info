@@ -1,0 +1,7 @@
+<figure class="mx-auto my-0 text-center">
+  {{- $src := .Get "src" | default (.Get 0) -}}
+  {{- $alt := .Get "alt" | default "" -}}
+  {{- $caption := .Get "caption" | default "" -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" class="mx-auto" />
+  {{- with $caption }}<figcaption class="text-sm italic">{{ . }}</figcaption>{{ end -}}
+</figure>
