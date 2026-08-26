@@ -87,18 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    let startMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+    // 前月ボタンで今月へ戻れるよう、表示可能範囲の開始月は常に今月にする。
+    displayStartDate = new Date(today.getFullYear(), today.getMonth(), 1);
 
-    if (today.getDate() >= 26) {
-      const currentMonthStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}`;
-      const hasEventInCurrentMonth = Object.keys(events).some(date => date.startsWith(currentMonthStr));
-      if (!hasEventInCurrentMonth) {
-        startMonth.setMonth(startMonth.getMonth() + 1);
-      }
-    }
-
-    displayStartDate = startMonth;
+    // 今月の今日以降に「空き」または「要相談」がなければ、初期表示だけ翌月へ進める。
     currentDate = new Date(displayStartDate);
+    if (!hasAvailableDateInMonth(today)) {
+      currentDate.setMonth(currentDate.getMonth() + 1);
+    }
 
     let maxMonthRange = 6;
     if (today.getDate() >= 25) {
@@ -106,6 +102,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     displayEndDate = new Date(today.getFullYear(), today.getMonth() + maxMonthRange, 1);
+  }
+
+  function hasAvailableDateInMonth(today) {
+    const year = today.getFullYear();
+    const month = today.getMonth();
+    const lastDay = new Date(year, month + 1, 0).getDate();
+
+    for (let day = today.getDate(); day <= lastDay; day++) {
+      const date = new Date(year, month, day);
+      const event = events[formatDate(date)] || getDefaultEvent(date);
+      if (event && (event.type === 1 || event.type === 2)) {
+        return true;
+      }
+    }
+
+    return false;
   }
 
   // --- カレンダー描画 ---
