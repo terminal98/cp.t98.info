@@ -361,6 +361,36 @@ document.addEventListener('DOMContentLoaded', () => {
     paginationControls.appendChild(createBtn('<i class="fas fa-arrow-right"></i>', currentPage === totalPages, () => { currentPage++; renderEventList(); }));
   }
 
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, (character) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[character]));
+  }
+
+  function publicLocationInfoMarkup(event) {
+    // locationInfoは、場所が公開された予定の公開投影にだけ含まれる。
+    const info = event?.locationInfo;
+    if (!event?.place || !info || typeof info !== 'object') return '';
+    const address = info.address && typeof info.address === 'object'
+      ? ['street', 'city', 'state', 'countryOrRegion', 'postalCode']
+        .map((field) => info.address[field])
+        .filter(Boolean)
+        .join(', ')
+      : '';
+    const latitude = Number(info.coordinates?.latitude);
+    const longitude = Number(info.coordinates?.longitude);
+    const hasCoordinates = Number.isFinite(latitude) && Number.isFinite(longitude);
+    if (!address && !hasCoordinates) return '';
+    const query = hasCoordinates ? `${latitude},${longitude}` : address;
+    const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+    const coordinateText = hasCoordinates ? `${latitude.toFixed(6)}, ${longitude.toFixed(6)}` : '';
+    return `<div class="ml-7 mt-1 rounded-lg bg-blue-50 dark:bg-blue-950/30 px-3 py-2 text-sm text-gray-600 dark:text-gray-300">` +
+      `${address ? `<div><i class="fas fa-location-dot w-5 mr-1 text-blue-500"></i>${escapeHtml(address)}</div>` : ''}` +
+      `${coordinateText ? `<div class="mt-1"><i class="fas fa-crosshairs w-5 mr-1 text-blue-500"></i>${escapeHtml(coordinateText)}</div>` : ''}` +
+      `<a href="${mapUrl}" target="_blank" rel="noopener noreferrer" class="mt-1 inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline"><i class="fas fa-map mr-1"></i>地図で開く</a>` +
+      `</div>`;
+  }
+
   // --- 詳細モーダル表示 ---
   function showDetails(date, event) {
     const dateStr = formatDate(date);
@@ -396,7 +426,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!event.isDefault) {
       if (event.time) detailsHtml += `<div><i class="far fa-clock w-5 mr-2 text-gray-400 dark:text-gray-500"></i>${event.time}</div>`;
-      if (event.place) detailsHtml += `<div><i class="fas fa-map-marker-alt w-5 mr-2 text-gray-400 dark:text-gray-500"></i>${event.place}</div>`;
+      if (event.place) {
+        detailsHtml += `<div><i class="fas fa-map-marker-alt w-5 mr-2 text-gray-400 dark:text-gray-500"></i>${escapeHtml(event.place)}</div>`;
+        detailsHtml += publicLocationInfoMarkup(event);
+      }
       if (event.url) detailsHtml += `<div><i class="fas fa-link w-5 mr-2 text-gray-400 dark:text-gray-500"></i><a href="${event.url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">${event.url}</a></div>`;
       if (event.note) detailsHtml += `<div class="mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg whitespace-pre-wrap"><i class="far fa-sticky-note w-5 mr-2 text-gray-400 dark:text-gray-500 align-top"></i><span class="inline-block">${event.note}</span></div>`;
     }
