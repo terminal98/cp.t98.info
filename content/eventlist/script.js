@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td class="px-4 py-2 w-1/4">${date.getMonth() + 1}/${date.getDate()} ${dayOfWeekHtml}</td>
                 <td class="px-4 py-2 break-words w-3/4">
                   <div class="flex justify-between items-center">
-                      <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${event.locationInfo && event.place ? '<i class="fas fa-map-marker-alt mr-1 text-blue-500" title="位置情報あり"></i>' : ''}${event.eventname}</span>
+                      <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${event.eventname}</span>
                       <button class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4">
                           <i class="fas fa-info-circle"></i>
                       </button>
