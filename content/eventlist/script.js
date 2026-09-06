@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   // --- 設定 ---
   const EVENTS_JSON_URL = 'https://g2.t98.info/tmp/events.json';
+  const SETTINGS_JSON_URL = 'https://g2.t98.info/calendar-settings.json';
   const HOLIDAYS_JSON_URL = 'https://holidays-jp.github.io/api/v1/date.json';
   const ITEMS_PER_PAGE = 10;
 
   // --- グローバル変数 ---
   let currentDate = new Date();
   let events = {};
+  let calendarSettings = { weekdayTentativeDays: 14 };
   let holidays = {};
   let displayStartDate = null;
   let displayEndDate = null;
@@ -67,19 +69,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function fetchData() {
     try {
-      const [eventsRes, holidaysRes] = await Promise.all([
+      const [eventsRes, settingsRes, holidaysRes] = await Promise.all([
         fetchWithRetry(EVENTS_JSON_URL),
+        fetchWithRetry(SETTINGS_JSON_URL).catch(() => null),
         fetchWithRetry(HOLIDAYS_JSON_URL)
       ]);
 
       events = await eventsRes.json();
+      if (settingsRes) calendarSettings = normalizeCalendarSettings(await settingsRes.json());
       holidays = await holidaysRes.json();
     } catch (error) {
       console.error('データ取得エラー (リトライ後):', error);
       events = {};
+      calendarSettings = { weekdayTentativeDays: 14 };
       holidays = {};
       throw error;
     }
+  }
+
+  function normalizeCalendarSettings(value) {
+    const raw = Number(value?.weekdayTentativeDays);
+    return {
+      weekdayTentativeDays: Number.isFinite(raw) ? Math.min(365, Math.max(0, Math.round(raw))) : 14
+    };
   }
 
   // --- 表示期間の設定 ---
@@ -240,8 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (holidays[dateStr] || dayOfWeek === 0 || dayOfWeek === 6) {
       return { eventname: '', type: date.getTime() === today.getTime() ? 2 : 1, isDefault: true };
     } else {
-      const oneWeekLater = new Date(today.getTime() + 14 * 24 * 60 * 60 * 1000);
-      return { eventname: '', type: date < oneWeekLater ? 3 : 2, isDefault: true };
+      const cutoffDate = new Date(today.getTime() + calendarSettings.weekdayTentativeDays * 24 * 60 * 60 * 1000);
+      return { eventname: '', type: date < cutoffDate ? 3 : 2, isDefault: true };
     }
   }
 
