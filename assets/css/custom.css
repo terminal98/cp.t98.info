@@ -6,8 +6,32 @@ body {
   background: linear-gradient(to right, #cae6f7, #e9ddf3);
 }
 
-.dark>body {
+html.dark body {
   background: #26234f;
+  color: #f8fafc;
+}
+
+/* Blowfishの共通ヘッダーは一部のメニュー項目にベース文字色がないため、
+   ダークモードではナビゲーション全体を明示的に明るくする。 */
+html.dark header .main-menu a,
+html.dark header .main-menu button,
+html.dark header .main-menu .bf-icon-color-hover,
+html.dark header .main-menu .text-sm,
+html.dark header .main-menu .text-xs {
+  color: #f8fafc;
+}
+
+html.dark header .main-menu a:hover,
+html.dark header .main-menu button:hover,
+html.dark header .main-menu .bf-icon-color-hover:hover {
+  color: #93c5fd;
+}
+
+html.dark main > article > header h1,
+html.dark main > article > header h2,
+html.dark main > article > header h3,
+html.dark .profile-name {
+  color: #f8fafc;
 }
 
 .logo {
@@ -68,6 +92,7 @@ body {
 }
 
 .dark .profile-name {
+  color: #f8fafc;
   background: linear-gradient(transparent 70%, #4387be 70%);
 }
 
