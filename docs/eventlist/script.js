@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   // --- 設定 ---
-  const EVENTS_JSON_URL = 'https://g2.t98.info/tmp/events.json';
-  const SETTINGS_JSON_URL = 'https://g2.t98.info/calendar-settings.json';
+  const PUBLIC_API_BASE_URL = 'https://icy-wind-5903.t98.workers.dev/api/public';
+  const EVENTS_JSON_URL = `${PUBLIC_API_BASE_URL}/events`;
+  const SETTINGS_JSON_URL = `${PUBLIC_API_BASE_URL}/settings`;
   const HOLIDAYS_JSON_URL = 'https://holidays-jp.github.io/api/v1/date.json';
   const ITEMS_PER_PAGE = 10;
 
