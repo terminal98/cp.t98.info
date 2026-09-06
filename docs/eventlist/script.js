@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // --- 設定 ---
-  const EVENTS_JSON_URL = 'https://g2.t98.info/events.json';
+  const EVENTS_JSON_URL = 'https://g2.t98.info/tmp/events.json';
   const HOLIDAYS_JSON_URL = 'https://holidays-jp.github.io/api/v1/date.json';
   const ITEMS_PER_PAGE = 10;
 
