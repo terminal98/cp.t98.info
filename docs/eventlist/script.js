@@ -514,6 +514,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${y}-${m}-${d}`;
   }
 
+  function parseDate(dateStr) {
+    const [year, month, day] = dateStr.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+
   function getFormattedDayOfWeek(date, sizeClass = 'text-sm') {
     const dayOfWeekMap = ['日', '月', '火', '水', '木', '金', '土'];
     const dayOfWeek = date.getDay();
