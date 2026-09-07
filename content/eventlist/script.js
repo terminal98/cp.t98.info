@@ -438,6 +438,29 @@ document.addEventListener('DOMContentLoaded', () => {
       detailsHtml += `<div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center"><p class="text-sm text-gray-600 dark:text-gray-400 mb-4">\\ 楽しいお誘いお待ちしております！ /</p><div class="flex items-center justify-center space-x-4"><a href="https://x.com/98tml" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-black text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-transform transform hover:scale-105"><i class="fab fa-x-twitter mr-2"></i>DMで相談</a><a href="https://t98.info/contact/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105"><i class="far fa-envelope mr-2"></i>メールフォーム</a></div></div>`;
     }
 
+    if (event.type === 3) {
+      const nearbyAvailableDates = findNearbyAvailableDates(date);
+      if (nearbyAvailableDates.length > 0) {
+        detailsHtml += `
+          <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
+            <h4 class="font-bold text-gray-800 dark:text-gray-100">\\ こちらの日程はいかがですか？ /</h4>
+            <div class="grid grid-cols-3 gap-2">
+              ${nearbyAvailableDates.map(({ date: recommendedDate, event: recommendedEvent }) => {
+                const recommendedStatus = statusMap[recommendedEvent.type];
+                const recommendedDateLabel = `${recommendedDate.getMonth() + 1}/${recommendedDate.getDate()}`;
+                const recommendedDayOfWeek = getFormattedDayOfWeek(recommendedDate, 'text-xs');
+                return `<button type="button" class="nearby-date-recommendation group flex min-w-0 min-h-[72px] flex-col items-center justify-center rounded-lg border border-gray-200 bg-gray-50 px-1.5 py-2 text-center transition-colors hover:border-blue-400 hover:bg-blue-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:border-blue-500 dark:hover:bg-blue-700" data-date="${formatDate(recommendedDate)}">
+                  <span class="flex items-baseline justify-center gap-1 whitespace-nowrap">
+                    <span class="text-sm font-semibold text-gray-800 dark:text-gray-100">${recommendedDateLabel}</span>${recommendedDayOfWeek}
+                  </span>
+                  <span class="mt-1 ${recommendedStatus.colorClass} text-xs font-semibold">${recommendedStatus.symbol} 空き</span>
+                </button>`;
+              }).join('')}
+            </div>
+          </div>`;
+      }
+    }
+
     detailsHtml += `</div></div>`;
 
     modalContent.innerHTML = detailsHtml;
@@ -445,6 +468,36 @@ document.addEventListener('DOMContentLoaded', () => {
     modalContent.classList.add('modal-enter', 'modal-enter-active');
     eventModal.classList.remove('hidden');
     document.getElementById('close-modal').addEventListener('click', hideDetails);
+    modalContent.querySelectorAll('.nearby-date-recommendation').forEach((button) => {
+      button.addEventListener('click', () => {
+        const recommendedDate = parseDate(button.dataset.date);
+        const recommendedEvent = events[button.dataset.date] || getDefaultEvent(recommendedDate);
+        if (recommendedDate && recommendedEvent) showDetails(recommendedDate, recommendedEvent);
+      });
+    });
+  }
+
+  function findNearbyAvailableDates(targetDate, limit = 3, radius = 30) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const recommendations = [];
+
+    for (let distance = 1; distance <= radius && recommendations.length < limit; distance++) {
+      for (const offset of [-distance, distance]) {
+        const candidateDate = new Date(targetDate);
+        candidateDate.setDate(candidateDate.getDate() + offset);
+        if (candidateDate < today) continue;
+
+        const candidateDateStr = formatDate(candidateDate);
+        const candidateEvent = events[candidateDateStr] || getDefaultEvent(candidateDate);
+        if (candidateEvent && candidateEvent.type === 1) {
+          recommendations.push({ date: candidateDate, event: candidateEvent });
+          if (recommendations.length === limit) break;
+        }
+      }
+    }
+
+    return recommendations;
   }
 
   function hideDetails() {
@@ -459,6 +512,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const m = String(date.getMonth() + 1).padStart(2, '0');
     const d = String(date.getDate()).padStart(2, '0');
     return `${y}-${m}-${d}`;
+  }
+
+  function parseDate(dateStr) {
+    const [year, month, day] = dateStr.split('-').map(Number);
+    const date = new Date(year, month - 1, day);
+    return Number.isNaN(date.getTime()) ? null : date;
   }
 
   function getFormattedDayOfWeek(date, sizeClass = 'text-sm') {
