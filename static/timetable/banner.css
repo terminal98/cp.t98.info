@@ -25,21 +25,22 @@
 
 #schedule-page .schedule-recruitments{box-sizing:border-box;width:100%;margin:-8px auto 22px;color:inherit}
 #schedule-page .schedule-recruitments__options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-#schedule-page .schedule-recruitments__options>a{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;column-gap:8px;min-width:0;min-height:68px;padding:12px 14px;border:0;border-radius:9px;background:var(--venue-color);color:#fff;text-decoration:none;box-shadow:0 3px 10px #173b4020;transition:filter .15s,transform .15s}
+#schedule-page .schedule-recruitments__options>a{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;column-gap:8px;min-width:0;height:73px;padding:12px 14px;border:0;border-radius:9px;background:var(--venue-color);color:#fff;text-decoration:none;box-shadow:0 3px 10px #173b4020;transition:filter .15s,transform .15s}
 #schedule-page .schedule-recruitments__options>a:hover{filter:brightness(.94);transform:translateY(-1px)}
 #schedule-page .schedule-recruitments__options>a:focus-visible{outline:2px solid var(--venue-color);outline-offset:3px}
 #schedule-page .schedule-recruitments__name{min-width:0;overflow:hidden;color:#fff;font-size:14px;font-weight:750;text-overflow:ellipsis;white-space:nowrap;text-shadow:0 1px 2px #0004}
 #schedule-page .schedule-recruitments__dates{color:#ffffffe6;font-size:11px;line-height:1.4;white-space:nowrap}
 #schedule-page .schedule-recruitments__arrow{width:15px;height:15px;margin:0;color:#fff}
 #schedule-page .schedule-recruitments__carousel{display:none}
+@media(max-width:768px){#schedule-page .schedule-recruitments__options>a{height:54.3px}}
 @media(max-width:640px){
   #schedule-page .schedule-recruitments{margin-top:-4px}
   #schedule-page .schedule-recruitments__options{grid-template-columns:1fr;gap:4px}
   #schedule-page .schedule-recruitments__options>a{padding:9px 12px}
   #schedule-page .schedule-recruitments__options svg{width:15px;height:15px}
   #schedule-page .schedule-recruitments.is-slideshow .schedule-recruitments__options{display:none}
-  #schedule-page .schedule-recruitments.is-slideshow .schedule-recruitments__carousel{display:grid;grid-template-columns:minmax(0,1fr);align-items:stretch;min-height:54px}
-  #schedule-page .schedule-recruitments__slide{grid-area:1/1;box-sizing:border-box;display:grid;grid-template-columns:22px minmax(0,1fr) 18px;align-items:center;gap:0 8px;min-width:0;height:54px;padding:10px 14px;border:0;border-radius:10px;background:var(--venue-color);color:#fff;text-decoration:none;box-shadow:0 3px 10px #173b4020;opacity:0;pointer-events:none;transform:translateY(3px);transition:opacity .24s ease,transform .24s ease}
+  #schedule-page .schedule-recruitments.is-slideshow .schedule-recruitments__carousel{display:grid;grid-template-columns:minmax(0,1fr);align-items:stretch;min-height:calc(30px + clamp(22px,4.3vw,24.3px))}
+  #schedule-page .schedule-recruitments__slide{grid-area:1/1;box-sizing:border-box;display:grid;grid-template-columns:22px minmax(0,1fr) 18px;align-items:center;gap:0 8px;min-width:0;height:calc(30px + clamp(22px,4.3vw,24.3px));padding:10px 14px;border:0;border-radius:10px;background:var(--venue-color);color:#fff;text-decoration:none;box-shadow:0 3px 10px #173b4020;opacity:0;pointer-events:none;transform:translateY(3px);transition:opacity .24s ease,transform .24s ease}
   #schedule-page .schedule-recruitments__slide[data-active=true]{opacity:1;pointer-events:auto;transform:translateY(0)}
   #schedule-page .schedule-recruitments__slide--intro{background:linear-gradient(110deg,#f64d99 0 33.3%,#008f8b 33.3% 66.6%,#064bb4 66.6%);color:#fff;text-shadow:0 1px 2px #0005}
   #schedule-page .schedule-recruitments__slide--intro>span{min-width:0;overflow:hidden;font-size:clamp(11px,3.5vw,16px);font-weight:750;letter-spacing:.01em;text-align:center;text-overflow:ellipsis;white-space:nowrap}
@@ -51,4 +52,5 @@
   #schedule-page .schedule-recruitments__slide-arrow{grid-column:3;width:18px;height:18px;margin:0;color:#fff}
   #schedule-page .schedule-recruitments__slide--intro .schedule-recruitments__slide-icon{opacity:.95}
 }
+@media(max-width:375px){#schedule-page .schedule-recruitments.is-slideshow .schedule-recruitments__carousel{min-height:67.8px}#schedule-page .schedule-recruitments__slide{height:67.8px}}
 @media(prefers-reduced-motion:reduce){#schedule-page .schedule-recruitments__options>a,#schedule-page .schedule-recruitments__slide{transition:none}#schedule-page .schedule-recruitments__options>a:hover{transform:none}}
