@@ -7,6 +7,8 @@
   const title = get('availability-title');
   const fullTitle = 'ラグコス2026Twinkle タイムテーブル';
   const shortTitle = 'ラグコス2026TW タイテ';
+  let availableSlots = [];
+  const statusLabels = { open: '○ 空き', pending: '△ 確認待ち', confirmed: '× 予約済み', break: '× 休憩', blocked: '× 受付停止', ended: '× 終了' };
 
   function fitTitle() {
     if (!title.clientWidth) return;
@@ -87,7 +89,9 @@
     actions.append(link);
   }
   invitation.append(actions);
-  dialogContent.append(dialogHeader, dialogStatus, invitation);
+  const recommendations = element('div', undefined, 'availability-recommendations');
+  recommendations.hidden = true;
+  dialogContent.append(dialogHeader, dialogStatus, invitation, recommendations);
   consultation.append(dialogContent);
   document.body.append(consultation);
   consultation.addEventListener('click', event => {
@@ -99,9 +103,32 @@
 
   function showConsultation(slot, status) {
     dialogTitle.textContent = range(slot);
-    dialogStatus.textContent = status === 'open' ? '○ 空き' : '△ 確認待ち';
+    dialogStatus.textContent = statusLabels[status] || '× 受付停止';
     dialogStatus.dataset.status = status;
-    consultation.showModal();
+    const receiving = board.dataset.receiving === 'true';
+    invitation.hidden = !receiving || !['open', 'pending'].includes(status);
+    recommendations.replaceChildren();
+    const nearby = receiving && status !== 'open' ? availableSlots
+      .filter(candidate => candidate.starts_at !== slot.starts_at && Date.parse(candidate.starts_at) > Date.now())
+      .sort((a, b) => Math.abs(Date.parse(a.starts_at) - Date.parse(slot.starts_at)) - Math.abs(Date.parse(b.starts_at) - Date.parse(slot.starts_at)) || Date.parse(a.starts_at) - Date.parse(b.starts_at))
+      .slice(0, 3) : [];
+    recommendations.hidden = nearby.length === 0;
+    if (nearby.length) {
+      recommendations.append(element('h4', '\\ こちらの時間帯はいかがですか？ /'));
+      const cards = element('div', undefined, 'availability-recommendation-grid');
+      for (const candidate of nearby) {
+        const button = element('button', undefined, 'availability-recommendation');
+        button.type = 'button';
+        const date = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric' }).format(new Date(candidate.starts_at));
+        button.setAttribute('aria-label', `${date} ${range(candidate)} 空き、相談する`);
+        button.append(element('span', date, 'availability-recommendation-date'), element('span', range(candidate)), element('span', '○ 空き', 'availability-recommendation-state'));
+        button.addEventListener('click', () => showConsultation(candidate, 'open'));
+        cards.append(button);
+      }
+      recommendations.append(cards);
+    }
+    if (!consultation.open) consultation.showModal();
+    else closeButton.focus();
   }
 
   function renderSection(section, slots, now) {
@@ -132,16 +159,14 @@
       row.dataset.status = status;
       const time = element('th');
       time.scope = 'row';
-      if (board.dataset.receiving === 'true' && ['open', 'pending'].includes(status)) {
+      {
         const button = element('button', range(slot), 'availability-slot-button');
         button.type = 'button';
         button.setAttribute('aria-haspopup', 'dialog');
-        button.setAttribute('aria-label', `${range(slot)} ${status === 'open' ? '空き' : '確認待ち'}、相談する`);
+        button.setAttribute('aria-label', `${range(slot)} ${statusLabels[status] || '受付停止'}、詳細を見る`);
         time.append(button);
         row.classList.add('availability-slot-interactive');
         row.addEventListener('click', () => showConsultation(slot, status));
-      } else {
-        time.append(element('span', range(slot)));
       }
       const state = element('td');
       const mark = element('span', undefined, 'availability-state');
@@ -166,6 +191,7 @@
       if (data.event?.slug !== 'lagcos-tw-2026' || !Array.isArray(data.slots) || !data.updatedAt) throw new Error('空き状況を取得できませんでした。');
 
       board.dataset.receiving = String(data.event.receiving === true);
+      availableSlots = data.slots.filter(slot => slot.status === 'open');
       const now = Date.now();
       const counts = { open: 0 };
       const sections = [];
