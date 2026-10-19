@@ -5,7 +5,6 @@ layout= "simple"
 <div id="schedule-page" class="not-prose">
   <h3 id="event" class="profile-name text-center text-2xl">撮影予定表</h3>
   {{< lagcos-banner >}}
-  {{< studio-recruitments >}}
   <div class="schedule-calendar">
     <div id="calendar-container" class="w-full">
       <div id="loading-message" class="text-center py-20 text-gray-600 dark:text-gray-400">
@@ -39,13 +38,6 @@ layout= "simple"
             <div class="flex items-center"><i class="fas fa-times text-red-500 dark:text-red-400 w-5 text-center mr-2"></i><span>締切</span></div>
           </div>
         </div>
-        <div id="next-available-dates" class="mt-8">
-          <h4 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">直近で空いている日</h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div id="next-weekday" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
-            <div id="next-weekend" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
-          </div>
-        </div>
         <div id="event-list-container" class="mt-8">
           <h4 id="event-list-title" class="profile-name text-center text-2xl mb-4">イベント参加予定</h4>
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
@@ -53,6 +45,14 @@ layout= "simple"
             <div id="no-events-message" class="hidden text-center text-gray-500 dark:text-gray-400 p-8">現在参加予定のイベントはありません。</div>
           </div>
           <div id="pagination-controls" class="mt-4 flex justify-center items-center space-x-2 text-gray-600 dark:text-gray-400"></div>
+        </div>
+        {{< studio-recruitments >}}
+        <div id="next-available-dates" class="mt-8">
+          <h4 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">直近で空いている日</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div id="next-weekday" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
+            <div id="next-weekend" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
+          </div>
         </div>
       </div>
     </div>
