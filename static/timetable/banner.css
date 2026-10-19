@@ -14,3 +14,11 @@
 @media(max-width:768px){.lagcos-availability-banner__action-label{display:none}}
 
 @media(max-width:768px){.lagcos-availability-banner__action{padding:0;border:0;background:transparent}.lagcos-availability-banner__chevron{width:20px;height:20px}}
+
+.lagcos-availability-banner__title{display:grid;transition:opacity .18s ease,transform .18s ease}
+.lagcos-availability-banner__copy{grid-area:1 / 1}
+.lagcos-availability-banner__copy--alternate{visibility:hidden}
+.lagcos-availability-banner[data-alternate=true] .lagcos-availability-banner__copy--small,.lagcos-availability-banner[data-alternate=true] .lagcos-availability-banner__copy--large{visibility:hidden}
+.lagcos-availability-banner[data-alternate=true] .lagcos-availability-banner__copy--alternate{visibility:visible}
+.lagcos-availability-banner__title.is-switching{opacity:0;transform:translateY(2px)}
+@media(prefers-reduced-motion:reduce){.lagcos-availability-banner__title{transition:none}.lagcos-availability-banner__title.is-switching{transform:none}}
