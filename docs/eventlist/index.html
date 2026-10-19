@@ -292,7 +292,7 @@
 
   
 
-    <link rel="stylesheet" href="/timetable/banner.css?v=recruit-list-20261020-2"><script src="/timetable/banner.js?v=recruit-list-20261020-2" defer></script>
+    <link rel="stylesheet" href="/timetable/banner.css?v=recruit-table-20261020"><script src="/timetable/banner.js?v=recruit-table-20261020" defer></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="/eventlist/style.css?v=scoped-calendar-20261020">
 <link rel="stylesheet" href="/eventlist/utilities.css?v=full-width-calendar-20261020">
@@ -940,16 +940,21 @@
             <div class="flex items-center"><i class="fas fa-times text-red-500 dark:text-red-400 w-5 text-center mr-2"></i><span>締切</span></div>
           </div>
         </div>
-        <div id="event-list-container" class="mt-8">
-          <h4 id="event-list-title" class="profile-name text-center text-2xl mb-4">イベント参加予定</h4>
-          <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
-            <div id="event-table-wrapper" class="w-full max-w-none overflow-x-auto"></div>
-            <div id="no-events-message" class="hidden text-center text-gray-500 dark:text-gray-400 p-8">現在参加予定のイベントはありません。</div>
+        <div id="next-available-dates" class="mt-8">
+          <h4 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">直近で空いている日</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div id="next-weekday" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
+            <div id="next-weekend" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
           </div>
-          <div id="pagination-controls" class="mt-4 flex justify-center items-center space-x-2 text-gray-600 dark:text-gray-400"></div>
         </div>
+
         <nav class="schedule-recruitments" aria-labelledby="studio-recruitments-title">
-          <h4 id="studio-recruitments-title" class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">スタジオ撮影の募集</h4>
+          <h4 id="studio-recruitments-title" class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">スタジオ撮影 被写体募集</h4>
+          <div class="schedule-recruitments__header" aria-hidden="true">
+            <span>スタジオ名</span>
+            <span>日程候補</span>
+            <span></span>
+          </div>
           <ul class="schedule-recruitments__list">
             <li>
               <a href="/posts/2026/102002/">
@@ -974,12 +979,13 @@
             </li>
           </ul>
         </nav>
-                <div id="next-available-dates" class="mt-8">
-          <h4 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">直近で空いている日</h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div id="next-weekday" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
-            <div id="next-weekend" class="relative bg-white dark:bg-gray-800 p-4 rounded-lg shadow text-center"></div>
+        <div id="event-list-container" class="mt-8">
+          <h4 id="event-list-title" class="profile-name text-center text-2xl mb-4">イベント参加予定</h4>
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden">
+            <div id="event-table-wrapper" class="w-full max-w-none overflow-x-auto"></div>
+            <div id="no-events-message" class="hidden text-center text-gray-500 dark:text-gray-400 p-8">現在参加予定のイベントはありません。</div>
           </div>
+          <div id="pagination-controls" class="mt-4 flex justify-center items-center space-x-2 text-gray-600 dark:text-gray-400"></div>
         </div>
       </div>
     </div>
