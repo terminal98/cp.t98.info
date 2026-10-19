@@ -12,3 +12,5 @@
 @media(max-width:768px){.lagcos-availability-banner__icon{width:22px;height:22px}.lagcos-availability-banner__chevron{width:14px;height:14px}}
 
 @media(max-width:768px){.lagcos-availability-banner__action-label{display:none}}
+
+@media(max-width:768px){.lagcos-availability-banner__action{padding:0;border:0;background:transparent}.lagcos-availability-banner__chevron{width:20px;height:20px}}
