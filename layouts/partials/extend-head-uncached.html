@@ -1,0 +1,2 @@
+{{- if or .IsHome (eq .RelPermalink "/eventlist/") }}<link rel="stylesheet" href="/timetable/banner.css">{{- end }}
+{{- if .Params.timetableAvailability }}<link rel="stylesheet" href="/timetable/availability.css"><script src="/timetable/availability.js" defer></script>{{- end -}}

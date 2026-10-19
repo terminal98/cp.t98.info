@@ -16,6 +16,14 @@ body{
 
 <img src="/img/c103_b1.png">
 
+<a class="lagcos-availability-banner" href="/timetable/lagcos-tw-2026/">
+  <span class="lagcos-availability-banner__title">
+    <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--small">ラグコスタイテ 募集中！</span>
+    <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--large">ラグコス2026 Twinkle タイテ募集中！</span>
+  </span>
+  <span class="lagcos-availability-banner__action">空き状況を見る</span>
+</a>
+
 <div class="w-full grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
 <a class="flex !rounded-md bg-primary-600 px-4 py-3 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 items-center" href="https://lit.link/98tml" target="_blank">
 <span class="mr-1">
