@@ -11,3 +11,12 @@
 {{- if or .IsHome (hasPrefix .RelPermalink "/posts/") (hasPrefix .RelPermalink "/categories/") }}<link rel="stylesheet" href="/news-thumbnails.css?v=20261020-3">{{- end }}
 
 {{- if .HasShortcode "shooting-contact" }}<link rel="stylesheet" href="/shooting-contact.css?v=20261020">{{- end }}
+
+{{- if or .IsHome (eq .Section "posts") (hasPrefix .RelPermalink "/categories/") }}
+  {{- $expiry := slice }}
+  {{- range where site.RegularPages "Params.recruitment" true }}
+    {{- $expiry = $expiry | append (dict "url" .RelPermalink "externalUrl" (.Params.externalUrl | default "") "expires" (.ExpiryDate.Format "2006-01-02T15:04:05Z07:00")) }}
+  {{- end }}
+  <script id="news-expiry-data" type="application/json">{{ $expiry | jsonify | safeJS }}</script>
+  <script src="/news-expiry.js?v=20261020" defer></script>
+{{- end }}

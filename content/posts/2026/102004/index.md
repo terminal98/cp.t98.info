@@ -2,6 +2,7 @@
 title: "【10/23・30】ハコスタ大阪 被写体募集"
 date: 2026-10-20T00:03:00+09:00
 draft: false
+recruitment: true
 showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ"]
