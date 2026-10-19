@@ -4,7 +4,7 @@ date: 2026-10-20T00:03:00+09:00
 draft: false
 showReadingTime: false
 showTableOfContents: false
-categories: ["お知らせ"]
+categories: ["お知らせ", "recruit"]
 expiryDate: 2026-10-29T00:00:00+09:00
 images: ["featured.png"]
 description: "ハコスタ大阪での撮影にご参加いただける被写体様を募集しています。10/23・30のいずれか。5時間チケットでも可。"

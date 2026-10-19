@@ -3,7 +3,7 @@ title: "【10/23・24・25・31】横浜クロスタ 被写体募集"
 date: 2026-10-20T00:01:00+09:00
 draft: false
 showReadingTime: false
-categories: ["お知らせ"]
+categories: ["お知らせ", "recruit"]
 expiryDate: 2026-10-30T00:00:00+09:00
 externalUrl: "https://x.com/98tml/status/2111947613260152972"
 images: ["featured.png"]
