@@ -31,6 +31,28 @@
     return node;
   }
 
+  function mailIcon() {
+    const namespace = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(namespace, 'svg');
+    svg.setAttribute('width', '18');
+    svg.setAttribute('height', '18');
+    svg.setAttribute('viewBox', '0 0 24 24');
+    svg.setAttribute('fill', 'none');
+    svg.setAttribute('stroke', 'currentColor');
+    svg.setAttribute('stroke-width', '1.8');
+    svg.setAttribute('stroke-linecap', 'round');
+    svg.setAttribute('stroke-linejoin', 'round');
+    svg.setAttribute('aria-hidden', 'true');
+    const rect = document.createElementNS(namespace, 'rect');
+    rect.setAttribute('x', '3'); rect.setAttribute('y', '5');
+    rect.setAttribute('width', '18'); rect.setAttribute('height', '14');
+    rect.setAttribute('rx', '2');
+    const flap = document.createElementNS(namespace, 'path');
+    flap.setAttribute('d', 'm3 7 9 6 9-6');
+    svg.append(rect, flap);
+    return svg;
+  }
+
   function clock(iso) {
     const parts = new Intl.DateTimeFormat('en-GB', {
       timeZone: 'Asia/Tokyo', hour: 'numeric', minute: '2-digit', hourCycle: 'h23',
@@ -77,14 +99,14 @@
   const actions = element('div', undefined, 'availability-dialog-actions');
   for (const [label, href, icon, className] of [
     ['DMで相談', 'https://x.com/98tml', '𝕏', 'availability-dialog-dm'],
-    ['メールフォーム', 'https://t98.info/contact/', '✉', 'availability-dialog-mail'],
+    ['メールフォーム', 'https://t98.info/contact/', 'mail', 'availability-dialog-mail'],
   ]) {
     const link = element('a', undefined, className);
     link.href = href;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    const mark = element('span', icon);
-    mark.setAttribute('aria-hidden', 'true');
+    const mark = icon === 'mail' ? mailIcon() : element('span', icon);
+    if (icon !== 'mail') mark.setAttribute('aria-hidden', 'true');
     link.append(mark, document.createTextNode(label));
     actions.append(link);
   }
