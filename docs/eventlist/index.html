@@ -99,6 +99,9 @@
     href="/css/main.bundle.min.70ebe5f0d2cc74290e1675486d19329444609941912a5217238d157c3ff36551a6fb0857f3bd66c988d3a2cddd65f4a4729e479a6afb7c942d5a67115b370283.css"
     integrity="sha512-cOvl8NLMdCkOFnVIbRkylERgmUGRKlIXI40VfD/zZVGm&#43;whX871myYjTos3dZfSkcp5Hmmr7fJQtWmcRWzcCgw==">
   <link rel="stylesheet" href="/timetable/banner.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="/eventlist/style.css?v=scoped-calendar-20261020">
+<link rel="stylesheet" href="/eventlist/utilities.css?v=scoped-calendar-20261020">
   <style>
     html.dark body { background: #26234f; color: #f8fafc; }
     html.dark header .main-menu a,
@@ -905,18 +908,7 @@
       </h1>
     </header>
     <section class="max-w-full mt-6 prose dark:prose-invert">
-      <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>空き状況カレンダー</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { darkMode: 'class' }</script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gray-50 dark:bg-gray-900 text-black !dark:text-white font-sans antialiased">
+      <div id="schedule-page" class="not-prose">
   <h3 id="event" class="profile-name text-center text-2xl">撮影予定表</h3>
   <a class="lagcos-availability-banner" href="/timetable/lagcos-tw-2026/">
     <span class="lagcos-availability-banner__title">
@@ -925,7 +917,7 @@
     </span>
     <span class="lagcos-availability-banner__action">空き状況を見る</span>
   </a>
-  <main>
+  <div class="schedule-calendar">
     <div id="calendar-container" class="max-w-4xl mx-auto p-4">
       <div id="loading-message" class="text-center py-20 text-gray-600 dark:text-gray-400">
         <i class="fas fa-spinner fa-spin text-4xl text-blue-500 dark:text-blue-400"></i>
@@ -975,13 +967,12 @@
         </div>
       </div>
     </div>
-  </main>
+  </div>
   <div id="event-modal" class="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50 hidden">
     <div id="modal-content" class="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto"></div>
   </div>
-  <script src="script.js?v=availability-recommendations-parse-date-fix-20260907"></script>
-</body>
-</html>
+</div>
+<script src="/eventlist/script.js?v=scoped-calendar-20261020" defer></script>
     </section>
     <footer class="pt-8 print:hidden">
       

@@ -1,0 +1,750 @@
+#schedule-page, #schedule-page *, #schedule-page ::before, #schedule-page ::after {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position:  ;
+    --tw-gradient-via-position:  ;
+    --tw-gradient-to-position:  ;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+    --tw-contain-size:  ;
+    --tw-contain-layout:  ;
+    --tw-contain-paint:  ;
+    --tw-contain-style:  
+}
+#schedule-page ::backdrop {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position:  ;
+    --tw-gradient-via-position:  ;
+    --tw-gradient-to-position:  ;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+    --tw-contain-size:  ;
+    --tw-contain-layout:  ;
+    --tw-contain-paint:  ;
+    --tw-contain-style:  
+}
+#schedule-page .pointer-events-none {
+    pointer-events: none
+}
+#schedule-page .fixed {
+    position: fixed
+}
+#schedule-page .absolute {
+    position: absolute
+}
+#schedule-page .relative {
+    position: relative
+}
+#schedule-page .inset-0 {
+    inset: 0px
+}
+#schedule-page .left-3 {
+    left: 0.75rem
+}
+#schedule-page .top-2 {
+    top: 0.5rem
+}
+#schedule-page .z-10 {
+    z-index: 10
+}
+#schedule-page .z-50 {
+    z-index: 50
+}
+#schedule-page .mx-auto {
+    margin-left: auto;
+    margin-right: auto
+}
+#schedule-page .mb-0 {
+    margin-bottom: 0px
+}
+#schedule-page .mb-2 {
+    margin-bottom: 0.5rem
+}
+#schedule-page .mb-4 {
+    margin-bottom: 1rem
+}
+#schedule-page .ml-2 {
+    margin-left: 0.5rem
+}
+#schedule-page .ml-4 {
+    margin-left: 1rem
+}
+#schedule-page .ml-7 {
+    margin-left: 1.75rem
+}
+#schedule-page .mr-1 {
+    margin-right: 0.25rem
+}
+#schedule-page .mr-2 {
+    margin-right: 0.5rem
+}
+#schedule-page .mt-0 {
+    margin-top: 0px
+}
+#schedule-page .mt-1 {
+    margin-top: 0.25rem
+}
+#schedule-page .mt-4 {
+    margin-top: 1rem
+}
+#schedule-page .mt-6 {
+    margin-top: 1.5rem
+}
+#schedule-page .mt-8 {
+    margin-top: 2rem
+}
+#schedule-page .block {
+    display: block
+}
+#schedule-page .inline-block {
+    display: inline-block
+}
+#schedule-page .flex {
+    display: flex
+}
+#schedule-page .inline-flex {
+    display: inline-flex
+}
+#schedule-page .table {
+    display: table
+}
+#schedule-page .grid {
+    display: grid
+}
+#schedule-page .hidden {
+    display: none
+}
+#schedule-page .h-6 {
+    height: 1.5rem
+}
+#schedule-page .max-h-\[80vh\] {
+    max-height: 80vh
+}
+#schedule-page .min-h-\[72px\] {
+    min-height: 72px
+}
+#schedule-page .min-h-\[80px\] {
+    min-height: 80px
+}
+#schedule-page .\!w-full {
+    width: 100% !important
+}
+#schedule-page .w-1\/4 {
+    width: 25%
+}
+#schedule-page .w-3\/4 {
+    width: 75%
+}
+#schedule-page .w-5 {
+    width: 1.25rem
+}
+#schedule-page .w-6 {
+    width: 1.5rem
+}
+#schedule-page .w-full {
+    width: 100%
+}
+#schedule-page .min-w-0 {
+    min-width: 0px
+}
+#schedule-page .max-w-4xl {
+    max-width: 56rem
+}
+#schedule-page .max-w-md {
+    max-width: 28rem
+}
+#schedule-page .max-w-none {
+    max-width: none
+}
+#schedule-page .flex-shrink-0 {
+    flex-shrink: 0
+}
+#schedule-page .flex-grow {
+    flex-grow: 1
+}
+#schedule-page .table-auto {
+    table-layout: auto
+}
+#schedule-page .transform {
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+#schedule-page .cursor-pointer {
+    cursor: pointer
+}
+#schedule-page .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+}
+#schedule-page .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+#schedule-page .grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr))
+}
+#schedule-page .flex-col {
+    flex-direction: column
+}
+#schedule-page .items-start {
+    align-items: flex-start
+}
+#schedule-page .items-center {
+    align-items: center
+}
+#schedule-page .items-baseline {
+    align-items: baseline
+}
+#schedule-page .justify-center {
+    justify-content: center
+}
+#schedule-page .justify-between {
+    justify-content: space-between
+}
+#schedule-page .gap-1 {
+    gap: 0.25rem
+}
+#schedule-page .gap-2 {
+    gap: 0.5rem
+}
+#schedule-page .gap-4 {
+    gap: 1rem
+}
+#schedule-page :is(.space-x-2 > :not([hidden]) ~ :not([hidden])) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))
+}
+#schedule-page :is(.space-x-4 > :not([hidden]) ~ :not([hidden])) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)))
+}
+#schedule-page :is(.space-y-3 > :not([hidden]) ~ :not([hidden])) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.75rem * var(--tw-space-y-reverse))
+}
+#schedule-page .overflow-hidden {
+    overflow: hidden
+}
+#schedule-page .overflow-x-auto {
+    overflow-x: auto
+}
+#schedule-page .overflow-y-auto {
+    overflow-y: auto
+}
+#schedule-page .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+#schedule-page .whitespace-nowrap {
+    white-space: nowrap
+}
+#schedule-page .whitespace-pre-wrap {
+    white-space: pre-wrap
+}
+#schedule-page .break-words {
+    overflow-wrap: break-word
+}
+#schedule-page .rounded-full {
+    border-radius: 9999px
+}
+#schedule-page .rounded-lg {
+    border-radius: 0.5rem
+}
+#schedule-page .border {
+    border-width: 1px
+}
+#schedule-page .border-b {
+    border-bottom-width: 1px
+}
+#schedule-page .border-r {
+    border-right-width: 1px
+}
+#schedule-page .border-t {
+    border-top-width: 1px
+}
+#schedule-page .border-gray-200 {
+    --tw-border-opacity: 1;
+    border-color: rgb(229 231 235 / var(--tw-border-opacity, 1))
+}
+#schedule-page .bg-black {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .bg-black\/50 {
+    background-color: rgb(0 0 0 / 0.5)
+}
+#schedule-page .bg-black\/70 {
+    background-color: rgb(0 0 0 / 0.7)
+}
+#schedule-page .bg-blue-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .bg-blue-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .p-1 {
+    padding: 0.25rem
+}
+#schedule-page .p-2 {
+    padding: 0.5rem
+}
+#schedule-page .p-3 {
+    padding: 0.75rem
+}
+#schedule-page .p-4 {
+    padding: 1rem
+}
+#schedule-page .p-6 {
+    padding: 1.5rem
+}
+#schedule-page .p-8 {
+    padding: 2rem
+}
+#schedule-page .px-1\.5 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem
+}
+#schedule-page .px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem
+}
+#schedule-page .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem
+}
+#schedule-page .py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem
+}
+#schedule-page .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem
+}
+#schedule-page .py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem
+}
+#schedule-page .pt-4 {
+    padding-top: 1rem
+}
+#schedule-page .text-left {
+    text-align: left
+}
+#schedule-page .text-center {
+    text-align: center
+}
+#schedule-page .align-top {
+    vertical-align: top
+}
+#schedule-page .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem
+}
+#schedule-page .text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem
+}
+#schedule-page .text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem
+}
+#schedule-page .text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem
+}
+#schedule-page .text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem
+}
+#schedule-page .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem
+}
+#schedule-page .text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem
+}
+#schedule-page .font-bold {
+    font-weight: 700
+}
+#schedule-page .font-medium {
+    font-weight: 500
+}
+#schedule-page .font-semibold {
+    font-weight: 600
+}
+#schedule-page .uppercase {
+    text-transform: uppercase
+}
+#schedule-page .text-blue-500 {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-blue-600 {
+    --tw-text-opacity: 1;
+    color: rgb(37 99 235 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgb(34 197 94 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-green-600 {
+    --tw-text-opacity: 1;
+    color: rgb(22 163 74 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-green-700 {
+    --tw-text-opacity: 1;
+    color: rgb(21 128 61 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-red-500 {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgb(220 38 38 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-red-700 {
+    --tw-text-opacity: 1;
+    color: rgb(185 28 28 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-yellow-500 {
+    --tw-text-opacity: 1;
+    color: rgb(234 179 8 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-yellow-600 {
+    --tw-text-opacity: 1;
+    color: rgb(202 138 4 / var(--tw-text-opacity, 1))
+}
+#schedule-page .text-yellow-700 {
+    --tw-text-opacity: 1;
+    color: rgb(161 98 7 / var(--tw-text-opacity, 1))
+}
+#schedule-page .opacity-0 {
+    opacity: 0
+}
+#schedule-page .shadow {
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+#schedule-page .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+#schedule-page .filter {
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+#schedule-page .transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+#schedule-page .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+#schedule-page .transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms
+}
+#schedule-page .duration-300 {
+    transition-duration: 300ms
+}
+#schedule-page .hover\:scale-105:hover {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+#schedule-page .hover\:border-blue-400:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(96 165 250 / var(--tw-border-opacity, 1))
+}
+#schedule-page .hover\:bg-blue-50:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(239 246 255 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .hover\:bg-blue-700:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .hover\:bg-gray-100:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .hover\:bg-gray-200:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .hover\:bg-gray-800:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .hover\:text-blue-700:hover {
+    --tw-text-opacity: 1;
+    color: rgb(29 78 216 / var(--tw-text-opacity, 1))
+}
+#schedule-page .hover\:text-gray-600:hover {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1))
+}
+#schedule-page .hover\:underline:hover {
+    text-decoration-line: underline
+}
+#schedule-page .disabled\:cursor-not-allowed:disabled {
+    cursor: not-allowed
+}
+#schedule-page .disabled\:opacity-50:disabled {
+    opacity: 0.5
+}
+#schedule-page .dark\:border-gray-600:is(.dark *) {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity, 1))
+}
+#schedule-page .dark\:border-gray-700:is(.dark *) {
+    --tw-border-opacity: 1;
+    border-color: rgb(55 65 81 / var(--tw-border-opacity, 1))
+}
+#schedule-page .dark\:bg-blue-950\/30:is(.dark *) {
+    background-color: rgb(23 37 84 / 0.3)
+}
+#schedule-page .dark\:bg-gray-700:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .dark\:bg-gray-800:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .dark\:bg-gray-800\/50:is(.dark *) {
+    background-color: rgb(31 41 55 / 0.5)
+}
+#schedule-page .dark\:bg-gray-900:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .dark\:text-blue-400:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(96 165 250 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-blue-500:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(59 130 246 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-gray-100:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(243 244 246 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-gray-300:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-gray-400:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-gray-500:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-green-300:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(134 239 172 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-green-400:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(74 222 128 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-red-300:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(252 165 165 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-red-400:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(248 113 113 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-white:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-yellow-300:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(253 224 71 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:text-yellow-400:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(250 204 21 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:hover\:border-blue-500:hover:is(.dark *) {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity, 1))
+}
+#schedule-page .dark\:hover\:bg-blue-700:hover:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .dark\:hover\:bg-gray-700:hover:is(.dark *) {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1))
+}
+#schedule-page .dark\:hover\:text-blue-400:hover:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(96 165 250 / var(--tw-text-opacity, 1))
+}
+#schedule-page .dark\:hover\:text-gray-300:hover:is(.dark *) {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity, 1))
+}
+@media (min-width: 768px) {
+    #schedule-page .md\:block {
+        display: block
+    }
+    #schedule-page .md\:min-h-\[120px\] {
+        min-height: 120px
+    }
+    #schedule-page .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+    #schedule-page .md\:p-2 {
+        padding: 0.5rem
+    }
+    #schedule-page .md\:text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem
+    }
+    #schedule-page .md\:text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem
+    }
+    #schedule-page .md\:text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem
+    }
+}

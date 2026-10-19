@@ -1,36 +1,50 @@
-body {
-  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+/* Apply calendar defaults only inside the embedded calendar. */
+#schedule-page { color: inherit; font-family: inherit; line-height: 1.5; }
+:where(#schedule-page, #schedule-page *, #schedule-page ::before, #schedule-page ::after) {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
 }
-
-.logo {
-  height: 1.75em;
-  max-width: 15rem;
+#schedule-page :where(h1,h2,h3,h4,h5,h6,p,figure,blockquote,dl,dd) { margin: 0; }
+#schedule-page :where(h1,h2,h3,h4,h5,h6) { font-size: inherit; font-weight: inherit; }
+#schedule-page :where(button,input,select,textarea) {
+  margin: 0; padding: 0; font: inherit; color: inherit; background: transparent;
 }
+#schedule-page :where(button) { cursor: pointer; text-transform: none; }
+#schedule-page :where(button:disabled) { cursor: default; }
+#schedule-page :where(table) { border-collapse: collapse; text-indent: 0; }
+:where(#schedule-page a) { color: inherit; text-decoration: inherit; }
+#schedule-page :where(img,svg) { display: block; vertical-align: middle; }
+#schedule-page [hidden] { display: none; }
 
-.calendar-grid {
+#schedule-page .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 /* モーダルのアニメーション */
-.modal-enter {
+#schedule-page .modal-enter {
   opacity: 0;
   transform: scale(0.95);
 }
 
-.modal-enter-active {
+#schedule-page .modal-enter-active {
   opacity: 1;
   transform: scale(1);
   transition: opacity 200ms, transform 200ms;
 }
 
-.modal-leave {
+#schedule-page .modal-leave {
   opacity: 1;
   transform: scale(1);
 }
 
-.modal-leave-active {
+#schedule-page .modal-leave-active {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 200ms, transform 200ms;
 }
+
+/* Older theme bundles do not include the fixed header spacer utility. */
+body:has(#schedule-page) > header > .min-h-16 { min-height: 4rem; }
