@@ -6,6 +6,7 @@ showReadingTime: false
 categories: ["お知らせ"]
 expiryDate: 2026-11-08T06:00:00+09:00
 externalUrl: "/timetable/lagcos-tw-2026/"
+images: ["featured.png"]
 ---
 
 ラグコス2026 Twinkleの撮影タイムテーブルを公開しました。

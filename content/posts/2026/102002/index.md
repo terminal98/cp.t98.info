@@ -6,6 +6,7 @@ showReadingTime: false
 categories: ["お知らせ"]
 expiryDate: 2026-11-01T00:00:00+09:00
 externalUrl: "https://x.com/98tml/status/2111947613260152972"
+images: ["featured.png"]
 ---
 
 10/23・24・25・31のいずれかの日程で、横浜クロスタでの撮影にご参加いただける被写体様を募集しています。
