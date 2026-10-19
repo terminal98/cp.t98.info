@@ -15,7 +15,6 @@
 {{- end -}}
 {{- if $hasActiveVenue }}
 <nav class="schedule-recruitments" aria-label="撮影募集を選ぶ">
-  <p class="schedule-recruitments__heading">スタジオ撮影の募集</p>
   <div class="schedule-recruitments__options">
     {{- range $venues -}}
       {{- if $currentTime.Before .expires }}
@@ -29,15 +28,16 @@
   </div>
   <div class="schedule-recruitments__carousel" role="region" aria-label="スタジオ撮影の被写体募集" aria-roledescription="スライドショー">
     <div class="schedule-recruitments__slide schedule-recruitments__slide--intro" data-active="true" aria-hidden="false">
+      <svg class="schedule-recruitments__slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5h3l1.5-2h7l1.5 2h3A2 2 0 0 1 22 9.5v8A2 2 0 0 1 20 19.5H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
       <span>スタジオ撮影被写体募集</span>
+      <svg class="schedule-recruitments__slide-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
     </div>
     {{- range $venues -}}
       {{- if $currentTime.Before .expires }}
     <a class="schedule-recruitments__slide" href="{{ .href }}" style="--venue-color: {{ .color }}" aria-hidden="true" inert>
-      <span class="schedule-recruitments__slide-badge">【被写体募集】</span>
-      <span class="schedule-recruitments__slide-name">{{ .name }}</span>
-      <span class="schedule-recruitments__slide-dates">{{ .dates }}</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+      <svg class="schedule-recruitments__slide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7.5h3l1.5-2h7l1.5 2h3A2 2 0 0 1 22 9.5v8A2 2 0 0 1 20 19.5H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z"/><circle cx="12" cy="13.5" r="3.5"/></svg>
+      <span class="schedule-recruitments__slide-copy"><span class="schedule-recruitments__slide-badge">【被写体募集】</span><span class="schedule-recruitments__slide-name">{{ .name }}</span><span class="schedule-recruitments__slide-dates">{{ .dates }}</span></span>
+      <svg class="schedule-recruitments__slide-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
     </a>
       {{- end -}}
     {{- end }}
