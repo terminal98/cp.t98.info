@@ -3,9 +3,9 @@
 {{- $yokohamaExpires := time.AsTime "2026-10-30T00:00:00+09:00" -}}
 {{- $currentTime := now -}}
 {{- $venues := slice
+  (dict "name" "横浜クロスタ" "dates" "10/23・24・25・31" "href" "/posts/2026/102002/" "expires" $yokohamaExpires)
   (dict "name" "ハコスタ大阪" "dates" "10/23・30" "href" "/posts/2026/102004/" "expires" $hakosutaExpires)
   (dict "name" "四谷ベース" "dates" "10/23・27・28・30" "href" "/posts/2026/102003/" "expires" $yotsuyaExpires)
-  (dict "name" "横浜クロスタ" "dates" "10/23・24・25・31" "href" "/posts/2026/102002/" "expires" $yokohamaExpires)
 -}}
 {{- $hasActiveVenue := false -}}
 {{- range $venues -}}
@@ -14,7 +14,8 @@
   {{- end -}}
 {{- end -}}
 {{- if $hasActiveVenue }}
-<nav class="schedule-recruitments" aria-label="スタジオ撮影の被写体募集">
+<nav class="schedule-recruitments" aria-labelledby="studio-recruitments-title">
+  <h4 id="studio-recruitments-title" class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">スタジオ撮影の募集</h4>
   <ul class="schedule-recruitments__list">
     {{- range $venues -}}
       {{- if $currentTime.Before .expires }}
