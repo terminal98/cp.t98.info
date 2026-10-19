@@ -35,6 +35,7 @@
 #schedule-page .schedule-recruitments__carousel{display:none}
 @media(max-width:640px){
   #schedule-page .schedule-recruitments{margin-top:-4px}
+  #schedule-page .schedule-recruitments.is-slideshow .schedule-recruitments__heading{display:none}
   .dark #schedule-page .schedule-recruitments__heading{color:#d1d5db}
   #schedule-page .schedule-recruitments__options{grid-template-columns:1fr;gap:4px}
   #schedule-page .schedule-recruitments__options>a{padding:9px 12px}
