@@ -1,0 +1,12 @@
+.shooting-contact{margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb;text-align:center}
+.shooting-contact p{margin:0 0 16px;color:#4b5563;font-size:14px;line-height:1.6}
+.shooting-contact__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.shooting-contact__actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px;border-radius:8px;color:#fff;text-decoration:none;font-size:16px;font-weight:700;line-height:1.5;transition:transform .15s}
+.shooting-contact__actions a:hover{transform:scale(1.05)}
+.shooting-contact__actions a:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
+.shooting-contact__actions svg{display:block;flex:none;margin:0}
+.shooting-contact__dm{background:#000}
+.shooting-contact__mail{background:#2563eb}
+.dark .shooting-contact{border-color:#374151}
+.dark .shooting-contact p{color:#9ca3af}
+@media(prefers-reduced-motion:reduce){.shooting-contact__actions a{transition:none}}

@@ -4,7 +4,7 @@ date: 2026-10-20T00:01:00+09:00
 draft: false
 showReadingTime: false
 categories: ["お知らせ"]
-expiryDate: 2026-11-01T00:00:00+09:00
+expiryDate: 2026-10-30T00:00:00+09:00
 externalUrl: "https://x.com/98tml/status/2111947613260152972"
 images: ["featured.png"]
 ---
