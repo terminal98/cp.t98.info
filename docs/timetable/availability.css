@@ -19,7 +19,7 @@ body:has(.availability-board){margin-inline:auto}
 .availability-section h2{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;margin:0;padding:20px 0;border-radius:18px;background:var(--slot-color);color:#fff;font-size:25px;font-weight:700;letter-spacing:.08em}
 .availability-section h2 span{writing-mode:vertical-rl;text-orientation:upright}
 .availability-section h2 img{display:block;width:27px;height:27px;object-fit:contain}
-.availability-section table{width:100%;border-collapse:separate;border-spacing:0 10px;table-layout:fixed;font-variant-numeric:tabular-nums}
+.availability-section table{display:table;width:100%;border-collapse:separate;border-spacing:0 10px;table-layout:fixed;font-variant-numeric:tabular-nums}
 .availability-col-time{width:80%}
 .availability-col-state{width:20%}
 .availability-section tbody tr{background:#fff;color:var(--slot-color)}
