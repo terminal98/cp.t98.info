@@ -1,0 +1,46 @@
+{{- $yotsuyaExpires := time.AsTime "2026-10-29T00:00:00+09:00" -}}
+{{- $hakosutaExpires := time.AsTime "2026-10-29T00:00:00+09:00" -}}
+{{- $yokohamaExpires := time.AsTime "2026-10-30T00:00:00+09:00" -}}
+{{- $currentTime := now -}}
+{{- $venues := slice
+  (dict "name" "ハコスタ大阪" "dates" "10/23・30" "href" "/posts/2026/102004/" "expires" $hakosutaExpires "color" "#f64d99")
+  (dict "name" "四谷ベース" "dates" "10/23・27・28・30" "href" "/posts/2026/102003/" "expires" $yotsuyaExpires "color" "#008f8b")
+  (dict "name" "横浜クロスタ" "dates" "10/23・24・25・31" "href" "/posts/2026/102002/" "expires" $yokohamaExpires "color" "#064bb4")
+-}}
+{{- $hasActiveVenue := false -}}
+{{- range $venues -}}
+  {{- if $currentTime.Before .expires -}}
+    {{- $hasActiveVenue = true -}}
+  {{- end -}}
+{{- end -}}
+{{- if $hasActiveVenue }}
+<nav class="schedule-recruitments" aria-label="撮影募集を選ぶ">
+  <p class="schedule-recruitments__heading">スタジオ撮影の募集</p>
+  <div class="schedule-recruitments__options">
+    {{- range $venues -}}
+      {{- if $currentTime.Before .expires }}
+    <a href="{{ .href }}" style="--venue-color: {{ .color }}">
+      <span class="schedule-recruitments__name">{{ .name }}</span>
+      <span class="schedule-recruitments__dates">{{ .dates }}</span>
+      <svg class="schedule-recruitments__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+    </a>
+      {{- end -}}
+    {{- end }}
+  </div>
+  <div class="schedule-recruitments__carousel" role="region" aria-label="スタジオ撮影の被写体募集" aria-roledescription="スライドショー">
+    <div class="schedule-recruitments__slide schedule-recruitments__slide--intro" data-active="true" aria-hidden="false">
+      <span>スタジオ撮影被写体募集</span>
+    </div>
+    {{- range $venues -}}
+      {{- if $currentTime.Before .expires }}
+    <a class="schedule-recruitments__slide" href="{{ .href }}" style="--venue-color: {{ .color }}" aria-hidden="true" inert>
+      <span class="schedule-recruitments__slide-badge">【被写体募集】</span>
+      <span class="schedule-recruitments__slide-name">{{ .name }}</span>
+      <span class="schedule-recruitments__slide-dates">{{ .dates }}</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+    </a>
+      {{- end -}}
+    {{- end }}
+  </div>
+</nav>
+{{- end -}}

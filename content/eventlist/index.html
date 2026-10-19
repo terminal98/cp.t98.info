@@ -4,35 +4,8 @@ layout= "simple"
 +++
 <div id="schedule-page" class="not-prose">
   <h3 id="event" class="profile-name text-center text-2xl">撮影予定表</h3>
-  <a class="lagcos-availability-banner" href="/timetable/lagcos-tw-2026/" aria-label="ラグコス2026 Twinkleの空き状況はこちら">
-  <svg class="lagcos-availability-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 14-5v14L3 14z"/><path d="M7 15v5h4l-1-4M17 9l4-2m-4 8 4 2M21 12h1"/></svg>
-    <span class="lagcos-availability-banner__title" aria-hidden="true">
-      <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--small">ラグコスタイテ 募集中！</span>
-      <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--large">ラグコス2026 Twinkle タイテ募集中！</span>
-      <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--alternate">ラグコス タイテ空き多数あります！</span>
-    </span>
-    <span class="lagcos-availability-banner__action"><span class="lagcos-availability-banner__action-label">空き状況はこちら</span><svg class="lagcos-availability-banner__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
-  </a>
-  <nav class="schedule-recruitments" aria-label="撮影募集を選ぶ">
-    <p>スタジオ撮影の募集</p>
-    <div class="schedule-recruitments__options">
-      <a href="/posts/2026/102003/">
-        <span class="schedule-recruitments__name">四谷ベース</span>
-        <span class="schedule-recruitments__dates">10/23・27・28・30</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
-      </a>
-      <a href="/posts/2026/102004/">
-        <span class="schedule-recruitments__name">ハコスタ大阪</span>
-        <span class="schedule-recruitments__dates">10/23・30</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
-      </a>
-      <a href="/posts/2026/102002/">
-        <span class="schedule-recruitments__name">横浜クロスタ</span>
-        <span class="schedule-recruitments__dates">10/23・24・25・31</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
-      </a>
-    </div>
-  </nav>
+  {{< lagcos-banner >}}
+  {{< studio-recruitments >}}
   <div class="schedule-calendar">
     <div id="calendar-container" class="w-full">
       <div id="loading-message" class="text-center py-20 text-gray-600 dark:text-gray-400">
