@@ -3,7 +3,7 @@
 {{- $yokohamaExpires := time.AsTime "2026-10-30T00:00:00+09:00" -}}
 {{- $currentTime := now -}}
 {{- $venues := slice
-  (dict "name" "横浜クロスタ" "dates" "10/23・24・25・31" "href" "/posts/2026/102002/" "expires" $yokohamaExpires)
+  (dict "name" "横浜クロスタ" "dates" "10/23・24・25・31" "href" "https://x.com/98tml/status/2111947613260152972" "external" true "expires" $yokohamaExpires)
   (dict "name" "ハコスタ大阪" "dates" "10/23・30" "href" "/posts/2026/102004/" "expires" $hakosutaExpires)
   (dict "name" "四谷ベース" "dates" "10/23・27・28・30" "href" "/posts/2026/102003/" "expires" $yotsuyaExpires)
 -}}
@@ -25,7 +25,7 @@
     {{- range $venues -}}
       {{- if $currentTime.Before .expires }}
     <li>
-      <a href="{{ .href }}">
+      <a href="{{ .href }}"{{ with .external }} target="_blank" rel="external noopener"{{ end }}>
         <span class="schedule-recruitments__name">{{ .name }}</span>
         <span class="schedule-recruitments__dates">{{ .dates }}</span>
         <svg class="schedule-recruitments__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
