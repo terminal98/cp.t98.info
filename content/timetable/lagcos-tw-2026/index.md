@@ -14,6 +14,7 @@ sitemap:
   disable: true
 ---
 
+<nav class="availability-back" aria-label="スケジュールへの移動"><a href="/eventlist/">← 予定カレンダーに戻る</a></nav>
 <div id="availability-board" class="availability-board" data-api="https://g2.t98.info/timetable/lagcos-tw-2026.json">
   <header class="availability-heading">
     <h1 id="availability-title">ラグコス2026Twinkle タイムテーブル</h1>

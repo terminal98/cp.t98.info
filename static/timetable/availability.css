@@ -84,3 +84,7 @@ body:has(.availability-board){margin-inline:auto}
 .dark .availability-recommendation:hover{border-color:#3b82f6;background:#1d4ed8}
 .dark .availability-recommendation-date{color:#9ca3af}
 .dark .availability-recommendation-state{color:#4ade80}
+
+.availability-back{margin:0 0 16px;font-size:14px}
+.availability-back a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.availability-back a:hover{color:#008b89}
