@@ -132,7 +132,7 @@
       const updated = new Date(data.updatedAt);
       get('availability-updated').textContent = new Intl.DateTimeFormat('ja-JP', {
         timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h23',
-      }).format(updated) + ' 最終更新';
+      }).format(updated) + ' 現在';
       document.title = `${fullTitle} · にじてくと`;
       get('availability-error').hidden = true;
       fitTitle();
