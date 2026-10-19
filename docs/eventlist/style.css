@@ -48,3 +48,27 @@
 
 /* Older theme bundles do not include the fixed header spacer utility. */
 body:has(#schedule-page) > header > .min-h-16 { min-height: 4rem; }
+
+
+/* Compact studio recruitment choices below the main availability banner. */
+#schedule-page .schedule-recruitments { margin: -8px 0 22px; }
+#schedule-page .schedule-recruitments > p { margin: 0 0 7px; color: #6b7280; font-size: 12px; font-weight: 600; }
+#schedule-page .schedule-recruitments__options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+#schedule-page .schedule-recruitments__options > a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 6px; row-gap: 2px; min-width: 0; padding: 8px 10px; border: 1px solid #d1d5db; border-radius: 8px; background: rgb(255 255 255 / 55%); color: #374151; text-decoration: none; transition: border-color .15s, background-color .15s; }
+#schedule-page .schedule-recruitments__options > a:hover { border-color: #60a5fa; background: #eff6ff; }
+#schedule-page .schedule-recruitments__options > a:focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+#schedule-page .schedule-recruitments__name { min-width: 0; overflow: hidden; font-size: 13px; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+#schedule-page .schedule-recruitments__dates { grid-column: 1; color: #6b7280; font-size: 11px; line-height: 1.4; white-space: nowrap; }
+#schedule-page .schedule-recruitments__options svg { grid-column: 2; grid-row: 1 / span 2; width: 15px; height: 15px; margin: 0; color: #6b7280; }
+.dark #schedule-page .schedule-recruitments > p { color: #9ca3af; }
+.dark #schedule-page .schedule-recruitments__options > a { border-color: #4b5563; background: rgb(31 41 55 / 55%); color: #f3f4f6; }
+.dark #schedule-page .schedule-recruitments__options > a:hover { border-color: #3b82f6; background: #1d4ed8; }
+.dark #schedule-page .schedule-recruitments__dates, .dark #schedule-page .schedule-recruitments__options svg { color: #9ca3af; }
+@media(max-width:520px) {
+  #schedule-page .schedule-recruitments { margin-top: -4px; }
+  #schedule-page .schedule-recruitments__options { gap: 6px; }
+  #schedule-page .schedule-recruitments__options > a { padding: 8px 6px; column-gap: 3px; }
+  #schedule-page .schedule-recruitments__name { font-size: 12px; }
+  #schedule-page .schedule-recruitments__dates { font-size: 10px; letter-spacing: -.03em; }
+  #schedule-page .schedule-recruitments__options svg { width: 13px; height: 13px; }
+}
