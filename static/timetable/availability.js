@@ -58,6 +58,52 @@
     return svg;
   }
 
+  const consultation = element('dialog', undefined, 'availability-dialog');
+  consultation.setAttribute('aria-labelledby', 'availability-dialog-title');
+  const dialogContent = element('div', undefined, 'availability-dialog-content');
+  const dialogHeader = element('div', undefined, 'availability-dialog-header');
+  const dialogTitle = element('h3');
+  dialogTitle.id = 'availability-dialog-title';
+  const closeButton = element('button', '×', 'availability-dialog-close');
+  closeButton.type = 'button';
+  closeButton.setAttribute('aria-label', '閉じる');
+  closeButton.addEventListener('click', () => consultation.close());
+  dialogHeader.append(dialogTitle, closeButton);
+  const dialogStatus = element('p', undefined, 'availability-dialog-status');
+  const invitation = element('div', undefined, 'availability-dialog-invitation');
+  invitation.append(element('p', '\\ 楽しいお誘いお待ちしております！ /'));
+  const actions = element('div', undefined, 'availability-dialog-actions');
+  for (const [label, href, icon, className] of [
+    ['DMで相談', 'https://x.com/98tml', '𝕏', 'availability-dialog-dm'],
+    ['メールフォーム', 'https://t98.info/contact/', '✉', 'availability-dialog-mail'],
+  ]) {
+    const link = element('a', undefined, className);
+    link.href = href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    const mark = element('span', icon);
+    mark.setAttribute('aria-hidden', 'true');
+    link.append(mark, document.createTextNode(label));
+    actions.append(link);
+  }
+  invitation.append(actions);
+  dialogContent.append(dialogHeader, dialogStatus, invitation);
+  consultation.append(dialogContent);
+  document.body.append(consultation);
+  consultation.addEventListener('click', event => {
+    if (event.target === consultation) {
+      const rect = consultation.getBoundingClientRect();
+      if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) consultation.close();
+    }
+  });
+
+  function showConsultation(slot, status) {
+    dialogTitle.textContent = range(slot);
+    dialogStatus.textContent = status === 'open' ? '○ 空き' : '△ 確認待ち';
+    dialogStatus.dataset.status = status;
+    consultation.showModal();
+  }
+
   function renderSection(section, slots, now) {
     const panel = element('section', undefined, `availability-section availability-section--${section}`);
     const heading = element('h2');
@@ -86,7 +132,17 @@
       row.dataset.status = status;
       const time = element('th');
       time.scope = 'row';
-      time.append(element('span', range(slot)));
+      if (board.dataset.receiving === 'true' && ['open', 'pending'].includes(status)) {
+        const button = element('button', range(slot), 'availability-slot-button');
+        button.type = 'button';
+        button.setAttribute('aria-haspopup', 'dialog');
+        button.setAttribute('aria-label', `${range(slot)} ${status === 'open' ? '空き' : '確認待ち'}、相談する`);
+        time.append(button);
+        row.classList.add('availability-slot-interactive');
+        row.addEventListener('click', () => showConsultation(slot, status));
+      } else {
+        time.append(element('span', range(slot)));
+      }
       const state = element('td');
       const mark = element('span', undefined, 'availability-state');
       mark.setAttribute('role', 'img');
@@ -109,6 +165,7 @@
       const data = await response.json();
       if (data.event?.slug !== 'lagcos-tw-2026' || !Array.isArray(data.slots) || !data.updatedAt) throw new Error('空き状況を取得できませんでした。');
 
+      board.dataset.receiving = String(data.event.receiving === true);
       const now = Date.now();
       const counts = { open: 0 };
       const sections = [];

@@ -39,3 +39,30 @@ body:has(.availability-board){margin-inline:auto}
 @media(max-width:380px){.availability-page{padding:18px 0 48px}.availability-heading h1{font-size:20px}.availability-section{grid-template-columns:27px minmax(0,1fr);gap:6px;padding:6px}.availability-section h2{font-size:16px}.availability-section tbody th{font-size:14px}.availability-state svg{width:21px;height:21px}}
 @media(max-width:640px){.availability-message,.availability-closed{margin:12px 4px;padding:12px 14px;font-size:15px}}
 @media(prefers-reduced-motion:reduce){#availability-loading::before{animation:none}}
+
+.availability-slot-interactive{cursor:pointer}
+.availability-slot-interactive:hover{filter:brightness(.96)}
+.availability-slot-button{display:block;width:100%;margin:0;padding:0;border:0;background:transparent;color:inherit;font:inherit;line-height:inherit;cursor:pointer}
+.availability-slot-button:focus-visible{outline:3px solid #006b67;outline-offset:4px;border-radius:4px}
+.availability-dialog{box-sizing:border-box;position:fixed;inset:0;width:calc(100% - 32px);max-width:448px;max-height:80dvh;margin:auto;padding:0;overflow:auto;border:0;border-radius:8px;background:#fff;color:#374151;box-shadow:0 20px 25px #0003;font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+.availability-dialog::backdrop{background:#000b}
+.availability-dialog-content{padding:24px}
+.availability-dialog-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.availability-dialog-header h3{margin:0;color:#1f2937;font-size:24px;font-weight:700;line-height:1.4}
+.availability-dialog-close{flex:none;margin:0;padding:0 4px;border:0;background:transparent;color:#9ca3af;font-size:28px;line-height:1;cursor:pointer}
+.availability-dialog-status{margin:8px 0 0;color:#16a34a;font-size:18px;font-weight:600}
+.availability-dialog-status[data-status=pending]{color:#a16207}
+.availability-dialog-invitation{margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb;text-align:center}
+.availability-dialog-invitation p{margin:0 0 16px;color:#4b5563;font-size:14px;line-height:1.6}
+.availability-dialog-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.availability-dialog-actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px;border-radius:8px;color:#fff;text-decoration:none;font-size:16px;font-weight:700;line-height:1.5;transition:transform .15s}
+.availability-dialog-actions a:hover{transform:scale(1.05)}
+.availability-dialog-dm{background:#000}
+.availability-dialog-mail{background:#2563eb}
+.dark .availability-dialog{background:#111827;color:#d1d5db}
+.dark .availability-dialog-header h3{color:#f3f4f6}
+.dark .availability-dialog-status{color:#4ade80}
+.dark .availability-dialog-status[data-status=pending]{color:#facc15}
+.dark .availability-dialog-invitation{border-color:#374151}
+.dark .availability-dialog-invitation p{color:#9ca3af}
+@media(prefers-reduced-motion:reduce){.availability-dialog-actions a{transition:none}}
