@@ -16,12 +16,13 @@ body{
 
 <img src="/img/c103_b1.png">
 
-<a class="lagcos-availability-banner" href="/timetable/lagcos-tw-2026/">
+<a class="lagcos-availability-banner" href="/timetable/lagcos-tw-2026/" aria-label="ラグコス2026 Twinkleの空き状況はこちら">
+  <svg class="lagcos-availability-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 14-5v14L3 14z"/><path d="M7 15v5h4l-1-4M17 9l4-2m-4 8 4 2M21 12h1"/></svg>
   <span class="lagcos-availability-banner__title">
     <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--small">ラグコスタイテ 募集中！</span>
     <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--large">ラグコス2026 Twinkle タイテ募集中！</span>
   </span>
-  <span class="lagcos-availability-banner__action">空き状況を見る</span>
+  <span class="lagcos-availability-banner__action"><span class="lagcos-availability-banner__action-label">空き状況はこちら</span><svg class="lagcos-availability-banner__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
 </a>
 
 <div class="w-full grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4">

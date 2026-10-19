@@ -85,6 +85,7 @@ body:has(.availability-board){margin-inline:auto}
 .dark .availability-recommendation-date{color:#9ca3af}
 .dark .availability-recommendation-state{color:#4ade80}
 
-.availability-back{margin:0 0 16px;font-size:14px}
-.availability-back a{color:inherit;text-decoration:underline;text-underline-offset:3px}
-.availability-back a:hover{color:#008b89}
+.availability-back{margin:0 0 20px;font-size:16px;font-weight:600}
+.availability-back a{display:inline-flex;align-items:center;gap:8px;min-height:44px;line-height:1.5}
+.availability-back a:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+.availability-back svg{display:block;width:20px;height:20px;margin:0;flex:none}

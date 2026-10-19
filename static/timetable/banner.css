@@ -1,8 +1,14 @@
-.lagcos-availability-banner{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:14px;width:min(100%,920px);margin:22px auto;padding:16px 20px;border:2px solid #008f8b;border-radius:10px;background:#008f8b;color:#fff;text-decoration:none;box-shadow:0 3px 10px #173b4020}
+.lagcos-availability-banner{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;margin:22px auto;padding:16px 20px;border:2px solid #008f8b;border-radius:10px;background:#008f8b;color:#fff;text-decoration:none;box-shadow:0 3px 10px #173b4020}
 .lagcos-availability-banner:hover{filter:brightness(.96)}
 .lagcos-availability-banner:focus-visible{outline:3px solid #132b3a;outline-offset:3px}
 .lagcos-availability-banner__title{flex:1;min-width:0;text-align:left}
 .lagcos-availability-banner__copy{display:block;font-size:clamp(17px,2.5vw,24px);font-weight:750;line-height:1.35;text-shadow:0 1px 2px #0005}
 .lagcos-availability-banner__copy--small{display:none}
-.lagcos-availability-banner__action{flex:none;padding:7px 12px;border:1px solid #ffffffbd;border-radius:6px;background:#008f8b;color:#fff;font-size:14px;font-weight:700;white-space:nowrap}
+.lagcos-availability-banner__action{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:none;padding:7px 12px;border:1px solid #ffffffbd;border-radius:6px;background:#008f8b;color:#fff;font-size:14px;font-weight:700;white-space:nowrap}
 @media(max-width:768px){.lagcos-availability-banner{gap:10px;margin:16px auto;padding:13px 14px}.lagcos-availability-banner__copy{font-size:clamp(14px,3.3vw,18px)}.lagcos-availability-banner__copy--small{display:block}.lagcos-availability-banner__copy--large{display:none}.lagcos-availability-banner__action{padding:6px 9px;font-size:12px}}
+
+.lagcos-availability-banner__icon{display:block;width:28px;height:28px;margin:0;flex:none}
+.lagcos-availability-banner__chevron{display:block;width:16px;height:16px;margin:0;flex:none}
+@media(max-width:768px){.lagcos-availability-banner__icon{width:22px;height:22px}.lagcos-availability-banner__chevron{width:14px;height:14px}}
+
+@media(max-width:768px){.lagcos-availability-banner__action-label{display:none}}

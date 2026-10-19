@@ -98,10 +98,10 @@
     rel="stylesheet"
     href="/css/main.bundle.min.70ebe5f0d2cc74290e1675486d19329444609941912a5217238d157c3ff36551a6fb0857f3bd66c988d3a2cddd65f4a4729e479a6afb7c942d5a67115b370283.css"
     integrity="sha512-cOvl8NLMdCkOFnVIbRkylERgmUGRKlIXI40VfD/zZVGm&#43;whX871myYjTos3dZfSkcp5Hmmr7fJQtWmcRWzcCgw==">
-  <link rel="stylesheet" href="/timetable/banner.css">
+  <link rel="stylesheet" href="/timetable/banner.css?v=banner-navigation-20261020">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="/eventlist/style.css?v=scoped-calendar-20261020">
-<link rel="stylesheet" href="/eventlist/utilities.css?v=scoped-calendar-20261020">
+<link rel="stylesheet" href="/eventlist/utilities.css?v=full-width-calendar-20261020">
   <style>
     html.dark body { background: #26234f; color: #f8fafc; }
     html.dark header .main-menu a,
@@ -910,15 +910,16 @@
     <section class="max-w-full mt-6 prose dark:prose-invert">
       <div id="schedule-page" class="not-prose">
   <h3 id="event" class="profile-name text-center text-2xl">撮影予定表</h3>
-  <a class="lagcos-availability-banner" href="/timetable/lagcos-tw-2026/">
+  <a class="lagcos-availability-banner" href="/timetable/lagcos-tw-2026/" aria-label="ラグコス2026 Twinkleの空き状況はこちら">
+  <svg class="lagcos-availability-banner__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 14-5v14L3 14z"/><path d="M7 15v5h4l-1-4M17 9l4-2m-4 8 4 2M21 12h1"/></svg>
     <span class="lagcos-availability-banner__title">
       <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--small">ラグコスタイテ 募集中！</span>
       <span class="lagcos-availability-banner__copy lagcos-availability-banner__copy--large">ラグコス2026 Twinkle タイテ募集中！</span>
     </span>
-    <span class="lagcos-availability-banner__action">空き状況を見る</span>
+    <span class="lagcos-availability-banner__action"><span class="lagcos-availability-banner__action-label">空き状況はこちら</span><svg class="lagcos-availability-banner__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span>
   </a>
   <div class="schedule-calendar">
-    <div id="calendar-container" class="max-w-4xl mx-auto p-4">
+    <div id="calendar-container" class="w-full">
       <div id="loading-message" class="text-center py-20 text-gray-600 dark:text-gray-400">
         <i class="fas fa-spinner fa-spin text-4xl text-blue-500 dark:text-blue-400"></i>
         <p class="mt-4">予定を読み込んでいます...</p>

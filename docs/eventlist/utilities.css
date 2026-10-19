@@ -131,10 +131,6 @@
 #schedule-page .z-50 {
     z-index: 50
 }
-#schedule-page .mx-auto {
-    margin-left: auto;
-    margin-right: auto
-}
 #schedule-page .mb-0 {
     margin-bottom: 0px
 }
@@ -227,9 +223,6 @@
 }
 #schedule-page .min-w-0 {
     min-width: 0px
-}
-#schedule-page .max-w-4xl {
-    max-width: 56rem
 }
 #schedule-page .max-w-md {
     max-width: 28rem
