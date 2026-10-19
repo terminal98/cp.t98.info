@@ -12,7 +12,7 @@ build:
   render: always
 sitemap:
   disable: true
-images: ["featured.png"]
+images: ["https://cp.t98.info/posts/2026/102001/featured.png"]
 ---
 
 <nav class="availability-back" aria-label="スケジュールへの移動"><a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/eventlist/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6M8 12h12"/></svg><span>予定カレンダーに戻る</span></a></nav>
