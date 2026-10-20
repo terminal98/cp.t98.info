@@ -5,11 +5,13 @@ body:has(.availability-board){margin-inline:auto}
 .availability-board{width:100%;margin:0 auto;padding:28px;background:#00a8a3;border-radius:8px;color:#fff;font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
 .availability-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;margin:0 0 24px}
 .availability-heading h1{min-width:0;margin:0;font-size:clamp(24px,3vw,36px);font-weight:750;line-height:1.4;letter-spacing:.01em;white-space:nowrap}
+.availability-board .availability-heading h1{color:#fff}
 .availability-count{margin:0;padding:5px 12px;border:1px solid #ffffffb3;border-radius:6px;font-size:14px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
 .availability-count:empty{display:none}
 .availability-count strong{margin-inline:3px;font-size:1.7em;line-height:1;font-weight:750;vertical-align:-.06em}
 .availability-message,.availability-closed{margin:16px 4px;padding:14px 18px;border-radius:10px;font-size:17px;font-weight:700;line-height:1.55;box-shadow:0 3px 10px #003b3820}
 .availability-message{border:2px solid #d7fffb;border-left:6px solid #006b67;background:#f7fffe;color:#173b3a}
+#availability-loading{border-left:2px solid #d7fffb}
 #availability-loading::before{display:inline-block;width:18px;height:18px;margin-inline-end:10px;border:3px solid #93d7d2;border-top-color:#006b67;border-radius:50%;vertical-align:-4px;content:"";animation:availability-spin .8s linear infinite}
 @keyframes availability-spin{to{transform:rotate(360deg)}}
 .availability-closed{border:2px solid #f2d887;border-left:6px solid #775400;background:#fff8df;color:#463200}
