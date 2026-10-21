@@ -1,5 +1,5 @@
 ---
-title: "ラグコス2026 Twinkle タイムテーブル公開中！"
+title: "ラグコス タイテ募集中！ 空き多数あります！"
 date: 2026-10-20T00:00:00+09:00
 draft: false
 showReadingTime: false

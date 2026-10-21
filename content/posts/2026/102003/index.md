@@ -6,6 +6,7 @@ showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]
 expiryDate: 2026-10-29T00:00:00+09:00
+externalUrl: "https://x.com/98tml/status/2112665165980119192"
 images: ["featured.png"]
 description: "2026年10月23日・27日・28日・30日に四谷BASEで撮影に参加いただける被写体様を募集しています。作品・キャラクター不問、FF外の方も歓迎です。"
 ---
