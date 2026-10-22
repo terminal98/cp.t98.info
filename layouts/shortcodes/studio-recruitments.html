@@ -1,11 +1,9 @@
 {{- $yotsuyaExpires := time.AsTime "2026-10-29T00:00:00+09:00" -}}
 {{- $hakosutaExpires := time.AsTime "2026-10-31T00:00:00+09:00" -}}
-{{- $yokohamaExpires := time.AsTime "2026-10-30T00:00:00+09:00" -}}
 {{- $currentTime := now -}}
 {{- $venues := slice
-  (dict "name" "横浜クロスタ" "dates" "10/23・24・25・31" "href" "https://x.com/98tml/status/2111947613260152972" "external" true "expires" $yokohamaExpires)
   (dict "name" "ハコアム大阪" "dates" "10/30" "href" "https://x.com/98tml/status/2112665165980119192" "external" true "expires" $hakosutaExpires)
-  (dict "name" "四谷ベース" "dates" "10/23・27・28・30" "href" "https://x.com/98tml/status/2112665165980119192" "external" true "expires" $yotsuyaExpires)
+  (dict "name" "四谷ベース" "dates" "10/23・27・28" "href" "https://x.com/98tml/status/2112665165980119192" "external" true "expires" $yotsuyaExpires)
 -}}
 {{- $hasActiveVenue := false -}}
 {{- range $venues -}}
