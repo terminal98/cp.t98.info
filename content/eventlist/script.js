@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td class="px-4 py-2 w-1/4">${date.getMonth() + 1}/${date.getDate()} ${dayOfWeekHtml}</td>
                 <td class="px-4 py-2 break-words w-3/4">
                   <div class="flex justify-between items-center">
-                      <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${event.eventname}</span>
+                      <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${escapeHtml(event.eventname)}</span>
                       <button class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4">
                           <i class="fas fa-info-circle"></i>
                       </button>
@@ -391,6 +391,36 @@ document.addEventListener('DOMContentLoaded', () => {
       `</div>`;
   }
 
+  function safeHttpUrl(value) {
+    try {
+      const url = new URL(value);
+      return ['https:', 'http:'].includes(url.protocol) ? url.href : '';
+    } catch { return ''; }
+  }
+
+  function resolveTimetableSlug(dateStr, event) {
+    if (Object.hasOwn(event, 'timetableSlug')) return event.timetableSlug === 'lagcos-tw-2026' ? event.timetableSlug : '';
+    // Existing published calendar JSON predates the explicit association field.
+    return dateStr === '2026-11-07' && event.isEvent === true && /ラグコス/.test(event.eventname || '') ? 'lagcos-tw-2026' : '';
+  }
+
+  async function loadTimetableSummary(slug, target) {
+    try {
+      const response = await fetch(`https://g2.t98.info/timetable/${slug}.json`, {
+        credentials: 'omit', cache: 'no-store', signal: AbortSignal.timeout(8000), headers: { Accept: 'application/json' },
+      });
+      if (!response.ok) throw new Error('status unavailable');
+      const data = await response.json();
+      if (data.event?.slug !== slug || !Array.isArray(data.slots) || !Number.isFinite(Date.parse(data.updatedAt))) throw new Error('invalid status');
+      const now = Date.now();
+      const remaining = data.slots.filter(slot => ['day', 'night'].includes(slot.section) && slot.status === 'open' && Date.parse(slot.starts_at) > now).length;
+      const updated = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h23' }).format(new Date(data.updatedAt));
+      target.textContent = `${data.event.receiving === true ? (remaining ? `残り ${remaining}枠` : '満枠') : '受付終了'} · ${updated}現在`;
+    } catch {
+      target.textContent = '空き状況はタイムテーブルでご確認ください';
+    }
+  }
+
   // --- 詳細モーダル表示 ---
   function showDetails(date, event) {
     const dateStr = formatDate(date);
@@ -405,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const status = statusMap[event.type];
-    const displayName = event.isDefault ? ` ${status.text}` : event.eventname;
+    const displayName = escapeHtml(event.isDefault ? ` ${status.text}` : event.eventname);
     const titleIcon = event.type === 2 ? `<i class="${status.icon} mr-2" style="transform: rotate(-90deg);"></i>` : `<i class="${status.icon} mr-2"></i>`;
 
     let detailsHtml = `
@@ -417,21 +447,31 @@ document.addEventListener('DOMContentLoaded', () => {
                           <span class="text-3xl">${date.getDate()}</span><span class="text-xl">日</span>
                           <span class="ml-2">${dayOfWeekHtml}</span>
                         </h3>
-                        ${holidayName ? `<p class="text-sm font-semibold text-red-500 dark:text-red-400">${holidayName}</p>` : ''}
+                        ${holidayName ? `<p class="text-sm font-semibold text-red-500 dark:text-red-400">${escapeHtml(holidayName)}</p>` : ''}
                         <p class="text-lg font-semibold ${status.colorClass} ${holidayName ? 'mt-1' : ''}">${titleIcon}${displayName}</p>
                     </div>
-                    <button id="close-modal" class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-2xl"><i class="fas fa-times"></i></button>
+                    <button id="close-modal" type="button" aria-label="閉じる" class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-2xl"><i class="fas fa-times"></i></button>
                 </div>
                 <div class="space-y-3 text-gray-700 dark:text-gray-300">`;
 
     if (!event.isDefault) {
-      if (event.time) detailsHtml += `<div><i class="far fa-clock w-5 mr-2 text-gray-400 dark:text-gray-500"></i>${event.time}</div>`;
+      if (event.time) detailsHtml += `<div><i class="far fa-clock w-5 mr-2 text-gray-400 dark:text-gray-500"></i>${escapeHtml(event.time)}</div>`;
       if (event.place) {
         detailsHtml += `<div><i class="fas fa-map-marker-alt w-5 mr-2 text-gray-400 dark:text-gray-500"></i>${escapeHtml(event.place)}</div>`;
         detailsHtml += publicLocationInfoMarkup(event);
       }
-      if (event.url) detailsHtml += `<div><i class="fas fa-link w-5 mr-2 text-gray-400 dark:text-gray-500"></i><a href="${event.url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">${event.url}</a></div>`;
-      if (event.note) detailsHtml += `<div class="mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg whitespace-pre-wrap"><i class="far fa-sticky-note w-5 mr-2 text-gray-400 dark:text-gray-500 align-top"></i><span class="inline-block">${event.note}</span></div>`;
+      const eventUrl = safeHttpUrl(event.url);
+      if (eventUrl) detailsHtml += `<div><i class="fas fa-link w-5 mr-2 text-gray-400 dark:text-gray-500"></i><a href="${escapeHtml(eventUrl)}" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">${escapeHtml(eventUrl)}</a></div>`;
+      if (event.note) detailsHtml += `<div class="mt-4 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg whitespace-pre-wrap"><i class="far fa-sticky-note w-5 mr-2 text-gray-400 dark:text-gray-500 align-top"></i><span class="inline-block">${escapeHtml(event.note)}</span></div>`;
+    }
+
+    const imageUrl = safeHttpUrl(event.imgPath);
+    if (!event.isDefault && imageUrl) {
+      detailsHtml += `<a class="event-detail-image" href="${escapeHtml(imageUrl)}" target="_blank" rel="noopener noreferrer" aria-label="画像を拡大して開く"><img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(event.eventname || '予定の画像')}" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a>`;
+    }
+    const timetableSlug = resolveTimetableSlug(dateStr, event);
+    if (timetableSlug) {
+      detailsHtml += `<a class="event-timetable-banner" href="/timetable/${timetableSlug}/"><span class="event-timetable-banner__title">ラグコス2026Twinkle<br>タイムテーブルを見る</span><span class="event-timetable-banner__status" role="status" aria-live="polite">空き状況を確認中…</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>`;
     }
 
     if (event.type === 1 || event.type === 2) {
@@ -464,6 +504,10 @@ document.addEventListener('DOMContentLoaded', () => {
     detailsHtml += `</div></div>`;
 
     modalContent.innerHTML = detailsHtml;
+    const timetableStatus = modalContent.querySelector('.event-timetable-banner__status');
+    if (timetableStatus) loadTimetableSummary(timetableSlug, timetableStatus);
+    const detailImage = modalContent.querySelector('.event-detail-image img');
+    if (detailImage) detailImage.addEventListener('error', () => { detailImage.parentElement.hidden = true; });
     modalContent.classList.remove('modal-leave', 'modal-leave-active');
     modalContent.classList.add('modal-enter', 'modal-enter-active');
     eventModal.classList.remove('hidden');
