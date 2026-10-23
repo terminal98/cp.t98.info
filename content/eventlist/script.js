@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const timetableSlug = resolveTimetableSlug(dateStr, event);
     if (timetableSlug) {
-      detailsHtml += `<a class="event-timetable-banner" href="/timetable/${timetableSlug}/"><span class="event-timetable-banner__title">タイテ募集中！</span><span class="event-timetable-banner__status" role="status" aria-live="polite">確認中…</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>`;
+      detailsHtml += `<a class="event-timetable-banner" href="/timetable/${timetableSlug}/"><span class="event-timetable-banner__title"><i class="fas fa-calendar-days" aria-hidden="true"></i>タイテ募集中！</span><span class="event-timetable-banner__status" role="status" aria-live="polite">確認中…</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>`;
     }
 
     if (event.type === 1 || event.type === 2) {
