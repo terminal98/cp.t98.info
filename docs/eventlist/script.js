@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let displayEndDate = null;
   let eventList = [];
   let currentPage = 1;
+  let detailsReturnDate = '';
+  let detailsReturnTarget = null;
+  let hideDetailsTimer = 0;
+  const statusLabels = { 1: '空き', 2: '応相談', 3: '締切', 4: 'その他' };
 
   // --- DOM要素 ---
   const loadingMessage = document.getElementById('loading-message');
@@ -159,13 +163,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- 日付セル生成 ---
+  function dayAccessibleName(date, event) {
+    const label = `${date.getMonth() + 1}月${date.getDate()}日`;
+    const eventName = event?.eventname?.trim();
+    if (eventName) return `${label} ${eventName}`;
+    if (event) return `${label} ${statusLabels[event.type] || ''}`.trim();
+    return label;
+  }
+
   function createDayCell(date) {
-    const cell = document.createElement('div');
     const dateStr = formatDate(date);
     const today = new Date();
     today.setHours(0, 0, 0, 0);
+    const isPast = date < today;
+    const event = isPast ? null : (events[dateStr] || getDefaultEvent(date));
+    const cell = document.createElement(event ? 'button' : 'div');
+    if (event) {
+      cell.type = 'button';
+      cell.dataset.date = dateStr;
+      cell.classList.add('calendar-day');
+      cell.setAttribute('aria-label', dayAccessibleName(date, event));
+      cell.addEventListener('click', () => showDetails(date, event));
+    }
 
-    cell.className = 'relative p-1 md:p-2 border-r border-b border-gray-200 dark:border-gray-700 min-h-[80px] md:min-h-[120px]';
+    cell.className += ' relative p-1 md:p-2 border-r border-b border-gray-200 dark:border-gray-700 min-h-[80px] md:min-h-[120px]';
 
     const dayNumber = document.createElement('div');
     dayNumber.textContent = date.getDate();
@@ -181,22 +202,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     cell.appendChild(dayNumber);
 
-    if (date < today) {
+    if (isPast) {
       dayNumber.classList.remove('text-red-500', 'dark:text-red-400', 'text-blue-500', 'dark:text-blue-400', 'text-gray-700', 'dark:text-gray-300');
       dayNumber.classList.add('text-gray-400', 'dark:text-gray-500');
       cell.classList.add('bg-gray-50', 'dark:bg-gray-800/50');
       return cell;
     }
 
-    const event = events[dateStr] || getDefaultEvent(date);
-    if (event) {
-      cell.classList.add('cursor-pointer', 'hover:bg-gray-100', 'dark:hover:bg-gray-700', 'transition-colors');
-      cell.addEventListener('click', () => showDetails(date, event));
-
-      const eventContent = createEventContent(event);
-      cell.appendChild(eventContent);
-    }
-
+    cell.classList.add('cursor-pointer', 'hover:bg-gray-100', 'dark:hover:bg-gray-700', 'transition-colors');
+    cell.appendChild(createEventContent(event));
     return cell;
   }
 
@@ -326,8 +340,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td class="px-4 py-2 break-words w-3/4">
                   <div class="flex justify-between items-center">
                       <span class="font-medium text-gray-900 dark:text-white truncate flex-grow">${escapeHtml(event.eventname)}</span>
-                      <button class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4">
-                          <i class="fas fa-info-circle"></i>
+                      <button type="button" class="detail-btn text-blue-600 dark:text-blue-500 hover:text-blue-700 dark:hover:text-blue-400 text-lg flex-shrink-0 ml-4" data-date="${dateStr}" aria-label="${escapeHtml(dayAccessibleName(date, event))}の詳細">
+                          <i class="fas fa-info-circle" aria-hidden="true"></i>
                       </button>
                     </div>
                 </td>
@@ -345,20 +359,22 @@ document.addEventListener('DOMContentLoaded', () => {
     paginationControls.innerHTML = '';
     const totalPages = Math.ceil(eventList.length / ITEMS_PER_PAGE);
     if (totalPages <= 1) return;
-    const createBtn = (html, disabled, onClick) => {
+    const createBtn = (html, label, disabled, onClick) => {
       const btn = document.createElement('button');
+      btn.type = 'button';
       btn.innerHTML = html;
+      btn.setAttribute('aria-label', label);
       btn.className = 'px-3 py-1 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50';
       btn.disabled = disabled;
       btn.addEventListener('click', onClick);
       return btn;
     };
-    paginationControls.appendChild(createBtn('<i class="fas fa-arrow-left"></i>', currentPage === 1, () => { currentPage--; renderEventList(); }));
+    paginationControls.appendChild(createBtn('<i class="fas fa-arrow-left" aria-hidden="true"></i>', '前のページ', currentPage === 1, () => { currentPage--; renderEventList(); }));
     const pageInfo = document.createElement('span');
     pageInfo.textContent = `${currentPage} / ${totalPages}`;
     pageInfo.className = 'px-3 py-1 text-sm';
     paginationControls.appendChild(pageInfo);
-    paginationControls.appendChild(createBtn('<i class="fas fa-arrow-right"></i>', currentPage === totalPages, () => { currentPage++; renderEventList(); }));
+    paginationControls.appendChild(createBtn('<i class="fas fa-arrow-right" aria-hidden="true"></i>', '次のページ', currentPage === totalPages, () => { currentPage++; renderEventList(); }));
   }
 
   function escapeHtml(value) {
@@ -426,6 +442,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 詳細モーダル表示 ---
   function showDetails(date, event) {
+    if (eventModal.classList.contains('hidden') || eventModal.classList.contains('is-closing')) {
+      detailsReturnTarget = document.activeElement;
+      detailsReturnDate = formatDate(date);
+    }
+    clearTimeout(hideDetailsTimer);
+    eventModal.classList.remove('is-closing');
     const dateStr = formatDate(date);
     const holidayName = holidays[dateStr];
     const dayOfWeekHtml = getFormattedDayOfWeek(date, 'text-lg');
@@ -445,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="p-6">
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <h3 class="flex items-baseline font-bold text-gray-800 dark:text-gray-100">
+                        <h3 id="event-detail-heading" class="flex items-baseline font-bold text-gray-800 dark:text-gray-100">
                           <span class="text-3xl">${date.getMonth() + 1}</span><span class="text-xl">月</span>
                           <span class="text-3xl">${date.getDate()}</span><span class="text-xl">日</span>
                           <span class="ml-2">${dayOfWeekHtml}</span>
@@ -453,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${holidayName ? `<p class="text-sm font-semibold text-red-500 dark:text-red-400">${escapeHtml(holidayName)}</p>` : ''}
                         <p class="text-lg font-semibold ${status.colorClass} ${holidayName ? 'mt-1' : ''}">${titleIcon}${displayName}</p>
                     </div>
-                    <button id="close-modal" type="button" aria-label="閉じる" class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-2xl"><i class="fas fa-times"></i></button>
+                    <button id="close-modal" type="button" aria-label="閉じる" class="text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-2xl"><i class="fas fa-times" aria-hidden="true"></i></button>
                 </div>
                 <div class="space-y-3 text-gray-700 dark:text-gray-300">`;
 
@@ -514,7 +536,8 @@ document.addEventListener('DOMContentLoaded', () => {
     modalContent.classList.remove('modal-leave', 'modal-leave-active');
     modalContent.classList.add('modal-enter', 'modal-enter-active');
     eventModal.classList.remove('hidden');
-    document.getElementById('close-modal').addEventListener('click', hideDetails);
+    const closeButton = document.getElementById('close-modal');
+    closeButton.addEventListener('click', hideDetails);
     modalContent.querySelectorAll('.nearby-date-recommendation').forEach((button) => {
       button.addEventListener('click', () => {
         const recommendedDate = parseDate(button.dataset.date);
@@ -522,6 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (recommendedDate && recommendedEvent) showDetails(recommendedDate, recommendedEvent);
       });
     });
+    closeButton.focus();
   }
 
   function findNearbyAvailableDates(targetDate, limit = 3, radius = 30) {
@@ -548,9 +572,43 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function hideDetails() {
+    if (eventModal.classList.contains('hidden') || eventModal.classList.contains('is-closing')) return;
+    eventModal.classList.add('is-closing');
     modalContent.classList.remove('modal-enter', 'modal-enter-active');
     modalContent.classList.add('modal-leave', 'modal-leave-active');
-    setTimeout(() => eventModal.classList.add('hidden'), 200);
+    clearTimeout(hideDetailsTimer);
+    hideDetailsTimer = setTimeout(() => {
+      eventModal.classList.add('hidden');
+      eventModal.classList.remove('is-closing');
+      const returnTarget = (detailsReturnTarget?.isConnected && detailsReturnTarget !== document.body ? detailsReturnTarget : null)
+        || calendarGrid.querySelector(`button[data-date="${detailsReturnDate}"]`)
+        || eventTableWrapper.querySelector(`button[data-date="${detailsReturnDate}"]`);
+      if (returnTarget) returnTarget.focus();
+    }, 200);
+  }
+
+  function onDetailsKeydown(event) {
+    if (eventModal.classList.contains('hidden')) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      hideDetails();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const focusable = [...modalContent.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')];
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (!modalContent.contains(document.activeElement)) {
+      event.preventDefault();
+      (event.shiftKey ? last : first).focus();
+    } else if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 
   // --- ヘルパー関数 ---
@@ -585,6 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prevMonthBtn.addEventListener('click', () => changeMonth(-1));
     nextMonthBtn.addEventListener('click', () => changeMonth(1));
     eventModal.addEventListener('click', (e) => { if (e.target === eventModal) hideDetails(); });
+    document.addEventListener('keydown', onDetailsKeydown);
   }
 
   function changeMonth(delta) {

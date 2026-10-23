@@ -64,13 +64,15 @@
 # the copyright notice. Configure as per the main menu above.
 
 [[footer]]
-  name = "News"
+  name = "お知らせ"
+  title = "お知らせ"
   pageRef = "posts"
   weight = 100
 
 [[footer]]
   #pre = "substack"
-  name = "Recruit"
+  name = "被写体募集"
+  title = "被写体募集"
   pageRef = "categories/recruit/"
   weight = 110
 
@@ -81,26 +83,31 @@
 #   weight = 10
 
 [[footer]]
-  name = "Categories"
+  name = "カテゴリ"
+  title = "カテゴリ"
   pageRef = "categories/"
   weight = 120
 
 [[footer]]
-  name = "Rule"
+  name = "利用規約"
+  title = "利用規約"
   url = "https://doc.t98.info/rule/"
   weight = 170
 
 [[footer]]
-  name = "Policy"
+  name = "プライバシーポリシー"
+  title = "プライバシーポリシー"
   url = "https://doc.t98.info/policy/"
   weight = 180
 
 [[footer]]
-  name = "Shop"
+  name = "通販"
+  title = "通販"
   url = "https://www.melonbooks.co.jp/circle/index.php?circle_id=119704"
   weight = 191
 
 [[footer]]
-  name = "Contact"
+  name = "お問い合わせ"
+  title = "お問い合わせ"
   url = "https://www.t98.info/contact/"
   weight = 192

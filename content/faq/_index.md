@@ -1,7 +1,13 @@
 ---
 title: "よくある質問"
 date: 2023-11-19T21:42:54+09:00
-draft: false
+draft: true
+excludeFromSearch: true
+sitemap:
+  disable: true
+build:
+  render: never
+  list: never
 #categories: [""]
 #tags: [""]
 ---
