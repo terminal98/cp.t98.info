@@ -414,9 +414,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (data.event?.slug !== slug || !Array.isArray(data.slots)) throw new Error('invalid status');
       const now = Date.now();
       const remaining = data.slots.filter(slot => ['day', 'night'].includes(slot.section) && slot.status === 'open' && Date.parse(slot.starts_at) > now).length;
-      target.textContent = data.event.receiving === true ? `残り${remaining}枠` : '受付終了';
+      if (data.event.receiving === true) {
+        const count = document.createElement('strong');
+        count.textContent = String(remaining);
+        target.replaceChildren('残り', count, '枠');
+      } else target.textContent = '受付終了';
     } catch {
-      target.textContent = '空き状況を確認';
+      target.textContent = '確認する';
     }
   }
 
@@ -470,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const timetableSlug = resolveTimetableSlug(dateStr, event);
     if (timetableSlug) {
-      detailsHtml += `<a class="event-timetable-banner" href="/timetable/${timetableSlug}/"><span class="event-timetable-banner__title">タイテ募集中</span><span class="event-timetable-banner__status" role="status" aria-live="polite">空き状況を確認中…</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>`;
+      detailsHtml += `<a class="event-timetable-banner" href="/timetable/${timetableSlug}/"><span class="event-timetable-banner__title">タイテ募集中！</span><span class="event-timetable-banner__status" role="status" aria-live="polite">確認中…</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>`;
     }
 
     if (event.type === 1 || event.type === 2) {
