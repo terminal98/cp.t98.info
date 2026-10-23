@@ -411,13 +411,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       if (!response.ok) throw new Error('status unavailable');
       const data = await response.json();
-      if (data.event?.slug !== slug || !Array.isArray(data.slots) || !Number.isFinite(Date.parse(data.updatedAt))) throw new Error('invalid status');
+      if (data.event?.slug !== slug || !Array.isArray(data.slots)) throw new Error('invalid status');
       const now = Date.now();
       const remaining = data.slots.filter(slot => ['day', 'night'].includes(slot.section) && slot.status === 'open' && Date.parse(slot.starts_at) > now).length;
-      const updated = new Intl.DateTimeFormat('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h23' }).format(new Date(data.updatedAt));
-      target.textContent = `${data.event.receiving === true ? (remaining ? `残り ${remaining}枠` : '満枠') : '受付終了'} · ${updated}現在`;
+      target.textContent = data.event.receiving === true ? `残り${remaining}枠` : '受付終了';
     } catch {
-      target.textContent = '空き状況はタイムテーブルでご確認ください';
+      target.textContent = '空き状況を確認';
     }
   }
 
@@ -471,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const timetableSlug = resolveTimetableSlug(dateStr, event);
     if (timetableSlug) {
-      detailsHtml += `<a class="event-timetable-banner" href="/timetable/${timetableSlug}/"><span class="event-timetable-banner__title">ラグコス2026Twinkle<br>タイムテーブルを見る</span><span class="event-timetable-banner__status" role="status" aria-live="polite">空き状況を確認中…</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>`;
+      detailsHtml += `<a class="event-timetable-banner" href="/timetable/${timetableSlug}/"><span class="event-timetable-banner__title">タイテ募集中</span><span class="event-timetable-banner__status" role="status" aria-live="polite">空き状況を確認中…</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></a>`;
     }
 
     if (event.type === 1 || event.type === 2) {
