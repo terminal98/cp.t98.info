@@ -2,8 +2,8 @@
 {{- $hakosutaExpires := time.AsTime "2026-10-31T00:00:00+09:00" -}}
 {{- $currentTime := now -}}
 {{- $venues := slice
-  (dict "name" "ハコアム大阪" "dates" "10/30" "href" "https://x.com/98tml/status/2113129413827244174" "external" true "expires" $hakosutaExpires)
-  (dict "name" "四谷ベース" "dates" "10/27・28" "href" "https://x.com/98tml/status/2113129413827244174" "external" true "expires" $yotsuyaExpires)
+  (dict "name" "ハコアム大阪" "dates" "10/30" "image" "/posts/2026/102004/featured.png" "href" "https://x.com/98tml/status/2113129413827244174" "external" true "expires" $hakosutaExpires)
+  (dict "name" "四谷ベース" "dates" "10/27・28" "image" "/posts/2026/102003/featured.png" "href" "https://x.com/98tml/status/2113129413827244174" "external" true "expires" $yotsuyaExpires)
 -}}
 {{- $hasActiveVenue := false -}}
 {{- range $venues -}}
@@ -14,15 +14,16 @@
 {{- if $hasActiveVenue }}
 <nav class="schedule-recruitments" aria-labelledby="studio-recruitments-title">
   <h4 id="studio-recruitments-title" class="profile-name text-center text-2xl mb-4">被写体募集</h4>
-  <p class="schedule-recruitments__intro text-left text-sm text-gray-600 dark:text-gray-300 mb-3">スタジオ撮影における被写体さまを募集しています。<br class="schedule-recruitments__mobile-break">日時や条件などの詳細は各リンクよりご確認ください。</p>
   <ul class="schedule-recruitments__list">
     {{- range $venues -}}
       {{- if $currentTime.Before .expires }}
     <li>
       <a href="{{ .href }}"{{ with .external }} target="_blank" rel="external noopener"{{ end }}>
-        <span class="schedule-recruitments__name">{{ .name }}</span>
-        <span class="schedule-recruitments__dates">{{ .dates }}</span>
-        <svg class="schedule-recruitments__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+        <img class="schedule-recruitments__thumbnail" src="{{ .image }}" alt="" width="1280" height="670" loading="lazy" decoding="async">
+        <span class="schedule-recruitments__body">
+          <span class="schedule-recruitments__name">{{ .name }}</span>
+          <span class="schedule-recruitments__dates">{{ .dates }}</span>
+        </span>
       </a>
     </li>
       {{- end -}}
