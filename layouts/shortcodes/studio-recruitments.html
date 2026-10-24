@@ -19,7 +19,7 @@
       {{- if $currentTime.Before .expires }}
     <li>
       <a href="{{ .href }}"{{ with .external }} target="_blank" rel="external noopener"{{ end }}>
-        <img class="schedule-recruitments__thumbnail" src="{{ .image }}" alt="" width="1280" height="670" loading="lazy" decoding="async">
+        <img class="schedule-recruitments__thumbnail nozoom" src="{{ .image }}" alt="" width="1280" height="670" loading="lazy" decoding="async">
         <span class="schedule-recruitments__body">
           <span class="schedule-recruitments__name">{{ .name }}</span>
           <span class="schedule-recruitments__dates">{{ .dates }}</span>

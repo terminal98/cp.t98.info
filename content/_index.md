@@ -17,7 +17,7 @@ body{
 <picture>
   <source srcset="/img/c103_b1.avif" type="image/avif">
   <source srcset="/img/c103_b1.webp" type="image/webp">
-  <img src="/img/c103_b1.png" alt="にじてくと" width="1920" height="250">
+  <img class="nozoom" src="/img/c103_b1.png" alt="にじてくと" width="1920" height="250">
 </picture>
 
 {{< lagcos-banner >}}
