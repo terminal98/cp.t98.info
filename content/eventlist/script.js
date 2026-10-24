@@ -638,8 +638,70 @@ document.addEventListener('DOMContentLoaded', () => {
     return `<span class="${sizeClass} ${colorClass}">(${dayOfWeekMap[dayOfWeek]})</span>`;
   }
 
+  function setupLegend() {
+    const legend = document.getElementById('legend');
+    const tooltip = document.getElementById('legend-description');
+    const buttons = [...legend.querySelectorAll('[data-legend]')];
+    const descriptions = {
+      open: 'ご連絡いただければすぐ予定を確定できる日です。土休日中心ですが、連休前後の平日にも設定しています。',
+      tentative: '予定の調整をすれば対応できる日です。場合によっては確定まで数日お時間をいただく場合があります。',
+      closed: '既に予定が埋まっており対応が難しい日です。場合により状況が変わる可能性はあります。キャンセル待ちは承っておりません。',
+    };
+    let pinned = null;
+    let active = null;
+    function close() {
+      tooltip.hidden = true;
+      buttons.forEach(button => button.setAttribute('aria-expanded', 'false'));
+      pinned = active = null;
+    }
+    function position() {
+      if (!active || tooltip.hidden) return;
+      const bounds = legend.getBoundingClientRect();
+      const buttonBounds = active.getBoundingClientRect();
+      const left = buttonBounds.left - bounds.left + buttonBounds.width / 2 - tooltip.offsetWidth / 2;
+      tooltip.style.left = `${Math.max(0, Math.min(left, legend.clientWidth - tooltip.offsetWidth))}px`;
+      const above = window.innerHeight - bounds.bottom < tooltip.offsetHeight + 8 && bounds.top >= tooltip.offsetHeight + 8;
+      tooltip.style.top = above ? 'auto' : 'calc(100% + 8px)';
+      tooltip.style.bottom = above ? 'calc(100% + 8px)' : 'auto';
+    }
+    function show(button) {
+      active = button;
+      tooltip.textContent = descriptions[button.dataset.legend];
+      tooltip.hidden = false;
+      buttons.forEach(item => item.setAttribute('aria-expanded', String(item === button)));
+      position();
+    }
+    buttons.forEach(button => {
+      button.addEventListener('pointerenter', event => {
+        if (event.pointerType !== 'touch' && !pinned) show(button);
+      });
+      button.addEventListener('focus', () => {
+        if (pinned !== button) pinned = null;
+        show(button);
+      });
+      button.addEventListener('click', () => {
+        if (pinned === button) close();
+        else { pinned = button; show(button); }
+      });
+    });
+    legend.addEventListener('pointerleave', () => {
+      if (!pinned && !legend.contains(document.activeElement)) close();
+    });
+    legend.addEventListener('focusout', event => {
+      if (!legend.contains(event.relatedTarget)) close();
+    });
+    document.addEventListener('pointerdown', event => {
+      if (!legend.contains(event.target)) close();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !tooltip.hidden) close();
+    });
+    window.addEventListener('resize', position);
+  }
+
   // --- イベントリスナー設定 ---
   function setupEventListeners() {
+    setupLegend();
     prevMonthBtn.addEventListener('click', () => changeMonth(-1));
     nextMonthBtn.addEventListener('click', () => changeMonth(1));
     eventModal.addEventListener('click', (e) => { if (e.target === eventModal) hideDetails(); });

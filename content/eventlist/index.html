@@ -30,13 +30,14 @@ layout= "simple"
           <div id="calendar-grid" class="calendar-grid"></div>
           <div id="swipe-overlay" class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-2xl font-bold opacity-0 pointer-events-none transition-opacity duration-300 z-10"></div>
         </div>
-        <div id="legend" class="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow text-sm text-gray-700 dark:text-gray-300">
-          <h3 class="font-bold mb-2">凡例</h3>
-          <div class="grid grid-cols-3 gap-2">
-            <div class="flex items-center"><i class="far fa-circle text-green-500 dark:text-green-400 w-5 text-center mr-2"></i><span>空き</span></div>
-            <div class="flex items-center"><i class="fas fa-play text-yellow-500 dark:text-yellow-400 w-5 text-center mr-2" style="transform: rotate(-90deg);"></i><span>応相談</span></div>
-            <div class="flex items-center"><i class="fas fa-times text-red-500 dark:text-red-400 w-5 text-center mr-2"></i><span>締切</span></div>
+        <div id="legend" class="mt-4 bg-white dark:bg-gray-800 rounded-lg shadow text-sm text-gray-700 dark:text-gray-300">
+          <h3>凡例</h3>
+          <div class="legend-items" role="group" aria-label="予定の状態">
+            <button type="button" data-legend="open" aria-describedby="legend-description" aria-controls="legend-description" aria-expanded="false"><i class="far fa-circle text-green-500 dark:text-green-400 w-5 text-center mr-2" aria-hidden="true"></i><span>空き</span></button>
+            <button type="button" data-legend="tentative" aria-describedby="legend-description" aria-controls="legend-description" aria-expanded="false"><i class="fas fa-play text-yellow-500 dark:text-yellow-400 w-5 text-center mr-2" style="transform: rotate(-90deg);" aria-hidden="true"></i><span>応相談</span></button>
+            <button type="button" data-legend="closed" aria-describedby="legend-description" aria-controls="legend-description" aria-expanded="false"><i class="fas fa-times text-red-500 dark:text-red-400 w-5 text-center mr-2" aria-hidden="true"></i><span>締切</span></button>
           </div>
+          <p id="legend-description" role="tooltip" hidden></p>
         </div>
         <div id="next-available-dates" class="mt-8">
           <h4 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">直近で空いている日</h4>
@@ -61,4 +62,4 @@ layout= "simple"
     <div id="modal-content" role="dialog" aria-modal="true" aria-labelledby="event-detail-heading" class="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto"></div>
   </div>
 </div>
-<script src="/eventlist/script.js?v=calendar-a11y-20261024" defer></script>
+<script src="/eventlist/script.js?v=legend-help-20261024" defer></script>
