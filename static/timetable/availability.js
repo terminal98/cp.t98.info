@@ -9,7 +9,7 @@
   const shortTitle = 'ラグコス2026TW タイテ';
   let availableSlots = [];
   let weather = null;
-  const statusLabels = { open: '○ 空き', pending: '△ 確認待ち', confirmed: '× 予約済み', break: '× 休憩', blocked: '× 受付停止', ended: '× 終了' };
+  const statusLabels = { open: '○ 空き', pending: '△ 確認待ち', confirmed: '× 確定', break: '× 休憩', blocked: '× 受付停止', ended: '× 終了' };
 
   function fitTitle() {
     if (!title.clientWidth) return;
@@ -212,7 +212,7 @@
       const state = element('td');
       const mark = element('span', undefined, 'availability-state');
       mark.setAttribute('role', 'img');
-      const labels = { open: '空きあり', pending: '確認待ち', confirmed: '予約済み', break: '休憩', blocked: '受付停止', ended: '終了' };
+      const labels = { open: '空きあり', pending: '確認待ち', confirmed: '確定', break: '休憩', blocked: '受付停止', ended: '終了' };
       mark.setAttribute('aria-label', labels[status] || '受付停止');
       mark.append(stateIcon(status));
       state.append(mark);
