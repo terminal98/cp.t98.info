@@ -1,5 +1,5 @@
 {{- $visible := slice -}}
-{{- $archive := or (eq .context.RelPermalink "/categories/recruit/") (and (eq .context.Data.Plural "tags") (eq .context.Data.Term "募集終了")) -}}
+{{- $archive := or (eq .context.RelPermalink "/categories/recruit/") (and (eq .context.Data.Plural "tags") (eq .context.Data.Term "recruitment-closed")) -}}
 {{- range .pages -}}
   {{- $keep := true -}}
   {{- if and .Params.recruitmentClosed (not $archive) -}}

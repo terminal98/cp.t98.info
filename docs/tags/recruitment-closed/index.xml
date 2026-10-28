@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>募集終了 on にじてくと</title>
-    <link>https://cp.t98.info/tags/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/</link>
+    <link>https://cp.t98.info/tags/recruitment-closed/</link>
     <description>Recent content in 募集終了 on にじてくと</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>&amp;copy;2026 にじてくと</copyright>
-    <lastBuildDate>Sun, 16 Aug 2026 00:03:00 +0900</lastBuildDate><atom:link href="https://cp.t98.info/tags/%E5%8B%9F%E9%9B%86%E7%B5%82%E4%BA%86/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 16 Aug 2026 00:03:00 +0900</lastBuildDate><atom:link href="https://cp.t98.info/tags/recruitment-closed/index.xml" rel="self" type="application/rss+xml" />
+
     <item>
       <title>ハコアム大阪 被写体募集</title>
       <link>https://cp.t98.info/posts/2026/102004/</link>
@@ -23,21 +23,21 @@
       <title>四谷ベース 被写体募集</title>
       <link>https://cp.t98.info/posts/2026/102003/</link>
       <pubDate>Sun, 16 Aug 2026 00:02:00 +0900</pubDate>
-      
+
       <guid>https://cp.t98.info/posts/2026/102003/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2026/102003/featured.png" />
     </item>
-    
+
     <item>
       <title>横浜クロスタ 被写体募集</title>
       <link>https://cp.t98.info/posts/2026/102002/</link>
       <pubDate>Sun, 16 Aug 2026 00:01:00 +0900</pubDate>
-      
+
       <guid>https://cp.t98.info/posts/2026/102002/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://cp.t98.info/posts/2026/102002/featured.png" />
     </item>
-    
+
   </channel>
 </rss>

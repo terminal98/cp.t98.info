@@ -9,7 +9,7 @@ recruitmentDeadline: "2026-10-26"
 showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]
-tags: ["募集終了"]
+tags: ["recruitment-closed"]
 externalUrl: "https://x.com/98tml/status/2114303542014222558"
 images: ["featured.png"]
 description: "2026年10月27日・28日に四谷BASEで撮影に参加いただける被写体様を募集しています。作品・キャラクター不問、FF外の方も歓迎です。"

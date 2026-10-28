@@ -1,6 +1,6 @@
 (() => {
   // Keep the recruitment archive intact; other lists expire without a rebuild.
-  const archives = ['/categories/recruit/', '/tags/募集終了/'];
+  const archives = ['/categories/recruit/', '/tags/recruitment-closed/'];
   if (archives.some(path => location.pathname.startsWith(path) || location.pathname.startsWith(encodeURI(path)))) return;
   const refresh = () => {
     document.querySelectorAll('[data-recruitment-hide-after]').forEach(card => {

@@ -4,7 +4,7 @@ date: 2025-01-02T10:48:07+09:00
 expiryDate: 2025-01-10
 draft: true
 categories: ["notice"]
-tags: ["通販", "セール"]
+tags: ["online-shop", "セール"]
 #featureimage: ""
 #externalUrl: ""
 ---
