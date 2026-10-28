@@ -2,8 +2,9 @@
 title: "ラグコス タイテ募集中！ 空き多数あります！"
 date: 2026-10-20T00:00:00+09:00
 draft: false
+recruitmentDeadline: "2026-11-07"
 showReadingTime: false
-categories: ["お知らせ"]
+categories: ["お知らせ", "recruit"]
 expiryDate: 2026-11-08T06:00:00+09:00
 externalUrl: "/timetable/lagcos-tw-2026/"
 images: ["featured.png"]
