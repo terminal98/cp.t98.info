@@ -1,4 +1,7 @@
-{{- $deadline := partial "recruitment-deadline.html" . -}}
+{{- $deadline := dict -}}
+{{- if not .Params.recruitmentClosed -}}
+  {{- $deadline = partial "recruitment-deadline.html" . -}}
+{{- end -}}
 {{- if or .Params.studioName $deadline -}}
 <dl class="recruitment-details">
   {{ with .Params.studioName }}<dt>スタジオ</dt><dd>{{ . }}</dd>{{ end }}
