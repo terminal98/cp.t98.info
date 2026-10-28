@@ -1,6 +1,6 @@
 ---
-title: "【10/23・24・25・31】横浜クロスタ 被写体募集"
-date: 2026-10-20T00:01:00+09:00
+title: "横浜クロスタ 被写体募集"
+date: 2026-08-16T00:01:00+09:00
 draft: false
 recruitmentClosed: true
 recruitmentClosedAt: 2026-10-28T00:00:00+09:00

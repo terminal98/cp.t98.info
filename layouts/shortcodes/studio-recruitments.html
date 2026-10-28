@@ -1,11 +1,12 @@
 {{- $hakosutaExpires := time.AsTime "2026-10-31T00:00:00+09:00" -}}
+{{- $hakosuta := site.GetPage "/posts/2026/102004" -}}
 {{- $currentTime := now -}}
 {{- $venues := slice
-  (dict "name" "ハコアム大阪" "dates" "10/30" "image" "/posts/2026/102004/featured.png" "href" "https://x.com/98tml/status/2114303542014222558" "external" true "expires" $hakosutaExpires)
+  (dict "name" "ハコアム大阪" "dates" "10/30" "image" "/posts/2026/102004/featured.png" "href" "https://x.com/98tml/status/2114303542014222558" "external" true "expires" $hakosutaExpires "page" $hakosuta)
 -}}
 {{- $hasActiveVenue := false -}}
 {{- range $venues -}}
-  {{- if $currentTime.Before .expires -}}
+  {{- if and .page (not .page.Params.recruitmentClosed) ($currentTime.Before .expires) -}}
     {{- $hasActiveVenue = true -}}
   {{- end -}}
 {{- end -}}
@@ -14,7 +15,7 @@
   <h4 id="studio-recruitments-title" class="profile-name text-center text-2xl mb-4">被写体募集</h4>
   <ul class="schedule-recruitments__list">
     {{- range $venues -}}
-      {{- if $currentTime.Before .expires }}
+      {{- if and .page (not .page.Params.recruitmentClosed) ($currentTime.Before .expires) }}
     <li>
       <a href="{{ .href }}"{{ with .external }} target="_blank" rel="external noopener"{{ end }}>
         <img class="schedule-recruitments__thumbnail nozoom" src="{{ .image }}" alt="" width="1280" height="670" loading="lazy" decoding="async">
