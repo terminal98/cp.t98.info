@@ -1,5 +1,5 @@
 {{- if not .Params.recruitmentClosed -}}
   {{- with (partial "recruitment-deadline.html" .) -}}
-<span class="recruitment-deadline-meta">締切 <time datetime="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-recruitment-deadline="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-deadline-absolute="{{ .absolute }}" data-recruitment-closed="false" title="{{ .at.Format "2006年1月2日15:04" }}（日本時間）">{{ .label }}</time></span>
+<span class="recruitment-deadline-meta">締切 <time{{ if and (gt .remaining 0) (le .remaining 259200) }} class="is-urgent"{{ end }} datetime="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-recruitment-deadline="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-recruitment-closed="false" title="{{ .at.Format "2006年1月2日15:04" }}（日本時間）">{{ .label }}</time></span>
   {{- end -}}
 {{- end -}}

@@ -13,7 +13,7 @@
       {{- $label = "締切済み" -}}
     {{- else if le $remaining 86400 -}}
       {{- $label = printf "あと%.0f時間" (math.Ceil (div (float $remaining) 3600)) -}}
-    {{- else if le $remaining 604800 -}}
+    {{- else -}}
       {{- $label = printf "あと%.0f日" (math.Ceil (div (float $remaining) 86400)) -}}
     {{- end -}}
   {{- end -}}
