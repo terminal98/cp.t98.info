@@ -1,0 +1,240 @@
+{
+  "categories": [
+    {
+      "id": "photo-books",
+      "name": "作例集",
+      "products": [
+        {
+          "id": "melon-3785798",
+          "title": "コスプレ撮影作例集2026夏",
+          "description": "2026年上半期までに撮影したコスプレ写真を収録。",
+          "specs": "B5・フルカラー・本文16ページ",
+          "image": "/circle/melon-3785798.jpg",
+          "shops": [
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=3785798"
+            }
+          ],
+          "event": "C108"
+        },
+        {
+          "title": "コスプレ撮影作例集ミニ2025冬",
+          "description": "2025年下半期に撮影したコスプレ写真を収録。",
+          "specs": "B5・フルカラー・16ページ",
+          "image": "/circle/melon-cover-3425809.jpg",
+          "id": "booth-7811466",
+          "shops": [
+            {
+              "label": "BOOTH",
+              "kind": "booth",
+              "url": "https://t98.booth.pm/items/7811466"
+            },
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=3425809"
+            }
+          ],
+          "event": "C107"
+        },
+        {
+          "title": "コスプレ撮影作例集2025夏",
+          "description": "2025年上半期に撮影したコスプレ写真を収録。",
+          "specs": "B5・フルカラー・24ページ",
+          "image": "/circle/melon-cover-3044091.jpg",
+          "id": "booth-7072847",
+          "shops": [
+            {
+              "label": "BOOTH",
+              "kind": "booth",
+              "url": "https://t98.booth.pm/items/7072847"
+            },
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=3044091"
+            },
+            {
+              "label": "メロンブックス（電子）",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=3242159",
+              "detailOnly": true
+            }
+          ],
+          "event": "C106"
+        },
+        {
+          "title": "コスプレ撮影作例集2024",
+          "description": "2024年のコスプレ撮影事例をまとめた写真集。",
+          "specs": "B5・フルカラー・24ページ",
+          "image": "/circle/melon-cover-2740963.jpg",
+          "id": "booth-6294012",
+          "shops": [
+            {
+              "label": "BOOTH",
+              "kind": "booth",
+              "url": "https://t98.booth.pm/items/6294012"
+            },
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=2740963"
+            }
+          ],
+          "event": "C105"
+        }
+      ]
+    },
+    {
+      "id": "guide-books",
+      "name": "コスプレ解説本",
+      "products": [
+        {
+          "id": "melon-3807023",
+          "title": "技術抜きのうすい本 準備号",
+          "description": "撮影技法を解説しない本の準備号。",
+          "specs": "B5・本文モノクロ・12ページ",
+          "image": "/circle/melon-3807023.jpg",
+          "shops": [
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=3807023"
+            }
+          ],
+          "event": "C108"
+        },
+        {
+          "title": "コスカメラ0年目本",
+          "description": "活動の準備から実際の撮影まで、実体験をもとに紹介。コスプレ撮影をはじめたい人に向けた一冊。",
+          "specs": "",
+          "image": "/circle/melon-cover-2436477.jpg",
+          "id": "booth-5829883",
+          "shops": [
+            {
+              "label": "BOOTH",
+              "kind": "booth",
+              "url": "https://t98.booth.pm/items/5829883"
+            },
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=2436477"
+            },
+            {
+              "label": "メロンブックス（電子）",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=2520653",
+              "detailOnly": true
+            }
+          ],
+          "details": "撮影に興味があるけれど、何から始めればよいか迷っている人へ。活動をはじめる準備から実際の撮影まで、筆者の実体験をもとに紹介します。カメラを始める人だけでなく、普段は被写体として参加している人にも向けた一冊です。",
+          "summary": "活動の準備から撮影まで、はじめの一歩を紹介。",
+          "event": "C104"
+        },
+        {
+          "title": "コスカメラ2年目本",
+          "description": "活動2年間の経験をまとめたコラム集。活動紹介から撮影のTipsまで。",
+          "specs": "B5・本文モノクロ・24ページ",
+          "image": "/circle/melon-cover-2431630.jpg",
+          "id": "booth-5810901",
+          "shops": [
+            {
+              "label": "BOOTH",
+              "kind": "booth",
+              "url": "https://t98.booth.pm/items/5810901"
+            },
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=2431630"
+            }
+          ],
+          "details": "活動を始めてから2年間の経験をまとめたコラム集です。実体験に基づく活動紹介から撮影のTipsまで、コスプレカメラマンの活動を幅広く紹介しています。",
+          "summary": "活動2年間の経験をまとめたコラム集。",
+          "event": "C104"
+        },
+        {
+          "title": "コスカメラ1年目本",
+          "description": "活動1年目の経験をまとめた本。先輩カメラマンへのインタビューも収録。",
+          "specs": "B5・本文モノクロ・24ページ",
+          "image": "/circle/melon-cover-2273516.jpg",
+          "id": "booth-5249764",
+          "shops": [
+            {
+              "label": "BOOTH",
+              "kind": "booth",
+              "url": "https://t98.booth.pm/items/5249764"
+            },
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=2273516"
+            }
+          ],
+          "details": "コスプレカメラ活動の最初の1年間で得た経験をまとめた一冊です。先輩カメラマンへのインタビューも収録しています。BOOTHの商品説明には、内容の見直しを伴う改訂版の計画が案内されています。",
+          "summary": "活動1年目の経験と先輩カメラマンのインタビュー。",
+          "event": "C103"
+        }
+      ]
+    },
+    {
+      "id": "goods",
+      "name": "グッズ",
+      "products": [
+        {
+          "id": "melon-2535739",
+          "title": "コスカメラ2年目本 アクリルコースター",
+          "description": "『コスカメラ2年目本』の表紙イラストを使ったアクリルコースター。",
+          "specs": "直径89mm・アクリル3mm厚",
+          "image": "/circle/melon-2535739.jpg",
+          "shops": [
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=2535739"
+            }
+          ],
+          "details": "クリアな質感の円形アクリルコースターです。UVインクジェットのフルカラー印刷と白の裏刷り。イラスト：蒼だいふき。",
+          "summary": "2年目本の表紙イラストをクリアなコースターに。",
+          "event": "C105"
+        },
+        {
+          "title": "2年目本 アクリルキーホルダー【受注生産】",
+          "description": "『コスカメラ2年目本』の表紙キャラクターのアクリルキーホルダー。",
+          "specs": "イラスト：蒼だいふき",
+          "image": "/circle/booth-5878473.jpg",
+          "id": "booth-5878473",
+          "shops": [
+            {
+              "label": "BOOTH",
+              "kind": "booth",
+              "url": "https://t98.booth.pm/items/5878473"
+            }
+          ],
+          "summary": "2年目本の表紙キャラクターをキーホルダーに。",
+          "event": "C104"
+        },
+        {
+          "id": "melon-2740962",
+          "title": "コスカメラ1年目本 アクリルキーホルダー",
+          "description": "『コスカメラ1年目本』の表紙イラストを使ったアクリルキーホルダー。",
+          "specs": "約50×75mm・ボールチェーン付き",
+          "image": "/circle/melon-2740962.jpg",
+          "shops": [
+            {
+              "label": "メロンブックス",
+              "kind": "melon",
+              "url": "https://www.melonbooks.co.jp/detail/detail.php?product_id=2740962"
+            }
+          ],
+          "details": "表紙イラスト：ハニのん。『コスカメラ1年目本』の表紙キャラクターをアクリルキーホルダーにしました。",
+          "summary": "1年目本の表紙キャラクターをキーホルダーに。",
+          "event": "C103"
+        }
+      ]
+    }
+  ]
+}

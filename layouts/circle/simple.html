@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article class="max-w-full">
+  {{ partial "page-hero.html" (dict "title" .Title "id" "page-title") }}
+  <div class="site-page-body"><div class="site-page-content">
+    <section class="max-w-full mt-0 prose dark:prose-invert">{{ .Content }}</section>
+  </div></div>
+</article>
+{{ end }}

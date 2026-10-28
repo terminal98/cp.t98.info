@@ -1,0 +1,1 @@
+.news-recruitment-closed-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgb(24 24 27 / .7); color:#fff; font-size:clamp(24px,3vw,40px); font-weight:800; line-height:1.4; letter-spacing:.08em; pointer-events:none; }

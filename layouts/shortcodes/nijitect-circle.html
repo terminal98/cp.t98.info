@@ -1,0 +1,67 @@
+{{- if eq (.Get "compact") "true" }}
+{{- $style := resources.Get "css/shooting-wishlist.css" | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+<a class="cp-wishlist-summary" href="{{ "circle/" | relURL }}" aria-labelledby="nijitect-circle-heading">
+  <div>
+    <h2 id="nijitect-circle-heading">同人サークル「にじてくと」</h2>
+    <p>コスプレ撮影の作例集や解説本、グッズを制作しています。</p>
+  </div>
+  <span class="cp-wishlist-corner" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span>
+</a>
+{{- else }}
+{{- $data := site.Data.nijitect_circle -}}
+{{- $style := resources.Get "css/nijitect-circle.css" | fingerprint -}}
+{{- $script := resources.Get "js/nijitect-circle.js" | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+<div class="cp-circle">
+  <div class="cp-circle-intro">
+    <p>帆村サツキが運営する、コスプレやカメラに関する同人サークルです。<br>コミックマーケット103から、撮影の作例集や解説本、グッズを制作・頒布しています。</p>
+  </div>
+  <section class="cp-circle-works" aria-labelledby="circle-works-heading">
+    <h2 id="circle-works-heading">発行した作品</h2>
+  <nav class="cp-circle-nav" aria-label="作品のカテゴリ">
+    {{- range $data.categories }}
+    <a href="#{{ .id }}">{{ .name }}</a>
+    {{- end }}
+  </nav>
+  {{- range $data.categories }}
+  <section class="cp-circle-shelf" id="{{ .id }}" aria-labelledby="{{ .id }}-heading">
+    <h3 id="{{ .id }}-heading" class="profile-name">{{ .name }}</h3>
+    <div class="cp-circle-products">
+      {{- range .products }}
+      <article class="cp-circle-product">
+        <a class="cp-circle-product-link" href="{{ (index .shops 0).url }}" target="_blank" rel="noopener noreferrer" data-circle-open="circle-detail-{{ .id }}" aria-haspopup="dialog" aria-controls="circle-detail-{{ .id }}">
+          <div class="cp-circle-cover"><img class="nozoom" src="{{ .image | relURL }}" alt="" width="620" height="620" loading="lazy" decoding="async"></div>
+          {{- with .event }}<span class="cp-circle-event" aria-label="{{ . }}発行">{{ . }}</span>{{ end }}
+          <h4>{{ .title }}</h4>
+        </a>
+        <p>{{ .summary | default .description }}</p>
+        {{ partial "circle-shop-links.html" (dict "product" . "detailed" false) }}
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+  </section>
+  {{- range $data.categories }}
+  {{- range .products }}
+  <dialog class="cp-circle-dialog" id="circle-detail-{{ .id }}" aria-labelledby="circle-detail-{{ .id }}-title">
+    <div class="cp-circle-dialog-toolbar">
+      <button type="button" data-circle-close aria-label="閉じる" autofocus><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg><span>閉じる</span></button>
+    </div>
+    <div class="cp-circle-dialog-layout">
+      <img class="cp-circle-dialog-image nozoom" src="{{ .image | relURL }}" alt="{{ .title }}の表紙・商品画像" width="620" height="620" loading="lazy" decoding="async">
+      <div class="cp-circle-dialog-body">
+        <h2 id="circle-detail-{{ .id }}-title">{{ .title }}</h2>
+        <p>{{ .details | default .description }}</p>
+        {{- if or .event .specs }}<p class="cp-circle-specs">{{ with .event }}{{ . }}発行{{ end }}{{ if and .event .specs }}・{{ end }}{{ .specs }}</p>{{ end }}
+        {{ partial "circle-shop-links.html" (dict "product" . "detailed" true) }}
+      </div>
+    </div>
+  </dialog>
+  {{- end }}
+  {{- end }}
+  <p class="cp-circle-back"><a href="https://lit.link/98tml">プロフィールに戻る</a></p>
+</div>
+{{- end }}

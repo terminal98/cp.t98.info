@@ -10,3 +10,12 @@
 {{- if or .IsHome (hasPrefix .RelPermalink "/posts/") (hasPrefix .RelPermalink "/categories/") }}<link rel="stylesheet" href="/news-thumbnails.css?v=20261020-3">{{- end }}
 
 {{- if .HasShortcode "shooting-contact" }}<link rel="stylesheet" href="/shooting-contact.css?v=20261020">{{- end }}
+
+{{- if .IsHome }}
+  {{ $css := resources.Get "css/recruitment-closed.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end }}
+{{- if eq .RelPermalink "/circle/" }}
+  {{ $css := resources.Get "css/standalone-page.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end }}

@@ -1,0 +1,63 @@
+.cp-circle { max-width: 960px; }
+.prose .cp-circle-works > h2 { margin: 0 0 1rem; font-size: 1.6rem; }
+.cp-circle-intro { min-width: 0; margin: 0 0 3rem; padding: 1rem 1.25rem 1.25rem; border: 1px solid rgb(128 128 128 / .4); border-radius: .4rem; }
+.prose .cp-circle-intro p:last-child { margin-bottom: 0; }
+.prose .cp-circle-intro p { margin-block: 0 1rem; line-height: 1.9; }
+.cp-circle-nav { position: sticky; top: var(--cp-circle-header-height, 4rem); z-index: 30; display: flex; gap: 2rem; overflow-x: auto; border-bottom: 1px solid rgb(128 128 128 / .4); margin-block: 0; background: #fff; }
+html.dark .cp-circle-nav { background: rgb(var(--color-neutral-800,30,41,59)); }
+.prose .cp-circle-nav a { flex: none; padding: .85rem 0; color: inherit; text-decoration: none; font-size: .95rem; font-weight: 600; border-bottom: 2px solid transparent; white-space: nowrap; }
+.cp-circle-nav a:hover { opacity: .75; }
+.prose .cp-circle-nav a[aria-current="location"] { border-bottom-color: currentColor; }
+.cp-circle-nav a:focus-visible, .cp-circle-product-link:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.cp-circle-shelf { padding-top: 2.25rem; margin-bottom: 1.5rem; scroll-margin-top: calc(var(--cp-circle-header-height, 4rem) + var(--cp-circle-nav-height, 3.5rem) + 1rem); }
+.prose .cp-circle-shelf > h3 { margin: 0 0 1.5rem; font-size: 1.4rem; text-align: center; }
+.cp-circle-products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem 1.5rem; }
+.cp-circle-product { display: flex; flex-direction: column; min-width: 0; overflow-wrap: anywhere; }
+.prose .cp-circle-product-link { display: block; color: inherit; text-decoration: none; }
+.cp-circle-cover { display: flex; align-items: center; justify-content: center; box-sizing: border-box; aspect-ratio: 1; padding: 1.4rem; background: rgb(255 255 255 / .22); }
+.prose .cp-circle-cover img { width: 100%; height: 100%; object-fit: contain; margin: 0; filter: drop-shadow(0 4px 5px rgb(20 30 45 / .16)); transition: transform .2s ease, filter .2s ease; }
+.cp-circle-product-link:hover h4, .cp-circle-product-link:focus-visible h4 { text-decoration: underline; text-underline-offset: .2em; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .cp-circle-product-link:hover img { transform: translateY(-4px); filter: drop-shadow(0 8px 7px rgb(20 30 45 / .2)); }
+}
+.cp-circle-event { display: inline-flex; align-items: center; margin-top: .85rem; padding: .1rem .5rem; border: 1px solid rgb(128 128 128 / .4); border-radius: .2rem; background: rgb(255 255 255 / .25); font-size: .75rem; font-weight: 600; line-height: 1.6; }
+.prose .cp-circle-product h4 { margin: .45rem 0 .5rem; font-size: 1.05rem; font-weight: 600; line-height: 1.6; }
+.prose .cp-circle-product p { margin: .4rem 0 0; font-size: .9rem; line-height: 1.8; }
+.cp-circle-buy { display: flex; flex-wrap: wrap; gap: .4rem; min-width: 0; }
+.cp-circle-purchase-inline { margin-top: auto; padding-top: 1rem; }
+.prose .cp-circle-shop { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; box-sizing: border-box; min-height: 36px; padding: .35rem .65rem; border: 1px solid transparent; border-radius: .25rem; color: #fff; font-size: .8rem; line-height: 1.5; text-decoration: none; }
+.cp-circle-shop--booth { background: #b62c3a; }
+.cp-circle-shop--melon { background: #32683b; }
+.cp-circle-shop:hover { filter: brightness(1.12); }
+.cp-circle-shop:focus-visible { outline: 2px solid #334155; outline-offset: 3px; }
+html.dark .cp-circle-shop:focus-visible { outline-color: #f8fafc; }
+html.cp-circle-modal-open { overflow: hidden; }
+.cp-circle-dialog { box-sizing: border-box; width: min(780px, calc(100% - 2rem)); max-height: calc(100dvh - 2rem); margin: auto; padding: .65rem 1.25rem 1.25rem; border: 1px solid rgb(128 128 128 / .4); border-radius: .5rem; background: #f9fafc; color: #202a3a; overflow: auto; overscroll-behavior: contain; }
+.cp-circle-dialog::backdrop { background: rgb(10 15 25 / .6); }
+html.dark .cp-circle-dialog { background: #26234f; color: #f8fafc; }
+.cp-circle-dialog-toolbar { position: sticky; top: 0; z-index: 1; display: flex; justify-content: flex-end; background: inherit; margin-bottom: .25rem; }
+.cp-circle-dialog-toolbar button { display: flex; align-items: center; justify-content: center; gap: .35rem; min-height: 40px; padding: .35rem .65rem; font-size: .85rem; border: 1px solid rgb(128 128 128 / .4); border-radius: .25rem; background: inherit; color: inherit; cursor: pointer; }
+.cp-circle-dialog-toolbar svg { width: 20px; height: 20px; }
+.cp-circle-dialog-toolbar button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.cp-circle-dialog-layout { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.prose .cp-circle-dialog-image { width: 100%; height: auto; margin: 0; object-fit: contain; }
+.prose .cp-circle-dialog-body h2 { margin: 0 0 1rem; color: inherit; font-size: 1.35rem; line-height: 1.6; overflow-wrap: anywhere; }
+.prose .cp-circle-dialog-body p { margin: .75rem 0; line-height: 1.9; font-size: .95rem; }
+.prose .cp-circle-dialog-body .cp-circle-specs { font-size: .85rem; }
+.cp-circle-purchase-box { min-width: 0; margin: 1.25rem 0 0; padding: .75rem .8rem .9rem; border: 1px solid rgb(128 128 128 / .55); border-radius: .3rem; }
+.cp-circle-purchase-note { max-width: 100%; padding-inline: .35rem; font-size: .85rem; line-height: 1.6; font-weight: 600; }
+.cp-circle-purchase-note > span { display: flex; align-items: center; gap: .4rem; }
+.cp-circle-purchase-note svg { flex: none; width: 1.25em; height: 1.25em; }
+.prose .cp-circle-back { margin-top: 3rem; font-size: .9rem; }
+@media (max-width: 640px) {
+  .prose .cp-circle-intro p { font-size: .9rem; line-height: 1.85; }
+  .cp-circle-nav { gap: 1.5rem; }
+  .cp-circle-products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1rem; }
+  .cp-circle-cover { padding: .75rem; }
+  .prose .cp-circle-product h4 { font-size: .95rem; }
+  .prose .cp-circle-product p { font-size: .85rem; }
+  .cp-circle-dialog { padding: .65rem 1rem 1rem; }
+  .cp-circle-dialog-layout { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .prose .cp-circle-dialog-image { max-height: 30dvh; }
+  .prose .cp-circle-dialog-body h2 { font-size: 1.15rem; }
+}

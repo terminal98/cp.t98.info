@@ -2,11 +2,11 @@
 title: "【10/27・28】四谷ベース 被写体募集"
 date: 2026-10-20T00:02:00+09:00
 draft: false
+recruitmentClosed: true
 showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]
-expiryDate: 2026-10-29T00:00:00+09:00
-externalUrl: "https://x.com/98tml/status/2113129413827244174"
+externalUrl: "https://x.com/98tml/status/2114303542014222558"
 images: ["featured.png"]
 description: "2026年10月27日・28日に四谷BASEで撮影に参加いただける被写体様を募集しています。作品・キャラクター不問、FF外の方も歓迎です。"
 ---

@@ -6,7 +6,7 @@ showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]
 expiryDate: 2026-10-31T00:00:00+09:00
-externalUrl: "https://x.com/98tml/status/2113129413827244174"
+externalUrl: "https://x.com/98tml/status/2114303542014222558"
 images: ["featured.png"]
 description: "2026年10月30日にハコアム大阪で撮影に参加いただける被写体様を募集しています。作品・キャラクター不問、FF外の方も歓迎です。"
 ---

@@ -1,0 +1,18 @@
+{{- if .detailed }}
+<fieldset class="cp-circle-purchase-box">
+  <legend class="cp-circle-purchase-note"><span>{{ partial "circle-cart-icon.html" . }}<span>通販でお求めいただけます！</span></span></legend>
+{{- else }}
+<div class="cp-circle-purchase-inline" role="group" aria-label="{{ .product.title }}の通販先">
+{{- end }}
+  <div class="cp-circle-buy">
+    {{- range .product.shops }}
+    {{- if or (not .detailOnly) $.detailed }}
+    <a class="cp-circle-shop cp-circle-shop--{{ .kind }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+    {{- end }}
+    {{- end }}
+  </div>
+{{- if .detailed }}
+</fieldset>
+{{- else }}
+</div>
+{{- end }}

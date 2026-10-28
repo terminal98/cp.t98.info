@@ -38,7 +38,7 @@
 [[main]]
   name = "通販"
   pre = "store-solid"
-  url = "https://www.melonbooks.co.jp/circle/?circle_id=119704"
+  url = "/circle/"
   weight = 14
 
 [[main]]
