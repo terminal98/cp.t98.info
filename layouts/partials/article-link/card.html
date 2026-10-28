@@ -1,0 +1,5 @@
+{{ if .Params.recruitmentClosed }}
+  {{ partial "article-link/recruitment-closed-card.html" . }}
+{{ else }}
+  {{ partial "article-link/card-default.html" . }}
+{{ end }}

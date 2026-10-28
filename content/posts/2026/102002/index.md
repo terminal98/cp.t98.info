@@ -1,11 +1,13 @@
 ---
 title: "【10/23・24・25・31】横浜クロスタ 被写体募集"
 date: 2026-10-20T00:01:00+09:00
-draft: true
+draft: false
+recruitmentClosed: true
+recruitmentClosedAt: 2026-10-28T00:00:00+09:00
+excludeFromSearch: true
 showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]
-expiryDate: 2026-10-30T00:00:00+09:00
 externalUrl: "https://x.com/98tml/status/2111947613260152972"
 images: ["featured.png"]
 description: "2026年10月23日・24日・25日・31日に横浜クロームスタジオで撮影に参加いただける被写体様を募集しています。作品・キャラクター不問、FF外の方も歓迎です。"

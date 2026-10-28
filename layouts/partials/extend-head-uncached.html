@@ -11,9 +11,11 @@
 
 {{- if .HasShortcode "shooting-contact" }}<link rel="stylesheet" href="/shooting-contact.css?v=20261020">{{- end }}
 
-{{- if .IsHome }}
+{{- if or .IsHome (and (not .IsPage) (or (hasPrefix .RelPermalink "/posts/") (hasPrefix .RelPermalink "/categories/") (hasPrefix .RelPermalink "/tags/"))) }}
   {{ $css := resources.Get "css/recruitment-closed.css" | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $js := resources.Get "js/recruitment-visibility.js" | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- end }}
 {{- if eq .RelPermalink "/circle/" }}
   {{ $css := resources.Get "css/standalone-page.css" | fingerprint }}

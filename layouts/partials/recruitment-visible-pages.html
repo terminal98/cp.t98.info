@@ -1,0 +1,11 @@
+{{- $visible := slice -}}
+{{- $archive := eq .context.RelPermalink "/categories/recruit/" -}}
+{{- range .pages -}}
+  {{- $keep := true -}}
+  {{- if and .Params.recruitmentClosed (not $archive) -}}
+    {{- $hideAfter := partial "recruitment-hide-after.html" . -}}
+    {{- $keep = now.Before $hideAfter -}}
+  {{- end -}}
+  {{- if $keep -}}{{- $visible = $visible | append . -}}{{- end -}}
+{{- end -}}
+{{- return $visible -}}

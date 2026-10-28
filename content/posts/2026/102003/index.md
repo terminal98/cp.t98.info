@@ -3,6 +3,8 @@ title: "【10/27・28】四谷ベース 被写体募集"
 date: 2026-10-20T00:02:00+09:00
 draft: false
 recruitmentClosed: true
+recruitmentClosedAt: 2026-10-28T00:00:00+09:00
+excludeFromSearch: true
 showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]

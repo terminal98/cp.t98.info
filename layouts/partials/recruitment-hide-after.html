@@ -1,0 +1,2 @@
+{{- $closedAt := .Params.recruitmentClosedAt | default .Date -}}
+{{- return ((time.AsTime $closedAt).AddDate 0 0 14) -}}
