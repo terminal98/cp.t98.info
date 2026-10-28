@@ -8,7 +8,7 @@ excludeFromSearch: true
 recruitmentDeadline: "2026-10-29"
 showReadingTime: false
 showTableOfContents: false
-categories: ["お知らせ", "recruit"]
+categories: ["notice", "recruit"]
 tags: ["recruitment-closed"]
 externalUrl: "https://x.com/98tml/status/2111947613260152972"
 images: ["featured.png"]

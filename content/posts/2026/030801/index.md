@@ -2,7 +2,7 @@
 title: "既刊セール 3/15まで"
 date: 2026-03-08T15:59:09+09:00
 draft: false
-categories: ["お知らせ"]
+categories: ["notice"]
 tags: ["online-shop"]
 #featureimage: ""
 expiryDate: 2026-03-16T00:00:00+09:00

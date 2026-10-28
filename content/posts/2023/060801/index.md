@@ -2,7 +2,7 @@
 title: "RAWデータ保持期限について"
 date: 2023-06-08T00:14:11+09:00
 draft: true
-categories: ["お知らせ"]
+categories: ["notice"]
 ---
 
 いつもお世話になっております。帆村サツキです。
