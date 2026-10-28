@@ -8,6 +8,7 @@
   const fullTitle = 'ラグコス2026Twinkle タイムテーブル';
   const shortTitle = 'ラグコス2026TW タイテ';
   let availableSlots = [];
+  let weather = null;
   const statusLabels = { open: '○ 空き', pending: '△ 確認待ち', confirmed: '× 予約済み', break: '× 休憩', blocked: '× 受付停止', ended: '× 終了' };
 
   function fitTitle() {
@@ -186,6 +187,24 @@
         button.type = 'button';
         button.setAttribute('aria-haspopup', 'dialog');
         button.setAttribute('aria-label', `${range(slot)} ${statusLabels[status] || '受付停止'}、詳細を見る`);
+        const hour = weather?.hours?.find(hour => Date.parse(hour.time) === Math.floor(Date.parse(slot.starts_at) / 3600000) * 3600000);
+        if (hour && ['sun','moon','cloud','rain','snow'].includes(hour.icon)) {
+          const mark = element('span', undefined, 'availability-weather-mark');
+          const icon = element('span', undefined, 'availability-weather-icon');
+          const temperature = typeof hour.temperature === 'number' && Number.isFinite(hour.temperature) ? `${hour.temperature.toFixed(1)} ℃` : '—';
+          icon.style.setProperty('--weather-icon', `url("/timetable/weather/${hour.icon}.svg")`);
+          mark.setAttribute('role', 'img');
+          mark.setAttribute('aria-label', `${hour.label} ${temperature}`);
+          icon.setAttribute('aria-hidden', 'true');
+          const value = element('span', temperature, 'availability-weather-temperature');
+          value.setAttribute('aria-hidden', 'true');
+          mark.append(icon, value);
+          const updated = weather.fetchedAt ? new Intl.DateTimeFormat('ja-JP', {timeZone:'Asia/Tokyo',month:'numeric',day:'numeric',hour:'numeric',minute:'2-digit',hourCycle:'h23'}).format(new Date(weather.fetchedAt)) : '';
+          mark.title = `${weather.location.name}：${hour.label} ${temperature}${updated ? `（${weather.stale ? '更新遅延・最終取得' : '予報取得'} ${updated}）` : ''}`;
+          button.classList.add('availability-slot-button--weather');
+          button.prepend(mark);
+          button.setAttribute('aria-label', `${range(slot)} ${hour.label} ${temperature} ${statusLabels[status] || '受付停止'}、詳細を見る`);
+        }
         time.append(button);
         row.classList.add('availability-slot-interactive');
         row.addEventListener('click', () => showConsultation(slot, status));
@@ -212,6 +231,7 @@
       const data = await response.json();
       if (data.event?.slug !== 'lagcos-tw-2026' || !Array.isArray(data.slots) || !data.updatedAt) throw new Error('空き状況を取得できませんでした。');
 
+      weather = data.weather || null;
       board.dataset.receiving = String(data.event.receiving === true);
       availableSlots = data.slots.filter(slot => slot.status === 'open');
       const now = Date.now();
@@ -242,6 +262,7 @@
       get('availability-error').hidden = true;
       fitTitle();
     } catch {
+      weather = null;
       groups.replaceChildren();
       get('availability-count').textContent = '';
       get('availability-updated').textContent = '';

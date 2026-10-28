@@ -91,3 +91,10 @@ body:has(.availability-board){margin-inline:auto}
 .availability-back a{display:inline-flex;align-items:center;gap:8px;min-height:44px;line-height:1.5}
 .availability-back a:focus-visible{outline:3px solid currentColor;outline-offset:4px}
 .availability-back svg{display:block;width:20px;height:20px;margin:0;flex:none}
+
+.availability-slot-button--weather{position:relative;padding-inline:46px 4px}
+.availability-slot-button--weather .availability-weather-mark{position:absolute;left:0;top:50%;transform:translateY(-50%);display:flex;width:40px;flex-direction:column;align-items:center;gap:3px;line-height:1}
+.availability-section .availability-weather-icon{display:block;flex:none;width:17px;height:17px;margin:0;background-color:currentColor;-webkit-mask:var(--weather-icon) center/contain no-repeat;mask:var(--weather-icon) center/contain no-repeat}
+.availability-weather-temperature{font-size:10px;font-weight:500;white-space:nowrap;letter-spacing:-.03em}
+@media(max-width:640px){.availability-slot-button--weather{padding-inline:38px 0}.availability-slot-button--weather .availability-weather-mark{width:34px;gap:2px}.availability-section .availability-weather-icon{width:14px;height:14px}.availability-weather-temperature{font-size:9px}}
+@media(max-width:380px){.availability-slot-button--weather{font-size:13px;line-height:17.5px}}
