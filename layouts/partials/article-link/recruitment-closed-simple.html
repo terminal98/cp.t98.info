@@ -99,7 +99,6 @@
   <div class="{{ $cardContentClasses }}">
     <header class="items-center text-start text-xl font-semibold">
       <h2 class="not-prose text-xl font-bold text-neutral-800 dark:text-neutral">{{ .Title | emojify }}</h2>
-      <span class="recruitment-closed-badge">募集終了</span>
       {{ if and .Draft .Site.Params.article.showDraftLabel }}
         <div class="ms-2">{{ partial "badge.html" (i18n "article.draft" | emojify) }}</div>
       {{ end }}
@@ -107,7 +106,6 @@
         {{ partial "extend-article-link.html" . }}
       {{ end }}
     </header>
-    {{ partial "recruitment-details.html" . }}
     <div class="text-sm text-neutral-500 dark:text-neutral-400">
       {{ partial "article-meta/basic.html" . }}
     </div>

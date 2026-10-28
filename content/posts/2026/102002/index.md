@@ -5,7 +5,6 @@ draft: false
 recruitmentClosed: true
 recruitmentClosedAt: 2026-10-28T00:00:00+09:00
 excludeFromSearch: true
-studioName: "横浜クロームスタジオ"
 recruitmentDeadline: "2026-10-29"
 showReadingTime: false
 showTableOfContents: false

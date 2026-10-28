@@ -1,13 +1,5 @@
-{{- $deadline := dict -}}
 {{- if not .Params.recruitmentClosed -}}
-  {{- $deadline = partial "recruitment-deadline.html" . -}}
-{{- end -}}
-{{- if or .Params.studioName $deadline -}}
-<dl class="recruitment-details">
-  {{ with .Params.studioName }}<dt>スタジオ</dt><dd>{{ . }}</dd>{{ end }}
-  {{ with $deadline }}
-  <dt>締切</dt>
-  <dd><time datetime="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-recruitment-deadline="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-deadline-absolute="{{ .absolute }}" data-recruitment-closed="{{ $.Params.recruitmentClosed | default false }}" title="{{ .at.Format "2006年1月2日15:04" }}（日本時間）">{{ .label }}</time></dd>
-  {{ end }}
-</dl>
+  {{- with (partial "recruitment-deadline.html" .) -}}
+<span class="recruitment-deadline-meta">締切 <time datetime="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-recruitment-deadline="{{ .at.Format "2006-01-02T15:04:05Z07:00" }}" data-deadline-absolute="{{ .absolute }}" data-recruitment-closed="false" title="{{ .at.Format "2006年1月2日15:04" }}（日本時間）">{{ .label }}</time></span>
+  {{- end -}}
 {{- end -}}

@@ -13,6 +13,10 @@
 {{ $meta.Add "partials" (slice (partial "meta/date.html" .Date)) }}
 {{ end }}
 
+{{ if and (ne $scope "single") .Params.recruitmentDeadline (not .Params.recruitmentClosed) }}
+{{ $meta.Add "partials" (slice (partial "recruitment-details.html" .)) }}
+{{ end }}
+
 {{ if and (.Params.showDateUpdated | default (.Site.Params.article.showDateUpdated | default false)) (ne (partial
 "functions/date.html" .Date) (partial "functions/date.html" .Lastmod)) }}
 {{ $meta.Add "partials" (slice (partial "meta/date-updated.html" .Lastmod)) }}
