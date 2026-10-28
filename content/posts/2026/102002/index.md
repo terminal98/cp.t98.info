@@ -5,9 +5,12 @@ draft: false
 recruitmentClosed: true
 recruitmentClosedAt: 2026-10-28T00:00:00+09:00
 excludeFromSearch: true
+studioName: "横浜クロームスタジオ"
+recruitmentDeadline: "2026-10-29"
 showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]
+tags: ["募集終了"]
 externalUrl: "https://x.com/98tml/status/2111947613260152972"
 images: ["featured.png"]
 description: "2026年10月23日・24日・25日・31日に横浜クロームスタジオで撮影に参加いただける被写体様を募集しています。作品・キャラクター不問、FF外の方も歓迎です。"

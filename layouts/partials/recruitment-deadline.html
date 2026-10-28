@@ -1,0 +1,22 @@
+{{- $result := dict -}}
+{{- with .Params.recruitmentDeadline -}}
+  {{- $raw := printf "%v" . -}}
+  {{- if findRE `^\d{4}-\d{2}-\d{2}$` $raw -}}
+    {{- $raw = printf "%sT23:59:00+09:00" $raw -}}
+  {{- end -}}
+  {{- $deadline := time.AsTime $raw -}}
+  {{- $remaining := sub $deadline.Unix now.Unix -}}
+  {{- $absolute := $deadline.Format "2日15:04" -}}
+  {{- $label := $absolute -}}
+  {{- if not $.Params.recruitmentClosed -}}
+    {{- if le $remaining 0 -}}
+      {{- $label = "締切済み" -}}
+    {{- else if le $remaining 86400 -}}
+      {{- $label = printf "あと%.0f時間" (math.Ceil (div (float $remaining) 3600)) -}}
+    {{- else if le $remaining 604800 -}}
+      {{- $label = printf "あと%.0f日" (math.Ceil (div (float $remaining) 86400)) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $result = dict "at" $deadline "absolute" $absolute "label" $label "remaining" $remaining -}}
+{{- end -}}
+{{- return $result -}}

@@ -14,6 +14,8 @@
 {{- if or .IsHome (and (not .IsPage) (or (hasPrefix .RelPermalink "/posts/") (hasPrefix .RelPermalink "/categories/") (hasPrefix .RelPermalink "/tags/"))) }}
   {{ $css := resources.Get "css/recruitment-closed.css" | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $deadlineJS := resources.Get "js/recruitment-deadline.js" | fingerprint }}
+  <script src="{{ $deadlineJS.RelPermalink }}" integrity="{{ $deadlineJS.Data.Integrity }}" defer></script>
   {{ $js := resources.Get "js/recruitment-visibility.js" | fingerprint }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- end }}

@@ -2,6 +2,8 @@
 title: "【10/30】ハコアム大阪 被写体募集"
 date: 2026-10-20T00:03:00+09:00
 draft: false
+studioName: "ハコアム大阪"
+recruitmentDeadline: "2026-10-28"
 showReadingTime: false
 showTableOfContents: false
 categories: ["お知らせ", "recruit"]

@@ -1,3 +1,9 @@
 .news-recruitment-closed-overlay { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgb(24 24 27 / .7); color:#fff; font-size:clamp(24px,3vw,40px); font-weight:800; line-height:1.4; letter-spacing:.08em; pointer-events:none; }
 .recruitment-closed-badge { display:inline-flex; align-items:center; margin-top:8px; padding:2px 8px; border:1px solid #a1a1aa; border-radius:4px; background:#f4f4f5; color:#3f3f46; font-size:12px; font-weight:700; line-height:1.6; }
 html.dark .recruitment-closed-badge { background:#3f3f46; color:#f4f4f5; border-color:#71717a; }
+.recruitment-details { display:grid; grid-template-columns:max-content minmax(0,1fr); gap:2px 8px; margin:8px 0; font-size:13px; line-height:1.7; }
+.recruitment-details dt { color:#71717a; font-weight:500; }
+.recruitment-details dd { min-width:0; margin:0; overflow-wrap:anywhere; }
+html.dark .recruitment-details dt { color:#a1a1aa; }
+.recruitment-details .is-urgent { color:#b91c1c; font-weight:700; }
+html.dark .recruitment-details .is-urgent { color:#fca5a5; }

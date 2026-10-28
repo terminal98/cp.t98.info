@@ -1,6 +1,7 @@
 (() => {
   // Keep the recruitment archive intact; other lists expire without a rebuild.
-  if (/^\/categories\/recruit(?:\/|$)/.test(location.pathname)) return;
+  const archives = ['/categories/recruit/', '/tags/募集終了/'];
+  if (archives.some(path => location.pathname.startsWith(path) || location.pathname.startsWith(encodeURI(path)))) return;
   const refresh = () => {
     document.querySelectorAll('[data-recruitment-hide-after]').forEach(card => {
       const deadline = Date.parse(card.dataset.recruitmentHideAfter);

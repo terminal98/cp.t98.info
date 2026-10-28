@@ -93,6 +93,7 @@
       <h2 class="not-prose text-xl font-bold text-neutral-800 dark:text-neutral">{{ .Title | emojify }}</h2>
       <span class="recruitment-closed-badge">募集終了</span>
     </header>
+    {{ partial "recruitment-details.html" . }}
     <div class="text-sm text-neutral-500 dark:text-neutral-400">
       {{ partial "article-meta/basic.html" . }}
     </div>
