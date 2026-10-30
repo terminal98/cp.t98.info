@@ -1,4 +1,5 @@
 import {createPresenceMap} from './map.js';
+import {createMapLibrePresenceMap} from './maplibre-map.js';
 // Display model only. The API adapter is kept separate from the app's upload payload.
 export const activityLabels = Object.freeze({shooting:'撮影中',moving:'移動中',resting:'休憩中',waiting:'待機中',available:'フリー'});
 const time = value => typeof value === 'string' && Number.isFinite(Date.parse(value)) ? Date.parse(value) : NaN;
@@ -67,7 +68,8 @@ export function createPresenceView(container,{clock=Date.now,mapLibrary=globalTh
     if(state.state==='disabled')container.append(el('p','公開ページには現在位置・ステータスを表示しません。','tt-presence-note'));
     if(!state.position)return;
     if(mapLibrary){
-      map=createPresenceMap(container,{L:mapLibrary,position:state.position,eventSlug:event.slug,allowedArea:admin?undefined:event.allowed_area,maptilerKey});
+      const createMap=typeof mapLibrary.Map?.prototype.setStyle==='function'?createMapLibrePresenceMap:createPresenceMap;
+      map=createMap(container,{L:mapLibrary,position:state.position,eventSlug:event.slug,allowedArea:admin?undefined:event.allowed_area,maptilerKey});
       mapEvent=event.slug;
     }
   }

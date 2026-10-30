@@ -2,7 +2,7 @@
 {{- if or .IsHome (eq .RelPermalink "/eventlist/") }}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">{{- end }}
 {{- if .Params.timetableAvailability }}
 {{- with .Params.maptilerKey }}<meta name="timetable-maptiler-key" content="{{ . }}">{{- end }}
-<link rel="stylesheet" href="/timetable/presence/vendor/leaflet.css"><link rel="stylesheet" href="/timetable/presence/presence.css?v=20261030"><script src="/timetable/presence/vendor/leaflet.js" defer></script><script type="module" src="/timetable/presence/public.js?v=ttl15-20261030"></script><link rel="stylesheet" href="/timetable/availability.css?v=slot-time-20261030"><script src="/timetable/availability.js?v=event-slug-20261030" defer></script>{{- end -}}
+<link rel="stylesheet" href="/timetable/presence/vendor/maplibre/maplibre-gl.css"><link rel="stylesheet" href="/timetable/presence/presence.css?v=maplibre-20261030"><script type="module" src="/timetable/presence/public.js?v=maplibre-20261030"></script><link rel="stylesheet" href="/timetable/availability.css?v=slot-time-20261030"><script src="/timetable/availability.js?v=event-slug-20261030" defer></script>{{- end -}}
 
 {{- if eq .RelPermalink "/eventlist/" }}
 <link rel="stylesheet" href="/eventlist/style.css?v=legend-help-20261024">

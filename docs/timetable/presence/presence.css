@@ -44,3 +44,15 @@
 .tt-presence .tt-presence-ended-message{display:flex;align-items:center;gap:10px;margin:0;font-size:16px;line-height:1.7}
 .tt-presence-ended-message svg{width:20px;height:20px;flex:none}
 @media(max-width:640px){.tt-presence[data-public=true] .tt-presence-summary{gap:8px}.tt-presence[data-public=true] .tt-presence-status{font-size:20px}.tt-presence[data-public=true] .tt-presence-updated{font-size:16px}.tt-presence--ended{padding:16px 14px;border-radius:14px}.tt-presence .tt-presence-ended-message{font-size:14px}}
+
+/* MapLibre public map; Leaflet admin preview stays compatible. */
+.tt-presence-shared-dot,.tt-presence-self-dot{box-sizing:border-box;width:20px;height:20px;border:3px solid #fff;border-radius:50%;background:#00877f;box-shadow:0 1px 5px #0004}
+.tt-presence-self-dot{width:18px;height:18px;background:#2563eb}
+.tt-presence-spot-dot{box-sizing:border-box;width:11px;height:11px;border:2px solid #fff;border-radius:50%;background:#ae650e}
+.tt-presence-map .tt-presence-spot-label{position:absolute;left:10px;top:50%;transform:translateY(-50%);white-space:nowrap}
+.tt-presence-map .tt-presence-self-label{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);padding:2px 5px;border-radius:4px;white-space:nowrap;background:#fff;box-shadow:0 1px 3px #0003}
+.tt-presence .maplibregl-ctrl-attrib{font-family:inherit;font-size:10px}
+.tt-presence-map[data-map-theme=dark] .maplibregl-ctrl-group,.tt-presence-map[data-map-theme=dark] .maplibregl-ctrl-attrib{background:#263544;color:#f1f5f9}
+.tt-presence-map[data-map-theme=dark] .maplibregl-ctrl-attrib a{color:#a9caff}
+.tt-presence-map[data-map-theme=dark] .maplibregl-ctrl-icon{filter:invert(1)}
+.tt-presence-map[data-map-theme=dark] .tt-presence-self-label{background:#263544;color:#dbeafe}
