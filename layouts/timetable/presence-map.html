@@ -1,0 +1,7 @@
+{{ define "main" }}
+<section class="tt-location-page" aria-label="現在地の地図">
+  <a id="presence-map-back" class="tt-location-back" href="/timetable/lagcos-tw-2026/" aria-label="タイムテーブルに戻る"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span>タイテ</span></a>
+  <section id="availability-presence" aria-label="現在位置・ステータス"><p class="tt-presence-empty" role="status">読み込み中…</p></section>
+  <div id="availability-board" data-api="https://g2.t98.info/timetable/lagcos-tw-2026.json" data-presence-api="https://g2.t98.info/presence/{slug}.json" data-presence-map="true" hidden></div>
+</section>
+{{ end }}

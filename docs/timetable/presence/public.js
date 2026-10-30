@@ -1,5 +1,4 @@
-import * as maplibregl from './vendor/maplibre/maplibre-gl.mjs';
-import {createPresenceView} from './view.js?v=maplibre-20261030';
+import {createPresenceView} from './view.js?v=live-bubble-20261030';
 const board=document.getElementById('availability-board');
 const container=document.getElementById('availability-presence');
 if(board&&container){
@@ -9,7 +8,9 @@ if(board&&container){
     const sample=['localhost','127.0.0.1'].includes(location.hostname)&&board.dataset.presencePreview==='true';
     let sampleTime=Date.parse(board.dataset.presenceNow),samplePerf=performance.now();
     const clock=()=>sample&&Number.isFinite(sampleTime)?sampleTime+performance.now()-samplePerf:Date.now();
-    const view=createPresenceView(container,{clock,mapLibrary:maplibregl});
+    const fullMap=board.dataset.presenceMap==='true';
+    const mapLibrary=fullMap?await import('./vendor/maplibre/maplibre-gl.mjs'):null;
+    const view=createPresenceView(container,{clock,mapLibrary,fullMap});
     let event=null,timer=null,inFlight=false,revision=0;
     function withinEvent(){return event&&clock()>=Date.parse(event.starts_at)&&clock()<Date.parse(event.ends_at);}
     async function refresh(){
