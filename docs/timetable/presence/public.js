@@ -1,4 +1,4 @@
-import {createPresenceView} from './view.js';
+import {createPresenceView} from './view.js?v=ttl15-20261030';
 const board=document.getElementById('availability-board');
 const container=document.getElementById('availability-presence');
 if(board&&container){

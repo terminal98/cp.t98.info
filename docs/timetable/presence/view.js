@@ -13,7 +13,7 @@ export function presenceState(event, presence, enabled, now=Date.now()) {
   if (presence.sharing!==true) return {state:'stopped',visible:false,label:'共有停止中'};
   const updated=time(presence.updatedAt),expires=time(presence.expiresAt),position=presence.position;
   const measured=time(position?.measuredAt),positionExpiry=time(position?.expiresAt);
-  const deadline=Math.min(expires,positionExpiry,measured+5*60000,end);
+  const deadline=Math.min(expires,positionExpiry,measured+15*60000,end);
   if (!Number.isFinite(updated)||updated>now+30000||!Number.isFinite(measured)||measured>now+30000||!Number.isFinite(deadline)||deadline<=now) return {state:'stale',visible:false,label:'更新待ち',updatedAt:presence.updatedAt};
   if (!Object.hasOwn(activityLabels,presence.status)||!validCoordinate(position.latitude,90)||!validCoordinate(position.longitude,180)) return {state:'unavailable',visible:false,label:'状況を確認できません'};
   return {state:'active',visible:true,label:activityLabels[presence.status],activity:presence.status,updatedAt:position.measuredAt,deadline,position:{latitude:position.latitude,longitude:position.longitude,accuracy:typeof position.accuracy==='number'&&Number.isFinite(position.accuracy)&&position.accuracy>=0?Math.min(position.accuracy,5000):null,placeName:typeof position.placeName==='string'?position.placeName.slice(0,120):''}};
