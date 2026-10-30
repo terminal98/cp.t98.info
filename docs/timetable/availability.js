@@ -5,8 +5,9 @@
   const get = (id) => document.getElementById(id);
   const groups = get('availability-groups');
   const title = get('availability-title');
-  const fullTitle = 'ラグコス2026Twinkle タイムテーブル';
-  const shortTitle = 'ラグコス2026TW タイテ';
+  const eventSlug = board.dataset.eventSlug || 'lagcos-tw-2026';
+  const fullTitle = board.dataset.title || 'ラグコス2026Twinkle タイムテーブル';
+  const shortTitle = board.dataset.shortTitle || 'ラグコス2026TW タイテ';
   let availableSlots = [];
   let weather = null;
   let slotRows = [];
@@ -263,7 +264,7 @@
       const response = await fetch(board.dataset.api, { method: 'GET', credentials: 'omit', cache: 'no-store', headers: { Accept: 'application/json' } });
       if (!response.ok) throw new Error('空き状況を取得できませんでした。');
       const data = await response.json();
-      if (data.event?.slug !== 'lagcos-tw-2026' || !Array.isArray(data.slots) || !data.updatedAt) throw new Error('空き状況を取得できませんでした。');
+      if (data.event?.slug !== eventSlug || !Array.isArray(data.slots) || !data.updatedAt) throw new Error('空き状況を取得できませんでした。');
 
       board.timetableEvent = data.event;
       board.dispatchEvent(new CustomEvent('timetable:loaded', {detail:{event:data.event}}));
