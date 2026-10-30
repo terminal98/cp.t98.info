@@ -9,6 +9,10 @@
   const shortTitle = 'ラグコス2026TW タイテ';
   let availableSlots = [];
   let weather = null;
+  let slotRows = [];
+  const preview = ['localhost','127.0.0.1'].includes(location.hostname) && board.dataset.presencePreview === 'true';
+  const previewTime = Date.parse(board.dataset.presenceNow), previewStarted = performance.now();
+  const currentTime = () => preview && Number.isFinite(previewTime) ? previewTime + performance.now() - previewStarted : Date.now();
   const statusLabels = { open: '○ 空き', pending: '△ 確認待ち', confirmed: '× 確定', break: '× 休憩', blocked: '× 受付停止', ended: '× 終了' };
 
   function fitTitle() {
@@ -132,7 +136,7 @@
     invitation.hidden = !receiving || !['open', 'pending'].includes(status);
     recommendations.replaceChildren();
     const nearby = receiving && status !== 'open' ? availableSlots
-      .filter(candidate => candidate.starts_at !== slot.starts_at && Date.parse(candidate.starts_at) > Date.now())
+      .filter(candidate => candidate.starts_at !== slot.starts_at && Date.parse(candidate.starts_at) > currentTime())
       .sort((a, b) => Math.abs(Date.parse(a.starts_at) - Date.parse(slot.starts_at)) - Math.abs(Date.parse(b.starts_at) - Date.parse(slot.starts_at)) || Date.parse(a.starts_at) - Date.parse(b.starts_at))
       .slice(0, 3) : [];
     recommendations.hidden = nearby.length === 0;
@@ -177,7 +181,7 @@
     const body = element('tbody');
     for (const slot of slots) {
       const rawStatus = slot.status;
-      const status = rawStatus === 'open' && Date.parse(slot.starts_at) <= now ? 'ended' : rawStatus;
+      const status = Date.parse(slot.ends_at) <= now ? 'ended' : rawStatus;
       const row = element('tr');
       row.dataset.status = status;
       const time = element('th');
@@ -207,7 +211,7 @@
         }
         time.append(button);
         row.classList.add('availability-slot-interactive');
-        row.addEventListener('click', () => showConsultation(slot, status));
+        row.addEventListener('click', () => showConsultation(slot, row.dataset.status));
       }
       const state = element('td');
       const mark = element('span', undefined, 'availability-state');
@@ -218,10 +222,40 @@
       state.append(mark);
       row.append(time, state);
       body.append(row);
+      slotRows.push({slot,row});
     }
     table.append(body);
     panel.append(table);
     return panel;
+  }
+
+  function refreshSlotTimes() {
+    if(document.hidden || !slotRows.length)return;
+    const now=currentTime();
+    for(const {slot,row} of slotRows){
+      const active=Date.parse(slot.starts_at)<=now && now<Date.parse(slot.ends_at);
+      const status=Date.parse(slot.ends_at)<=now?'ended':slot.status;
+      if(row.dataset.current!==String(active)){
+        row.dataset.current=String(active);
+        if(active)row.setAttribute('aria-current','time');else row.removeAttribute('aria-current');
+      }
+      if(row.dataset.status===status)continue;
+      row.dataset.status=status;
+      const mark=row.querySelector('.availability-state');
+      mark.setAttribute('aria-label',status==='ended'?'終了':statusLabels[status]||'受付停止');
+      mark.replaceChildren(stateIcon(status));
+      const button=row.querySelector('.availability-slot-button');
+      const forecast=row.querySelector('.availability-weather-mark')?.getAttribute('aria-label');
+      button.setAttribute('aria-label',`${range(slot)} ${forecast?forecast+' ':''}${statusLabels[status]||'受付停止'}、詳細を見る`);
+    }
+    const open=availableSlots.filter(slot=>Date.parse(slot.starts_at)>now).length;
+    const countPanel=get('availability-count');
+    countPanel.hidden=Number.isFinite(Date.parse(board.timetableEvent?.ends_at)) && now>=Date.parse(board.timetableEvent.ends_at);
+    const count=countPanel.querySelector('strong');if(count)count.textContent=String(open);
+    const selected=slotRows.find(({slot})=>range(slot)===dialogTitle.textContent);
+    if(consultation.open && selected && selected.row.dataset.status==='ended'){
+      dialogStatus.textContent=statusLabels.ended;dialogStatus.dataset.status='ended';invitation.hidden=true;
+    }
   }
 
   async function load() {
@@ -231,10 +265,13 @@
       const data = await response.json();
       if (data.event?.slug !== 'lagcos-tw-2026' || !Array.isArray(data.slots) || !data.updatedAt) throw new Error('空き状況を取得できませんでした。');
 
+      board.timetableEvent = data.event;
+      board.dispatchEvent(new CustomEvent('timetable:loaded', {detail:{event:data.event}}));
       weather = data.weather || null;
       board.dataset.receiving = String(data.event.receiving === true);
       availableSlots = data.slots.filter(slot => slot.status === 'open');
-      const now = Date.now();
+      const now = currentTime();
+      slotRows = [];
       const counts = { open: 0 };
       const sections = [];
       for (const section of ['day', 'night']) {
@@ -249,7 +286,7 @@
       groups.replaceChildren(...sections);
       const count = get('availability-count');
       count.replaceChildren(document.createTextNode('残り '), element('strong', String(counts.open)), document.createTextNode(' 枠'));
-      get('availability-closed').hidden = data.event.receiving === true;
+      refreshSlotTimes();
       const noticeList = get('availability-notice-list');
       const notices = String(data.event.image_note || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
       noticeList.replaceChildren(...notices.map(line => element('li', line.replace(/^[・●]\s*/, ''))));
@@ -263,11 +300,11 @@
       fitTitle();
     } catch {
       weather = null;
+      slotRows = [];
       groups.replaceChildren();
       get('availability-count').textContent = '';
       get('availability-updated').textContent = '';
       get('availability-notices').hidden = true;
-      get('availability-closed').hidden = true;
       const error = get('availability-error');
       error.textContent = '空き状況を読み込めませんでした。時間をおいて再度ページを開いてください。';
       error.hidden = false;
@@ -278,5 +315,7 @@
 
   window.addEventListener('resize', fitTitle, { passive: true });
   if (document.fonts?.ready) document.fonts.ready.then(fitTitle);
+  setInterval(refreshSlotTimes,1000);
+  document.addEventListener('visibilitychange',refreshSlotTimes);
   load();
 })();
