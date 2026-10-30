@@ -20,7 +20,7 @@ export function presenceState(event, presence, enabled, now=Date.now()) {
 }
 const el = (tag,text,className) => {const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
 const dateLabel = iso => new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',month:'numeric',day:'numeric',hour:'numeric',minute:'2-digit',hourCycle:'h23'}).format(new Date(iso));
-export function createPresenceView(container,{clock=Date.now,mapLibrary=globalThis.L,admin=false}={}) {
+export function createPresenceView(container,{clock=Date.now,mapLibrary=globalThis.L,admin=false,maptilerKey}={}) {
   let event=null,presence=null,enabled=false,map=null,lastKey='',disposed=false,mapEvent=null;
   function clearMap(){if(map){map.remove();map=null;}}
   function updateTime(node,state,now){
@@ -67,7 +67,7 @@ export function createPresenceView(container,{clock=Date.now,mapLibrary=globalTh
     if(state.state==='disabled')container.append(el('p','公開ページには現在位置・ステータスを表示しません。','tt-presence-note'));
     if(!state.position)return;
     if(mapLibrary){
-      map=createPresenceMap(container,{L:mapLibrary,position:state.position,eventSlug:event.slug,allowedArea:admin?undefined:event.allowed_area});
+      map=createPresenceMap(container,{L:mapLibrary,position:state.position,eventSlug:event.slug,allowedArea:admin?undefined:event.allowed_area,maptilerKey});
       mapEvent=event.slug;
     }
   }

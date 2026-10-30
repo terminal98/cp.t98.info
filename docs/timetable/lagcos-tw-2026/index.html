@@ -298,7 +298,7 @@
 
 
     <meta name="timetable-maptiler-key" content="PHzSMmcgaK0JcHpfFiwU">
-<link rel="stylesheet" href="/timetable/presence/vendor/leaflet.css"><link rel="stylesheet" href="/timetable/presence/presence.css?v=20261030"><script src="/timetable/presence/vendor/leaflet.js" defer></script><script type="module" src="/timetable/presence/public.js?v=20261030"></script><link rel="stylesheet" href="/timetable/availability.css?v=slot-time-20261030"><script src="/timetable/availability.js?v=slot-time-20261030" defer></script>
+<link rel="stylesheet" href="/timetable/presence/vendor/leaflet.css"><link rel="stylesheet" href="/timetable/presence/presence.css?v=20261030"><script src="/timetable/presence/vendor/leaflet.js" defer></script><script type="module" src="/timetable/presence/public.js?v=presence-api-20261030"></script><link rel="stylesheet" href="/timetable/availability.css?v=slot-time-20261030"><script src="/timetable/availability.js?v=slot-time-20261030" defer></script>
 
 
 
@@ -873,7 +873,7 @@
     <section class="max-w-full mt-6 prose dark:prose-invert">
       <nav class="availability-back" aria-label="スケジュールへの移動"><a class="!rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700" href="/eventlist/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6M8 12h12"/></svg><span>予定カレンダーに戻る</span></a></nav>
 <section id="availability-presence" aria-label="現在位置・ステータス" hidden></section>
-<div id="availability-board" class="availability-board" data-api="https://g2.t98.info/timetable/lagcos-tw-2026.json">
+<div id="availability-board" class="availability-board" data-api="https://g2.t98.info/timetable/lagcos-tw-2026.json" data-presence-api="https://icy-wind-5903.t98.workers.dev/api/presence/events/{slug}">
   <header class="availability-heading">
     <h1 id="availability-title">ラグコス2026Twinkle タイムテーブル</h1>
     <p id="availability-count" class="availability-count" role="status" aria-live="polite"></p>

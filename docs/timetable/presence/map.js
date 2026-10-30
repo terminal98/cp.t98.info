@@ -6,14 +6,13 @@ export function validMapArea(area){
   return {latitude:area.latitude,longitude:area.longitude,radius:area.radius};
 }
 
-export function createPresenceMap(host,{L,position,eventSlug,allowedArea}){
+export function createPresenceMap(host,{L,position,eventSlug,allowedArea,maptilerKey=document.querySelector('meta[name="timetable-maptiler-key"]')?.content.trim()||''}){
   let disposed=false,watch=null,locationRevision=0,userMarker=null,userAccuracy=null,locationTime=0;
   const node=el('div',undefined,'tt-presence-map');node.setAttribute('role','region');node.setAttribute('aria-label','共有中の位置・撮影Spot・自分の現在地');host.append(node);
   const map=L.map(node,{scrollWheelZoom:false,zoomControl:true});
   const area=validMapArea(allowedArea);
   if(area){map.fitBounds(L.latLng(area.latitude,area.longitude).toBounds(area.radius*2),{padding:[16,16],maxZoom:18,animate:false});}
   else map.setView([position.latitude,position.longitude],17);
-  const maptilerKey=document.querySelector('meta[name="timetable-maptiler-key"]')?.content.trim()||'';
   const osmAttribution='&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>';
   let baseLayer=null,baseTheme='';
   node.dataset.mapProvider=maptilerKey?'maptiler':'osm';

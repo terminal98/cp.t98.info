@@ -19,12 +19,13 @@ if(board&&container){
       if(inFlight)return;
       inFlight=true;const currentRevision=revision;
       try{
-        const url=new URL(endpoint,location.href);url.searchParams.set('event',event.slug);
+        const url=new URL(endpoint.replace('{slug}',encodeURIComponent(event.slug)),location.href);if(sample)url.searchParams.set('event',event.slug);
         const response=await fetch(url,{credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(8000)});
         if(!response.ok)throw new Error('Presence unavailable');
         const data=await response.json();
         if(currentRevision!==revision)return;
         if(sample&&Number.isFinite(Date.parse(data.previewNow))){sampleTime=Date.parse(data.previewNow);samplePerf=performance.now();}
+        if(data.event?.slug===event.slug)event={...event,allowed_area:data.event.allowed_area};
         view.update(event,data.presence,data.enabled===true);
       }catch{if(currentRevision===revision)view.update(event,null,true);}
       finally{inFlight=false;if(currentRevision!==revision)void refresh();else if(!document.hidden)timer=setTimeout(refresh,60000);}
