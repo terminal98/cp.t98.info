@@ -57,7 +57,7 @@ body:has(.availability-board){margin-inline:auto}
 .availability-dialog-header h3{margin:0;color:#1f2937;font-size:24px;font-weight:700;line-height:1.4}
 .availability-dialog-close{flex:none;margin:0;padding:0 4px;border:0;background:transparent;color:#9ca3af;font-size:28px;line-height:1;cursor:pointer}
 .availability-dialog-status{margin:8px 0 0;color:#16a34a;font-size:18px;font-weight:600}
-.availability-dialog-status[data-status=pending]{color:#a16207}
+.availability-dialog-status:is([data-status=pending],[data-status=adjusting]){color:#a16207}
 .availability-dialog-invitation{margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb;text-align:center}
 .availability-dialog-invitation p{margin:0 0 16px;color:#4b5563;font-size:14px;line-height:1.6}
 .availability-dialog-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
@@ -68,14 +68,14 @@ body:has(.availability-board){margin-inline:auto}
 .dark .availability-dialog{background:#111827;color:#d1d5db}
 .dark .availability-dialog-header h3{color:#f3f4f6}
 .dark .availability-dialog-status{color:#4ade80}
-.dark .availability-dialog-status[data-status=pending]{color:#facc15}
+.dark .availability-dialog-status:is([data-status=pending],[data-status=adjusting]){color:#facc15}
 .dark .availability-dialog-invitation{border-color:#374151}
 .dark .availability-dialog-invitation p{color:#9ca3af}
 @media(prefers-reduced-motion:reduce){.availability-dialog-actions a{transition:none}}
 
 .availability-message,.availability-closed{text-align:center}
-.availability-dialog-status:not([data-status=open]):not([data-status=pending]){color:#dc2626}
-.dark .availability-dialog-status:not([data-status=open]):not([data-status=pending]){color:#f87171}
+.availability-dialog-status:not([data-status=open]):not([data-status=pending]):not([data-status=adjusting]){color:#dc2626}
+.dark .availability-dialog-status:not([data-status=open]):not([data-status=pending]):not([data-status=adjusting]){color:#f87171}
 .availability-recommendations{margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb;text-align:center}
 .availability-recommendations h4{margin:0 0 12px;color:#1f2937;font-size:14px;font-weight:700;line-height:1.6}
 .availability-recommendation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}

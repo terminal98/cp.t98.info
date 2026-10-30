@@ -14,7 +14,7 @@
   const preview = ['localhost','127.0.0.1'].includes(location.hostname) && board.dataset.presencePreview === 'true';
   const previewTime = Date.parse(board.dataset.presenceNow), previewStarted = performance.now();
   const currentTime = () => preview && Number.isFinite(previewTime) ? previewTime + performance.now() - previewStarted : Date.now();
-  const statusLabels = { open: '○ 空き', pending: '△ 確認待ち', confirmed: '× 確定', break: '× 休憩', blocked: '× 受付停止', ended: '× 終了' };
+  const statusLabels = { open: '○ 空き', pending: '△ 確認待ち', adjusting: '△ 調整中', confirmed: '× 確定', break: '× 休憩', blocked: '× 受付停止', ended: '× 終了' };
 
   function fitTitle() {
     if (!title.clientWidth) return;
@@ -79,7 +79,7 @@
     const shape = document.createElementNS(svg.namespaceURI, status === 'open' ? 'circle' : 'path');
     if (status === 'open') {
       shape.setAttribute('cx', '12'); shape.setAttribute('cy', '12'); shape.setAttribute('r', '8.25');
-    } else if (status === 'pending') {
+    } else if (['pending', 'adjusting'].includes(status)) {
       shape.setAttribute('d', 'M12 3.5 21 20H3L12 3.5Z');
     } else {
       shape.setAttribute('d', 'm5 5 14 14M19 5 5 19');
@@ -217,7 +217,7 @@
       const state = element('td');
       const mark = element('span', undefined, 'availability-state');
       mark.setAttribute('role', 'img');
-      const labels = { open: '空きあり', pending: '確認待ち', confirmed: '確定', break: '休憩', blocked: '受付停止', ended: '終了' };
+      const labels = { open: '空きあり', pending: '確認待ち', adjusting: '調整中', confirmed: '確定', break: '休憩', blocked: '受付停止', ended: '終了' };
       mark.setAttribute('aria-label', labels[status] || '受付停止');
       mark.append(stateIcon(status));
       state.append(mark);
