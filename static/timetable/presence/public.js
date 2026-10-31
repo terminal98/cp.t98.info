@@ -1,4 +1,4 @@
-import {createPresenceView} from './view.js?v=live-bubble-20261030';
+import {createPresenceView} from './view.js?v=map-places-20261031';
 const board=document.getElementById('availability-board');
 const container=document.getElementById('availability-presence');
 if(board&&container){

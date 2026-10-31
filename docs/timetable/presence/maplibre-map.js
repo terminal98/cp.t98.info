@@ -1,7 +1,7 @@
 import {visibleVenuePoint} from './place-visibility.js?v=overview-20261030';
 import {presenceBasemap} from './basemap.js?v=map-options-20261030';
 import {mapSettingsControl,preferredBasemap} from './map-settings.js?v=map-options-20261030';
-import {venueGroups} from './venue-areas.js?v=points-20261030';
+import {venueGroups} from './venue-areas.js?v=map-places-20261031';
 import {validMapArea} from './map.js';
 const el=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
 const collection=features=>({type:'FeatureCollection',features});

@@ -1,4 +1,4 @@
-import './public.js?v=live-bubble-20261030';
+import './public.js?v=map-places-20261031';
 const board=document.getElementById('availability-board'),container=document.getElementById('availability-presence');
 const slug=new URLSearchParams(location.search).get('event')||'lagcos-tw-2026';
 const valid=/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)&&slug.length<=64;
