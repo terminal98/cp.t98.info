@@ -1,5 +1,5 @@
 ---
-title: "コセット池袋 被写体募集"
+title: "【11/9】コセット池袋 被写体募集"
 date: 2026-11-02T12:00:00+09:00
 draft: false
 showReadingTime: false
