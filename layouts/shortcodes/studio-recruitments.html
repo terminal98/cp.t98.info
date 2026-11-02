@@ -1,7 +1,10 @@
 {{- $hakosutaExpires := time.AsTime "2026-10-31T00:00:00+09:00" -}}
 {{- $hakosuta := site.GetPage "/posts/2026/102004" -}}
 {{- $currentTime := now -}}
+{{- $cossetExpires := time.AsTime "2026-11-10T00:00:00+09:00" -}}
+{{- $cosset := site.GetPage "/posts/2026/110201" -}}
 {{- $venues := slice
+  (dict "name" "コセット池袋" "dates" "11/9" "image" "/posts/2026/110201/featured.png" "href" "https://x.com/98tml/status/2117154303362425176" "external" true "expires" $cossetExpires "page" $cosset)
   (dict "name" "ハコアム大阪" "dates" "10/30" "image" "/posts/2026/102004/featured.png" "href" "https://x.com/98tml/status/2114303542014222558" "external" true "expires" $hakosutaExpires "page" $hakosuta)
 -}}
 {{- $hasActiveVenue := false -}}
