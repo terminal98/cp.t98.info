@@ -11,6 +11,8 @@
   let availableSlots = [];
   let weather = null;
   let slotRows = [];
+  let timelines = [];
+  let useTimeline = false;
   const preview = ['localhost','127.0.0.1'].includes(location.hostname) && board.dataset.presencePreview === 'true';
   const previewTime = Date.parse(board.dataset.presenceNow), previewStarted = performance.now();
   const currentTime = () => preview && Number.isFinite(previewTime) ? previewTime + performance.now() - previewStarted : Date.now();
@@ -172,28 +174,59 @@
     panel.setAttribute('aria-labelledby', heading.id);
     panel.append(heading);
 
-    const table = element('table');
+    if (useTimeline) panel.classList.add('availability-section--timeline');
+    const table = element(useTimeline ? 'div' : 'table', undefined, useTimeline ? 'availability-timeline' : undefined);
     const columns = element('colgroup');
     columns.append(element('col', undefined, 'availability-col-time'), element('col', undefined, 'availability-col-state'));
-    table.append(columns);
+    if (!useTimeline) table.append(columns);
     const caption = element('caption', `${section === 'day' ? '昼' : '夜'}の撮影時間帯と空き状況`);
     caption.className = 'visually-hidden';
-    table.append(caption);
-    const body = element('tbody');
+    if (!useTimeline) table.append(caption);
+    const body = element(useTimeline ? 'div' : 'tbody', undefined, useTimeline ? 'availability-timeline-track' : undefined);
+    let startsAt = 0;
+    if (useTimeline) {
+      const hour = 3600000;
+      startsAt = Math.floor(Math.min(...slots.map(slot => Date.parse(slot.starts_at))) / hour) * hour;
+      const endsAt = Math.ceil(Math.max(...slots.map(slot => Date.parse(slot.ends_at))) / hour) * hour;
+      table.style.setProperty('--timeline-height', `${(endsAt - startsAt) / 60000 * 2}px`);
+      const axis = element('div', undefined, 'availability-time-axis');
+      axis.setAttribute('aria-hidden', 'true');
+      for (let at = startsAt; at <= endsAt; at += hour) {
+        const tick = element('span', clock(at), 'availability-time-tick');
+        tick.style.top = `${(at - startsAt) / 60000 * 2}px`;
+        axis.append(tick);
+      }
+      const indicator = element('div', undefined, 'availability-time-now');
+      indicator.setAttribute('aria-hidden', 'true');
+      body.setAttribute('role', 'list');
+      body.setAttribute('aria-label', `${section === 'day' ? '昼' : '夜'}の撮影時間帯と空き状況`);
+      table.append(axis);
+      body.append(indicator);
+      timelines.push({startsAt, endsAt, indicator});
+    }
     for (const slot of slots) {
       const rawStatus = slot.status;
       const status = Date.parse(slot.ends_at) <= now ? 'ended' : rawStatus;
-      const row = element('tr');
+      const row = element(useTimeline ? 'div' : 'tr', undefined, useTimeline ? 'availability-timeline-slot' : undefined);
+      if (useTimeline) {
+        row.setAttribute('role', 'listitem');
+        if (Date.parse(slot.ends_at) - Date.parse(slot.starts_at) < 30 * 60000) row.classList.add('availability-timeline-slot--compact');
+        row.style.top = `${(Date.parse(slot.starts_at) - startsAt) / 60000 * 2}px`;
+        row.style.height = `${(Date.parse(slot.ends_at) - Date.parse(slot.starts_at)) / 60000 * 2 - 3}px`;
+      }
       row.dataset.status = status;
-      const time = element('th');
-      time.scope = 'row';
+      if (slot.timelineActivity) row.dataset.activity = slot.kind;
+      const time = element(useTimeline ? 'div' : 'th', undefined, useTimeline ? 'availability-timeline-time' : undefined);
+      if (!useTimeline) time.scope = 'row';
       {
-        const button = element('button', range(slot), 'availability-slot-button');
-        button.type = 'button';
-        button.setAttribute('aria-haspopup', 'dialog');
-        button.setAttribute('aria-label', `${range(slot)} ${statusLabels[status] || '受付停止'}、詳細を見る`);
+        const button = element(slot.timelineActivity ? 'span' : 'button', range(slot), 'availability-slot-button');
+        if (!slot.timelineActivity) {
+          button.type = 'button';
+          button.setAttribute('aria-haspopup', 'dialog');
+        }
+        if (!slot.timelineActivity) button.setAttribute('aria-label', `${range(slot)} ${statusLabels[status] || '受付停止'}、詳細を見る`);
         const hour = weather?.hours?.find(hour => Date.parse(hour.time) === Math.floor(Date.parse(slot.starts_at) / 3600000) * 3600000);
-        if (hour && ['sun','moon','cloud','rain','snow'].includes(hour.icon)) {
+        if (!slot.timelineActivity && hour && ['sun','moon','cloud','rain','snow'].includes(hour.icon)) {
           const mark = element('span', undefined, 'availability-weather-mark');
           const icon = element('span', undefined, 'availability-weather-icon');
           const temperature = typeof hour.temperature === 'number' && Number.isFinite(hour.temperature) ? `${hour.temperature.toFixed(1)} ℃` : '—';
@@ -211,16 +244,19 @@
           button.setAttribute('aria-label', `${range(slot)} ${hour.label} ${temperature} ${statusLabels[status] || '受付停止'}、詳細を見る`);
         }
         time.append(button);
-        row.classList.add('availability-slot-interactive');
-        row.addEventListener('click', () => showConsultation(slot, row.dataset.status));
+        if (!slot.timelineActivity) {
+          row.classList.add('availability-slot-interactive');
+          row.addEventListener('click', () => showConsultation(slot, row.dataset.status));
+        }
       }
-      const state = element('td');
+      const state = element(useTimeline ? 'div' : 'td', undefined, useTimeline ? 'availability-timeline-state' : undefined);
       const mark = element('span', undefined, 'availability-state');
       mark.setAttribute('role', 'img');
       const labels = { open: '空きあり', pending: '確認待ち', adjusting: '調整中', confirmed: '確定', break: '休憩', blocked: '受付停止', ended: '終了' };
       mark.setAttribute('aria-label', labels[status] || '受付停止');
       mark.append(stateIcon(status));
-      state.append(mark);
+      if (!slot.timelineActivity) state.append(mark);
+      if (useTimeline) state.append(element('span', slot.timelineActivity ? (slot.kind === 'free' ? 'フリー' : '休憩') : (labels[status] || '受付停止'), 'availability-timeline-label'));
       row.append(time, state);
       body.append(row);
       slotRows.push({slot,row});
@@ -233,6 +269,10 @@
   function refreshSlotTimes() {
     if(document.hidden || !slotRows.length)return;
     const now=currentTime();
+    for (const {startsAt, endsAt, indicator} of timelines) {
+      indicator.hidden = now < startsAt || now >= endsAt;
+      if (!indicator.hidden) indicator.style.top = `${(now - startsAt) / 60000 * 2}px`;
+    }
     for(const {slot,row} of slotRows){
       const active=Date.parse(slot.starts_at)<=now && now<Date.parse(slot.ends_at);
       const status=Date.parse(slot.ends_at)<=now?'ended':slot.status;
@@ -242,9 +282,12 @@
       }
       if(row.dataset.status===status)continue;
       row.dataset.status=status;
+      if (slot.timelineActivity) continue;
       const mark=row.querySelector('.availability-state');
       mark.setAttribute('aria-label',status==='ended'?'終了':statusLabels[status]||'受付停止');
       mark.replaceChildren(stateIcon(status));
+      const label = row.querySelector('.availability-timeline-label');
+      if (label) label.textContent = status === 'ended' ? '終了' : (statusLabels[status] || '受付停止').replace(/^[○△×] /, '');
       const button=row.querySelector('.availability-slot-button');
       const forecast=row.querySelector('.availability-weather-mark')?.getAttribute('aria-label');
       button.setAttribute('aria-label',`${range(slot)} ${forecast?forecast+' ':''}${statusLabels[status]||'受付停止'}、詳細を見る`);
@@ -266,6 +309,8 @@
       const data = await response.json();
       if (data.event?.slug !== eventSlug || !Array.isArray(data.slots) || !data.updatedAt) throw new Error('空き状況を取得できませんでした。');
 
+      useTimeline = data.event.timetable_mode === 'timeline';
+      board.classList.toggle('availability-board--timeline', useTimeline);
       board.timetableEvent = data.event;
       board.dispatchEvent(new CustomEvent('timetable:loaded', {detail:{event:data.event}}));
       weather = data.weather || null;
@@ -273,10 +318,12 @@
       availableSlots = data.slots.filter(slot => slot.status === 'open');
       const now = currentTime();
       slotRows = [];
+      timelines = [];
       const counts = { open: 0 };
       const sections = [];
+      const displayed = useTimeline ? [...data.slots, ...(data.activities || []).filter(a => ['break','free'].includes(a.kind)).map(a => ({...a, status:a.kind, timelineActivity:true}))] : data.slots;
       for (const section of ['day', 'night']) {
-        const slots = data.slots.filter(slot => slot.section === section);
+        const slots = displayed.filter(slot => slot.section === section).sort((a, b) => Date.parse(a.starts_at) - Date.parse(b.starts_at));
         if (!slots.length) continue;
         for (const slot of slots) {
           if (slot.status === 'open' && Date.parse(slot.starts_at) > now) counts.open += 1;
@@ -302,6 +349,7 @@
     } catch {
       weather = null;
       slotRows = [];
+      timelines = [];
       groups.replaceChildren();
       get('availability-count').textContent = '';
       get('availability-updated').textContent = '';

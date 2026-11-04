@@ -104,3 +104,40 @@ body:has(.availability-board){margin-inline:auto}
 .availability-weather-temperature{font-size:10px;font-weight:500;white-space:nowrap;letter-spacing:-.03em}
 @media(max-width:640px){.availability-slot-button--weather{padding-inline:38px 0}.availability-slot-button--weather .availability-weather-mark{width:34px;gap:2px}.availability-section .availability-weather-icon{width:14px;height:14px}.availability-weather-temperature{font-size:9px}}
 @media(max-width:380px){.availability-slot-button--weather{font-size:13px;line-height:17.5px}}
+
+/* 時間軸に沿って開始時刻と所要時間を表示する当日タイムテーブル。 */
+.availability-board--timeline .availability-groups{grid-template-columns:minmax(0,1fr);align-items:start;gap:20px}
+.availability-section--timeline{display:block;min-width:0;padding:16px;background:#fff;border-radius:12px;color:#243a3a;--timeline-hour:120px}
+.availability-section--timeline h2{flex-direction:row;justify-content:flex-start;gap:8px;padding:0 0 22px;border-radius:0;background:none;color:#344747;font-size:18px;letter-spacing:0}
+.availability-section--timeline h2 span{writing-mode:horizontal-tb}
+.availability-section--timeline h2 img{width:24px;height:24px}
+.availability-timeline{position:relative;display:grid;grid-template-columns:45px minmax(0,1fr);height:var(--timeline-height);margin-bottom:12px;font-variant-numeric:tabular-nums}
+.availability-time-axis{position:relative;color:#657574;font-size:12px;line-height:1}
+.availability-time-tick{position:absolute;right:9px;transform:translateY(-50%);white-space:nowrap}
+.availability-timeline-track{position:relative;min-width:0;border-top:1px solid #dce5e3;border-bottom:1px solid #dce5e3;background:repeating-linear-gradient(to bottom,transparent 0,transparent 59px,#eaf0ee 59px,#eaf0ee 60px,transparent 60px,transparent 119px,#dce5e3 119px,#dce5e3 120px)}
+.availability-timeline-slot{position:absolute;left:6px;right:0;display:flex;flex-direction:column;justify-content:center;min-height:0;padding:6px 10px;border-left:3px solid #26846c;border-radius:5px;background:#e7f5ef;color:#17634e;overflow:hidden}
+.availability-timeline-slot[data-status=pending],.availability-timeline-slot[data-status=adjusting]{border-color:#b78118;background:#fff5d9;color:#886010}
+.availability-timeline-slot[data-status=confirmed]{border-color:#657a9c;background:#e9eef7;color:#435d83}
+.availability-timeline-slot[data-status=break],.availability-timeline-slot[data-status=blocked]{border-color:#939a9b;background:#eff1f2;color:#657072}
+.availability-timeline-slot[data-status=ended]{border-color:#b9c4c1;background:#f1f4f3;color:#82918d}
+.availability-timeline-slot[data-current=true]{box-shadow:inset 0 0 0 2px #168474}
+.availability-timeline-slot .availability-slot-button{font-size:14px;font-weight:700;line-height:1.4;text-align:left;white-space:nowrap}
+.availability-timeline-slot .availability-slot-button:focus-visible{outline-offset:1px}
+.availability-timeline-state{display:flex;align-items:center;gap:5px;margin-top:2px;font-size:12px;line-height:1.4}
+.availability-timeline-state .availability-state svg{width:15px;height:15px}
+.availability-time-now{position:absolute;left:0;right:0;z-index:2;height:2px;background:#dc5050;pointer-events:none}
+.availability-time-now::before{position:absolute;left:-4px;top:-3px;width:8px;height:8px;border-radius:50%;background:inherit;content:""}
+.availability-time-now[hidden]{display:none}
+.availability-timeline-slot .availability-slot-button--weather{padding-inline:0 48px}
+.availability-timeline-slot .availability-weather-mark{left:auto;right:0}
+@media(min-width:768px){.availability-board--timeline .availability-groups{grid-template-columns:repeat(2,minmax(0,1fr))}.availability-section--timeline{padding:18px 14px}.availability-board--timeline{padding:24px}}
+@media(max-width:640px){.availability-section--timeline{padding:16px 12px;border-radius:10px}.availability-section--timeline h2{padding:0 0 22px;font-size:17px}.availability-timeline-slot{padding:5px 8px}.availability-time-axis{font-size:11px}}
+
+.availability-timeline-slot[data-activity=free]:not([data-status=ended]){background:#e8f3fa;border-color:#4683a9;color:#32617d}
+.availability-timeline-slot[data-activity],.availability-timeline-slot[data-activity] .availability-slot-button{cursor:default}
+.availability-timeline-slot--compact{flex-direction:row;align-items:center;justify-content:space-between;gap:5px}
+.availability-timeline-slot--compact .availability-timeline-time{min-width:0}
+.availability-timeline-slot--compact .availability-slot-button{font-size:12px;padding:0}
+.availability-timeline-slot--compact .availability-weather-mark{display:none}
+.availability-timeline-slot--compact .availability-timeline-state{flex:none;margin:0;font-size:11px}
+@media(max-width:380px){.availability-timeline-slot .availability-slot-button{font-size:13px}.availability-timeline-slot .availability-slot-button--weather{padding-right:40px}.availability-timeline-slot--compact .availability-slot-button{font-size:11px;padding-right:0}}
