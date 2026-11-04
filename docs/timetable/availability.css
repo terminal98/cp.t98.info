@@ -108,7 +108,7 @@ body:has(.availability-board){margin-inline:auto}
 /* 時間軸に沿って開始時刻と所要時間を表示する当日タイムテーブル。 */
 .availability-board--timeline .availability-groups{grid-template-columns:minmax(0,1fr);align-items:start;gap:20px}
 .availability-section--timeline{display:block;min-width:0;padding:16px;background:#fff;border-radius:12px;color:#243a3a;--timeline-hour:120px}
-.availability-section--timeline h2{flex-direction:row;justify-content:flex-start;gap:8px;padding:0 0 22px;border-radius:0;background:none;color:#344747;font-size:18px;letter-spacing:0}
+.availability-section--timeline h2{flex-direction:row;justify-content:flex-start;gap:8px;margin:0 0 22px;padding:8px 12px;border-radius:6px;background:var(--slot-color);color:#fff;font-size:18px;letter-spacing:0}
 .availability-section--timeline h2 span{writing-mode:horizontal-tb}
 .availability-section--timeline h2 img{width:24px;height:24px}
 .availability-timeline{position:relative;display:grid;grid-template-columns:45px minmax(0,1fr);height:var(--timeline-height);margin-bottom:12px;font-variant-numeric:tabular-nums}
@@ -131,7 +131,7 @@ body:has(.availability-board){margin-inline:auto}
 .availability-timeline-slot .availability-slot-button--weather{padding-inline:0 48px}
 .availability-timeline-slot .availability-weather-mark{left:auto;right:0}
 @media(min-width:768px){.availability-board--timeline .availability-groups{grid-template-columns:repeat(2,minmax(0,1fr))}.availability-section--timeline{padding:18px 14px}.availability-board--timeline{padding:24px}}
-@media(max-width:640px){.availability-section--timeline{padding:16px 12px;border-radius:10px}.availability-section--timeline h2{padding:0 0 22px;font-size:17px}.availability-timeline-slot{padding:5px 8px}.availability-time-axis{font-size:11px}}
+@media(max-width:640px){.availability-section--timeline{padding:16px 12px;border-radius:10px}.availability-section--timeline h2{padding:8px 10px;font-size:17px}.availability-timeline-slot{padding:5px 8px}.availability-time-axis{font-size:11px}}
 
 .availability-timeline-slot[data-activity=free]:not([data-status=ended]){background:#e8f3fa;border-color:#4683a9;color:#32617d}
 .availability-timeline-slot[data-activity],.availability-timeline-slot[data-activity] .availability-slot-button{cursor:default}
@@ -141,3 +141,9 @@ body:has(.availability-board){margin-inline:auto}
 .availability-timeline-slot--compact .availability-weather-mark{display:none}
 .availability-timeline-slot--compact .availability-timeline-state{flex:none;margin:0;font-size:11px}
 @media(max-width:380px){.availability-timeline-slot .availability-slot-button{font-size:13px}.availability-timeline-slot .availability-slot-button--weather{padding-right:40px}.availability-timeline-slot--compact .availability-slot-button{font-size:11px;padding-right:0}}
+
+@media(max-width:767px){
+  .availability-board--timeline .availability-groups{gap:0;padding:16px 12px;border-radius:10px;background:#fff}
+  .availability-board--timeline .availability-section--timeline{padding:0;border-radius:0;background:transparent}
+  .availability-board--timeline .availability-section--timeline+.availability-section--timeline{margin-top:28px}
+}
