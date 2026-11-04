@@ -147,3 +147,8 @@ body:has(.availability-board){margin-inline:auto}
   .availability-board--timeline .availability-section--timeline{padding:0;border-radius:0;background:transparent}
   .availability-board--timeline .availability-section--timeline+.availability-section--timeline{margin-top:28px}
 }
+
+@media(min-width:768px){
+  .availability-section--timeline{border-left:6px solid var(--slot-color)}
+  .availability-section--timeline h2{margin:-18px -14px 22px;padding:10px 14px;border-radius:0 10px 0 0}
+}
