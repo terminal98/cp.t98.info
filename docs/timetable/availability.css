@@ -76,8 +76,8 @@ body:has(.availability-board){margin-inline:auto}
 @media(prefers-reduced-motion:reduce){.availability-dialog-actions a{transition:none}}
 
 .availability-message,.availability-closed{text-align:center}
-.availability-dialog-status:not([data-status=open]):not([data-status=pending]):not([data-status=adjusting]){color:#dc2626}
-.dark .availability-dialog-status:not([data-status=open]):not([data-status=pending]):not([data-status=adjusting]){color:#f87171}
+.availability-dialog-status:not([data-activity]):not([data-status=open]):not([data-status=pending]):not([data-status=adjusting]){color:#dc2626}
+.dark .availability-dialog-status:not([data-activity]):not([data-status=open]):not([data-status=pending]):not([data-status=adjusting]){color:#f87171}
 .availability-recommendations{margin-top:24px;padding-top:16px;border-top:1px solid #e5e7eb;text-align:center}
 .availability-recommendations h4{margin:0 0 12px;color:#1f2937;font-size:14px;font-weight:700;line-height:1.6}
 .availability-recommendation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
@@ -134,7 +134,6 @@ body:has(.availability-board){margin-inline:auto}
 @media(max-width:640px){.availability-section--timeline{padding:16px 12px;border-radius:10px}.availability-section--timeline h2{padding:8px 10px;font-size:17px}.availability-timeline-slot{padding:5px 8px}.availability-time-axis{font-size:11px}}
 
 .availability-timeline-slot[data-activity=free]:not([data-status=ended]){background:#e8f3fa;border-color:#4683a9;color:#32617d}
-.availability-timeline-slot[data-activity],.availability-timeline-slot[data-activity] .availability-slot-button{cursor:default}
 .availability-timeline-slot--compact{flex-direction:row;align-items:center;justify-content:space-between;gap:5px}
 .availability-timeline-slot--compact .availability-timeline-time{min-width:0}
 .availability-timeline-slot--compact .availability-slot-button{font-size:12px;padding:0}
@@ -152,3 +151,8 @@ body:has(.availability-board){margin-inline:auto}
   .availability-section--timeline{border-left:6px solid var(--slot-color)}
   .availability-section--timeline h2{margin:-18px -14px 22px;padding:10px 14px;border-radius:0 10px 0 0}
 }
+
+.availability-dialog-status[data-activity=free]{color:#32617d}
+.availability-dialog-status[data-activity=break]{color:#657072}
+.dark .availability-dialog-status[data-activity=free]{color:#8dc7ed}
+.dark .availability-dialog-status[data-activity=break]{color:#b4c0c3}

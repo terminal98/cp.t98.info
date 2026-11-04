@@ -133,12 +133,16 @@
 
   function showConsultation(slot, status) {
     dialogTitle.textContent = range(slot);
-    dialogStatus.textContent = statusLabels[status] || '× 受付停止';
+    const activity = slot.timelineActivity === true;
+    const activityLabel = slot.kind === 'free' ? 'フリー' : '休憩';
+    dialogStatus.textContent = activity ? activityLabel + (status === 'ended' ? '（終了）' : '') : (statusLabels[status] || '× 受付停止');
+    if (activity) dialogStatus.dataset.activity = slot.kind;
+    else delete dialogStatus.dataset.activity;
     dialogStatus.dataset.status = status;
     const receiving = board.dataset.receiving === 'true';
-    invitation.hidden = !receiving || !['open', 'pending'].includes(status);
+    invitation.hidden = activity || !receiving || !['open', 'pending'].includes(status);
     recommendations.replaceChildren();
-    const nearby = receiving && status !== 'open' ? availableSlots
+    const nearby = !activity && receiving && status !== 'open' ? availableSlots
       .filter(candidate => candidate.starts_at !== slot.starts_at && Date.parse(candidate.starts_at) > currentTime())
       .sort((a, b) => Math.abs(Date.parse(a.starts_at) - Date.parse(slot.starts_at)) - Math.abs(Date.parse(b.starts_at) - Date.parse(slot.starts_at)) || Date.parse(a.starts_at) - Date.parse(b.starts_at))
       .slice(0, 3) : [];
@@ -219,12 +223,11 @@
       const time = element(useTimeline ? 'div' : 'th', undefined, useTimeline ? 'availability-timeline-time' : undefined);
       if (!useTimeline) time.scope = 'row';
       {
-        const button = element(slot.timelineActivity ? 'span' : 'button', range(slot), 'availability-slot-button');
-        if (!slot.timelineActivity) {
-          button.type = 'button';
-          button.setAttribute('aria-haspopup', 'dialog');
-        }
-        if (!slot.timelineActivity) button.setAttribute('aria-label', `${range(slot)} ${statusLabels[status] || '受付停止'}、詳細を見る`);
+        const button = element('button', range(slot), 'availability-slot-button');
+        button.type = 'button';
+        button.setAttribute('aria-haspopup', 'dialog');
+        const label = slot.timelineActivity ? (slot.kind === 'free' ? 'フリー' : '休憩') : (statusLabels[status] || '受付停止');
+        button.setAttribute('aria-label', `${range(slot)} ${label}、詳細を見る`);
         const hour = weather?.hours?.find(hour => Date.parse(hour.time) === Math.floor(Date.parse(slot.starts_at) / 3600000) * 3600000);
         if (!slot.timelineActivity && hour && ['sun','moon','cloud','rain','snow'].includes(hour.icon)) {
           const mark = element('span', undefined, 'availability-weather-mark');
@@ -244,10 +247,8 @@
           button.setAttribute('aria-label', `${range(slot)} ${hour.label} ${temperature} ${statusLabels[status] || '受付停止'}、詳細を見る`);
         }
         time.append(button);
-        if (!slot.timelineActivity) {
-          row.classList.add('availability-slot-interactive');
-          row.addEventListener('click', () => showConsultation(slot, row.dataset.status));
-        }
+        row.classList.add('availability-slot-interactive');
+        row.addEventListener('click', () => showConsultation(slot, row.dataset.status));
       }
       const state = element(useTimeline ? 'div' : 'td', undefined, useTimeline ? 'availability-timeline-state' : undefined);
       const mark = element('span', undefined, 'availability-state');
@@ -298,7 +299,7 @@
     const count=countPanel.querySelector('strong');if(count)count.textContent=String(open);
     const selected=slotRows.find(({slot})=>range(slot)===dialogTitle.textContent);
     if(consultation.open && selected && selected.row.dataset.status==='ended'){
-      dialogStatus.textContent=statusLabels.ended;dialogStatus.dataset.status='ended';invitation.hidden=true;
+      dialogStatus.textContent=selected.slot.timelineActivity?(selected.slot.kind==='free'?'フリー':'休憩')+'（終了）':statusLabels.ended;dialogStatus.dataset.status='ended';invitation.hidden=true;
     }
   }
 
