@@ -267,6 +267,14 @@
     return panel;
   }
 
+  function renderAvailableCount(count) {
+    const panel = get('availability-count');
+    if (panel.dataset.openCount === String(count)) return;
+    panel.dataset.openCount = String(count);
+    if (count === 0) panel.replaceChildren(document.createTextNode('確定'));
+    else panel.replaceChildren(document.createTextNode('残り '), element('strong', String(count)), document.createTextNode(' 枠'));
+  }
+
   function refreshSlotTimes() {
     if(document.hidden || !slotRows.length)return;
     const now=currentTime();
@@ -296,7 +304,7 @@
     const open=availableSlots.filter(slot=>Date.parse(slot.starts_at)>now).length;
     const countPanel=get('availability-count');
     countPanel.hidden=Number.isFinite(Date.parse(board.timetableEvent?.ends_at)) && now>=Date.parse(board.timetableEvent.ends_at);
-    const count=countPanel.querySelector('strong');if(count)count.textContent=String(open);
+    renderAvailableCount(open);
     const selected=slotRows.find(({slot})=>range(slot)===dialogTitle.textContent);
     if(consultation.open && selected && selected.row.dataset.status==='ended'){
       dialogStatus.textContent=selected.slot.timelineActivity?(selected.slot.kind==='free'?'フリー':'休憩')+'（終了）':statusLabels.ended;dialogStatus.dataset.status='ended';invitation.hidden=true;
@@ -333,8 +341,7 @@
       }
       if (!sections.length) throw new Error('空き状況を取得できませんでした。');
       groups.replaceChildren(...sections);
-      const count = get('availability-count');
-      count.replaceChildren(document.createTextNode('残り '), element('strong', String(counts.open)), document.createTextNode(' 枠'));
+      renderAvailableCount(counts.open);
       refreshSlotTimes();
       const noticeList = get('availability-notice-list');
       const notices = String(data.event.image_note || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
