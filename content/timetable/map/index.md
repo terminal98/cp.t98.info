@@ -10,4 +10,5 @@ build:
   render: always
 sitemap:
   disable: true
+images: ["https://cp.t98.info/timetable/lagcos-share-cover.png"]
 ---
