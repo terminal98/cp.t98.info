@@ -152,3 +152,35 @@ body:has(.tt-location-page)>header,body:has(.tt-location-page)>#the-top{display:
 .tt-presence-map[data-map-theme=dark] .tt-presence-live-time{color:#c1d4cd}
 @media(max-width:480px){.tt-presence-live-bubble{font-size:13px;padding:7px 10px;gap:8px}.tt-presence-live-time{font-size:12px}}
 .tt-presence-live-bubble[hidden]{display:none}
+
+.tt-map-settings--icons {
+  gap: 2px;
+  padding: 2px;
+}
+.tt-map-settings--icons button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #25433c;
+  cursor: pointer;
+}
+.tt-map-settings--icons button:hover,
+.tt-map-settings--icons button[aria-pressed="true"] {
+  background: #dcefe9;
+  color: #005d58;
+}
+.tt-map-settings--icons button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -3px;
+}
+.tt-map-settings--icons svg { width: 21px; height: 21px; }
+.dark .tt-map-settings--icons button { color: #e3edeb; }
+.dark .tt-map-settings--icons button:hover,
+.dark .tt-map-settings--icons button[aria-pressed="true"] {
+  background: #3b5b64;
+  color: #b9f1e6;
+}

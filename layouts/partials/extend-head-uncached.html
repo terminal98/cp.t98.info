@@ -30,7 +30,7 @@
 
 {{- if .Params.presenceMap }}
 <link rel="stylesheet" href="/timetable/presence/vendor/maplibre/maplibre-gl.css">
-<link rel="stylesheet" href="/timetable/presence/presence.css?v=map-button-20261107">
-<script type="module" src="/timetable/presence/map-page.js?v=map-places-20261031"></script>
+<link rel="stylesheet" href="/timetable/presence/presence.css?v=map-icon-controls-20261107">
+<script type="module" src="/timetable/presence/map-page.js?v=map-icon-controls-20261107"></script>
 {{- with site.GetPage "/timetable/lagcos-tw-2026" }}{{ with .Params.maptilerKey }}<meta name="timetable-maptiler-key" content="{{ . }}">{{ end }}{{ end }}
 {{- end }}

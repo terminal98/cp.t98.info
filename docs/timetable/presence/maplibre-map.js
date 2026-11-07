@@ -1,6 +1,6 @@
 import {visibleVenuePoint} from './place-visibility.js?v=overview-20261030';
 import {presenceBasemap} from './basemap.js?v=map-options-20261030';
-import {mapSettingsControl,preferredBasemap} from './map-settings.js?v=map-options-20261030';
+import {mapSettingsControl,preferredBasemap} from './map-settings.js?v=map-icon-controls-20261107';
 import {venueGroups} from './venue-areas.js?v=map-places-20261031';
 import {validMapArea} from './map.js';
 const el=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
@@ -69,7 +69,7 @@ export function createMapLibrePresenceMap(host,{L:GL,position,eventSlug,allowedA
     try{const next=await presenceBasemap(maptilerKey,theme,basemap);if(!disposed&&revision===styleRevision)map.setStyle(next);}
     catch{if(!disposed&&revision===styleRevision){fallback=true;map.setStyle(style(theme));}}
   }
-  map.addControl(mapSettingsControl({canSatellite:!!maptilerKey,onBasemapChange:value=>{basemap=value;void applyBasemap();}}),'top-right');
+  map.addControl(mapSettingsControl({canSatellite:!!maptilerKey,iconButtons:fullMap,onBasemapChange:value=>{basemap=value;void applyBasemap();}}),'top-right');
   void applyBasemap();
   const themeObserver=new MutationObserver(()=>{const next=currentTheme();if(disposed||next===theme)return;theme=next;void applyBasemap();});
   themeObserver.observe(document.documentElement,{attributes:true,attributeFilter:['class']});
