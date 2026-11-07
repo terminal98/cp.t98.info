@@ -59,7 +59,35 @@
 
 /* The timetable carries a compact location row; the separate page owns the map. */
 .tt-presence[data-public=true] .tt-presence-summary{grid-template-columns:max-content minmax(0,1fr) max-content max-content;margin-bottom:0}
-.tt-presence-map-link{font-size:13px;line-height:1.5;white-space:nowrap;color:#007d76;text-decoration:underline;text-underline-offset:3px}
+.tt-presence .tt-presence-map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  background-color: #00736d;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.tt-presence .tt-presence-map-link:hover {
+  background-color: #005d58;
+  color: #fff;
+  text-decoration: none;
+}
+.tt-presence-map-link::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  flex: none;
+  background-color: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15'/%3E%3C/svg%3E") center / contain no-repeat;
+}
 .tt-presence-map-link:focus-visible{outline:2px solid currentColor;outline-offset:4px}
 .tt-location-page{position:fixed;inset:0;z-index:70;background:#edf3f1;overflow:hidden;color:#173b3a}
 .tt-location-back{position:absolute;top:max(14px,env(safe-area-inset-top));left:14px;z-index:3;display:flex;align-items:center;gap:2px;padding:10px 12px;background:#fff;border-radius:9px;box-shadow:0 2px 8px #0002;color:inherit;text-decoration:none;font-size:14px}
@@ -71,9 +99,10 @@
 .tt-location-page .tt-presence-empty,.tt-location-page .tt-presence-ended-message{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max-content;max-width:90%;font-size:16px}
 .tt-location-page .tt-presence-geolocation-feedback{position:absolute;bottom:40px;left:16px;right:16px;z-index:3;background:#fff;padding:8px 12px;border-radius:8px}
 .dark .tt-location-page{background:#18242d;color:#e3edeb}.dark .tt-location-back,.dark .tt-location-page .tt-presence-summary,.dark .tt-location-page .tt-presence-geolocation-feedback{background:#23343e;color:#e3edeb}
-.dark .tt-presence-map-link{color:#70d6c7}
+.dark .tt-presence .tt-presence-map-link { background-color: #78ddcc; color: #122c2a; }
+.dark .tt-presence .tt-presence-map-link:hover { background-color: #a4ebdf; color: #122c2a; }
 @media(max-width:640px){
- .tt-presence[data-public=true] .tt-presence-summary{gap:7px}.tt-presence-map-link{font-size:11px}
+ .tt-presence[data-public=true] .tt-presence-summary{gap:7px}
  .tt-presence[data-public=true] .tt-presence-status{font-size:19px}.tt-presence[data-public=true] .tt-presence-updated{font-size:14px}
  .tt-location-page .tt-presence-summary{left:90px;padding:11px 10px;gap:8px;display:flex}
  .tt-location-page .tt-presence-status{font-size:17px}.tt-location-page .tt-presence-place{font-size:13px}.tt-location-page .tt-presence-updated{font-size:12px}
@@ -89,7 +118,7 @@ body:has(.tt-location-page)>header,body:has(.tt-location-page)>#the-top{display:
 .tt-location-page{z-index:110}
 @media(max-width:480px){
  .tt-presence[data-public=true] .tt-presence-summary{grid-template-columns:max-content minmax(0,1fr) max-content}
- .tt-presence-map-link{grid-column:1/-1;justify-self:end;display:inline-flex;align-items:center;min-height:30px;padding:3px 0;font-size:12px}
+ .tt-presence-map-link{grid-column:1/-1;justify-self:end}
 }
 .tt-venue-label-anchor{width:9px;height:9px;border-radius:50%;background:#a47331;border:2px solid #fff;box-shadow:0 1px 3px #0003}
 .tt-venue-label-anchor[data-active=true]{background:#00877f}
