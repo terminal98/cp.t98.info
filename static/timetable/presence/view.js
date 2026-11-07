@@ -1,5 +1,5 @@
 import {createPresenceMap} from './map.js';
-import {createMapLibrePresenceMap} from './maplibre-map.js?v=map-icon-controls-20261107';
+import {createMapLibrePresenceMap} from './maplibre-map.js?v=reception-point-20261107';
 // Display model only. The API adapter is kept separate from the app's upload payload.
 export const activityLabels = Object.freeze({shooting:'撮影中',moving:'移動中',resting:'休憩中',waiting:'待機中',available:'フリー'});
 const time = value => typeof value === 'string' && Number.isFinite(Date.parse(value)) ? Date.parse(value) : NaN;

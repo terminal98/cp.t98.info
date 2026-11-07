@@ -1854,8 +1854,8 @@ export const venueAreas = {
         "name": "ラグコス受付",
         "group": "ラグコス受付",
         "label": [
-          137.2722494,
-          34.8088603
+          137.2718318,
+          34.8089545
         ],
         "radius": 20,
         "match": true,
@@ -1865,8 +1865,8 @@ export const venueAreas = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-          137.2722494,
-          34.8088603
+          137.2718318,
+          34.8089545
         ]
       }
     },
@@ -3381,4 +3381,4 @@ export const venueAreas = {
   ]
 };
 export const venueGroups = venueAreas.features.map(feature=>feature.properties);
-export const venueDataVersion = "laguna-points-1793379865918";
+export const venueDataVersion = "reception-point-20261107";

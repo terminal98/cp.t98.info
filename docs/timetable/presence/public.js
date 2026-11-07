@@ -1,4 +1,4 @@
-import {createPresenceView} from './view.js?v=map-icon-controls-20261107';
+import {createPresenceView} from './view.js?v=reception-point-20261107';
 const board=document.getElementById('availability-board');
 const container=document.getElementById('availability-presence');
 if(board&&container){
