@@ -2,10 +2,13 @@
 title: "ラグコスタイテ募集中！"
 date: 2026-10-20T00:00:00+09:00
 draft: false
+recruitmentClosed: true
+recruitmentClosedAt: 2026-11-08T06:00:00+09:00
+excludeFromSearch: true
 recruitmentDeadline: "2026-11-07"
 showReadingTime: false
 categories: ["notice", "recruit"]
-expiryDate: 2026-11-08T06:00:00+09:00
+tags: ["recruitment-closed"]
 externalUrl: "/timetable/lagcos-tw-2026/"
 images: ["featured.png"]
 ---
