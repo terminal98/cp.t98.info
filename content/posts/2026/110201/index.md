@@ -2,6 +2,7 @@
 title: "【11/9】コセット池袋 被写体募集"
 date: 2026-11-02T12:00:00+09:00
 draft: false
+recruitmentDeadline: "2026-11-08T23:59:00+09:00"
 showReadingTime: false
 showTableOfContents: false
 categories: ["notice", "recruit"]

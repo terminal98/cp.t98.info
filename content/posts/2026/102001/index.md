@@ -1,5 +1,5 @@
 ---
-title: "ラグコスタイテ募集中！"
+title: "ラグコス2026TW ありがとうございました！"
 date: 2026-10-20T00:00:00+09:00
 draft: false
 recruitmentClosed: true
