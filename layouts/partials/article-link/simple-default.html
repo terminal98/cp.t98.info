@@ -108,8 +108,7 @@
           {{ .Title | emojify }}
           {{ if .Params.externalUrl }}
             <span class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500">
-              <span class="rtl:hidden">&#8599;</span>
-              <span class="ltr:hidden">&#8598;</span>
+              {{ partial "icon.html" "arrow-up-right-from-square" }}
             </span>
           {{ end }}
         </h2>
