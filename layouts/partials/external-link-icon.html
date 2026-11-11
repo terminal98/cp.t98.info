@@ -1,0 +1,2 @@
+{{- $icon := resources.Get "icons/arrow-up-right-from-square.svg" -}}
+{{- replace $icon.Content "<svg " `<svg style="display:inline-block;vertical-align:-0.125em" ` | safeHTML -}}

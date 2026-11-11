@@ -115,7 +115,7 @@
           {{ $target.Title | emojify }}
           {{ if $target.Params.externalUrl }}
             <span class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500">
-              {{ partial "icon.html" "arrow-up-right-from-square" }}
+              {{ partial "external-link-icon.html" . }}
             </span>
           {{ end }}
         </h2>
