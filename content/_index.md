@@ -57,6 +57,11 @@ body{
 </a>
 </div>
 
+<span style="text-decoration:underline; font-weight:bold">■ C109 配置情報</span>  
+冬のコミックマーケット109に当選しました！ 12/30(水) 2日目 西1ホール へ-42b  
+撮影技法と作例集を発行予定です！  
+★ [お品書き等はWebカタログにて公開中。お気に入り登録いただくとメールで更新通知が受け取れます！](https://webcatalog-auth.circle.ms/Perma/Circle/10448152/)
+
 <span style="text-decoration:underline; font-weight:bold">■ XのDMが届かない事例を確認しております</span>   
 撮影依頼などのお問い合わせは通常2日以内に返信しております。   
 返信が届かない場合やお急ぎの場合は、[Instagram](https://www.instagram.com/98tml/)や[メールフォーム](http://www.t98.info/contact/)のご利用も併せてご検討くださいますようお願いいたします。
