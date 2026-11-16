@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 前月ボタンで今月へ戻れるよう、表示可能範囲の開始月は常に今月にする。
     displayStartDate = new Date(today.getFullYear(), today.getMonth(), 1);
 
-    // 今月の今日以降に「空き」または「要相談」がなければ、初期表示だけ翌月へ進める。
+    // 今月の今日以降に「空き」または「応相談」がなければ、初期表示だけ翌月へ進める。
     currentDate = new Date(displayStartDate);
     if (!hasAvailableDateInMonth(today)) {
       currentDate.setMonth(currentDate.getMonth() + 1);
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const statusMap = {
       1: { symbol: '○', text: '空き', colorClass: 'text-green-600 dark:text-green-400', icon: 'far fa-circle' },
-      2: { symbol: '△', text: '要相談', colorClass: 'text-yellow-600 dark:text-yellow-400', icon: 'fas fa-play' },
+      2: { symbol: '△', text: '応相談', colorClass: 'text-yellow-600 dark:text-yellow-400', icon: 'fas fa-play' },
       3: { symbol: '✕', text: '満枠', colorClass: 'text-red-600 dark:text-red-400', icon: 'fas fa-times' },
       4: { symbol: 'その他', text: 'その他', colorClass: 'text-gray-600 dark:text-gray-400', icon: 'fas fa-info-circle' }
     };
