@@ -85,6 +85,12 @@ body:has(#schedule-page) > header > .min-h-16 { min-height: 4rem; }
 #schedule-page .event-timetable-banner:focus-visible { outline: 3px solid #e6a538; outline-offset: 3px; }
 #schedule-page .event-timetable-banner__title { display: inline-flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 700; line-height: 1.5; white-space: nowrap; }
 #schedule-page .event-timetable-banner__status { font-size: 13px; line-height: 1.6; white-space: nowrap; }
+#schedule-page .schedule-loading { display: inline-flex; align-items: center; gap: 8px; }
+#schedule-page .schedule-loading::before { content: ""; flex: none; box-sizing: border-box; width: 16px; height: 16px; border: 2px solid currentColor; border-inline-start-color: transparent; border-radius: 50%; animation: schedule-loading-spin .8s linear infinite; }
+#schedule-page #loading-message .schedule-loading::before { color: #2563eb; }
+.dark #schedule-page #loading-message .schedule-loading::before { color: #93c5fd; }
+@keyframes schedule-loading-spin { to { transform: rotate(1turn); } }
+@media (prefers-reduced-motion: reduce) { #schedule-page .schedule-loading::before { animation: none; } }
 #schedule-page .event-timetable-banner svg { width: 16px; height: 16px; }
 
 #schedule-page .event-timetable-banner__status strong { font-size: 20px; font-weight: 750; line-height: 1; }
