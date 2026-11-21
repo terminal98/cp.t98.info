@@ -23,8 +23,13 @@
   {{ $js := resources.Get "js/recruitment-visibility.js" | fingerprint }}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- end }}
-{{- if eq .RelPermalink "/circle/" }}
+{{- $archive := partial "uses-archive-layout.html" . }}
+{{- if or $archive (eq .RelPermalink "/circle/") }}
   {{ $css := resources.Get "css/standalone-page.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end }}
+{{- if $archive }}
+  {{ $css := resources.Get "css/archive.css" | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
 

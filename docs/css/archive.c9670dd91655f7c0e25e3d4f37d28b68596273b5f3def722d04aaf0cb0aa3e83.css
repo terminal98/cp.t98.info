@@ -1,0 +1,26 @@
+/* Use the storefront's title band and align the archive to its reading width. */
+#main-content:has(> .site-archive-body) {
+  --site-archive-gutter: 40px;
+  display: flex;
+  flex-direction: column;
+}
+#main-content:has(> .site-archive-body) > .site-page-hero {
+  background: linear-gradient(to right, #cae6f7, #e9ddf3);
+}
+html.dark #main-content:has(> .site-archive-body) > .site-page-hero {
+  background: #26234f;
+}
+.site-archive-body { flex: 1; }
+.site-archive-body > .site-archive {
+  max-width: 960px;
+  margin-inline-start: max(var(--site-archive-gutter), calc((100% - 1120px) / 2));
+}
+.site-archive > header:has(> ol > li:not(.hidden)) { margin-bottom: 1rem; }
+.site-archive .article-link--simple { max-width: 100%; }
+
+@media (max-width: 1000px) {
+  #main-content:has(> .site-archive-body) { --site-archive-gutter: 24px; }
+}
+@media (max-width: 700px) {
+  #main-content:has(> .site-archive-body) { --site-archive-gutter: 20px; }
+}

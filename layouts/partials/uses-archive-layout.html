@@ -1,0 +1,4 @@
+{{- return (or
+  (and (eq .Kind "section") (eq .Section "posts"))
+  (and (in (slice "taxonomy" "term") .Kind) (in (slice "tags" "categories") .Data.Plural))
+) -}}

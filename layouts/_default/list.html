@@ -1,11 +1,15 @@
 {{ define "main" }}
   {{ $visiblePages := partial "recruitment-visible-pages.html" (dict "pages" .Pages "context" .) }}
+  {{ $archive := partial "uses-archive-layout.html" . }}
   {{ .Scratch.Set "scope" "list" }}
   {{ $enableToc := .Params.showTableOfContents | default (site.Params.list.showTableOfContents | default false) }}
   {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
 
   {{/* Hero */}}
-  {{ if site.Params.list.showHero | default false }}
+  {{ if $archive }}
+    {{ partial "page-hero.html" (dict "title" .Title "id" "page-title") }}
+    <div class="site-page-body site-archive-body"><div class="site-page-content site-archive">
+  {{ else if site.Params.list.showHero | default false }}
     {{ $heroStyle := print "hero/" site.Params.list.heroStyle ".html" }}
     {{ if templates.Exists ( printf "partials/%s" $heroStyle ) }}
       {{ partial $heroStyle . }}
@@ -19,34 +23,40 @@
     {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
+    {{ if not $archive }}
       <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
+    {{ end }}
+    {{ if or (not $archive) (.Params.showViews | default site.Params.list.showViews) (.Params.showLikes | default site.Params.list.showLikes) }}
       <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-      {{ partial "article-meta/list.html" (dict "context" . "scope" "single") }}
-    </div>
+        {{ partial "article-meta/list.html" (dict "context" . "scope" "single") }}
+      </div>
+    {{ end }}
   </header>
 
   {{/* Description (markdown content) */}}
-  {{ $tocMargin := cond $showToc "mt-12" "mt-0" }}
-  {{ $topClass := cond (or (hasPrefix site.Params.header.layout "fixed") (eq site.Params.header.layout "floating")) "lg:top-[140px]" "lg:top-10" }}
-  <section class="{{ $tocMargin }} prose flex max-w-full flex-col dark:prose-invert lg:flex-row mb-10">
-    {{ if $showToc }}
-      <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
-        <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
-          {{ partial "toc.html" . }}
+  {{ if or (not $archive) .Content }}
+    {{ $tocMargin := cond $showToc "mt-12" "mt-0" }}
+    {{ $topClass := cond (or (hasPrefix site.Params.header.layout "fixed") (eq site.Params.header.layout "floating")) "lg:top-[140px]" "lg:top-10" }}
+    <section class="{{ $tocMargin }} prose flex max-w-full flex-col dark:prose-invert lg:flex-row mb-10">
+      {{ if $showToc }}
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
+            {{ partial "toc.html" . }}
+          </div>
         </div>
+      {{ end }}
+      <div class="min-w-0 min-h-0 max-w-prose w-full">
+        {{ .Content }}
       </div>
-    {{ end }}
-    <div class="min-w-0 min-h-0 max-w-prose w-full">
-      {{ .Content }}
-    </div>
-  </section>
+    </section>
+  {{ end }}
 
   {{/* Article Grid */}}
   {{ if gt (len $visiblePages) 0 }}
     {{ $cardView := .Params.cardView | default (site.Params.list.cardView | default false) }}
-    {{ $cardViewScreenWidth := .Params.cardViewScreenWidth | default (site.Params.list.cardViewScreenWidth | default false) }}
+    {{ $cardViewScreenWidth := and (not $archive) (.Params.cardViewScreenWidth | default (site.Params.list.cardViewScreenWidth | default false)) }}
     {{ $groupByYear := .Params.groupByYear | default (site.Params.list.groupByYear | default false) }}
     {{ $orderByWeight := .Params.orderByWeight | default (site.Params.list.orderByWeight | default false) }}
     {{ $groupByYear := and (not $orderByWeight) $groupByYear }}
@@ -141,4 +151,5 @@
     </section>
   {{ end }}
   {{ partial "pagination.html" . }}
+  {{ if $archive }}</div></div>{{ end }}
 {{ end }}
