@@ -8,7 +8,7 @@ html.dark .site-page-hero.site-fixed-hero {
 
 .site-page-width > .site-fixed-content {
   width: 100%;
-  max-width: 960px;
+  max-width: var(--site-page-content-max-width);
   margin-inline: 0;
 }
 

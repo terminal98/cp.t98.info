@@ -1,0 +1,19 @@
+.site-page-hero.site-fixed-hero {
+  background: linear-gradient(to right, #cae6f7, #e9ddf3);
+}
+
+html.dark .site-page-hero.site-fixed-hero {
+  background: #26234f;
+}
+
+.site-page-width > .site-fixed-content {
+  width: 100%;
+  max-width: var(--site-page-content-max-width);
+  margin-inline: 0;
+}
+
+/* The legacy policy page has a separate title image and spacer. */
+.site-fixed-content > #hero,
+.site-fixed-content > .single_hero_background {
+  display: none;
+}

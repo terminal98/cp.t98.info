@@ -5,7 +5,7 @@ body:has(.site-page-hero) #site-footer { width:100%; max-width:1280px; margin-in
 .site-page-hero { padding:64px 0; color:#20242c; background:transparent; font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; overflow-wrap:anywhere; }
 .site-page-hero h1 { margin:0; font-size:clamp(28px,2.6vw,36px); line-height:1.5; font-weight:800; letter-spacing:-.055em; }
 html.dark .site-page-hero { color:#f1f5f9; }
-.site-page-body { background:#fff; padding-block:32px 48px; }
+.site-page-body { --site-page-content-max-width:1024px; background:#fff; padding-block:32px 48px; }
 html.dark .site-page-body { background:rgb(var(--color-neutral-800,30,41,59)); }
 .site-page-content { width:min(1120px,calc(100% - 80px)); margin-inline:auto; }
 .site-page-content > section { margin-top:0; }
