@@ -1,4 +1,4 @@
-<header class="site-page-hero"{{ with .id }} aria-labelledby="{{ . }}"{{ end }}>
+<header class="site-page-hero{{ with .class }} {{ . }}{{ end }}"{{ with .id }} aria-labelledby="{{ . }}"{{ end }}>
   <div class="site-page-width">
     <h1{{ with .id }} id="{{ . }}"{{ end }}>{{ .title | emojify }}</h1>
   </div>

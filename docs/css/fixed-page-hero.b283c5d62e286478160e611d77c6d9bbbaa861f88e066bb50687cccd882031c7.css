@@ -1,0 +1,13 @@
+.site-page-hero.site-fixed-hero {
+  background: linear-gradient(to right, #cae6f7, #e9ddf3);
+}
+
+html.dark .site-page-hero.site-fixed-hero {
+  background: #26234f;
+}
+
+/* The legacy policy page has a separate title image and spacer. */
+.site-fixed-content > #hero,
+.site-fixed-content > .single_hero_background {
+  display: none;
+}

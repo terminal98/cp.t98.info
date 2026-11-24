@@ -24,12 +24,17 @@
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- end }}
 {{- $archive := partial "uses-archive-layout.html" . }}
-{{- if or $archive (eq .RelPermalink "/circle/") }}
+{{- $fixedHero := partial "uses-fixed-page-hero.html" . }}
+{{- if or $archive $fixedHero (eq .RelPermalink "/circle/") }}
   {{ $css := resources.Get "css/standalone-page.css" | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
 {{- if $archive }}
   {{ $css := resources.Get "css/archive.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- end }}
+{{- if $fixedHero }}
+  {{ $css := resources.Get "css/fixed-page-hero.css" | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- end }}
 
