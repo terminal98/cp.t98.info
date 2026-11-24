@@ -6,6 +6,12 @@ html.dark .site-page-hero.site-fixed-hero {
   background: #26234f;
 }
 
+.site-page-width > .site-fixed-content {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: 0;
+}
+
 /* The legacy policy page has a separate title image and spacer. */
 .site-fixed-content > #hero,
 .site-fixed-content > .single_hero_background {

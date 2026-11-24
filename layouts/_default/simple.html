@@ -3,7 +3,7 @@
   <article class="max-w-full">
     {{ if $fixedHero }}
       {{ partial "page-hero.html" (dict "title" .Title "id" "page-title" "class" "site-fixed-hero") }}
-      <div class="site-fixed-content mx-auto w-full max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+      <div class="site-page-body"><div class="site-page-width"><div class="site-page-content site-fixed-content">
     {{ end }}
     <header>
       {{ if .Params.showBreadcrumbs | default (.Site.Params.article.showBreadcrumbs | default false) }}
@@ -22,6 +22,6 @@
       {{ partial "sharing-links.html" . }}
       {{ partial "article-comments.html" . }}
     </footer>
-    {{ if $fixedHero }}</div>{{ end }}
+    {{ if $fixedHero }}</div></div></div>{{ end }}
   </article>
 {{ end }}

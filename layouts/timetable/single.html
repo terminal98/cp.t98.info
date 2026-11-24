@@ -3,7 +3,7 @@
   <article class="max-w-full">
     {{ if $fixedHero }}
       {{ partial "page-hero.html" (dict "title" .Title "id" "page-title" "class" "site-fixed-hero") }}
-      <div class="site-fixed-content mx-auto w-full max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+      <div class="site-page-body"><div class="site-page-width"><div class="site-page-content site-fixed-content">
     {{ else }}
       <header>
         <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
@@ -14,6 +14,6 @@
     <section class="max-w-full mt-6 prose dark:prose-invert">
       {{ .Content }}
     </section>
-    {{ if $fixedHero }}</div>{{ end }}
+    {{ if $fixedHero }}</div></div></div>{{ end }}
   </article>
 {{ end }}
