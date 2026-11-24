@@ -1,23 +1,41 @@
-/* Keep the supplied thumbnail text fully visible in native news cards. */
-.article-link--card .thumbnail_card:has(img[src$="/2026/102001/featured.png"]),
-.article-link--card .thumbnail_card:has(img[src$="/2026/102002/featured.png"]),
-.article-link--card .thumbnail_card:has(img[src$="/2025/062003/featured.png"]),
-.article-link--card .thumbnail_card:has(img[src$="/2026/102003/featured.png"]),
-.article-link--card .thumbnail_card:has(img[src$="/2026/102004/featured.png"]),
-.article-link--card .thumbnail_card:has(img[src$="/2026/110201/featured.png"]) {
-  aspect-ratio: 1280 / 670;
+:is(.article-link--card .thumbnail_card, .site-archive .thumbnail) {
+  aspect-ratio: var(--news-thumbnail-ratio, var(--thumbnail-aspect-ratio, 1.5));
 }
-.article-link--card img[src$="/2026/102001/featured.png"],
-.article-link--card img[src$="/2026/102002/featured.png"],
-.article-link--card img[src$="/2025/062003/featured.png"],
-.article-link--card img[src$="/2026/102003/featured.png"],
-.article-link--card img[src$="/2026/102004/featured.png"],
-.article-link--card img[src$="/2026/110201/featured.png"],
-.article-link--simple img[src$="/2026/102001/featured.png"],
-.article-link--simple img[src$="/2026/102002/featured.png"],
-.article-link--simple img[src$="/2025/062003/featured.png"],
-.article-link--simple img[src$="/2026/102003/featured.png"],
-.article-link--simple img[src$="/2026/102004/featured.png"],
-.article-link--simple img[src$="/2026/110201/featured.png"] {
-  object-fit: contain;
+
+.site-archive .thumbnail {
+  position: relative;
+  flex: none;
+  align-self: flex-start;
+  width: min(300px, 100%);
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .site-archive .thumbnail { width: 100%; }
+}
+
+.site-archive .thumbnail > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Match the TOP cards for images designed to show the entire banner. */
+:is(.article-link--card .thumbnail_card, .article-link--simple .thumbnail, .site-archive .thumbnail):has(> img:is(
+  [src$="/2026/102001/featured.png"],
+  [src$="/2026/102002/featured.png"],
+  [src$="/2025/062003/featured.png"],
+  [src$="/2026/102003/featured.png"],
+  [src$="/2026/102004/featured.png"],
+  [src$="/2026/110201/featured.png"]
+)) {
+  --news-thumbnail-ratio: 1280 / 670;
+  --news-thumbnail-fit: contain;
+}
+
+:is(.article-link--card .thumbnail_card, .article-link--simple .thumbnail, .site-archive .thumbnail) > img {
+  object-fit: var(--news-thumbnail-fit, cover);
 }
